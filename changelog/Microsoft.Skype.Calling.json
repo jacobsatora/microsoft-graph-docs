@@ -3260,6 +3260,24 @@
       "CreatedDateTime": "2023-05-01T00:17:48.4795689Z",
       "WorkloadArea": "Teamwork and communications",
       "SubArea": "Calls and online meetings"
+    },
+    {
+      "ChangeList": [
+        {
+          "Id": "94c2417f-00ba-444d-94a4-198952b7e626",
+          "ApiChange": "Resource",
+          "ChangedApiName": "communications",
+          "ChangeType": "Addition",
+          "Description": "Added the **communications** relationship to the [user](https://learn.microsoft.com/en-us/graph/api/resources/user?view=graph-rest-beta) resource.",
+          "Target": "user"
+        }
+      ],
+      "Id": "94c2417f-00ba-444d-94a4-198952b7e626",
+      "Cloud": "Prod",
+      "Version": "beta",
+      "CreatedDateTime": "2023-06-08T22:26:00.8783213Z",
+      "WorkloadArea": "Identity and access",
+      "SubArea": "Directory management"
     }
   ]
 }
