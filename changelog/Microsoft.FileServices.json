@@ -7,7 +7,7 @@
           "ApiChange": "Relationship",
           "ChangedApiName": "transcripts",
           "ChangeType": "Addition",
-          "Description": "Added the [transcripts](https://learn.microsoft.com/en-us/graph/api/resources/transcript?view=graph-rest-beta) navigation property to [media](https://learn.microsoft.com/en-us/graph/api/resources/media?view=graph-rest-beta) resource",
+          "Description": "Added the **transcripts** navigation property to the [media](https://learn.microsoft.com/en-us/graph/api/resources/media?view=graph-rest-beta) resource",
           "Target": "media"
         },
         {
