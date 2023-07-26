@@ -57,7 +57,7 @@ Do not supply a request body for this method.
 ## Response
 
 If successful, this method returns a `200 OK` response code and the transcript content in the response body.
-Response body contains bytes for the transcript. The `content-type` header specifies type of the transcript content.
+Response body contains bytes for the transcript. 
 
 ## Examples
 
