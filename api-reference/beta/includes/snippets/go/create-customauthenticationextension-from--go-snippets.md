@@ -51,7 +51,7 @@ claimsForTokenConfiguration := []graphmodels.OnTokenIssuanceStartReturnClaimable
 }
 requestBody.SetClaimsForTokenConfiguration(claimsForTokenConfiguration)
 
-result, err := graphClient.Identity().CustomAuthenticationExtensions().Post(context.Background(), requestBody, nil)
+customAuthenticationExtensions, err := graphClient.Identity().CustomAuthenticationExtensions().Post(context.Background(), requestBody, nil)
 
 
 ```

@@ -125,10 +125,6 @@ POST https://graph.microsoft.com/v1.0/subscriptions/{subscriptionsId}/reauthoriz
 [!INCLUDE [sample-code](../includes/snippets/php/subscriptionthisreauthorize-php-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [PowerShell](#tab/powershell)
-[!INCLUDE [sample-code](../includes/snippets/powershell/subscriptionthisreauthorize-powershell-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Python](#tab/python)
 [!INCLUDE [sample-code](../includes/snippets/python/subscriptionthisreauthorize-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
