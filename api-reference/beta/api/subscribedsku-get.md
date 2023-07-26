@@ -1,9 +1,9 @@
 ---
 title: "Get subscribedSku"
 description: "Retrieve a specific commercial subscription that an organization has acquired."
-localization_priority: Normal
-author: "SumitParikh"
-ms.prod: "microsoft-identity-platform"
+ms.localizationpriority: medium
+author: "jconley76"
+ms.prod: "directory-management"
 doc_type: apiPageType
 ---
 
@@ -21,7 +21,7 @@ One of the following permissions is required to call this API. To learn more, in
 
 |Permission type      | Permissions (from least to most privileged)              |
 |:--------------------|:---------------------------------------------------------|
-|Delegated (work or school account) | Organization.Read.All, Directory.Read.All, Directory.ReadWrite.All, Directory.AccessAsUser.All    |
+|Delegated (work or school account) | Organization.Read.All, Directory.Read.All, Directory.ReadWrite.All    |
 |Delegated (personal Microsoft account) | Not supported.    |
 |Application | Organization.Read.All, Directory.Read.All, Organization.ReadWrite.All, Directory.ReadWrite.All |
 
@@ -56,22 +56,39 @@ Here is an example of the request.
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/subscribedSkus/{id}
 ```
+
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-subscribedsku-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/get-subscribedsku-go-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/get-subscribedsku-java-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [JavaScript](#tab/javascript)
 [!INCLUDE [sample-code](../includes/snippets/javascript/get-subscribedsku-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [Objective-C](#tab/objc)
-[!INCLUDE [sample-code](../includes/snippets/objc/get-subscribedsku-objc-snippets.md)]
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/get-subscribedsku-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/get-subscribedsku-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/get-subscribedsku-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
 ##### Response
-Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+Here is an example of the response. Note: The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
   "truncated": true,
@@ -80,26 +97,35 @@ Here is an example of the response. Note: The response object shown here may be 
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 450
 
 {
-  "capabilityStatus": "capabilityStatus-value",
-  "consumedUnits": 99,
-  "prepaidUnits": {
-    "enabled": 99,
-    "suspended": 99,
-    "warning": 99
-  },
-  "servicePlans": [
-    {
-      "servicePlanId": "servicePlanId-value",
-      "servicePlanName": "servicePlanName-value",
-      "provisioningStatus": "provisioningStatus-value",
-      "appliesTo": "appliesTo-value"
-    }
-  ],
-  "skuId": "skuId-value",
-  "skuPartNumber": "skuPartNumber-value"
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#subscribedSkus/$entity",
+    "capabilityStatus": "Enabled",
+    "consumedUnits": 14,
+    "id": "48a80680-7326-48cd-9935-b556b81d3a4e_c7df2760-2c81-4ef7-b578-5b5392b571df",
+    "prepaidUnits": {
+        "enabled": 25,
+        "lockedOut": 0,
+        "suspended": 0,
+        "warning": 0
+    },
+    "servicePlans": [
+        {
+            "servicePlanId": "8c098270-9dd4-4350-9b30-ba4703f3b36b",
+            "servicePlanName": "ADALLOM_S_O365",
+            "provisioningStatus": "Success",
+            "appliesTo": "User"
+        },
+        {
+            "servicePlanId": "9f431833-0334-42de-a7dc-70aa40db46db",
+            "servicePlanName": "LOCKBOX_ENTERPRISE",
+            "provisioningStatus": "Success",
+            "appliesTo": "User"
+        }
+    ],
+    "skuId": "c7df2760-2c81-4ef7-b578-5b5392b571df",
+    "skuPartNumber": "ENTERPRISEPREMIUM",
+    "appliesTo": "User"
 }
 ```
 

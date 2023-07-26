@@ -1,7 +1,7 @@
 ---
 title: "Calling the Microsoft Graph API"
 description: "To access and manipulate a Microsoft Graph resource, you call and specify the resource URLs using one of the following operations:   "
-localization_priority: Normal
+ms.localizationpriority: medium
 author: "ananmishr"
 ms.prod: "cloud-communications"
 ---
@@ -51,7 +51,7 @@ Microsoft Graph API `beta` metadata.
 ```
 
 The metadata allows you to see and understand the data model of Microsoft Graph, including the entity types and sets, complex types, and enums that make up the request and response packets sent to and from Microsoft Graph.
-You can use the metadata to understand the realtionships between entities in Microsoft Graph and establish URLs that navigate between entities.
+You can use the metadata to understand the relationships between entities in Microsoft Graph and establish URLs that navigate between entities.
 This navigation-based interconnectedness gives Microsoft Graph its unique character.
 
 Path URL resource names, query parameters, and action parameters and values are case insensitive. 

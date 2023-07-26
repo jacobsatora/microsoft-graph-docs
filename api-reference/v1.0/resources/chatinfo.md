@@ -1,8 +1,8 @@
 ---
 title: "chatInfo resource type"
-description: "Information about a message in Microsoft Teams."
+description: "Contains information associated with Microsoft Teams meetings."
 author: "ananmishr"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.prod: "cloud-communications"
 doc_type: resourcePageType
 ---
@@ -11,7 +11,7 @@ doc_type: resourcePageType
 
 Namespace: microsoft.graph
 
-This contains information associated with Microsoft Teams meetings.
+Contains information associated with Microsoft Teams meetings.
 
 ## Properties
 
