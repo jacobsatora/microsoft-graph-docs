@@ -14,6 +14,9 @@ See highlights of what's new in the recent two months in Microsoft Graph, [what'
 
 ## July 2023: New and generally available
 
+### Identity and access | Domains
+[Create](/graph/api/domain-post-domains) verified OnMicrosoft and branding domains.
+
 ### Reports | Identity and access reports
 - Get a report of the details of the [registered authentication methods](/graph/api/resources/userRegistrationDetails) for a specified user or users in an organization, such as multi-factor authentication, self-service password reset, and passwordless authentication.
 - [Get](/graph/api/authenticationmethodsroot-usersregisteredbyfeature) a report of the number of users in an organization capable of each of multi-factor authentication, self-service password reset, and passwordless authentication in an organization.
