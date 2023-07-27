@@ -2,9 +2,9 @@
 ms.localizationpriority: medium
 ---
 
-## Visualize your Microsoft Graph Data Connect data in Microsoft Power BI
+## Optional: Visualize your Microsoft Graph Data Connect data in Microsoft Power BI
 
-This exercise describes how to create a report in Microsoft Power BI to visualize your Microsoft 365 data from Microsoft Graph Data Connect. This step is entirely optional but requires you to complete all the steps in the building your first Microsoft Graph Data Connect pipeline beforehand. Once you have your JSON file in your Azure Storage, complete the following steps:
+This exercise describes how to create a report in Microsoft Power BI to visualize your Microsoft 365 data from Microsoft Graph Data Connect. **This step is entirely optional** but requires you to complete all the steps in the building your first Microsoft Graph Data Connect pipeline beforehand. Once you have your JSON file in your Azure Storage, complete the following steps:
 
 1. Open your Power BI desktop application or download it from: [Download Power BI tools and apps](https://powerbi.microsoft.com/en-us/downloads/)  
 
