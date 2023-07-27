@@ -17,4 +17,4 @@ You've completed the Microsoft Graph Data Connect tutorial! You should now be ab
 
 Now you have a starting point to experiment further with Microsoft Graph Data Connect. You can start by exploring the [documentation](/graph/data-connect-concept-overview).
 
-Learn how to create a PowerBI report to visualize your data from Graph Data Connect in the next step.
+Optional: Learn how to create a PowerBI report to visualize your data from Graph Data Connect in the next step.
