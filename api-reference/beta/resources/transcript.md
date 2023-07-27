@@ -21,7 +21,7 @@ Transcripts are available for Teams meeting recordings that use Teams live trans
 
 These transcript APIs are designed to provide access to authorized users, allowing them to automate tasks such as reading, uploading, or deleting transcripts.
 
-Transcript metadata has the following structure
+Transcript metadata has the following structure:
 
 [media item]: ./media.md
 
