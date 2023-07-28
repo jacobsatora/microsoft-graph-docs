@@ -32,6 +32,7 @@ All examples are relative to a **[list][]**: `https://graph.microsoft.com/v1.0/s
 | [Delete][]                                                               | No Content                         | Removes an item from a list.                                              |
 | [Update][]                                                               | [fieldValueSet][]                  | Update the properties on a listItem.                                      |
 | [Update column values][Update]                                           | [fieldValueSet][]                  | Update column values on a listItem.                                       |
+| [Create sharing link][CreateLink]       | [permission][]       | Create a sharing link for a listItem.
 | [List documentSetVersions](../api/listitem-list-documentsetversions.md)  | [documentSetVersion][] collection  | Get a list of the versions of a document set item in a list.              |
 | [Create documentSetVersion](../api/listitem-post-documentsetversions.md) | [documentSetVersion][]             | Create a new version of a document set item in a list.                    |
 | [Restore documentSetVersion](../api/documentsetversion-restore.md)       | No Content                         | Restore the document set item to a specific version.                      |
@@ -42,10 +43,11 @@ All examples are relative to a **[list][]**: `https://graph.microsoft.com/v1.0/s
 [Create]: ../api/listitem-create.md
 [Delete]: ../api/listitem-delete.md
 [Update]: ../api/listitem-update.md
-
+[CreateLink]: ../api/listitem-createlink.md
 [itemActivityStat]: itemactivitystat.md
 [fieldValueSet]: fieldvalueset.md
 [documentSetVersion]: documentsetversion.md
+[permission]: permission.md
 
 ## Properties
 

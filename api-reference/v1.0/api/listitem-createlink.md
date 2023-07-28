@@ -1,60 +1,64 @@
 ---
-author: JeremyKelley
-ms.date: 09/10/2017
-title: Share a file with a link
+title: "listItem: createLink"
+description: "Create a link to share a listItem"
+author: "ziebd"
 ms.localizationpriority: medium
 ms.prod: "sharepoint"
-description: "You can use createLink action to share a DriveItem via a sharing link."
 doc_type: apiPageType
 ---
-# Create a sharing link for a DriveItem
+
+# listItem: createLink
 
 Namespace: microsoft.graph
 
-You can use **createLink** action to share a [DriveItem](../resources/driveitem.md) via a sharing link.
+Create a sharing link for a [listItem](../resources/listitem.md).
 
-The **createLink** action will create a new sharing link if the specified link type doesn't already exist for the calling application.
-If a sharing link of the specified type already exists for the app, the existing sharing link will be returned.
+The **createLink** action creates a new sharing link if the specified link type doesn't already exist for the calling application.
+If a sharing link of the specified type already exists for the app, this action will return the existing sharing link.
 
-DriveItem resources inherit sharing permissions from their ancestors.
+**listItem** resources inherit sharing permissions from the [list](../resources/list.md) the item resides in.
 
 ## Permissions
+One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [permissions](/graph/permissions-reference).
 
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
-
-|Permission type      | Permissions (from least to most privileged)              |
-|:--------------------|:---------------------------------------------------------|
+|Permission type|Permissions (from least to most privileged)|
+|:---|:---|
 |Delegated (work or school account) | Files.ReadWrite, Files.ReadWrite.All, Sites.ReadWrite.All    |
 |Delegated (personal Microsoft account) | Files.ReadWrite, Files.ReadWrite.All    |
 |Application | Files.ReadWrite.All, Sites.ReadWrite.All |
 
 ## HTTP request
 
-<!-- { "blockType": "ignored" } -->
-
-```http
-POST /drives/{driveId}/items/{itemId}/createLink
-POST /groups/{groupId}/drive/items/{itemId}/createLink
-POST /me/drive/items/{itemId}/createLink
-POST /sites/{siteId}/drive/items/{itemId}/createLink
-POST /users/{userId}/drive/items/{itemId}/createLink
+<!-- {
+  "blockType": "ignored",
+  "sampleKeys": ["contoso.sharepoint.com,2288913C-B09C-46C4-BD1D-AEBB3A6E08EB,133A857A-DC2E-4A41-BCF7-D2B9BBC016AF", "A90E03FB-8446-4E0F-82E7-810FA7595A66", "3"]
+}
+-->
+``` http
+POST /sites/{siteId}/lists/{listId}/items/{itemId}/createLink
 ```
 
-### Request body
+## Request headers
+|Name|Description|
+|:---|:---|
+|Authorization|Bearer {token}. Required.|
+|Content-Type|application/json. Required.|
 
-The body of the request defines properties of the sharing link your application is requesting.
-The request should be a JSON object with the following properties.
+## Request body
+In the request body, provide a JSON representation of the parameters.
 
-|   Name       |  Type  |                                 Description                                  |
-| :------------| :----- | :--------------------------------------------------------------------------- |
-| **type**     | string | The type of sharing link to create. Either `view`, `edit`, or `embed`.       |
-| **password** | string | The password of the sharing link that is set by the creator. Optional and OneDrive Personal only.
-| **expirationDateTime** | string | A String with format of yyyy-MM-ddTHH:mm:ssZ of DateTime indicates the expiration time of the permission. |
-| **recipients** |[driveRecipient](../resources/driverecipient.md) collection|Optional. A collection of recipients who will receive access to the sharing link.|
-| **retainInheritedPermissions** |  Boolean          | Optional. If `true` (default), any existing inherited permissions are retained on the shared item when sharing this item for the first time. If `false`, all existing permissions are removed when sharing for the first time.  |
-| **scope** | string | Optional. The scope of link to create. Either `anonymous`, `organization`, or `users`. |
-| **message** | string | Optional. A message sent to recipients in addition to the sharing link they receive when `sendNotification` is true and `recipients` are specified. This option is only available for files in OneDrive for Business and SharePoint. |
-| **sendNotification** |Boolean|If `true`, this method sends a [sharing link](../resources/permission.md#sharing-links) in an email to users specified in `recipients`. Applicable to OneDrive for Business or SharePoint. The default value is `false`. Optional.|
+The following table shows the parameters that can be used with this action.
+
+|   Property             |  Type  |           Description                        |
+| :----------------------| :----- | :--------------------------------------------|
+|type|String|The type of sharing link to create. Optional. |
+|scope|String|The scope of link to create. Either `anonymous`, `organization` or `users`. Optional. |
+|expirationDateTime|DateTimeOffset|A string with format of yyyy-MM-ddTHH:mm:ssZ of DateTime indicates the expiration time of the permission. Optional. |
+|password|String|The password of the sharing link that is set by the creator. Optional. |
+|recipients|[driveRecipient](../resources/driverecipient.md) collection|A collection of recipients who will receive access to the sharing link. Optional. |
+| retainInheritedPermissions |  Boolean          | Optional. If `true` (default), any existing inherited permissions are retained on the shared item when sharing this item for the first time. If `false`, all existing permissions are removed when sharing for the first time.  |
+| message | string | Optional. A message sent to recipients in addition to the sharing link they receive when `sendNotification` is true and `recipients` are specified. This option is only available for files in OneDrive for Business and SharePoint. |
+|sendNotification|Boolean|If `true`, this method sends a [sharing link](../resources/permission.md#sharing-links) in an email to users specified in `recipients`. Applicable to OneDrive for Business and SharePoint. The default value is `false`. Optional.|
 
 ### Link types
 
@@ -72,38 +76,38 @@ The following values are allowed for the **type** parameter.
 ### Scope types
 
 The following values are allowed for the **scope** parameter.
-If the **scope** parameter is not specified, the default link type for the organization is created.
 
 | Value          | Description
 |:---------------|:------------------------------------------------------------
-| `anonymous`    | Anyone with the link has access, without needing to sign in. This may include people outside of your organization. Anonymous link support may be disabled by an administrator.
-| `organization` | Anyone signed into your organization (tenant) can use the link to get access. Only available in OneDrive for Business and SharePoint.
-| `users`        | Share only with people you choose inside or outside the organization.
+| anonymous    | Anyone with the link has access, without needing to sign in. This may include people outside of your organization. Anonymous link support may be disabled by an administrator.
+| organization | Anyone signed into your organization (tenant) can use the link to get access. Only available in OneDrive for Business and SharePoint.
+| users        | Specific people in the recipients collection can use the link to get access. Only available in OneDrive for Business and SharePoint.
 
 ## Response
 
-If successful, this method returns a single [Permission](../resources/permission.md) resource in the response body that represents the requested sharing permissions.
+If successful, this method returns a single [permission](../resources/permission.md) resource in the response body that represents the requested sharing permissions.
 
-The response will be `201 Created` if a new sharing link is created for the item or `200 OK` if an existing link is returned.
+The response will be `201 Created` if a new sharing link is created for the listItem or `200 OK` if an existing link is returned.
 
 ## Examples
 
 ### Example 1: Create an anonymous sharing link
-The following example requests a sharing link to be created for the **driveItem** specified by {itemId} in the user's OneDrive.
+The following example requests a sharing link to be created for the listItem specified by {itemId} in the list specified {listId}.
 The sharing link is configured to be read-only and usable by anyone with the link.
-For OneDrive for Business and SharePoint users, use the `sendNotification` parameter to create a sharing link. The sharing link is then sent to recipients via email.
+For OneDrive for Business and SharePoint users, use the `sendNotification` parameter to create a sharing link. The `sharingLink` is then sent to recipients via email.
 All existing permissions are removed when sharing for the first time if `retainInheritedPermissions` is false.
 
 #### Request
 
+
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "driveItem_createlink"
+  "name": "listItem_createlink_for_itemID_in_specific_list"
 }-->
 
 ```http
-POST /me/drive/items/{itemId}/createLink
+POST https://graph.microsoft.com/beta/sites/{siteId}/lists/{listId}/items/{itemId}/createLink
 Content-Type: application/json
 
 {
@@ -121,31 +125,31 @@ Content-Type: application/json
 ```
 
 # [C#](#tab/csharp)
-[!INCLUDE [sample-code](../includes/snippets/csharp/driveitem-createlink-csharp-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/csharp/listitem-createlink-for-itemid-in-specific-list-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/driveitem-createlink-javascript-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/javascript/listitem-createlink-for-itemid-in-specific-list-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Java](#tab/java)
-[!INCLUDE [sample-code](../includes/snippets/java/driveitem-createlink-java-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/java/listitem-createlink-for-itemid-in-specific-list-java-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
-[!INCLUDE [sample-code](../includes/snippets/go/driveitem-createlink-go-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/go/listitem-createlink-for-itemid-in-specific-list-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [PowerShell](#tab/powershell)
-[!INCLUDE [sample-code](../includes/snippets/powershell/driveitem-createlink-powershell-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/powershell/listitem-createlink-for-itemid-in-specific-list-powershell-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [PHP](#tab/php)
-[!INCLUDE [sample-code](../includes/snippets/php/driveitem-createlink-php-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/php/listitem-createlink-for-itemid-in-specific-list-php-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Python](#tab/python)
-[!INCLUDE [sample-code](../includes/snippets/python/driveitem-createlink-python-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/python/listitem-createlink-for-itemid-in-specific-list-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -158,8 +162,7 @@ Content-Type: application/json
   "@odata.type": "microsoft.graph.permission"
 }
 -->
-
-```http
+``` http
 HTTP/1.1 201 Created
 Content-Type: application/json
 
@@ -187,15 +190,15 @@ To create a company sharable link, use the **scope** parameter with a value of `
 
 #### Request
 
+
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "create-link-scoped",
-  "scopes": "files.readwrite service.sharepoint"
- } -->
+  "name": "listItem_createlink_create_company_shareable_links"
+}-->
 
 ```http
-POST /me/drive/items/{item-id}/createLink
+POST /sites/{siteId}/lists/{listId}/items/{itemId}/createLink
 Content-Type: application/json
 
 {
@@ -205,31 +208,31 @@ Content-Type: application/json
 ```
 
 # [C#](#tab/csharp)
-[!INCLUDE [sample-code](../includes/snippets/csharp/create-link-scoped-csharp-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/csharp/listitem-createlink-create-company-shareable-links-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/create-link-scoped-javascript-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/javascript/listitem-createlink-create-company-shareable-links-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Java](#tab/java)
-[!INCLUDE [sample-code](../includes/snippets/java/create-link-scoped-java-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/java/listitem-createlink-create-company-shareable-links-java-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
-[!INCLUDE [sample-code](../includes/snippets/go/create-link-scoped-go-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/go/listitem-createlink-create-company-shareable-links-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [PowerShell](#tab/powershell)
-[!INCLUDE [sample-code](../includes/snippets/powershell/create-link-scoped-powershell-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/powershell/listitem-createlink-create-company-shareable-links-powershell-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [PHP](#tab/php)
-[!INCLUDE [sample-code](../includes/snippets/php/create-link-scoped-php-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/php/listitem-createlink-create-company-shareable-links-php-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Python](#tab/python)
-[!INCLUDE [sample-code](../includes/snippets/python/create-link-scoped-python-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/python/listitem-createlink-create-company-shareable-links-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -266,15 +269,15 @@ When an embed link is created, the `webHtml` property contains the HTML code for
 
 #### Request
 
+
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "create-embedded-link",
-  "scopes": "files.readwrite service.onedrive"
-} -->
+  "name": "listItem_createlink_3"
+}-->
 
 ```http
-POST /me/drive/items/{item-id}/createLink
+POST /sites/{siteId}/lists/{listId}/items/{itemId}/createLink
 Content-Type: application/json
 
 {
@@ -283,31 +286,31 @@ Content-Type: application/json
 ```
 
 # [C#](#tab/csharp)
-[!INCLUDE [sample-code](../includes/snippets/csharp/create-embedded-link-csharp-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/csharp/listitem-createlink-3-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/create-embedded-link-javascript-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/javascript/listitem-createlink-3-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Java](#tab/java)
-[!INCLUDE [sample-code](../includes/snippets/java/create-embedded-link-java-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/java/listitem-createlink-3-java-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
-[!INCLUDE [sample-code](../includes/snippets/go/create-embedded-link-go-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/go/listitem-createlink-3-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [PowerShell](#tab/powershell)
-[!INCLUDE [sample-code](../includes/snippets/powershell/create-embedded-link-powershell-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/powershell/listitem-createlink-3-powershell-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [PHP](#tab/php)
-[!INCLUDE [sample-code](../includes/snippets/php/create-embedded-link-php-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/php/listitem-createlink-3-php-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Python](#tab/python)
-[!INCLUDE [sample-code](../includes/snippets/python/create-embedded-link-python-snippets.md)]
+[!INCLUDE [sample-code](../includes/snippets/python/listitem-createlink-3-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -338,16 +341,17 @@ Content-Type: application/json
 ## Remarks
 
 * Links created using this action do not expire unless a default expiration policy is enforced for the organization.
-* Links are visible in the sharing permissions for the item and can be removed by an owner of the item.
-* Links always point to the current version of a item unless the item is checked out (SharePoint only).
+* Links are visible in the sharing permissions for the listItem and can be removed by an owner of the listItem.
+* Links always point to the current version of a listItem unless the listItem is checked out (SharePoint only).
 
-<!-- {
+<!--
+{
   "type": "#page.annotation",
-  "description": "Create a new sharing link for an item.",
+  "description": "Create a new sharing link for an listItem.",
   "keywords": "create,sharing,sharing link",
   "section": "documentation",
   "tocPath": "Sharing/Create link",
   "suppressions": [
   ]
-} -->
-
+}
+-->

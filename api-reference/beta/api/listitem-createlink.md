@@ -59,6 +59,7 @@ The following table shows the parameters that can be used with this action.
 |password|String|The password of the sharing link that is set by the creator. Optional. |
 |recipients|[driveRecipient](../resources/driverecipient.md) collection|A collection of recipients who will receive access to the sharing link. Optional. |
 | retainInheritedPermissions |  Boolean          | Optional. If `true` (default), any existing inherited permissions are retained on the shared item when sharing this item for the first time. If `false`, all existing permissions are removed when sharing for the first time.  |
+| message | string | Optional. A message sent to recipients in addition to the sharing link they receive when `sendNotification` is true and `recipients` are specified. This option is only available for files in OneDrive for Business and SharePoint. |
 |sendNotification|Boolean|If `true`, this method sends a [sharing link](../resources/permission.md#sharing-links) in an email to users specified in `recipients`. Applicable to OneDrive for Business and SharePoint. The default value is `false`. Optional.|
 
 ### Link types
@@ -72,7 +73,7 @@ The following values are allowed for the **type** parameter.
 | edit           | Creates an read-write link to the item.                                                                       |
 | embed          | Creates an embeddable link to the item.                                                                      |
 | blocksDownload | Creates a read-only link that blocks download to the item. This option is only available for files in OneDrive for Business and SharePoint.  |
-| createOnly     | Creates an upload-only link to the item. This option is only available for folders in OneDrive for Business and SharePoint.             |
+| submitOnly     | Creates an upload-only link to the item. This option is only available for folders in OneDrive for Business and SharePoint.             |
 | addressBar     | Creates the default link that is shown in the browser address bars for newly created files. Only available in OneDrive for Business and SharePoint. The organization admin configures whether this link type is supported, and what features are supported by this link type. |
 | adminDefault   | Creates the default link to the item as determined by the administrator of the organization. Only available in OneDrive for Business and SharePoint. The policy is enforced for the organization by the admin |
 
