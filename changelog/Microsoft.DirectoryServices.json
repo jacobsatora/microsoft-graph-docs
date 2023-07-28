@@ -13947,6 +13947,24 @@
       "CreatedDateTime": "2023-06-19T07:13:01.0506132Z",
       "WorkloadArea": "Identity and access",
       "SubArea": "Directory management"
+    },
+    {
+      "ChangeList": [
+        {
+          "Id": "86ba3f4f-cd31-4bae-96ee-1cda7b55aff2",
+          "ApiChange": "Method",
+          "ChangedApiName": "promoteToInitial",
+          "ChangeType": "Addition",
+          "Description": "Added the [promoteToInitial](https://learn.microsoft.com/en-us/graph/api/domain?view=graph-rest-beta) method to the [domain](https://learn.microsoft.com/en-us/graph/api/domain?view=graph-rest-beta) resource.",
+          "Target": "domain"
+        }
+      ],
+      "Id": "86ba3f4f-cd31-4bae-96ee-1cda7b55aff2",
+      "Cloud": "Prod",
+      "Version": "beta",
+      "CreatedDateTime": "2023-07-28T11:09:46.8861182Z",
+      "WorkloadArea": "Identity and access",
+      "SubArea": "Directory management"
     }
   ]
 }
