@@ -63,7 +63,7 @@
           "ApiChange": "Method",
           "ChangedApiName": "GET",
           "ChangeType": "Addition",
-          "Description": "Added the [get content](https://learn.microsoft.com/en-us/graph/api/transcript-content-get?view=graph-rest-beta) operation to the [transcript](https://learn.microsoft.com/en-us/graph/api/resources/transcript?view=graph-rest-beta) resource.",
+          "Description": "Added the [get](https://learn.microsoft.com/en-us/graph/api/transcript-content-get?view=graph-rest-beta) operation to the [transcript](https://learn.microsoft.com/en-us/graph/api/resources/transcript?view=graph-rest-beta) resource.",
           "Target": "transcript"
         },
         {
@@ -71,9 +71,25 @@
           "ApiChange": "Method",
           "ChangedApiName": "PUT",
           "ChangeType": "Addition",
-          "Description": "Added the [put content](https://learn.microsoft.com/en-us/graph/api/transcript-put-content?view=graph-rest-beta) operation to the [transcript](https://learn.microsoft.com/en-us/graph/api/resources/transcript?view=graph-rest-beta) resource.",
+          "Description": "Added the [put](https://learn.microsoft.com/en-us/graph/api/transcript-put-content?view=graph-rest-beta) operation to the [transcript](https://learn.microsoft.com/en-us/graph/api/resources/transcript?view=graph-rest-beta) resource.",
           "Target": "transcript"
-        }
+        },
+        {
+          "Id": "3d4f03b8-00c5-4689-b9e8-01b0be114cec",
+          "ApiChange": "Enumeration",
+          "ChangedApiName": "transcriptType",
+          "ChangeType": "Addition",
+          "Description": "Added the **transcriptType** enumeration type.",
+          "Target": "transcriptType"
+        },
+        {
+          "Id": "3d4f03b8-00c5-4689-b9e8-01b0be114cec",
+          "ApiChange": "Enumeration",
+          "ChangedApiName": "transcriptSource",
+          "ChangeType": "Addition",
+          "Description": "Added the **transcriptSource** enumeration type.",
+          "Target": "transcriptSource"
+        },
       ],
       "Id": "3d4f03b8-00c5-4689-b9e8-01b0be114cec",
       "Cloud": "Prod",
