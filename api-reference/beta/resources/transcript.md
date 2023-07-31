@@ -93,7 +93,7 @@ Inherits from [entity](../resources/entity.md).
 | caption            | Denotes a transcript that is meant for the deaf and hard of hearing. In addition to spoken audio, the transcript may often contain descriptions of non-verbal audio, such as noises, music, etc. Typically, a caption is the original language of the media item. |
 | unknownFutureValue | Marker value for future compatibility.                                                                                                                                                |
 
-> Note: Transcript Type does not change how transcripts are displayed. 
+> Note: The transcript type does not change how transcripts are displayed. 
 
 ### transcriptSource enumeration
 
