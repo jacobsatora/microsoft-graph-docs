@@ -12,7 +12,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Read the properties and relationships of a [transcript](../resources/transcript.md) object that belongs to a certain media item. This API has the ability to report all the transcripts (incluing the machine-generated transcripts being created) that belong to the media item.
+Read the properties and relationships of a [transcript](../resources/transcript.md) object that belongs to a certain media item. This API can report all the transcripts (including the machine-generated transcripts being created) that belong to the media item.
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
