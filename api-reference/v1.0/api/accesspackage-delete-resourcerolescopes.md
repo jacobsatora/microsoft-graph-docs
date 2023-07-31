@@ -51,6 +51,7 @@ If successful, this method returns a 200-series response code. It does not retur
 
 The following is an example of the request.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "delete_accesspackageresourcerolescope_from_accesspackage"
@@ -59,6 +60,12 @@ The following is an example of the request.
 ```http
 DELETE https://graph.microsoft.com/v1.0/identityGovernance/entitlementManagement/accessPackages/{id}/resourceRoleScopes/{id}
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-accesspackageresourcerolescope-from-accesspackage-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 
 ### Response

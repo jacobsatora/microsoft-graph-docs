@@ -84,10 +84,6 @@ Content-length: 333
 [!INCLUDE [sample-code](../includes/snippets/cli/intune-deviceconfig-deviceconfiguration-assign-assign-action-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/intune-deviceconfig-deviceconfiguration-assign-assign-action-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 ---
 
 ### Response

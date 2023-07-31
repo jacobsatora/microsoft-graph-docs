@@ -44,6 +44,7 @@ If successful, this method returns a `204, No Content` response code. It does no
 
 ## Examples
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "stop_applyDecisions"
@@ -52,6 +53,13 @@ If successful, this method returns a `204, No Content` response code. It does no
 ``` http
 POST  https://graph.microsoft.com/beta/identityGovernance/accessReviews/definitions/2b83cc42-09db-46f6-8c6e-16fec466a82d/instances/5d431f4b-56f2-4a50-938b-fb1e4e2c91b9/stopApplyDecisions
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/stop-applydecisions-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ---
 
 ### Response

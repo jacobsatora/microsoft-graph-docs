@@ -48,6 +48,7 @@ If successful, this method returns `200 OK` response code and [audioRoutingGroup
 #### Request
 The following example shows the request.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "create-audioRoutingGroup-from-call"
@@ -69,6 +70,12 @@ Content-Length: 233
   ]
 }
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-audioroutinggroup-from-call-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ---
 

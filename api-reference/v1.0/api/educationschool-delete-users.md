@@ -43,7 +43,6 @@ If successful, this method returns a `204 No Content` response code and an empty
 ### Request
 The following is an example of a request.
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "remove_user_from_school_v1_e1"
@@ -51,16 +50,6 @@ The following is an example of a request.
 ```http
 DELETE https://graph.microsoft.com/v1.0/education/schools/{school-id}/users/{user-id}
 ```
-
-# [Java](#tab/java)
-[!INCLUDE [sample-code](../includes/snippets/java/remove-user-from-school-v1-e1-java-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/remove-user-from-school-v1-e1-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 ### Response
 The following is an example of the response. 

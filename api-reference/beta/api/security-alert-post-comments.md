@@ -58,7 +58,6 @@ If successful, this method returns a `200 OK` response code and an updated list 
 The following is an example of a request.
 
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "sampleKeys": ["da637865765418431569_-773071023"],
@@ -74,12 +73,6 @@ Content-Type: application/json
     "comment": "Demo for docs"
 }
 ```
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/alert-v2-addcomment-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 ### Response
 The following is an example of the response

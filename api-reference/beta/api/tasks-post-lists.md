@@ -61,7 +61,6 @@ If successful, this method returns a `201 Created` response code and a [baseTask
 
 ### Request
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "create_tasklist_from_"
@@ -76,12 +75,6 @@ Content-Type: application/json
     "displayName": "Shopping list"
 }
 ```
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/create-tasklist-from--javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 ### Response
 **Note:** The response object shown here might be shortened for readability.

@@ -49,6 +49,7 @@ If successful, this method returns a `200 OK` response code and an [audioRouting
 ### Request
 
 The following example shows the request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "get-audioRoutingGroup"
@@ -56,6 +57,12 @@ The following example shows the request.
 ```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/communications/calls/{id}/audioRoutingGroups/{id}
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-audioroutinggroup-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ---
 

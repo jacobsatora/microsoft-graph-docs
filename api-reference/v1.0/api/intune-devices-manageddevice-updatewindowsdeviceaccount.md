@@ -88,10 +88,6 @@ Content-length: 532
 [!INCLUDE [sample-code](../includes/snippets/cli/intune-devices-manageddevice-updatewindowsdeviceaccount-updatewindowsdeviceaccount-action-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/intune-devices-manageddevice-updatewindowsdeviceaccount-updatewindowsdeviceaccount-action-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 ---
 
 ### Response

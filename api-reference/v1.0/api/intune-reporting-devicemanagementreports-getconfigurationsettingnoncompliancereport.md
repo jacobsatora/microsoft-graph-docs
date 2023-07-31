@@ -97,10 +97,6 @@ Content-length: 278
 [!INCLUDE [sample-code](../includes/snippets/cli/intune-reporting-devicemanagementreports-getconfigurationsettingnoncompliancereport-getconfigurationsettingnoncompliancereport-action-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/intune-reporting-devicemanagementreports-getconfigurationsettingnoncompliancereport-getconfigurationsettingnoncompliancereport-action-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 ---
 
 ### Response

@@ -195,8 +195,8 @@ GET https://graph.microsoft.com/beta/me/calendar/events/delta?startDateTime=2020
 Prefer: odata.maxpagesize=1
 ```
 
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/event-delta-events-javascript-snippets.md)]
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/event-delta-events-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -261,8 +261,8 @@ GET https://graph.microsoft.com/beta/me/calendars/AAMkADI5M1BbeAAA=/calendarView
 Prefer: odata.maxpagesize=2
 ```
 
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/event-delta-calendarview-javascript-snippets.md)]
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/event-delta-calendarview-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---

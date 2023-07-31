@@ -58,7 +58,6 @@ If successful, this method returns a `200 OK` response code and updated [Range](
 Here is an example of the request. It updates a range - values, number-format and formula. The `null` input is to instruct the API to ignore the cell for that particular input. The values, number-format and formulas can be independently updated or combined together in the same API call. 
 
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "update_range"
@@ -73,12 +72,6 @@ Content-type: application/json
 "numberFormat" : [[null,null], ["m-ddd", null]]
 }
 ```
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/update-range-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 ##### Response
 Here is an example of the response. Note: The response object shown here might be shortened for readability.

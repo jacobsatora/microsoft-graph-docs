@@ -51,6 +51,7 @@ If successful, this method returns a `200 OK` response code and an updated [audi
 ### Request
 The following example shows the request.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "update-audioRoutingGroup"
@@ -72,6 +73,12 @@ Content-Type: application/json
   ]
 }
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/update-audioroutinggroup-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ---
 

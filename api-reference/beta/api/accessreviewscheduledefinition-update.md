@@ -69,7 +69,6 @@ In the request body, supply a JSON representation of the new properties of the [
 
 
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "update_accessReviewScheduleDefinition"
@@ -116,16 +115,6 @@ Content-type: application/json
   }
 }
 ```
-
-# [Java](#tab/java)
-[!INCLUDE [sample-code](../includes/snippets/java/update-accessreviewscheduledefinition-java-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/update-accessreviewscheduledefinition-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 ### Response
 <!-- {

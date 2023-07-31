@@ -63,7 +63,6 @@ If successful, this method returns a `201 Created` response code and a [checklis
 
 ### Request
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "create_checklistitem_task_for_me",
@@ -78,12 +77,6 @@ Content-Type: application/json
     "displayName": "Final sign-off from the team"
 }
 ```
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/create-checklistitem-task-for-me-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 ### Response
 >**Note:** The response object shown here might be shortened for readability.

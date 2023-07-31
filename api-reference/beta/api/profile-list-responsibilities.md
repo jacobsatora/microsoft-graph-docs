@@ -60,7 +60,6 @@ If successful, this method returns a `200 OK` response code and a collection of 
 ## Examples
 
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "get_responsibilities_from_profile"
@@ -69,16 +68,6 @@ If successful, this method returns a `200 OK` response code and a collection of 
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/me/responsibilities
 ```
-
-# [Java](#tab/java)
-[!INCLUDE [sample-code](../includes/snippets/java/get-responsibilities-from-profile-java-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/get-responsibilities-from-profile-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 ### Response
 **Note:** The response object shown here might be shortened for readability.

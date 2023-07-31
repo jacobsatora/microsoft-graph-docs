@@ -46,6 +46,7 @@ If successful, this method returns `204 No Content` response code. It does not r
 ### Request
 The following example shows the request.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "delete-audioRoutingGroup"
@@ -53,6 +54,12 @@ The following example shows the request.
 ```http
 DELETE https://graph.microsoft.com/v1.0/communications/calls/{id}/audioRoutingGroups/{id}
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-audioroutinggroup-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ---
 

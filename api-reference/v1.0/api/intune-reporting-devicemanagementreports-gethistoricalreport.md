@@ -95,10 +95,6 @@ Content-length: 242
 [!INCLUDE [sample-code](../includes/snippets/cli/intune-reporting-devicemanagementreports-gethistoricalreport-gethistoricalreport-action-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/intune-reporting-devicemanagementreports-gethistoricalreport-gethistoricalreport-action-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 ---
 
 ### Response

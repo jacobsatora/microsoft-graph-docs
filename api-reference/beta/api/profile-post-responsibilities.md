@@ -61,7 +61,6 @@ If successful, this method returns a `201 Created` response code and a [personRe
 ## Examples
 
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "create_personresponsibility_from_profile"
@@ -79,12 +78,6 @@ Content-Type: application/json
   ]
 }
 ```
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/create-personresponsibility-from-profile-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 ### Response
 **Note:** The response object shown here might be shortened for readability.

@@ -65,7 +65,6 @@ If successful, this method returns a `200 OK` response code and the requested [p
 The following example specifies the **id** of a **room** to get its properties.
 
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "get_room",
@@ -75,16 +74,6 @@ The following example specifies the **id** of a **room** to get its properties.
 ```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/places/979e9793-3e91-40eb-b18c-0ea937893956
 ```
-
-# [Java](#tab/java)
-[!INCLUDE [sample-code](../includes/snippets/java/get-room-java-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/get-room-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 #### Response
 
@@ -121,7 +110,6 @@ Content-type: application/json
 The following example specifies the **emailAddress** of a **roomList** to get its properties.
 
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "get_roomlist",
@@ -131,16 +119,6 @@ The following example specifies the **emailAddress** of a **roomList** to get it
 ```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/places/Building2Rooms@M365x214355.onmicrosoft.com
 ```
-
-# [Java](#tab/java)
-[!INCLUDE [sample-code](../includes/snippets/java/get-roomlist-java-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/get-roomlist-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 #### Response
 

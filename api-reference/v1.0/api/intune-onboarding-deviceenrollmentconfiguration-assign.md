@@ -84,10 +84,6 @@ Content-length: 360
 [!INCLUDE [sample-code](../includes/snippets/cli/intune-onboarding-deviceenrollmentconfiguration-assign-assign-action-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/intune-onboarding-deviceenrollmentconfiguration-assign-assign-action-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 ---
 
 ### Response

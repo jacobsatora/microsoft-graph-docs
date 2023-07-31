@@ -76,16 +76,6 @@ If successful, this method returns a `200` and a [sitePage](../resources/sitepag
 GET /sites/{site-id}/pages/{page-id}/microsoft.graph.sitePage
 ```
 
-# [Java](#tab/java)
-[!INCLUDE [sample-code](../includes/snippets/java/get-page-java-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/get-page-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
-
 #### Response
 
 <!-- { "blockType": "response", "@odata.type": "microsoft.graph.sitePage", "truncated": true } -->
@@ -134,7 +124,6 @@ Content-type: application/json
 
 With `select` and `expand` statements, you can retrieve sitePage metadata and page content in a single request.
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "get_sitePage"
@@ -144,16 +133,6 @@ With `select` and `expand` statements, you can retrieve sitePage metadata and pa
 ```msgraph-interactive
 GET /sites/{site-id}/pages/{page-id}/microsoft.graph.sitePage
 ```
-
-# [Java](#tab/java)
-[!INCLUDE [sample-code](../includes/snippets/java/get-sitepage-java-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/get-sitepage-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 #### Response
 

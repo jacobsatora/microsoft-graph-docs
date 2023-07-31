@@ -97,10 +97,6 @@ Content-length: 278
 [!INCLUDE [sample-code](../includes/snippets/cli/intune-reporting-devicemanagementreports-getdevicemanagementintentpersettingcontributingprofiles-getdevicemanagementintentpersettingcontributingprofiles-action-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/intune-reporting-devicemanagementreports-getdevicemanagementintentpersettingcontributingprofiles-getdevicemanagementintentpersettingcontributingprofiles-action-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 ---
 
 ### Response

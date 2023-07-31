@@ -53,7 +53,6 @@ The following is an example of a request.
 
 >**Note:** The request object shown here is shortened for readability. Include all the properties in an actual call.
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "update_synchronizationtemplate"
@@ -68,16 +67,6 @@ Content-type: application/json
     "factoryTag": "CustomSCIM"
 }
 ```
-
-# [Java](#tab/java)
-[!INCLUDE [sample-code](../includes/snippets/java/update-synchronizationtemplate-java-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/update-synchronizationtemplate-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 ##### Response
 The following is an example of a response.
