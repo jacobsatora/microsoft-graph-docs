@@ -46,7 +46,7 @@ items:
     content: |
       [!INCLUDE [](../includes/data-connect-quickstart-07.md)]
       
-   - title: Optional: Visualize your Microsoft Graph Data Connect data in Microsoft Power BI
+  - title: Optional: Visualize your Microsoft Graph Data Connect data in Microsoft Power BI
     durationInMinutes: 15
     content: |
       [!INCLUDE [](../includes/data-connect-quickstart-08.md)]
