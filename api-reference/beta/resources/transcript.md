@@ -89,7 +89,7 @@ Inherits from [entity](../resources/entity.md).
 
 | Value              | Description                                                                                                                                                                           |
 | :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| subtitle           | Denotes a transcript that is for an audience that doesn't understand the language used in the [media item]. Typically, the transcript itself includes only spoken/voiced audio.  Typically, a subtitle is not the original language of the media item but instead is a translation.       |
+| subtitle           | Denotes a transcript for an audience that doesn't understand the language used in the [media item]. It usually contains the textual representation of the spoken or voiced audio. Unlike the original language of the media item, subtitles are typically translations provided to enable understanding for viewers who speak different languages.|
 | caption            | Denotes a transcript that is meant for the deaf and hard of hearing. In addition to spoken audio, the transcript may often contain descriptions of non-verbal audio, such as noises, music, etc. Typically, a caption is the original language of the media item. |
 | unknownFutureValue | Marker value for future compatibility.                                                                                                                                                |
 
