@@ -72,7 +72,7 @@ GET https://graph.microsoft.com/beta/drives/1b502de9-89b4-4bba-a44e-a2aab0b4f293
 
 
 ### Response
-The following is an example of the response
+The following is an example of the response.
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
