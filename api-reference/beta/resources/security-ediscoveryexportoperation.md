@@ -41,7 +41,7 @@ Inherits from [caseOperation](../resources/security-caseoperation.md).
 |azureBlobContainer (deprecated)|String| The name of the Azure storage location where the export is stored. This only applies to exports stored in your own Azure storage location. The **azureBlobContainer** property is deprecated and will stop returning data on April 30th, 2023. |
 |azureBlobToken (deprecated)|String| The SAS token for the Azure storage location.  This only applies to exports stored in your own Azure storage location. The **azureBlobToken** property is deprecated and will stop returning data on April 30th, 2023. |
 |outputFolderId (deprecated) | String | The output folder ID. The **outputFolderId** property is deprecated and stopped returning data on April 30th, 2023.|
-|expandOption| String | This option will allow to expand the associated review set of the query. For more details, see [reviewSet: export](../api/security-ediscoveryreviewsetquery-export.md). Possible values are: `none`, `all`. Default value, if not provided is none.|
+|expandOption| String | Allows to expand the associated review set of the query. For more information, see [reviewSet: export](../api/security-ediscoveryreviewsetquery-export.md). Possible values are: `none`, `all`. The default value, if not provided is none.|
 
 ### exportOptions values
 
@@ -57,8 +57,8 @@ Inherits from [caseOperation](../resources/security-caseoperation.md).
 
 |Member|Description|
 |:----|-----------|
-|all|While exporting, expand the review set to include all the associated items in terms of the familyId and conversationId.|
-|none|While exporting,it will return only queried review set items.|
+|all|While exporting, expand the review set to include all the associated items to familyId and conversationId.|
+|none|While exporting, it returns only queried review set items.|
 
 
 ### exportFileStructure values
