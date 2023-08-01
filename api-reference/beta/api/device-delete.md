@@ -1,7 +1,7 @@
 ---
 title: "Delete device"
 description: "Delete a registered device."
-author: "spunukol"
+author: "myra-ramdenbourg"
 ms.localizationpriority: medium
 ms.prod: "directory-management"
 doc_type: apiPageType
@@ -23,7 +23,7 @@ One of the following permissions is required to call this API. To learn more, in
 |:--------------------|:---------------------------------------------------------|
 |Delegated (work or school account) | Directory.AccessAsUser.All |
 |Delegated (personal Microsoft account) | Not supported.    |
-|Application | Not supported. |
+|Application | Device.ReadWrite.All |
 
 The calling user must also be in one of the following [Azure AD roles](/azure/active-directory/roles/permissions-reference): *Global Administrator*, *Intune Administrator*, *Windows 365 Administrator*, or *Cloud Device Administrator*.
 
@@ -61,6 +61,15 @@ If successful, this method returns `204 No Content` response code. It does not r
 DELETE https://graph.microsoft.com/beta/devices/{id}
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-device-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 

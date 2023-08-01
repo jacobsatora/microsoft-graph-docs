@@ -18,11 +18,13 @@ List all the functions currently supported in the [attributeMappingSource](../re
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
-|Permission type                        | Permissions (from least to most privileged)              |
-|:--------------------------------------|:---------------------------------------------------------|
-|Delegated (work or school account)     |Directory.Read.All  |
-|Delegated (personal Microsoft account) |Not supported.|
-|Application                            |Application.ReadWrite.OwnedBy, Directory.ReadWrite.All | 
+|Permission type|Permissions (from least to most privileged)|
+|:---|:---|
+|Delegated (work or school account)|Synchronization.ReadWrite.All|
+|Delegated (personal Microsoft account)|Not supported.|
+|Application|Application.ReadWrite.OwnedBy, Synchronization.ReadWrite.All|
+
+[!INCLUDE [rbac-synchronization-apis](../includes/rbac-for-apis/rbac-synchronization-apis.md)]
 
 ## HTTP Request
 <!-- { "blockType": "ignored" } -->
@@ -59,10 +61,19 @@ The following is an example of a request.
 GET https://graph.microsoft.com/beta/servicePrincipals/{id}/synchronization/jobs/{jobId}/schema/functions
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/synchronizationschema-functions-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 The following is an example of a response.
 
->**Note:** The response object shown here might be shortened for readability. All the properties will be returned in an actual call.
+>**Note:** The response object shown here might be shortened for readability.
 
 <!--
 {
@@ -402,6 +413,12 @@ non-string type names like "Integer" or "Boolean"
   "section": "documentation",
   "tocPath": "",
   "suppressions": [
+    "Error: microsoft.graph.microsoft.graph/servicePrincipals:
+      /servicePrincipals/{var}/synchronization/jobs/{var}/schema/functions
+      Uri path requires navigating into unknown object hierarchy: missing property 'jobs' on 'synchronization'. Possible issues:
+  	 1) Doc bug where 'jobs' isn't defined on the resource.
+  	 2) Doc bug where 'jobs' is an example key and should instead be replaced with a placeholder like {item-id} or declared in the sampleKeys annotation.
+  	 3) Doc bug where 'synchronization' is supposed to be an entity type, but is being treated as a complex because it (and its ancestors) are missing the keyProperty annotation."
   ]
 }
 -->

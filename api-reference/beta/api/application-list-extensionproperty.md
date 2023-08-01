@@ -33,6 +33,7 @@ One of the following permissions is required to call this API. To learn more, in
 
 ```http
 GET /applications/{application ObjectId}/extensionProperties
+GET /applications(appId='{appId}')/extensionProperties
 ```
 
 ## Optional query parameters
@@ -68,6 +69,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/applications/fd918e4b-c821-4efb-b50a-5eddd23afc6f/extensionProperties
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-extensionproperties-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.
@@ -93,6 +103,7 @@ Content-type: application/json
             "name": "extension_25883231668a43a780b25685c3f874bc_jobGroup",
             "dataType": "String",
             "isSyncedFromOnPremises": false,
+            "isMultiValued": true,
             "targetObjects": [
                 "User"
             ]
@@ -104,6 +115,7 @@ Content-type: application/json
             "name": "extension_25883231668a43a780b25685c3f874bc_cpiminternal_useAccountEnabledForPhone",
             "dataType": "String",
             "isSyncedFromOnPremises": false,
+            "isMultiValued": true,
             "targetObjects": [
                 "User"
             ]

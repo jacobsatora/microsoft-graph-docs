@@ -59,9 +59,18 @@ The following is an example of the request.
 }-->
 
 ```http
-DELETE https://graph.microsoft.com/beta/policies/tokenLifetimePolicies/{id}
+DELETE https://graph.microsoft.com/beta/policies/tokenLifetimePolicies/4d2f137b-e8a9-46da-a5c3-cc85b2b840a4
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-tokenlifetimepolicy-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.

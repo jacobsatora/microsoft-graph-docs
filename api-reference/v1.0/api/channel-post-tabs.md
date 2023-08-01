@@ -53,10 +53,12 @@ If successful, this method returns a `201 Created` response code.
 #### Request
 
 The following is an example of the request.
+# [HTTP](#tab/http)
 <!-- {
-  "blockType": "ignored",
-  "name": "get_team"
+  "blockType": "request",
+  "name": "channelposttabs"
 }-->
+
 ```http
 POST https://graph.microsoft.com/v1.0/teams/{id}/channels/{id}/tabs
 
@@ -72,11 +74,17 @@ POST https://graph.microsoft.com/v1.0/teams/{id}/channels/{id}/tabs
 }
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/channelposttabs-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 #### Response
 
 The following is an example of the response. Note: The response object shown here might be shortened for readability.
 <!-- {
-  "blockType": "ignored",
+  "blockType": "response",
   "truncated": true,
   "@odata.type": "microsoft.graph.team"
 } -->
@@ -103,6 +111,7 @@ Content-type: application/json
 
 - [Configuring the built-in tab types](/graph/teams-configuring-builtin-tabs)
 - [Add app to team](team-post-installedapps.md)
+- [Microsoft Graph service-specific throttling limits](/graph/throttling-limits#microsoft-teams-service-limits)
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

@@ -58,6 +58,15 @@ The following example shows a request to retrieve all the access review instance
 GET https://graph.microsoft.com/beta/identityGovernance/accessReviews/definitions/8564a649-4f67-4e09-88e7-55def6530e88/instances?$top=100&$skip=0
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-accessreviewinstance-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {

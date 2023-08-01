@@ -1,7 +1,7 @@
 ---
 title: "Get adminConsentRequestPolicy"
 description: "Read the properties and relationships of an adminConsentRequestPolicy object."
-author: "psignoret"
+author: "eringreenlee"
 ms.localizationpriority: medium
 ms.prod: "governance"
 doc_type: apiPageType
@@ -72,7 +72,11 @@ If successful, this method returns a `200 OK` response code and an [adminConsent
 GET https://graph.microsoft.com/v1.0/policies/adminConsentRequestPolicy
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-adminconsentrequestpolicy-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

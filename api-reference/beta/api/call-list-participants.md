@@ -1,7 +1,7 @@
 ---
 title: "List participants"
 description: "Retrieve a list of participant objects in the call."
-author: "mkhribech"
+author: "rahulva-msft"
 ms.localizationpriority: medium
 ms.prod: "cloud-communications"
 doc_type: apiPageType
@@ -33,7 +33,9 @@ Retrieve a list of participant objects in the call.
 GET /app/calls/{id}/participants
 GET /communications/calls/{id}/participants
 ```
-> **Note:** The `/app` path is deprecated. Going forward, use the `/communications` path.
+> **Notes:**
+> - The `/app` path is deprecated. Going forward, use the `/communications` path.
+> - This request does not support peer-to-peer calls.
 
 ## Optional query parameters
 
@@ -66,6 +68,15 @@ If successful, this method returns a `200 OK` response code and collection of [p
 GET https://graph.microsoft.com/beta/communications/calls/7531d31f-d10d-44de-802f-c569dbca451c/participants
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-participants-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- markdownlint-disable MD024 -->
 
 

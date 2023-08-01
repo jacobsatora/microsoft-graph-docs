@@ -1,7 +1,7 @@
 ---
 title: "Get appConsentRequest"
 description: "Read the properties and relationships of an appConsentRequest object."
-author: "psignoret"
+author: "eringreenlee"
 ms.localizationpriority: medium
 ms.prod: "governance"
 doc_type: apiPageType
@@ -61,6 +61,15 @@ If successful, this method returns a `200 OK` response code and an [appConsentRe
 GET https://graph.microsoft.com/beta/identityGovernance/appConsent/appConsentRequests/7322e5f3-0f15-4eb8-9e82-2029e8622f5d
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-appconsentrequest-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {

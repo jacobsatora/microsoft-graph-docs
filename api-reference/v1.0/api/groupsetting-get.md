@@ -1,7 +1,7 @@
 ---
 title: "Get groupSetting"
 description: "Retrieve the properties of a specific of group setting object."
-author: "psaffaie"
+author: "Jordanndahl"
 ms.localizationpriority: medium
 ms.prod: "groups"
 doc_type: apiPageType
@@ -86,7 +86,11 @@ If successful, this method returns a `200 OK` response code and [groupSetting](.
 GET https://graph.microsoft.com/v1.0/groups/05aa6a98-956a-45c0-b13b-88076a23f2cd/settings/a06fa228-3042-4662-bd09-33e298da1afe
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-groupsettings-specific-group-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -133,7 +137,11 @@ Content-type: application/json
 GET https://graph.microsoft.com/v1.0/groupSettings/84af2ca5-c274-41bf-86e4-6e374ec4def6
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-groupsettings-tenantwide-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

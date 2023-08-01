@@ -75,6 +75,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/me/informationProtection/policy/labels
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-labels-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.
@@ -156,7 +165,15 @@ User-agent: ContosoLOBApp/1.0
   "description": "List labels",
   "keywords": "",
   "section": "documentation",
-  "tocPath": ""
+  "tocPath": "",
+  "suppressions": [
+    "Error: microsoft.graph.microsoft.graph/me:
+      /me/informationProtection/policy/labels
+      Uri path requires navigating into unknown object hierarchy: missing property 'informationProtection' on 'user'. Possible issues:
+  	 1) Doc bug where 'informationProtection' isn't defined on the resource.
+  	 2) Doc bug where 'informationProtection' is an example key and should instead be replaced with a placeholder like {item-id} or declared in the sampleKeys annotation.
+  	 3) Doc bug where 'user' is supposed to be an entity type, but is being treated as a complex because it (and its ancestors) are missing the keyProperty annotation."
+  ]
 }-->
 
 

@@ -63,7 +63,11 @@ If successful, this method returns a `200 OK` response code and a [riskDetection
 GET https://graph.microsoft.com/v1.0/identityProtection/riskDetections/c2b6c2b9-dddc-acd0-2b39-d519d803dbc3
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-riskdetection-1-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

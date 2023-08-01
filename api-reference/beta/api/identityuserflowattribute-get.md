@@ -50,7 +50,7 @@ Do not supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a JSON representation of the [identityUserFlowAttribute](../resources/identityuserflowattribute.md) in the response body.
+If successful, this method returns a `200 OK` response code and a [identityUserFlowAttribute](../resources/identityuserflowattribute.md) object in the response body.
 
 ## Examples
 
@@ -67,6 +67,15 @@ If successful, this method returns a `200 OK` response code and a JSON represent
 GET https://graph.microsoft.com/beta/identity/userFlowAttributes/{id}
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-userflowattributes-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 <!-- {

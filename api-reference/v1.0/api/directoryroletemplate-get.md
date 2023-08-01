@@ -53,7 +53,11 @@ Here is an example of the request.
 GET https://graph.microsoft.com/v1.0/directoryRoleTemplates/62e90394-69f5-4237-9190-012177145e10
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-directoryroletemplate-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

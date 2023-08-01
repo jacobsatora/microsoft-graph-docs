@@ -47,7 +47,13 @@ If successful, this method returns a `200 OK` response code and [columnDefinitio
 ## Example
 
 ### Request
-<!-- { "blockType": "request" } -->
+
+# [HTTP](#tab/http)
+<!-- { 
+  "blockType": "request" ,
+  "name" : "contenttype_post_conlumns"
+} -->
+
 ```http
 POST https://graph.microsoft.com/v1.0/sites/{site-id}/contentTypes/{contentType-id}/columns
 Content-Type: application/json
@@ -56,6 +62,12 @@ Content-Type: application/json
 	"sourceColumn@odata.bind": "https://graph.microsoft.com/v1.0/sites/root/columns/99ddcf45-e2f7-4f17-82b0-6fba34445103"
 }
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/contenttype-post-conlumns-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 

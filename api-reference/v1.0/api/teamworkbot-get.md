@@ -63,7 +63,11 @@ If successful, this method returns a `200 OK` response code and a [teamworkBot](
 GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps/e4c5c249-bb4b-419e-b7c5-b1d98559368b/appDefinitions/ZTRjNWMyNDktYmI0Yi00MTllLWI3YzUtYjFkOTg1NTkzNjhiIyMyLjAuMSMjUHVibGlzaGVk/bot
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-teamworkbot-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -90,5 +94,6 @@ Content-Type: application/json
 
 - To get bots installed in a team, see example 2 in [List apps in team](team-list-installedapps.md). <!-- - To get bots installed in a chat, see example 2 in [List apps in chat](chat-list-installedapps.md). -->
 - To get bots installed in the personal scope of a user, see example 2 in [List apps installed for user](userteamwork-list-installedapps.md).
+- [Microsoft Graph service-specific throttling limits](/graph/throttling-limits#microsoft-teams-service-limits)
 
 

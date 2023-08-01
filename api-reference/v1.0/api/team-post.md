@@ -75,15 +75,22 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/create-team-post-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
+<<<<<<< HEAD
 ---
 
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 <!-- {
   "blockType": "response",
@@ -129,15 +136,22 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/create-team-post-minimal-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
+<<<<<<< HEAD
 ---
 
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 <!-- {
   "blockType": "response",
@@ -247,7 +261,11 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/create-team-post-full-payload-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -293,15 +311,22 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/create-team-from-group-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
+<<<<<<< HEAD
 ---
 
 ---
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 <!-- {
   "blockType": "response",
@@ -363,15 +388,22 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/convert-team-from-group-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
+<<<<<<< HEAD
 ---
 
 ---
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 <!-- {
   "blockType": "response",
@@ -411,6 +443,7 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/convert-team-from-non-standard-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -419,6 +452,12 @@ Content-Type: application/json
 
 ---
 
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/convert-team-from-non-standard-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ---
 
 #### Response
@@ -483,15 +522,22 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/convert-team-from-non-standard2-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
+<<<<<<< HEAD
 ---
 
 ---
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 <!-- {
   "blockType": "response",
@@ -582,7 +628,11 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/create-team-post-upn-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -611,3 +661,4 @@ Content-Length: 0
 * [Getting started with Retail Teams templates](/MicrosoftTeams/get-started-with-retail-teams-templates)
 * [Getting started with Healthcare Teams templates](/MicrosoftTeams/healthcare/healthcare-templates)
 * [Creating a group with a team](/graph/teams-create-group-and-team)
+* [Microsoft Graph service-specific throttling limits](/graph/throttling-limits#microsoft-teams-service-limits)

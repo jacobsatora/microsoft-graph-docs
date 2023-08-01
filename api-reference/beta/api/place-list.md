@@ -123,6 +123,15 @@ The following example shows how to get all the [room](../resources/room.md) obje
 GET https://graph.microsoft.com/beta/places/microsoft.graph.room
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-all-rooms-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -315,6 +324,15 @@ The following example shows how to get all the [roomList](../resources/roomlist.
 GET https://graph.microsoft.com/beta/places/microsoft.graph.roomlist
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-all-roomlists-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -452,7 +470,7 @@ The following example shows how to get a list of [workspace](../resources/worksp
   "sampleKeys": ["bldg2@contoso.com"]
 }-->
 
-```http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/places/bldg2@contoso.com/microsoft.graph.roomlist/workspaces
 ```
 

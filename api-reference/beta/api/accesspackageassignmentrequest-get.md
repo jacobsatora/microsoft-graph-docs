@@ -66,6 +66,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/accessPackageAssignmentRequests/{id}
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-accesspackageassignmentrequest-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.
@@ -98,12 +107,13 @@ Content-type: application/json
             "type": "notSpecified"
         }
     },
-    "customExtensionHandlerInstances": [
+    "customExtensionCalloutInstances": [
         {
-            "status": "requestReceived",
+            "status": "callbackReceived",
             "externalCorrelationId": "08585600902100964604743022906CU13",
             "customExtensionId": "e59ef33d-7bc4-4b15-8d3c-01153de8a498",
-            "stage": "assignmentRequestCreated"
+            "id": "3C49CE50-E02C-4254-81E6-834328DF72DC",
+            "detail": "Request has been allowed"
         }
     ]
 }

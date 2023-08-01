@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ms.prod: "applications"
 zone_pivot_groups: grant-api-permissions
 ms.custom: template-how-to
-ms.date: 12/09/2022
+ms.date: 07/25/2023
 ---
 
 # Grant or revoke API permissions programmatically
@@ -59,8 +59,13 @@ The following request retrieves the app roles defined by the Microsoft Graph ser
 GET https://graph.microsoft.com/v1.0/servicePrincipals?$filter=displayName eq 'Microsoft Graph'&$select=id,displayName,appId,appRoles
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/get-approles-for-microsoftgraph-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/get-approles-for-microsoftgraph-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -130,8 +135,13 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/grant-approles-using-approleassignedto-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/grant-approles-using-approleassignedto-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -175,8 +185,13 @@ To confirm all principals with role assignments to the resource service principa
 GET https://graph.microsoft.com/v1.0/servicePrincipals/7ea9e944-71ce-443d-811c-71e8047b557a/appRoleAssignedTo
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/get-approles-for-sp-approleassignedto-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/get-approles-for-sp-approleassignedto-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -226,8 +241,13 @@ Content-type: application/json
 DELETE https://graph.microsoft.com/v1.0/servicePrincipals/7ea9e944-71ce-443d-811c-71e8047b557a/appRoleAssignedTo/47nZsM8O_UuNq5Jz3QValCxBBiqJea9Drc9CMK4Ru_M
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/revoke-approles-using-approleassignedto-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/revoke-approles-using-approleassignedto-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -247,6 +267,7 @@ You've learned how to manage app role grants for a service principal. This metho
 
 ## See also
 
++ [Tutorial: Grant app roles in Azure AD using Microsoft Graph PowerShell](/powershell/microsoftgraph/tutorial-grant-app-only-api-permissions)
 + [appRoleAssignment resource type](/graph/api/resources/approleassignment)
 
 ::: zone-end
@@ -297,8 +318,13 @@ The following request retrieves the delegated permissions defined by the Microso
 GET https://graph.microsoft.com/v1.0/servicePrincipals?$filter=displayName eq 'Microsoft Graph'&$select=id,displayName,appId,oauth2PermissionScopes
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/get-scopes-for-microsoftgraph-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/get-scopes-for-microsoftgraph-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -359,6 +385,7 @@ In this step, you'll grant your app, on behalf of a user, a delegated permission
 + From Step 1, the object ID of Microsoft Graph in the tenant is `7ea9e944-71ce-443d-811c-71e8047b557a`
 + The delegated permissions `User.Read.All` and `Group.Read.All` are identified by the globally unique IDs `a154be20-db9c-4678-8ab7-66f6cc099a59` and `5f8c59db-677d-491f-a6b8-5f174b11ec1d` respectively.
 + The principal is a user identified by ID `3fbd929d-8c56-4462-851e-0eb9a7b3a2a5`.
++ The client service principal is identified by ID `b0d9b9e3-0ecf-4bfd-8dab-9273dd055a94`. This is the object **id** of the service principal and *not* its **appId**.
 
 
 # [HTTP](#tab/http)
@@ -379,8 +406,13 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/grant-delegated-perms-sp-oauth2permissiongrants-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/grant-delegated-perms-sp-oauth2permissiongrants-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -442,8 +474,13 @@ To confirm the delegated permissions assigned to the service principal on behalf
 GET https://graph.microsoft.com/v1.0/oauth2PermissionGrants?$filter=clientId eq 'b0d9b9e3-0ecf-4bfd-8dab-9273dd055a94' and principalId eq '3fbd929d-8c56-4462-851e-0eb9a7b3a2a5' and consentType eq 'Principal'
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/get-delegated-perms-sp-oauth2permissiongrants-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/get-delegated-perms-sp-oauth2permissiongrants-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -499,8 +536,13 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/revoke-scopes-oauth2permissiongrants-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/revoke-scopes-oauth2permissiongrants-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -528,8 +570,13 @@ The following request revokes all permission grants for a service principal on b
 DELETE https://graph.microsoft.com/v1.0/oauth2PermissionGrants/47nZsM8O_UuNq5Jz3QValETpqX7OcT1EgRxx6AR7VXqdkr0_VoxiRIUeDrmns6Kl
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/revoke-all-scopes-oauth2permissiongrants-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/revoke-all-scopes-oauth2permissiongrants-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -549,7 +596,8 @@ You've granted delegated permissions (or scopes) to a service principal. This me
 
 ## See also
 
-+ [oAuth2PermissionGrant resource type](/graph/api/resources/oauth2permissiongrant)
+- [Tutorial: Grant delegated permissions in Azure AD using Microsoft Graph PowerShell](/powershell/microsoftgraph/tutorial-grant-delegated-api-permissions)
+- [oAuth2PermissionGrant resource type](/graph/api/resources/oauth2permissiongrant)
 
 ::: zone-end
 

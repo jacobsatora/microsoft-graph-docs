@@ -23,9 +23,9 @@ One of the following permissions is required to call this API. To learn more, in
 
 |Permission type|Permissions (from least to most privileged)|
 |:---|:---|
-|Delegated (work or school account)|CloudPC.ReadWrite.All|
+|Delegated (work or school account)|CloudPC.Read.All, CloudPC.ReadWrite.All|
 |Delegated (personal Microsoft account)|Not supported.|
-|Application|CloudPC.ReadWrite.All|
+|Application|CloudPC.Read.All, CloudPC.ReadWrite.All|
 
 ## HTTP request
 
@@ -59,13 +59,23 @@ The following is an example of a request.
 
 <!-- {
   "blockType": "request",
-  "name": "get_cloudpcexportjob"
+  "name": "get_cloudpcexportjob",
+  "sampleKeys": ["TotalAggregatedRemoteConnectionReports__d39979c9-a0a2-4916-a158-1b984742ffff"]
 }
 -->
 ``` http
 GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/reports/exportJobs/TotalAggregatedRemoteConnectionReports__d39979c9-a0a2-4916-a158-1b984742ffff
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-cloudpcexportjob-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 The following is an example of the response
 >**Note:** The response object shown here might be shortened for readability.

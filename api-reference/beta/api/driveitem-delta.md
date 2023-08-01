@@ -97,6 +97,15 @@ Here is an example of the initial request.
 GET https://graph.microsoft.com/beta/me/drive/root/delta
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-item-delta-first-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 Here is an example of the response.
@@ -147,6 +156,15 @@ Here is an example request after the initial request.
 GET https://graph.microsoft.com/beta/me/drive/root/delta(token='1230919asd190410jlka')
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-item-delta-last-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 Here is an example of the response.
@@ -201,13 +219,25 @@ Using `delta` is the only way to guarantee that you've read all of the data you 
 
 #### Request
 
+<<<<<<< HEAD
 
+=======
+# [HTTP](#tab/http)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- { "blockType": "request", "name": "get-delta-with_latest_token", "scope": "files.read", "target": "action" } -->
 
 ```msgraph-interactive
 GET /me/drive/root/delta?token=latest
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-delta-with-latest-token-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 #### Response
 
@@ -235,14 +265,26 @@ Using a timestamp in place of a token is only supported on OneDrive for Business
 #### Request
 
 
+<<<<<<< HEAD
 
+=======
+# [HTTP](#tab/http)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- { "blockType": "request", "name": "get-delta-timestamp", "scopes": "files.read", "tags": "service.graph", "target": "action" } -->
 
 ```msgraph-interactive
 GET /me/drive/root/delta?token=2021-09-29T20%3A00%3A00Z
 ```
 
+<<<<<<< HEAD
 
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-delta-timestamp-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 #### Response
 

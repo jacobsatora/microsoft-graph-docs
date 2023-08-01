@@ -53,6 +53,13 @@ If successful, this method returns a `204, No Content` response code. It does no
 DELETE https://graph.microsoft.com/beta/identityGovernance/accessReviews/definitions/29f2d16e-9ca6-4052-bbfe-802c48981fd8
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-accessreviewscheduledefinition-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ---
 
 ### Response

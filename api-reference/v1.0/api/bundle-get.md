@@ -62,14 +62,19 @@ For information about error responses, see [Microsoft Graph error responses and 
 The following is an example of a request.
 
 # [HTTP](#tab/http)
-<!-- { "blockType": "request", "name": "get-bundle-metadata" } -->
+<!-- { "blockType": "request", "name": "get-bundle-metadata_e1" } -->
 
 ```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/drive/bundles/{bundle-id}
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/get-bundle-metadata-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-bundle-metadata-e1-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -113,14 +118,19 @@ Use the `expand` [query string parameter](/graph/query-parameters) to include th
 The following is an example of a request.
 
 # [HTTP](#tab/http)
-<!-- { "blockType": "request", "name": "get-bundle-and-children" } -->
+<!-- { "blockType": "request", "name": "get-bundle-and-children_e2" } -->
 
 ```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/drive/items/{bundle-id}?expand=children
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/get-bundle-and-children-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-bundle-and-children-e2-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---

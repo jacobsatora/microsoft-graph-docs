@@ -27,7 +27,7 @@ The following Outlook resources support subscriptions with or without resource d
 
 ## Create a subscription
 
-To [create a subscription](webhooks.md#creating-a-subscription), specify the Outlook resource and the type of changes (creation, update, or deletion) for which you want to receive notifications. See an [example](#example-1-create-a-subscription-to-get-change-notifications-without-resource-data-when-the-user-receives-a-new-message).
+To create a subscription, specify the Outlook resource and the type of changes (creation, update, or deletion) for which you want to receive notifications. See an [example](#example-1-create-a-subscription-to-get-change-notifications-without-resource-data-when-the-user-receives-a-new-message).
 
 ### Request permissions
 
@@ -46,7 +46,7 @@ Depending on the resource, use the least privileged permission specified in the 
 > [!NOTE]
 > Notifications with resource data for Outlook resources are currently available only in the Microsoft Graph beta endpoint. 
 
-To have resource data included in a change notification, you **must** specify the following properties, in addition to those you normally include when [creating a subscription](webhooks.md#creating-a-subscription):
+To have resource data included in a change notification, you **must** specify the following properties, in addition to those you normally include when creating a subscription:
 
 - **includeResourceData**: Set this property to `true` to explicitly request resource data.
 - **resource**: This property specifies the resource URL. Make sure to use the `$select` query parameter to explicitly specify the Outlook resource properties to include in the notification payload.
@@ -198,8 +198,13 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/create-subscription-withoutresourcedata-for-message-resource-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/create-subscription-withoutresourcedata-for-message-resource-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -267,6 +272,15 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/beta/create-subscription-withresourcedata-for-message-resource-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -330,6 +344,15 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/beta/create-subscription-withresourcedata-for-message-resource-basedonfilter-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.

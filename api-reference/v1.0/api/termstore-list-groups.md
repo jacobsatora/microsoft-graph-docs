@@ -29,7 +29,7 @@ One of the following permissions is required to call this API. To learn more, in
 -->
 
 ``` http
-GET sites/{site-id}/termStore/groups
+GET /sites/{site-id}/termStore/groups
 ```
 
 ## Optional query parameters
@@ -65,7 +65,11 @@ The following is an example of a request.
 GET https://graph.microsoft.com/v1.0/sites/microsoft.sharepoint.com,b9b0bc03-cbc4-40d2-aba9-2c9dd9821ddf,6a742cee-9216-4db5-8046-13a595684e74/termStore/groups
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-group-2-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

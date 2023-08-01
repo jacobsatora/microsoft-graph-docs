@@ -114,7 +114,11 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/create-accessreviewscheduledefinition-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -195,7 +199,7 @@ Content-type: application/json
 The following example creates an access review with the following settings:
 + The review reviews all teams with inactive guest users. The period of inactivity is 30 days from the start date of the access review.
 + The group owners are the reviewers and fallback reviewers are assigned.
-+ It recurs on the third day of every quarter and continues indefinitely.
++ It recurs on the fifth day of every quarter and continues indefinitely.
 + **autoApplyDecisionsEnabled** is set to `true` with the **defaultDecision** set to `Deny`.
 
 #### Request
@@ -261,7 +265,11 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/create-accessreviewscheduledefinition-inactiveguests-m365-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -312,13 +320,7 @@ Content-type: application/json
       "queryRoot": null
     }
   ],
-  "backupReviewers": [
-    {
-      "query": "/users/fc9a2c2b-1ddc-486d-a211-5fe8ca77fa1f",
-      "queryType": "MicrosoftGraph",
-      "queryRoot": null
-    }
-  ],
+  "backupReviewers": [],
   "fallbackReviewers": [
     {
       "query": "/users/fc9a2c2b-1ddc-486d-a211-5fe8ca77fa1f",
@@ -340,24 +342,20 @@ Content-type: application/json
         "type": "absoluteMonthly",
         "interval": 3,
         "month": 0,
-        "dayOfMonth": 0,
+        "dayOfMonth": 5,
         "daysOfWeek": [],
         "firstDayOfWeek": "sunday",
         "index": "first"
       },
       "range": {
-        "type": "numbered",
+        "type": "noEnd",
         "numberOfOccurrences": 0,
         "recurrenceTimeZone": null,
         "startDate": "2021-05-05",
-        "endDate": "9999-12-31"
+        "endDate": "null"
       }
     },
-    "applyActions": [
-      {
-        "@odata.type": "#microsoft.graph.removeAccessApplyAction"
-      }
-    ]
+    "applyActions": []
   },
   "additionalNotificationRecipients": []
 }
@@ -446,7 +444,11 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/create-accessreviewscheduledefinition-allusers-m365-aadrole-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -471,63 +473,26 @@ Content-type: application/json
     "principalScopes": [
       {
         "@odata.type": "#microsoft.graph.accessReviewQueryScope",
-        "query": "/users",
-        "queryType": "MicrosoftGraph",
-        "queryRoot": null
+        "query": "/users"
       }
     ],
     "resourceScopes": [
       {
         "@odata.type": "#microsoft.graph.accessReviewQueryScope",
-        "query": "/servicePrincipals/bae11f90-7d5d-46ba-9f55-8112b59d92ae",
-        "queryType": "MicrosoftGraph",
-        "queryRoot": null
+        "query": "/servicePrincipals/bae11f90-7d5d-46ba-9f55-8112b59d92ae"
       }
     ]
   },
   "reviewers": [
     {
-      "query": "./manager",
-      "queryType": "MicrosoftGraph",
-      "queryRoot": "decisions"
-    }
-  ],
-  "backupReviewers": [
-    {
-      "query": "/groups/072ac5f4-3f13-4088-ab30-0a276f3e6322/transitiveMembers",
-      "queryType": "MicrosoftGraph",
-      "queryRoot": null
+      "query": "./manager"
     }
   ],
   "fallbackReviewers": [
     {
-      "query": "/groups/072ac5f4-3f13-4088-ab30-0a276f3e6322/transitiveMembers",
-      "queryType": "MicrosoftGraph",
-      "queryRoot": null
+      "query": "/groups/072ac5f4-3f13-4088-ab30-0a276f3e6322/transitiveMembers"
     }
-  ],
-  "settings": {
-    "instanceDurationInDays": 180,
-    "recurrence": {
-      "pattern": {
-        "type": "absoluteMonthly",
-        "interval": 6,
-        "month": 0,
-        "dayOfMonth": 0,
-        "daysOfWeek": [],
-        "firstDayOfWeek": "sunday",
-        "index": "first"
-      },
-      "range": {
-        "type": "numbered",
-        "numberOfOccurrences": 0,
-        "recurrenceTimeZone": null,
-        "startDate": "2021-05-05",
-        "endDate": "2022-05-05"
-      }
-    }
-  },
-  "additionalNotificationRecipients": []
+  ]
 }
 ```
 
@@ -600,11 +565,6 @@ Content-type: application/json
     }
   ],
   "settings": {
-    "mailNotificationsEnabled": true,
-    "reminderNotificationsEnabled": true,
-    "justificationRequiredOnApproval": true,
-    "defaultDecisionEnabled": false,
-    "defaultDecision": "None",
     "instanceDurationInDays": 4,
     "recurrence": {
       "pattern": {
@@ -622,7 +582,11 @@ Content-type: application/json
 
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/create-accessreviewscheduledefinition-group-multistage-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

@@ -36,6 +36,7 @@ DELETE /tenantRelationships/delegatedAdminRelationships/{delegatedAdminRelations
 ## Request headers
 |Name|Description|
 |:---|:---|
+|Authorization|Bearer {token}. Required.|
 |If-Match|If-match: {etag}. Last known ETag value for the **delegatedAdminRelationship** to be deleted. Retrieve the ETag value from a LIST or GET operation. Required.|
 
 ## Request body
@@ -60,6 +61,15 @@ DELETE https://graph.microsoft.com/beta/tenantRelationships/delegatedAdminRelati
 If-Match: W/"JyI0NzAwNjg0NS0wMDAwLTE5MDAtMDAwMC02MGY0Yjg4MzAwMDAiJw=="
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-delegatedadminrelationship-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 <!-- {
   "blockType": "response",

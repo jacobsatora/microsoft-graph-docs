@@ -1,7 +1,7 @@
 ---
 title: "Get group"
 description: "Get the properties and relationships of a group object."
-author: "psaffaie"
+author: "Jordanndahl"
 ms.localizationpriority: high
 ms.prod: "groups"
 doc_type: apiPageType
@@ -83,6 +83,15 @@ The following is an example of a GET request.
 GET https://graph.microsoft.com/beta/groups/45b7d2e7-b882-4a80-ba97-10b7a63b8fa4
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-group-1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response. It includes only the default properties.
@@ -140,6 +149,7 @@ Content-type: application/json
     "resourceProvisioningOptions": [],
     "securityEnabled": false,
     "securityIdentifier": "S-1-12-1-1306860066-1319449225-59104187-458188010",
+    "serviceProvisioningErrors": [],
     "theme": null,
     "visibility": "Public",
     "writebackConfiguration": {
@@ -168,6 +178,15 @@ The following is an example of a GET request.
 GET https://graph.microsoft.com/beta/groups/b320ee12-b1cd-4cca-b648-a437be61c5cd?$select=allowExternalSenders,autoSubscribeNewMembers,isSubscribedByMail,unseenCount
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-group-non-default-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response which includes the requested non-default properties.
@@ -234,6 +253,40 @@ Content-type: application/json
     "lastMembershipUpdated"  : null,
     "errorMessage" : null
   }
+}
+```
+
+### Example 4: Check if management of a group is restricted
+
+#### Request
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "get_group_restricted"
+}-->
+```msgraph-interactive
+GET https://graph.microsoft.com/beta/groups/aed0b780-965f-4149-85c5-a8c73e58brt6?$select=isManagementRestricted
+```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-group-restricted-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.administrativeUnit"
+} -->
+```http
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+    "isManagementRestricted": true
 }
 ```
 

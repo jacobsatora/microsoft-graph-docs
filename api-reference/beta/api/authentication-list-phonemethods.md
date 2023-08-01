@@ -35,19 +35,22 @@ One of the following permissions is required to call this API. To learn more, in
 | Delegated (personal Microsoft account) | Not supported. |
 | Application                            | UserAuthenticationMethod.Read.All, UserAuthenticationMethod.ReadWrite.All |
 
-For delegated scenarios where an admin is acting on another user, the admin needs one of the following [Azure AD roles](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles):
+[!INCLUDE [rbac-authentication-methods-apis-read-others](../includes/rbac-for-apis/rbac-authentication-methods-apis-read-others.md)]
 
-* Global administrator
-* Global reader
-* Privileged authentication administrator
-* Authentication administrator (only sees masked phone numbers)
+> [!NOTE]
+> The authentication administrator only sees masked phone numbers.
 
 ## HTTP request
 
+List your own phone authentication methods.
 <!-- { "blockType": "ignored" } -->
-
-```http
+``` http
 GET /me/authentication/phoneMethods
+```
+
+List your own or another user's phone authentication methods.
+<!-- { "blockType": "ignored" } -->
+``` http
 GET /users/{id | userPrincipalName}/authentication/phoneMethods
 ```
 
@@ -84,6 +87,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/me/authentication/phoneMethods
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-phonemethods-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.

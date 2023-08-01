@@ -71,7 +71,7 @@ If successful, this method returns a `201 Created` response code with the ID of 
 
 <!-- {
   "blockType": "request",
-  "name": "create_bookmark_from_bookmarks"
+  "name": "create_bookmark_from_bookmarks_e1"
 }-->
 ```http
 POST https://graph.microsoft.com/beta/search/bookmarks
@@ -100,6 +100,15 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-bookmark-from-bookmarks-e1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 Here is an example of the response.
 <!-- {

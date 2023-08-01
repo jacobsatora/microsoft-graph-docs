@@ -2,7 +2,7 @@
 title: "List device transitive memberships"
 description: "Get groups and administrative units that the device is a member of."
 ms.localizationpriority: medium
-author: "spunukol"
+author: "myra-ramdenbourg"
 ms.prod: "directory-management"
 doc_type: apiPageType
 ---
@@ -78,6 +78,15 @@ Here is an example of the request.
 GET https://graph.microsoft.com/beta/devices/{id}/transitiveMemberOf
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-devices-transitivememberof-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -197,6 +206,15 @@ GET https://graph.microsoft.com/beta/devices/{id}/transitiveMemberOf/microsoft.g
 ConsistencyLevel: eventual
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-devices-transitivememberof-startswith-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.

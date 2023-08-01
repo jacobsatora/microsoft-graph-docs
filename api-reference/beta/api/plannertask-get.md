@@ -57,6 +57,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/planner/tasks/01gzSlKkIUSUl6DF_EilrmQAKDhh
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-plannertask-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response. 
@@ -95,7 +104,8 @@ Content-type: application/json
     }
   },
   "id":"01gzSlKkIUSUl6DF_EilrmQAKDhh",
-  "priority": 5
+  "priority": 5,
+  "recurrence": null
 }
 ```
 

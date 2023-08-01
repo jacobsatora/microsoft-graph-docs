@@ -25,7 +25,7 @@ One of the following permissions is required to call this API. To learn more, in
 | Delegated (personal Microsoft account) | Not supported.                               |
 | Application                            | Not supported.                               |
 
-For delegated scenarios, the user needs to be assigned the *Global administrator* [role](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles).
+For delegated scenarios, the user needs to be assigned the *Global Administrator* [role](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles).
 
 ## HTTP request
 
@@ -65,7 +65,7 @@ The following is an example of a request.
 
 <!-- {
   "blockType": "request",
-  "name": "update_onpremisesdirectorysynchronization"
+  "name": "update_onpremisesdirectorysynchronization_e1"
 }
 -->
 ``` http
@@ -88,6 +88,15 @@ Content-length: 293
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/update-onpremisesdirectorysynchronization-e1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response

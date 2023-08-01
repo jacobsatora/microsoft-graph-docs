@@ -29,7 +29,7 @@ One of the following permissions is required to call this API. To learn more, in
 <!-- { "blockType": "ignored" } -->
 
 ```http
-POST https://graph.microsoft.com/beta/sites/{site-id}/lists
+POST /sites/{site-id}/lists
 ```
 
 ## Request headers
@@ -83,6 +83,14 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-list-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 ### Response
 

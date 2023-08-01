@@ -35,6 +35,14 @@ Depending on the RBAC provider and the permission type (delegated or application
 |Delegated (personal Microsoft account) | Not supported.    |
 |Application | Not supported. |
 
+### For an Exchange Online provider
+
+|Permission type      | Permissions (from least to most privileged)              |
+|:--------------------|:---------------------------------------------------------|
+|Delegated (work or school account) |  RoleManagement.ReadWrite.Exchange   |
+|Delegated (personal Microsoft account) | Not supported.    |
+|Application | Not supported. |
+
 ## HTTP request
 
 Remove a role assignment from a directory provider:
@@ -51,6 +59,14 @@ Remove a role assignment from the entitlement management provider:
 
 ```http
 DELETE /roleManagement/entitlementManagement/roleAssignments/{id}
+```
+
+Remove a role assignment from the Exchange Online provider:
+
+<!-- { "blockType": "ignored" } -->
+
+```http
+DELETE /roleManagement/exchange/roleAssignments/{id}
 ```
 
 
@@ -84,6 +100,51 @@ The following is an example of the request.
 DELETE https://graph.microsoft.com/beta/roleManagement/directory/roleAssignments/lAPpYvVpN0KRkAEhdxReEJC2sEqbR_9Hr48lds9SGHI-1
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-unifiedroleassignment-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+### Response
+
+The following is an example of the response.
+
+<!-- {
+  "blockType": "response",
+  "truncated": true
+} -->
+
+```http
+HTTP/1.1 204 No Content
+```
+
+## Example 2: Delete role assignment from Exchange Online Provider
+
+### Request
+
+The following is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "delete_exchange_unifiedroleassignment",
+  "sampleKeys": ["e664cde0-fbdf-4b1e-bcb2-d134ef32194d"]
+}-->
+
+```http
+DELETE https://graph.microsoft.com/beta/roleManagement/exchange/roleAssignments/e664cde0-fbdf-4b1e-bcb2-d134ef32194d
+```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-exchange-unifiedroleassignment-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.

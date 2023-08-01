@@ -33,7 +33,7 @@ One of the following permissions is required to call this API. To learn more, in
 -->
 
 ```http
-GET /sites/{sitesId}/pages/{sitePageId}/canvasLayout/horizontalSections/{horizontalSectionId}/columns
+GET /sites/{sitesId}/pages/{sitePageId}/microsoft.graph.sitePage/canvasLayout/horizontalSections/{horizontalSectionId}/columns
 ```
 
 ## Optional query parameters
@@ -60,7 +60,9 @@ If successful, this method returns a `200 OK` response code and a collection of 
 
 The following is an example of a request.
 
+<!-- { "blockType": "ignored" } -->
 
+<<<<<<< HEAD
 <!-- {
   "blockType": "request",
   "name": "list_horizontalsectioncolumn"
@@ -69,6 +71,10 @@ The following is an example of a request.
 
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/sites/{sitesId}/pages/{sitePageId}/canvasLayout/horizontalSections/{horizontalSectionId}/columns
+=======
+```http
+GET https://graph.microsoft.com/beta/sites/{sitesId}/pages/{sitePageId}/microsoft.graph.sitePage/canvasLayout/horizontalSections/{horizontalSectionId}/columns
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ```
 
 ### Response

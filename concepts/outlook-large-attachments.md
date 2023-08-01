@@ -56,8 +56,13 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/walkthrough-create-uploadsession-message-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/walkthrough-create-uploadsession-message-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -108,8 +113,13 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/walkthrough-create-uploadsession-event-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/walkthrough-create-uploadsession-event-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---

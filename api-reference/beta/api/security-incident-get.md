@@ -63,6 +63,15 @@ If successful, this method returns a `200 OK` response code and an [incident](..
 GET https://graph.microsoft.com/beta/security/incidents/2972395
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-incident-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {

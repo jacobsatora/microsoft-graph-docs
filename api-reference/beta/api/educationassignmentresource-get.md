@@ -54,12 +54,21 @@ The following is an example of the request.
 
 <!-- {
   "blockType": "request",
-  "name": "get_educationassignmentresource"
+  "name": "get_educationassignmentresource_e1"
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/education/classes/72a7baec-c3e9-4213-a850-f62de0adad5f/assignments/1618dfb0-3ff2-4edf-8d5c-b8f81df00e80/resources/fb92ec62-3996-4c3a-ad41-720dd930c834
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-educationassignmentresource-e1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response. 
@@ -113,12 +122,21 @@ The following is an example of the request.
 <!-- {
   "blockType": "request",
   "sampleKeys": ["72a7baec-c3e9-4213-a850-f62de0adad5f","1618dfb0-3ff2-4edf-8d5c-b8f81df00e80","a2f95693-aea2-4d5e-a936-11ef390f8f20"], 
-  "name": "get_educationlinkresource_from_educationassignment"
+  "name": "get_educationlinkresource_from_educationassignment_e2"
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/education/classes/72a7baec-c3e9-4213-a850-f62de0adad5f/assignments/1618dfb0-3ff2-4edf-8d5c-b8f81df00e80/resources/a2f95693-aea2-4d5e-a936-11ef390f8f20
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-educationlinkresource-from-educationassignment-e2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following is an example of the response. 
 
@@ -168,12 +186,21 @@ The following is an example of the request.
 <!-- {
   "blockType": "request",
   "sampleKeys": ["72a7baec-c3e9-4213-a850-f62de0adad5f","1618dfb0-3ff2-4edf-8d5c-b8f81df00e80","517b36a6-9ca2-4e7b-9748-3af25f5cd4fd"], 
-  "name": "get_educationexcelresource_from_educationassignment"
+  "name": "get_educationexcelresource_from_educationassignment_e3"
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/education/classes/72a7baec-c3e9-4213-a850-f62de0adad5f/assignments/1618dfb0-3ff2-4edf-8d5c-b8f81df00e80/resources/517b36a6-9ca2-4e7b-9748-3af25f5cd4fd
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-educationexcelresource-from-educationassignment-e3-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following is an example of the response. 
 
@@ -223,12 +250,21 @@ The following is an example of the request.
 <!-- {
   "blockType": "request",
   "sampleKeys": ["72a7baec-c3e9-4213-a850-f62de0adad5f","1618dfb0-3ff2-4edf-8d5c-b8f81df00e80","3cb7968b-082f-4756-bdfb-782b4538cc0a"], 
-  "name": "get_educationpowerpointresource_from_educationassignment"
+  "name": "get_educationpowerpointresource_from_educationassignment_e4"
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/education/classes/72a7baec-c3e9-4213-a850-f62de0adad5f/assignments/1618dfb0-3ff2-4edf-8d5c-b8f81df00e80/resources/3cb7968b-082f-4756-bdfb-782b4538cc0a
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-educationpowerpointresource-from-educationassignment-e4-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following is an example of the response. 
 
@@ -278,12 +314,21 @@ The following is an example of the request.
 <!-- {
   "blockType": "request",
   "sampleKeys": ["72a7baec-c3e9-4213-a850-f62de0adad5f","1618dfb0-3ff2-4edf-8d5c-b8f81df00e80","a7a2fec0-2a26-47bf-8d40-2319c0afb1f4"], 
-  "name": "get_educationfileresource_from_educationassignment"
+  "name": "get_educationfileresource_from_educationassignment_e5"
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/education/classes/72a7baec-c3e9-4213-a850-f62de0adad5f/assignments/1618dfb0-3ff2-4edf-8d5c-b8f81df00e80/resources/a7a2fec0-2a26-47bf-8d40-2319c0afb1f4
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-educationfileresource-from-educationassignment-e5-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following is an example of the response. 
 
@@ -333,12 +378,21 @@ The following is an example of the request.
 <!-- {
   "blockType": "request",
   "sampleKeys": ["72a7baec-c3e9-4213-a850-f62de0adad5f","1618dfb0-3ff2-4edf-8d5c-b8f81df00e80","f3687fc5-908b-4006-8040-dbba9e04023c"], 
-  "name": "get_educationmediaresource_from_educationassignment"
+  "name": "get_educationmediaresource_from_educationassignment_e6"
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/education/classes/72a7baec-c3e9-4213-a850-f62de0adad5f/assignments/1618dfb0-3ff2-4edf-8d5c-b8f81df00e80/resources/f3687fc5-908b-4006-8040-dbba9e04023c
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-educationmediaresource-from-educationassignment-e6-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following is an example of the response. 
 

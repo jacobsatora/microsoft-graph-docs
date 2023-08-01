@@ -65,6 +65,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/external/connections/contosohr/operations/3ed1595a-4bae-43c2-acda-ef973e581323
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-connectionoperation-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- markdownlint-disable MD024 -->
 ### Response
 <!-- markdownlint-enable MD024 -->

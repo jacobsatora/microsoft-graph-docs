@@ -71,6 +71,15 @@ If successful, this method returns `204 No Content` response code. It does not r
 DELETE https://graph.microsoft.com/beta/domains/contoso.com
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-domain-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Note: The response object shown here might be shortened for readability.

@@ -55,6 +55,7 @@ The following table shows the properties that are required when you create the d
 |isConfigured|Boolean|Whether device management partner is configured or not|
 |whenPartnerDevicesWillBeRemovedDateTime|DateTimeOffset|DateTime in UTC when PartnerDevices will be removed|
 |whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime|DateTimeOffset|DateTime in UTC when PartnerDevices will be marked as NonCompliant|
+|groupsRequiringPartnerEnrollment|[deviceManagementPartnerAssignment](../resources/intune-onboarding-devicemanagementpartnerassignment.md) collection|User groups that specifies whether enrollment is through partner.|
 
 
 
@@ -65,10 +66,13 @@ If successful, this method returns a `201 Created` response code and a [deviceMa
 
 ### Request
 Here is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- { "blockType": "request" , "name" : "intune_onboarding_devicemanagementpartner_create_create_devicemanagementpartner" }-->
 ``` http
 POST https://graph.microsoft.com/v1.0/deviceManagement/deviceManagementPartners
 Content-type: application/json
-Content-length: 502
+Content-length: 803
 
 {
   "@odata.type": "#microsoft.graph.deviceManagementPartner",
@@ -79,16 +83,33 @@ Content-length: 502
   "displayName": "Display Name value",
   "isConfigured": true,
   "whenPartnerDevicesWillBeRemovedDateTime": "2016-12-31T23:56:38.2655023-08:00",
-  "whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime": "2016-12-31T23:58:42.2131231-08:00"
+  "whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime": "2016-12-31T23:58:42.2131231-08:00",
+  "groupsRequiringPartnerEnrollment": [
+    {
+      "@odata.type": "microsoft.graph.deviceManagementPartnerAssignment",
+      "target": {
+        "@odata.type": "microsoft.graph.configurationManagerCollectionAssignmentTarget",
+        "collectionId": "Collection Id value"
+      }
+    }
+  ]
 }
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/intune-onboarding-devicemanagementpartner-create-create-devicemanagementpartner-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+
+<!-- { "blockType": "response" , "@odata.type" : "microsoft.graph.deviceManagementPartner" }-->
 ``` http
 HTTP/1.1 201 Created
 Content-Type: application/json
-Content-Length: 551
+Content-Length: 852
 
 {
   "@odata.type": "#microsoft.graph.deviceManagementPartner",
@@ -100,6 +121,15 @@ Content-Length: 551
   "displayName": "Display Name value",
   "isConfigured": true,
   "whenPartnerDevicesWillBeRemovedDateTime": "2016-12-31T23:56:38.2655023-08:00",
-  "whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime": "2016-12-31T23:58:42.2131231-08:00"
+  "whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime": "2016-12-31T23:58:42.2131231-08:00",
+  "groupsRequiringPartnerEnrollment": [
+    {
+      "@odata.type": "microsoft.graph.deviceManagementPartnerAssignment",
+      "target": {
+        "@odata.type": "microsoft.graph.configurationManagerCollectionAssignmentTarget",
+        "collectionId": "Collection Id value"
+      }
+    }
+  ]
 }
 ```

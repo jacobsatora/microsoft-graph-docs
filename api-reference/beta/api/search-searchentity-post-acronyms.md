@@ -64,7 +64,7 @@ If successful, this method returns a `200 Ok` response code.
 
 <!-- {
   "blockType": "request",
-  "name": "create_acronym_from_acronyms"
+  "name": "create_acronym_from_acronyms_e1"
 }-->
 ```http
 POST https://graph.microsoft.com/beta/search/acronyms
@@ -79,6 +79,15 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-acronym-from-acronyms-e1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 Here is an example of the response.
 <!-- {

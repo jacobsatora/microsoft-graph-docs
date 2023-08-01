@@ -51,13 +51,28 @@ If successful, this method returns a `200 OK` response code and a collection of 
 ## Example
 ##### Request
 Here is an example of the request.
-<!-- { "blockType": "ignored" } -->
-```http
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "section_list_pages"
+}-->
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/me/onenote/sections/{id}/pages
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/section-list-pages-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ##### Response
 Here is an example of the response. Note: The response object shown here is truncated for brevity. All of the properties will be returned from an actual call.
-<!-- { "blockType": "ignored" } -->
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.onenotePage"
+} -->
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json

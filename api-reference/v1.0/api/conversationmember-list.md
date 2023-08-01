@@ -63,13 +63,18 @@ The following is an example of the request.
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "list_conversation_members_2"
+  "name": "list_conversation_members_2",
+  "sampleKeys": ["19:9ef2dcdf14ba44cbae25c2f5d53171ba@thread.v2"]
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/chats/19:9ef2dcdf14ba44cbae25c2f5d53171ba@thread.v2/members
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/list-conversation-members-2-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

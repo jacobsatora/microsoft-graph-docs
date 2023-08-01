@@ -54,8 +54,13 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/tutorial-riskdetection-create-user-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/tutorial-riskdetection-create-user-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -107,8 +112,13 @@ When you signed in to the Azure portal using the anonymous browser, an `anonymiz
 GET https://graph.microsoft.com/v1.0/identityProtection/riskDetections?$filter=userDisplayName eq 'MyTestUser1'
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/tutorial-riskdetection-get-riskdetections-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/tutorial-riskdetection-get-riskdetections-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -213,8 +223,13 @@ Content-type: application/json
 } 
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/tutorial-riskdetection-create-conditionalaccesspolicy-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/tutorial-riskdetection-create-conditionalaccesspolicy-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -297,8 +312,13 @@ Because MFA was completed. Now, when you list risk detections the **riskState** 
 GET https://graph.microsoft.com/v1.0/identityProtection/riskDetections?$filter=userDisplayName eq 'MyTestUser1'
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/tutorial-riskdetection-get-riskdetections-filter-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/tutorial-riskdetection-get-riskdetections-filter-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -352,7 +372,7 @@ Instead of providing the opportunity for the user to self-remediate, you can blo
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "tutorial_riskdetection_create_conditionalaccesspolicy"
+  "name": "tutorial_riskdetection_block_user"
 }-->
 ```http
 POST https://graph.microsoft.com/v1.0/identity/conditionalAccess/policies
@@ -384,8 +404,13 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/tutorial-riskdetection-create-conditionalaccesspolicy-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/tutorial-riskdetection-block-user-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -472,8 +497,13 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/tutorial-riskdetection-riskyusersdismiss-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/tutorial-riskdetection-riskyusersdismiss-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -501,8 +531,13 @@ After dismissing the risk user, you can see in the response when listing risky u
 GET https://graph.microsoft.com/v1.0/identityProtection/riskyUsers?$filter=userDisplayName eq 'MyTestUser1'
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/tutorial-riskdetection-riskyuserslist-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/tutorial-riskdetection-riskyuserslist-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -551,8 +586,13 @@ Delete the **MyTestUser1** user account.
 DELETE https://graph.microsoft.com/v1.0/users/4628e7df-dff3-407c-a08f-75f08c0806dc
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/tutorial-riskdetection-delete-user-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/tutorial-riskdetection-delete-user-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -580,8 +620,13 @@ Delete the conditional access policy that you created.
 DELETE https://graph.microsoft.com/v1.0/groups/9ad78153-b1f8-4714-adc1-1445727678a8
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/tutorial-riskdetection-delete-group-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/tutorial-riskdetection-delete-group-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---

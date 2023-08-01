@@ -21,7 +21,7 @@ One of the following permissions is required to call this API. To learn more, in
 |:---|:---|
 |Delegated (work or school account)|Tasks.Read, Tasks.ReadWrite|
 |Delegated (personal Microsoft account)|Tasks.Read, Tasks.ReadWrite|
-|Application|Not supported.|
+|Application|Tasks.Read.All, Tasks.ReadWrite.All|
 
 ## HTTP request
 To get a file attached to a [todoTask](../resources/todotask.md):
@@ -40,10 +40,10 @@ To get the raw contents of a file attachment (the content type is based on the o
   "blockType": "ignored"
 }
 -->
-``http
+```http
 GET /me/todo/lists/{id}/tasks/{id}/attachments/{id}/$value
 GET /users/{id}/todo/lists/{id}/tasks/{id}/attachments/{id}/$value
-``
+```
 
 ## Optional query parameters
 This method supports some of the OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
@@ -75,6 +75,15 @@ The following is an example of a request.
 GET https://graph.microsoft.com/beta/me/todo/lists/AAMehdkfuhgAAA=/tasks/AAMkAGUzY5QKjAAA=/attachments/AAMkAGUzY5QKjAAABEgAQAMkpJI_X-LBFgvrv1PlZYd8=
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-taskfileattachment-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 The following is an example of the response.
 >**Note:** The response object shown here might be shortened for readability.

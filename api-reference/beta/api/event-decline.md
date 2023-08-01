@@ -41,8 +41,8 @@ POST /users/{id | userPrincipalName}/calendar/events/{id}/decline
 POST /me/calendars/{id}/events/{id}/decline
 POST /users/{id | userPrincipalName}/calendars/{id}/events/{id}/decline
 
-POST /me/calendargroups/{id}/calendars/{id}/events/{id}/decline
-POST /users/{id | userPrincipalName}/calendargroups/{id}/calendars/{id}/events/{id}/decline
+POST /me/calendarGroups/{id}/calendars/{id}/events/{id}/decline
+POST /users/{id | userPrincipalName}/calendarGroups/{id}/calendars/{id}/events/{id}/decline
 ```
 
 <br/>
@@ -107,6 +107,15 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/event-decline-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 Here is an example of the response.

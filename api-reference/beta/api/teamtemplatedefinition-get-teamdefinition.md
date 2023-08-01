@@ -14,14 +14,17 @@ Namespace: microsoft.graph
 
 Get the properties of the [team](../resources/team.md) associated with a [teamTemplateDefinition](../resources/teamstemplate.md) object.
 
+> **Note**: This API is currently in private preview only. When it reaches public preview, we will publish a blog post announcement on the [Microsoft 365 Developer blog](https://devblogs.microsoft.com/microsoft365dev/).
+
+
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
 |Permission type|Permissions (from least to most privileged)|
 |:---|:---|
-|Delegated (work or school account)|Team.Create|
+|Delegated (work or school account)|TeamTemplates.Read|
 |Delegated (personal Microsoft account)|Not supported|
-|Application|Team.Create|
+|Application|TeamTemplates.Read.All
 
 ## HTTP request
 
@@ -61,6 +64,15 @@ The following is an example of a request.
 GET https://graph.microsoft.com/beta/teamwork/teamTemplates/com.microsoft.teams.template.ManageAProject/definitions/Y29tLm1pY3Jvc29mdC50ZWFtcy50ZW1wbGF0ZS5NYW5hZ2VBUHJvamVjdCMjUHVibGljIyNlbi1VUw==/teamDefinition
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-teamtemplateteamdefinition-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 The following is an example of the response.
 

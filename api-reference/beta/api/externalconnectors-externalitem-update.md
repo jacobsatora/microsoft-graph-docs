@@ -30,7 +30,7 @@ One of the following permissions is required to call this API. To learn more, in
 <!-- { "blockType": "ignored" } -->
 
 ```http
-PATCH /external/connections/{connection-id}/items/{item-id}
+PUT /external/connections/{connection-id}/items/{item-id}
 ```
 
 ## Path parameters
@@ -84,7 +84,7 @@ The following is an example of the request.
 }-->
 
 ```http
-PATCH https://graph.microsoft.com/beta/external/connections/contosohr/items/TSP228082938
+PUT https://graph.microsoft.com/beta/external/connections/contosohr/items/TSP228082938
 Content-type: application/json
 
 {
@@ -98,6 +98,15 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/update-externalitem-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- markdownlint-disable MD024 -->
 ### Response
 <!-- markdownlint-enable MD024 -->

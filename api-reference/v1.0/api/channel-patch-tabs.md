@@ -50,6 +50,13 @@ If successful, this method returns a `200 OK` response code.
 ## Example
 #### Request
 The following is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "channel_patch_tabs"
+} -->
+
 ```http
 PATCH https://graph.microsoft.com/v1.0/teams/{id}/channels/{id}/tabs/{id}
 Content-type: application/json
@@ -58,7 +65,21 @@ Content-type: application/json
   "displayName": "My Contoso Tab - updated"
 }
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/channel-patch-tabs-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 #### Response
+
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.teamsTab"
+} -->
+
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
@@ -80,7 +101,8 @@ Content-type: application/json
 
 ## See also
 
-[Configuring the built-in tab types](/graph/teams-configuring-builtin-tabs)
+- [Configuring the built-in tab types](/graph/teams-configuring-builtin-tabs)
+- [Microsoft Graph service-specific throttling limits](/graph/throttling-limits#microsoft-teams-service-limits)
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->
@@ -93,4 +115,3 @@ Content-type: application/json
   "tocPath": ""
 }
 -->
-

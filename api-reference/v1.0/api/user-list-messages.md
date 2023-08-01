@@ -100,7 +100,11 @@ The following shows an example that gets the default, top 10 messages in the sig
 GET https://graph.microsoft.com/v1.0/me/messages?$select=sender,subject
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-messages-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

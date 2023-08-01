@@ -66,6 +66,13 @@ If successful, this returns a `200 OK` response code and a collection of [teamsA
 GET https://graph.microsoft.com/beta/chats/19:c253a29b5f694b55a6baad8e83510af7@thread.v2/operations
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-chat-operations-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ---
 
 ### Response

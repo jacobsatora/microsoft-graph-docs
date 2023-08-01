@@ -29,8 +29,8 @@ One of the following permissions is required to call this API. To learn more, in
 } -->
 
 ``` http
-GET sites/{site-id}/termStore/groups/{group-id}/sets/{set-id}/terms/{term-id}
-GET sites/{site-id}/termStore/sets/{set-id}/terms/{term-id}
+GET /sites/{site-id}/termStore/groups/{group-id}/sets/{set-id}/terms/{term-id}
+GET /sites/{site-id}/termStore/sets/{set-id}/terms/{term-id}
 ```
 
 ## Optional query parameters
@@ -64,7 +64,11 @@ If successful, this method returns a `200 OK` response code and a [microsoft.gra
 GET https://graph.microsoft.com/v1.0/sites/microsoft.sharepoint.com,b9b0bc03-cbc4-40d2-aba9-2c9dd9821ddf,6a742cee-9216-4db5-8046-13a595684e74/termStore/groups/8401c566-a86e-4734-a4db-eeb434cd99f9/sets/dcaae29d-2234-4619-bccf-c2ec50b52344/terms/81be9856-9856-81be-5698-be815698be81
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-term-1-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

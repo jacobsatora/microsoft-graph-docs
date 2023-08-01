@@ -50,14 +50,36 @@ Do not supply a request body for this method.
 If successful, this method returns a `200 OK` response code and a [tab](../resources/teamstab.md) object in the response body.
 ## Example
 ### Request
+
 The following is an example of the request.
-```http
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "channel_get_tabs"
+}-->
+
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/teams/{id}/channels/{id}/tabs/{id}?$expand=teamsApp
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/channel-get-tabs-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 The following is an example of the response. 
 
 >**Note:** The response object shown here might be shortened for readability. 
+
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.channel"
+} -->
+
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json

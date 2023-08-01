@@ -1,7 +1,7 @@
 ---
 title: "List group memberOf"
 description: "Get groups and administrative units that the group is a direct member of."
-author: "psaffaie"
+author: "Jordanndahl"
 ms.localizationpriority: medium
 ms.prod: "groups"
 doc_type: apiPageType
@@ -73,6 +73,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/groups/{id}/memberOf
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/group-get-memberof-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -230,6 +239,15 @@ GET https://graph.microsoft.com/beta/groups/{id}/memberOf/microsoft.graph.group?
 ConsistencyLevel: eventual
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-groups-memberof-startswith-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.

@@ -33,7 +33,7 @@ One of the following permissions is required to call this API. To learn more, in
 -->
 
 ```http
-GET /sites/{sitesId}/pages/{sitePageId}/canvasLayout/horizontalSections
+GET /sites/{sitesId}/pages/{sitePageId}/microsoft.graph.sitePage/canvasLayout/horizontalSections
 ```
 
 ## Optional query parameters
@@ -45,6 +45,7 @@ This method supports some of the OData query parameters to help customize the re
 | Name          | Description               |
 | :------------ | :------------------------ |
 | Authorization | Bearer {token}. Required. |
+| Content-Type  | application/json. Required. |
 
 ## Request body
 
@@ -60,7 +61,9 @@ If successful, this method returns a `200 OK` response code and a collection of 
 
 The following is an example of a request.
 
+<!-- { "blockType": "ignored" } -->
 
+<<<<<<< HEAD
 <!-- {
   "blockType": "request",
   "name": "list_horizontalsection"
@@ -69,6 +72,10 @@ The following is an example of a request.
 
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/sites/{sitesId}/pages/{sitePageId}/canvasLayout/horizontalSections
+=======
+``` http
+GET https://graph.microsoft.com/beta/sites/{sitesId}/pages/{sitePageId}/microsoft.graph.sitePage/canvasLayout/horizontalSections
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ```
 
 ### Response

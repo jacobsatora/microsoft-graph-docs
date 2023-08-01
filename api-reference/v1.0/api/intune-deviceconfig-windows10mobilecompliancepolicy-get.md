@@ -52,12 +52,23 @@ If successful, this method returns a `200 OK` response code and [windows10Mobile
 
 ### Request
 Here is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- { "blockType": "request" , "name" : "intune_deviceconfig_windows10mobilecompliancepolicy_get_get_windows10mobilecompliancepolicy" }-->
 ``` http
 GET https://graph.microsoft.com/v1.0/deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicyId}
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/intune-deviceconfig-windows10mobilecompliancepolicy-get-get-windows10mobilecompliancepolicy-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+
+<!-- { "blockType": "response" , "@odata.type" : "microsoft.graph.windows10MobileCompliancePolicy" }-->
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json

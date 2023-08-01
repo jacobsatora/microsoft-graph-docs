@@ -92,7 +92,11 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/directoryobject-getbyid-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -138,7 +142,7 @@ Content-type: application/json
       {
          "@odata.type": "#microsoft.graph.device",
          "id": "b75a5ab2-fe55-4463-bd31-d21ad555c6e0",
-         "dipslayName": "e8ba4e98c000002",
+         "displayName": "e8ba4e98c000002",
          "deviceId": "4c299165-6e8f-4b45-a5ba-c5d250a707ff"
       }
     ]

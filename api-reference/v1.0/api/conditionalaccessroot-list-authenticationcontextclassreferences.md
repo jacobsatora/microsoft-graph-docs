@@ -60,15 +60,20 @@ The following is an example of the request.
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "get_authenticationcontextclassreference"
+  "name": "list_authenticationcontextclassreference_v1_e1"
 }-->
 
 ```msgraph-interactive
 GET /identity/conditionalAccess/authenticationContextClassReferences
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/get-authenticationcontextclassreference-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-authenticationcontextclassreference-v1-e1-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---

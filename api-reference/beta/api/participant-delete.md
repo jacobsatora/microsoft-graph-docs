@@ -1,7 +1,7 @@
 ---
 title: "Delete participant"
 description: "Delete a specific participant in a call."
-author: "mkhribech"
+author: "rahulva-msft"
 ms.localizationpriority: medium
 ms.prod: "cloud-communications"
 doc_type: apiPageType
@@ -63,6 +63,15 @@ The following example shows the request.
 DELETE https://graph.microsoft.com/beta/communications/calls/{id}/participants/{id}
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-specific-call-participant-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 > **Note:** The response object shown here might be shortened for readability.
@@ -118,6 +127,15 @@ Content-Length: 464
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/cancel-participant-invite-noninvited-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 > **Note:** The response object shown here might be shortened for readability.
@@ -168,6 +186,15 @@ Content-Type: application/json
 DELETE https://graph.microsoft.com/beta/communications/calls/{id}/participants/{id}
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-participant-before-invited-to-roster-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 > **Note:** The response object shown here might be shortened for readability.

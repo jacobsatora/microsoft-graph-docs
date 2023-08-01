@@ -1,7 +1,7 @@
 ---
 title: "List group transitive members"
 description: "Get a list of the group's members. A group can have users, devices, organizational contacts, and other groups as members. This operation is transitive and returns a flat list of all nested members."
-author: psaffaie
+author: Jordanndahl
 ms.localizationpriority: medium
 ms.prod: "groups"
 doc_type: apiPageType
@@ -11,7 +11,7 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-Get a list of the group's members. A group can different object types as members. For more information about supported member types for different groups, see [Group membership](../resources/groups-overview.md#group-membership).
+Get a list of the group's members. A group can have different object types as members. For more information about supported member types for different groups, see [Group membership](../resources/groups-overview.md#group-membership).
 
 This operation is transitive and returns a flat list of all nested members. An attempt to filter by an OData cast that represents an unsupported member type returns a `400 Bad Request` error with the `Request_UnsupportedQuery` code.
 
@@ -81,7 +81,11 @@ The following is an example of the request.
 GET https://graph.microsoft.com/v1.0/groups/02bd9fd6-8f93-4758-87c3-1fb73740a315/transitiveMembers
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-group-transitivemembers-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -162,11 +166,15 @@ The following is an example of the request.
 }-->
 
 ```msgraph-interactive
-GET https://graph.microsoft.com/v1.0/groups/{id}/transitivemembers/microsoft.graph.group?$count=true
+GET https://graph.microsoft.com/v1.0/groups/{id}/transitiveMembers/microsoft.graph.group?$count=true
 ConsistencyLevel: eventual
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-group-transitivemembers-odatacast-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -284,7 +292,11 @@ GET https://graph.microsoft.com/v1.0/groups/{id}/transitiveMembers/microsoft.gra
 ConsistencyLevel: eventual
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/list-groups-transitivemembers-startswith-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

@@ -65,6 +65,9 @@ If successful, this method returns a `201 Created` response code and a [iosMobil
 
 ### Request
 Here is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- { "blockType": "request" , "name" : "intune_apps_iosmobileappconfiguration_create_create_iosmobileappconfiguration" }-->
 ``` http
 POST https://graph.microsoft.com/v1.0/deviceAppManagement/mobileAppConfigurations
 Content-type: application/json
@@ -90,8 +93,16 @@ Content-length: 534
 }
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/intune-apps-iosmobileappconfiguration-create-create-iosmobileappconfiguration-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+
+<!-- { "blockType": "response" , "@odata.type" : "microsoft.graph.iosMobileAppConfiguration" }-->
 ``` http
 HTTP/1.1 201 Created
 Content-Type: application/json

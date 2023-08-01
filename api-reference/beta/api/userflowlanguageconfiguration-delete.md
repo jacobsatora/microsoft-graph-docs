@@ -66,7 +66,7 @@ The following is an example of the request.
 
 <!-- {
   "blockType": "request",
-  "name": "delete_userflowlanguageconfiguration",
+  "name": "delete_userflowlanguageconfiguration_1",
   "sampleKeys": ["B2C_1_Customer", "es-ES"]
 }
 -->
@@ -75,6 +75,15 @@ The following is an example of the request.
 DELETE https://graph.microsoft.com/beta/identity/b2cUserFlows/B2C_1_Customer/languages/es-ES
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-userflowlanguageconfiguration-1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.

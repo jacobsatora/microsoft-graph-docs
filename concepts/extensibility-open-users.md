@@ -1,19 +1,20 @@
 ---
 title: "Add custom data to users using open extensions"
-description: "Follow the steps in this example to add an extension, query a user and return a roaming profile, change and then delete the user's roaming profile information."
+description: "Follow the steps in this article to add an extension, query a user and return a roaming profile, change and then delete the user's roaming profile information."
 author: "FaithOmbongi"
 ms.author: ombongifaith
 ms.reviewer: dkershaw
 ms.prod: "extensions"
 ms.localizationpriority: high
 ms.custom: graphiamtop20
-ms.date: 11/08/2022
+ms.date: 02/02/2023
 ---
 
 # Add custom data to users using open extensions
-This article walks you through an example to demonstrate how to use *open extensions*. 
 
-Imagine you're building an application that is available on lots of different client platforms, such as desktop and mobile.  You want to let users configure their UI experience so it’s consistent no matter which device they use to sign in to your app. This is a common requirement for most apps. 
+This article demonstrates how to use *open extensions*.
+
+Imagine you're building an application that is available on multiple client platforms, such as desktop and mobile. You want to let users configure their UI experience so it’s consistent no matter which device they use to sign in to your app.
 
 For this scenario, this article will show you how to:
 
@@ -23,14 +24,13 @@ For this scenario, this article will show you how to:
 4. Delete the user's roaming profile information.
 
 > [!NOTE]
-> This topic shows you how to add, read, update and delete open extensions on a **user** resource. Open extensions are also supported and can be managed for [other resource types](extensibility-overview.md).
+> Apart from users, open extensions are also supported and can be managed for [other resource types](extensibility-overview.md#comparison-of-extension-types).
 
 ## 1. Add roaming profile information
-The user signs in to the app and configures the look and feel of the app.  These app settings should roam so that the user gets the same experience on 
-whatever device they sign in to the app from.  Here we'll see how to add the roaming profile information to a user resource.
+
+The user signs in to the app and configures the look and feel of the app. These app settings should roam so that the user gets the same experience on whatever device they sign in to the app from. The app calls Microsoft Graph by running the following request to add the roaming profile information to a user resource.
 
 ### Request
-
 
 # [HTTP](#tab/http)
 <!-- {
@@ -50,8 +50,13 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/openextensions-users-create-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/openextensions-users-create-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -78,7 +83,8 @@ Content-Type: application/json
 ```
 
 ## 2. Retrieve roaming profile information
-When the user signs in to the app from another device, the app can retrieve the user's profile details as well as their roaming settings. This can be done by getting the user's resource and expanding the extension navigation property.
+
+When the user signs in to the app from another device, the app calls Microsoft Graph to retrieve the user's profile details and expand the **extensions** navigation property to get their roaming settings.
 
 ### Request
 
@@ -92,8 +98,13 @@ When the user signs in to the app from another device, the app can retrieve the 
 GET https://graph.microsoft.com/v1.0/me?$select=id,displayName,mail,mobilePhone&$expand=extensions
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/openextensions-users-get-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/openextensions-users-get-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -127,11 +138,9 @@ Content-Type: application/json
 }
 ```
 
-> [!NOTE]
-> If you have multiple extensions, you can filter on the **id** to get the extension that you're interested in.
-
 ## 3. Change roaming profile information
-The user can choose to change their roaming profile information.  This update can be done with a ```PATCH``` on the open extension value.
+
+The user can choose to change their roaming profile information. The app calls Microsoft Graph by running the following query.
 
 ### Request
 
@@ -152,8 +161,13 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/openextensions-users-update-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/openextensions-users-update-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -169,7 +183,8 @@ HTTP/1.1 204 No content
 ```
 
 ## 4. Delete a user's roaming profile
-The user decides that they don't want a roaming profile anymore, so they delete it. This can be done with a ```DELETE``` request on the open extension value.
+
+The user decides that they don't want a roaming profile anymore, so they delete it and the app calls Microsoft Graph by running the following request.
 
 ### Request
 
@@ -183,8 +198,13 @@ The user decides that they don't want a roaming profile anymore, so they delete 
 DELETE https://graph.microsoft.com/v1.0/me/extensions/com.contoso.roamingSettings
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/openextensions-users-delete-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/openextensions-users-delete-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---

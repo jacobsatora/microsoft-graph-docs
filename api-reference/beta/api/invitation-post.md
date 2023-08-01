@@ -2,7 +2,7 @@
 title: "Create invitation"
 description: "Use this API to create a new invitation. Invitation adds an external user to the organization."
 ms.localizationpriority: medium
-author: "Sammak"
+author: "ppolkadots"
 ms.prod: "identity-and-sign-in"
 doc_type: apiPageType
 ---
@@ -74,6 +74,15 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-invitation-post-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 The following is an example of the response. 
 >**Note:** The response object shown here might be shortened for readability.

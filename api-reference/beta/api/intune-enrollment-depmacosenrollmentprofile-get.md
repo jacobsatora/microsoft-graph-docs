@@ -63,7 +63,7 @@ Here is an example of the response. Note: The response object shown here may be 
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 2179
+Content-Length: 2251
 
 {
   "value": {
@@ -97,6 +97,9 @@ Content-Length: 2179
     "enabledSkipKeys": [
       "Enabled Skip Keys value"
     ],
+    "enrollmentTimeAzureAdGroupIds": [
+      "7f64eb6c-eb6c-7f64-6ceb-647f6ceb647f"
+    ],
     "registrationDisabled": true,
     "fileVaultDisabled": true,
     "iCloudDiagnosticsDisabled": true,
@@ -106,20 +109,18 @@ Content-Length: 2179
     "chooseYourLockScreenDisabled": true,
     "accessibilityScreenDisabled": true,
     "autoUnlockWithWatchDisabled": true,
+    "skipPrimarySetupAccountCreation": true,
+    "setPrimarySetupAccountAsRegularUser": true,
     "dontAutoPopulatePrimaryAccountInfo": true,
-    "lockPrimaryAccountInfo": true,
-    "managedLocalUserShortName": true,
     "primaryAccountFullName": "Primary Account Full Name value",
     "primaryAccountUserName": "Primary Account User Name value",
+    "enableRestrictEditing": true,
+    "adminAccountUserName": "Admin Account User Name value",
+    "adminAccountFullName": "Admin Account Full Name value",
+    "adminAccountPassword": "Admin Account Password value",
+    "hideAdminAccount": true,
     "requestRequiresNetworkTether": true,
-    "setPrimarySetupAccountAsRegularUser": true,
-    "skipPrimarySetupAccountCreation": true,
-    "isLocalPrimaryAccount": true,
-    "isPrimaryUser": true,
-    "primaryUser": "Primary User value",
-    "primaryUserFullName": "Primary User Full Name value",
-    "prefillAccountInfo": true,
-    "enableRestrictEditing": true
+    "autoAdvanceSetupEnabled": true
   }
 }
 ```

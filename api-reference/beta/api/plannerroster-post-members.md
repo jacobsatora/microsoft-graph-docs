@@ -8,6 +8,7 @@ doc_type: apiPageType
 ---
 
 # Create plannerRosterMember
+
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
@@ -15,6 +16,7 @@ Namespace: microsoft.graph
 Add a member to the [plannerRoster](../resources/plannerrostermember.md) object.
 
 ## Permissions
+
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
 |Permission type|Permissions (from least to most privileged)|
@@ -34,23 +36,23 @@ POST /planner/rosters/{plannerRosterId}/members
 ```
 
 ## Request headers
+
 |Name|Description|
 |:---|:---|
 |Authorization|Bearer {token}. Required.|
 |Content-Type|application/json. Required.|
 
 ## Request body
+
 In the request body, supply a JSON representation of the [plannerRosterMember](../resources/plannerrostermember.md) object.
 
 The following table shows the properties that are required when you create the [plannerRosterMember](../resources/plannerrostermember.md).
 
 |Property|Type|Description|
 |:---|:---|:---|
-|userId|String|Identifier of the .|
-|tenantId|String|Identifier of the tenant the user belongs to. Optional. Currently roster members cannot be from different tenants.|
-|roles|String collection|Additional roles assigned to the user. Optional. Currently there are no additional roles available for users.|
-
-
+|roles|String collection|Additional roles assigned to the user. Optional. Currently, no additional roles are available for users.|
+|tenantId|String|Identifier of the tenant the user belongs to. Optional. Currently, roster members cannot be from different tenants.|
+|userId|String|Identifier of the user.|
 
 ## Response
 
@@ -60,6 +62,12 @@ If successful, this method returns a `201 Created` response code and a [plannerR
 
 ### Request
 
+<<<<<<< HEAD
+=======
+The following is an example of the request.
+
+# [HTTP](#tab/http)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- {
   "blockType": "request",
   "name": "create_plannerrostermember_from_"
@@ -75,8 +83,18 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-plannerrostermember-from--cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
-**Note:** The response object shown here might be shortened for readability.
+The following is an example of the response.
+>**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
   "truncated": true,
@@ -95,4 +113,3 @@ Content-Type: application/json
   ]
 }
 ```
-

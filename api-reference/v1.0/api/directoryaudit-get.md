@@ -17,14 +17,12 @@ Get a specific Azure Active Directory audit log item. This includes an audit log
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
+<!-- { "blockType": "ignored"  } // Note: Removing this line will result in the permissions autogeneration tool overwriting the table. -->
 |Permission type      | Permissions (from least to most privileged)              |
 |:--------------------|:---------------------------------------------------------|
 |Delegated (work or school account) | AuditLog.Read.All and Directory.Read.All |
 |Delegated (personal Microsoft account) | Not supported   |
 |Application | AuditLog.Read.All and Directory.Read.All |
-
-> [!IMPORTANT]
-> This API has a [known issue](/graph/known-issues#license-check-errors-for-azure-ad-activity-reports) and currently requires consent to both the **AuditLog.Read.All** and **Directory.Read.All** permissions.
 
 ## HTTP request
 
@@ -35,7 +33,7 @@ GET /auditLogs/directoryAudits/{id}
 
 ## Optional query parameters
 
-This method supports OData query parameters to help customize the response. For details about how to use these parameters, see [OData query parameters](/graph/query-parameters).
+This method does not support any OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
 
 ## Request headers
 
@@ -67,7 +65,11 @@ Here is an example of the request.
 GET https://graph.microsoft.com/v1.0/auditLogs/directoryAudits/{id}
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-directoryaudit-1-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -90,45 +92,45 @@ Content-type: application/json
 {
   "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#auditlogs/directoryaudits",
   "value": [{
-		"id": "id",
-		"category": "UserManagement",
-		"correlationId": "da159bfb-54fa-4092-8a38-6e1fa7870e30",
-		"result": "success",
-		"resultReason": "Successfully added member to group",
-		"activityDisplayName": "Add member to group",
-		"activityDateTime": "2018-01-09T21:20:02.7215374Z",
-		"loggedByService": "Core Directory",
-		"initiatedBy": {
-			"user": {
-				"id": "728309ae-1a37-4937-9afe-e35d964db09b",
-				"displayName": "Audry Oliver",
-				"userPrincipalName": "bob@wingtiptoysonline.com",
-				"ipAddress": "127.0.0.1"
-			},
-			"app": null
-		},
-		"targetResource": [{
-			"id": "ef7e527d-6c92-4234-8c6d-cf6fdfb57f95",
-			"displayName": "Example.com",
-			"Type": "Group",
-			"modifiedProperties": [{
-				"displayName": "Action Client Name",
-				"oldValue": null,
-				"newValue": "DirectorySync" 
-			}],
-			"groupType": "unifiedGroups"
-		}, {
-			"id": "1f0e98f5-3161-4c6b-9b50-d488572f2bb7",
-			"displayName": null,
-			"Type": "User",
-			"modifiedProperties": [],
-			"userPrincipalName": "example@contoso.com"
-		}],
-		"additionalDetails": [{
-			"key": "Additional Detail Name",
-			"value": "Additional Detail Value"
-		}]
-	}]
+        "id": "id",
+        "category": "UserManagement",
+        "correlationId": "da159bfb-54fa-4092-8a38-6e1fa7870e30",
+        "result": "success",
+        "resultReason": "Successfully added member to group",
+        "activityDisplayName": "Add member to group",
+        "activityDateTime": "2018-01-09T21:20:02.7215374Z",
+        "loggedByService": "Core Directory",
+        "initiatedBy": {
+            "user": {
+                "id": "728309ae-1a37-4937-9afe-e35d964db09b",
+                "displayName": "Audry Oliver",
+                "userPrincipalName": "bob@wingtiptoysonline.com",
+                "ipAddress": "127.0.0.1"
+            },
+            "app": null
+        },
+        "targetResource": [{
+            "id": "ef7e527d-6c92-4234-8c6d-cf6fdfb57f95",
+            "displayName": "Example.com",
+            "Type": "Group",
+            "modifiedProperties": [{
+                "displayName": "Action Client Name",
+                "oldValue": null,
+                "newValue": "DirectorySync" 
+            }],
+            "groupType": "unifiedGroups"
+        }, {
+            "id": "1f0e98f5-3161-4c6b-9b50-d488572f2bb7",
+            "displayName": null,
+            "Type": "User",
+            "modifiedProperties": [],
+            "userPrincipalName": "example@contoso.com"
+        }],
+        "additionalDetails": [{
+            "key": "Additional Detail Name",
+            "value": "Additional Detail Value"
+        }]
+    }]
 }
 ```
 

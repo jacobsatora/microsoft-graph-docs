@@ -25,22 +25,21 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (personal Microsoft account) | Files.Read, Files.ReadWrite, Files.Read.All, Files.ReadWrite.All    |
 |Application | Files.Read.All, Files.ReadWrite.All, Sites.Read.All, Sites.ReadWrite.All |
 
-## Get current user's OneDrive
+## HTTP request
+
+### Get current user's OneDrive
 
 The signed in user's drive (when using delegated authentication) can be accessed from the `me` singleton.
 
 If a user's OneDrive is not provisioned but the user has a license to use OneDrive, this request will automatically provision the user's drive, when using delegated authentication.
 
-### HTTP request
+<!-- { "blockType": "ignored" } -->
 
-
-# [HTTP](#tab/http)
-<!-- { "blockType": "request", "name": "get-drive-default", "scopes": "files.read", "tags": "service.graph" } -->
-
-```msgraph-interactive
+```http
 GET /me/drive
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/get-drive-default-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -48,21 +47,21 @@ GET /me/drive
 ---
 
 ## Get a user's OneDrive
+=======
+### Get a user's OneDrive
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 To access a user's OneDrive or OneDrive for Business, your app must request the **drive** relationship on the User resource.
 
 If a user's OneDrive is not provisioned but the user has a license to use OneDrive, this request will automatically provision the user's drive, when using delegated authentication.
 
-### HTTP request
+<!-- { "blockType": "ignored" } -->
 
-
-# [HTTP](#tab/http)
-<!-- { "blockType": "request", "name": "get-drive-by-user", "scopes": "files.read.all", "tags": "service.graph" } -->
-
-```msgraph-interactive
-GET https://graph.microsoft.com/v1.0/users/{48d31887-5fad-4d73-a9f5-3c356e68a038}/drive
+```http
+GET https://graph.microsoft.com/v1.0/users/{idOrUserPrincipalName}/drive
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/get-drive-by-user-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -70,25 +69,25 @@ GET https://graph.microsoft.com/v1.0/users/{48d31887-5fad-4d73-a9f5-3c356e68a038
 ---
 
 ### Path parameters
+=======
+#### Path parameters
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 | Parameter name | Value  | Description                                       |
 |:---------------|:-------|:--------------------------------------------------|
 | _idOrUserPrincipalName_     | string | Required. The identifier for the user object who owns the OneDrive. |
 
-## Get the document library associated with a group
+### Get the document library associated with a group
 
 To access a Group's default document library, your app requests the **drive** relationship on the Group.
 
-### HTTP request
+<!-- { "blockType": "ignored" } -->
 
-
-# [HTTP](#tab/http)
-<!-- { "blockType": "request", "name": "get-drive-by-group", "scopes": "group.read.all", "tags": "service.graph" } -->
-
-```msgraph-interactive
+```http
 GET /groups/{groupId}/drive
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/get-drive-by-group-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -96,24 +95,24 @@ GET /groups/{groupId}/drive
 ---
 
 ### Path parameters
+=======
+#### Path parameters
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 | Parameter name | Value  | Description                                       |
 |:---------------|:-------|:--------------------------------------------------|
 | _groupId_      | string | Required. The identifier for the group which owns the document library. |
 
-## Get the document library for a site
+### Get the document library for a site
 
 To access a [Site's](../resources/site.md) default document library, your app requests the **drive** relationship on the Site.
 
-### HTTP request
+<!-- { "blockType": "ignored" } -->
 
-
-# [HTTP](#tab/http)
-<!-- { "blockType": "request", "name": "get-drive-by-site-id", "scopes": "group.read.all" } -->
-
-```msgraph-interactive
+```http
 GET /sites/{siteId}/drive
 ```
+<<<<<<< HEAD
 
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/get-drive-by-site-id-cli-snippets.md)]
@@ -122,25 +121,25 @@ GET /sites/{siteId}/drive
 ---
 
 ### Path parameters
+=======
+#### Path parameters
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 | Parameter name | Value  | Description                                       |
 |:---------------|:-------|:--------------------------------------------------|
 | _siteId_       | string | Required. The identifier for the site that contains the document library. |
 
-## Get a drive by ID
+### Get a drive by ID
 
 If you have the unique identifier for a drive, you can access it directly from the top-level drives collection.
 
-### HTTP request
+<!-- { "blockType": "ignored" } -->
 
-
-# [HTTP](#tab/http)
-<!-- { "blockType": "request", "name": "get-drive-by-id", "scopes": "files.read" } -->
-
-```msgraph-interactive
-GET /drives/{drive-id}
+```
+GET /drives/{driveId}
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/get-drive-by-id-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -148,6 +147,9 @@ GET /drives/{drive-id}
 ---
 
 ### Path parameters
+=======
+#### Path parameters
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 | Parameter name | Value  | Description                                       |
 |:---------------|:-------|:--------------------------------------------------|
@@ -161,7 +163,29 @@ These method support the [$select query parameter][odata-query-parameters] to sh
 
 Each of these methods returns a [Drive resource][drive-resource] for the matching drive in the response body.
 
-<!-- { "blockType": "response", "@odata.type": "microsoft.graph.drive", "truncated": true, "name": ["get-drive-by-id", "get-drive-by-group", "get-drive-by-user", "get-drive-default" , "get-drive-by-site-id"] } -->
+
+### Error response codes
+
+If the drive does not exist and cannot be provisioned automatically (when using delegated authentication) an `HTTP 404` response will be returned.
+
+## Examples
+### Request
+
+# [HTTP](#tab/http)
+<!-- { "blockType": "request", "name": "get-drive-default", "scopes": "files.read", "tags": "service.graph" } -->
+
+```msgraph-interactive
+GET /me/drive
+```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-drive-default-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+### Response
+<!-- { "blockType": "response", "@odata.type": "microsoft.graph.drive", "truncated": true } -->
 
 ```http
 HTTP/1.1 200 OK
@@ -185,10 +209,6 @@ Content-type: application/json
 }
 ```
 
-### Error response codes
-
-If the drive does not exist and cannot be provisioned automatically (when using delegated authentication) an `HTTP 404` response will be returned.
-
 [drive-resource]: ../resources/drive.md
 [odata-query-parameters]: /graph/query-parameters
 
@@ -201,4 +221,3 @@ If the drive does not exist and cannot be provisioned automatically (when using 
   ],
   "tocPath": "Drives/Get drive"
 } -->
-

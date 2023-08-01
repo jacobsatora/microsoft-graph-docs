@@ -15,7 +15,7 @@ Retrieve [messages](../resources/chatmessage.md) across all [channels](../resour
 
 To learn more about how to use the Microsoft Teams export APIs to export content, see [Export content with the Microsoft Teams export APIs](/microsoftteams/export-teams-content).
 
-[!INCLUDE [teams-model-A-and-B-disclaimer](../../includes/teams-model-A-and-B-disclaimer.md)]
+[!INCLUDE [teams-metered-apis](../../includes/teams-metered-apis.md)]
 
 ## Permissions
 
@@ -26,9 +26,6 @@ The following permissions are required to call this API. To learn more, includin
 |Delegated (work or school account) | Not supported. |
 |Delegated (personal Microsoft account) | Not supported. |
 |Application | ChannelMessage.Read.All |
-
-> [!NOTE]
-> Before you call this API with application permissions, you must request access. For details, see [Protected APIs in Microsoft Teams](/graph/teams-protected-apis).
 
 ## HTTP request
 
@@ -78,7 +75,11 @@ The following is an example of the request.
 GET https://graph.microsoft.com/v1.0/teams/01fe12e0-e720-44fd-8854-28c66d1bee40/channels/getAllMessages?$filter=lastModifiedDateTime+gt+2019-11-01T00:00:00Z+and lastModifiedDateTime+lt+2021-11-01T00:00:00Z
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/channel-getallchannelmessages-1-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -181,3 +182,7 @@ HTTP/1.1 200 OK
     ]
 }
 ```
+
+## See also
+
+[Microsoft Graph service-specific throttling limits](/graph/throttling-limits#microsoft-teams-service-limits)

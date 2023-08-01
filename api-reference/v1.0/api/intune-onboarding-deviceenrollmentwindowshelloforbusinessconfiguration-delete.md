@@ -49,12 +49,23 @@ If successful, this method returns a `204 No Content` response code.
 
 ### Request
 Here is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- { "blockType": "request" , "name" : "intune_onboarding_deviceenrollmentwindowshelloforbusinessconfiguration_delete_delete_deviceenrollmentwindowshelloforbusinessconfiguration" }-->
 ``` http
 DELETE https://graph.microsoft.com/v1.0/deviceManagement/deviceEnrollmentConfigurations/{deviceEnrollmentConfigurationId}
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/intune-onboarding-deviceenrollmentwindowshelloforbusinessconfiguration-delete-delete-deviceenrollmentwindowshelloforbusinessconfiguration-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+
+<!-- { "blockType": "response"}-->
 ``` http
 HTTP/1.1 204 No Content
 ```

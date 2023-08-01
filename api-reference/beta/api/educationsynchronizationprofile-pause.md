@@ -52,6 +52,15 @@ The following is an example of the request.
 POST https://graph.microsoft.com/beta/education/synchronizationProfiles/{id}/pause
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/post-synchronizationprofile-pause-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 There is no response body.

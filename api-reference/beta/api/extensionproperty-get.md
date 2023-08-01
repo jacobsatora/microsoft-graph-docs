@@ -31,6 +31,7 @@ One of the following permissions is required to call this API. To learn more, in
 -->
 ``` http
 GET /applications/{application ObjectId}/extensionProperties/{extensionPropertyId}
+GET /applications(appId='{appId}')/extensionProperties/{extensionPropertyId}
 ```
 
 ## Optional query parameters
@@ -61,6 +62,15 @@ If successful, this method returns a `200 OK` response code and an [extensionPro
 GET https://graph.microsoft.com/beta/applications/fd918e4b-c821-4efb-b50a-5eddd23afc6f/extensionProperties/1f0f15e3-925d-40f0-8fc8-9d3ad135bce0
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-extensionproperty-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {

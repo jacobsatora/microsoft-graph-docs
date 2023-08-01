@@ -1,7 +1,7 @@
 ---
 title: "List customQuestions"
 description: "Get a list of the custom registration questions associated with a meetingRegistration object."
-author: "mkhribech"
+author: "awang119"
 ms.localizationpriority: medium
 ms.prod: "cloud-communications"
 doc_type: apiPageType
@@ -70,8 +70,11 @@ If successful, this method returns a `200 OK` response code and a collection of 
 GET https://graph.microsoft.com/beta/me/onlineMeetings/MSpkYzE3Njc0Yy04MWQ5LTRhZGItYmZ/registration/microsoft.graph.meetingRegistration/customQuestions
 ```
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 > **Note**: The response object shown here might be shortened for readability.

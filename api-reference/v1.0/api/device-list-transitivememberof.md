@@ -1,7 +1,7 @@
 ---
 title: "List device transitive memberships"
 description: "Get groups and administrative units that the device is a member of."
-author: "spunukol"
+author: "myra-ramdenbourg"
 ms.prod: "directory-management"
 ms.localizationpriority: medium
 doc_type: apiPageType
@@ -72,7 +72,11 @@ The following is an example of the request.
 GET https://graph.microsoft.com/v1.0/devices/{id}/transitiveMemberOf
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-devices-transitivememberof-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -198,7 +202,11 @@ GET https://graph.microsoft.com/v1.0/devices/{id}/transitiveMemberOf/microsoft.g
 ConsistencyLevel: eventual
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/list-devices-transitivememberof-startswith-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

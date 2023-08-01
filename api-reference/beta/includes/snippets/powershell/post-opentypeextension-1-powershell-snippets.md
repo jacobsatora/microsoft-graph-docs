@@ -25,7 +25,11 @@ $params = @{
 			extensionName = "Com.Contoso.Referral"
 			companyName = "Wingtip Toys"
 			expirationDate = "2015-12-30T11:00:00.000Z"
+<<<<<<< HEAD
 			dealValue = 10000
+=======
+			dealValue = 
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 		}
 	)
 }

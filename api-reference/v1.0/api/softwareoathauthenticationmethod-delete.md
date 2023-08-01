@@ -32,19 +32,20 @@ One of the following permissions is required to call this API. To learn more, in
 | Delegated (personal Microsoft account) | Not supported. |
 | Application                            | UserAuthenticationMethod.ReadWrite.All |
 
-For delegated scenarios where an admin is acting on another user, the admin needs [one of the following directory roles](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles):
-* Authentication administrator
-* Privileged authentication administrator
-* Global administrator
+[!INCLUDE [rbac-authentication-methods-apis-write-others](../includes/rbac-for-apis/rbac-authentication-methods-apis-write-others.md)]
 
 
 ## HTTP request
 
-<!-- {
-  "blockType": "ignored"
-}
--->
-``` http
+Remove a software OATH token authentication method from your own account. For a signed-in user to update their own authentication method, they must have satisfied a multi-factor authentication requirement during sign in.
+<!-- { "blockType": "ignored" } -->
+```http
+DELETE /me/authentication/softwareOathMethods/{id}
+```
+
+Remove a software OATH token authentication method from another user's account.
+<!-- { "blockType": "ignored" } -->
+```http
 DELETE /users/{id | userPrincipalName}/authentication/softwareOathMethods/{id}
 ```
 
@@ -76,16 +77,23 @@ If successful, this method returns a `204 No Content` response code.
 DELETE https://graph.microsoft.com/v1.0/users/kim@contoso.com/authentication/softwareOathMethods/b172893e-893e-b172-3e89-72b13e8972b1
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/delete-softwareoathauthenticationmethod-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
+<<<<<<< HEAD
 ---
 
 
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 <!-- {
   "blockType": "response",

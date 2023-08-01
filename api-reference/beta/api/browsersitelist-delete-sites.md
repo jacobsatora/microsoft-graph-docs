@@ -54,7 +54,7 @@ The following is an example of a request.
 
 <!-- {
   "blockType": "request",
-  "name": "delete_browsersite",
+  "name": "delete_browsersite_e1",
   "sampleKeys": ["07f4030f-45ff-4ad1-9277-3b8f6ee74141", "a22cbc85-d5d2-4e61-8414-42e6704c36f7"]
 }
 -->
@@ -62,6 +62,15 @@ The following is an example of a request.
 DELETE https://graph.microsoft.com/beta/admin/edge/internetExplorerMode/siteLists/07f4030f-45ff-4ad1-9277-3b8f6ee74141/sites/a22cbc85-d5d2-4e61-8414-42e6704c36f7
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-browsersite-e1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following is an example of the response.
 <!-- {
@@ -77,9 +86,10 @@ HTTP/1.1 204 No Content
 
 #### Request
 The following is an example of a request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "delete_browsersite",
+  "name": "delete_browsersite_e2",
   "sampleKeys": ["07f4030f-45ff-4ad1-9277-3b8f6ee74141", "a22cbc85-d5d2-4e61-8414-42e6704c36f7"]
 }
 -->
@@ -87,6 +97,11 @@ The following is an example of a request.
 DELETE https://graph.microsoft.com/beta/admin/edge/internetExplorerMode/siteLists/07f4030f-45ff-4ad1-9277-3b8f6ee74141/sites/a22cbc85-d5d2-4e61-8414-42e6704c36f7
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-browsersite-e2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 #### Response
 The following is an example of the response where the status has changed to `pendingDelete` but the site is still published. You must publish the site to fully remove it from the site list.

@@ -62,11 +62,13 @@ If successful, this method returns a `201 Created` response code and a new [conn
 
 ### Request
 
+# [HTTP](#tab/http)
 <!-- {
-  "blockType": "ignored",
+  "blockType": "request",
   "name": "create_connectedorganization_from_connectedorganizations"
 }
 -->
+
 ``` http
 POST https://graph.microsoft.com/v1.0/identityGovernance/entitlementManagement/connectedOrganizations/
 Content-Type: application/json
@@ -85,8 +87,16 @@ Content-Type: application/json
 }
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-connectedorganization-from-connectedorganizations-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
->**Note:** The response object shown here might be shortened for readability.
+
+**Note:** The response object shown here might be shortened for readability.
+
 <!-- {
   "blockType": "response",
   "truncated": true,

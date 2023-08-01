@@ -1,7 +1,7 @@
 ---
 title: "conversationThread: reply"
 description: "Reply to a thread in a group conversation and add a new post to it. You can specify the parent conversation "
-author: "dkershaw10"
+author: "mikemcleanlive"
 ms.localizationpriority: medium
 ms.prod: "groups"
 doc_type: apiPageType
@@ -38,7 +38,7 @@ POST /groups/{id}/conversations/{id}/threads/{id}/reply
 ## Request body
 In the request body, provide a JSON object with the following parameters.
 
-| Parameter	   | Type	|Description|
+| Parameter       | Type    |Description|
 |:---------------|:--------|:----------|
 |post|[post](../resources/post.md)|The new post that is being replied with.|
 
@@ -70,7 +70,11 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/conversationthread-reply-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

@@ -26,8 +26,8 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-GET /me/drive/items/{id}/workbook/worksheets/{id|name}/charts/{name}/datalabels
-GET /me/drive/root:/{item-path}:/workbook/worksheets/{id|name}/charts/{name}/datalabels
+GET /me/drive/items/{id}/workbook/worksheets/{id|name}/charts/{name}/dataLabels
+GET /me/drive/root:/{item-path}:/workbook/worksheets/{id|name}/charts/{name}/dataLabels
 ```
 ## Optional query parameters
 This method supports the [OData Query Parameters](/graph/query-parameters) to help customize the response.
@@ -53,9 +53,18 @@ Here is an example of the request.
   "name": "get_chartdatalabels"
 }-->
 ```msgraph-interactive
-GET https://graph.microsoft.com/beta/me/drive/items/{id}/workbook/worksheets/{id|name}/charts/{name}/datalabels
+GET https://graph.microsoft.com/beta/me/drive/items/{id}/workbook/worksheets/{id|name}/charts/{name}/dataLabels
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-chartdatalabels-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.

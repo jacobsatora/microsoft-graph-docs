@@ -1,58 +1,68 @@
 ---
-title: "Set up notifications for changes in resource data"
-description: "Microsoft Graph APIs use a webhook mechanism to deliver change notifications to clients. Client apps use change notifications to update their state upon changes."
+title: "Set up notifications for changes in resource data."
+description: "Change notifications enable applications to receive alerts when a Microsoft Graph resource they're interested changes."
 author: FaithOmbongi
 ms.author: ombongifaith
-ms.reviewer: jumasure
+ms.reviewer: keylimesoda
 ms.prod: "change-notifications"
 ms.localizationpriority: high
 ms.custom: graphiamtop20
-ms.date: 12/02/2022
+ms.date: 07/19/2023
 ---
 
 # Set up notifications for changes in resource data
 
-The Microsoft Graph API uses a webhook mechanism to deliver change notifications to clients. A client is a web service that configures its own URL to receive change notifications. Client apps use change notifications to update their state upon changes.
+Change notifications enable applications to receive alerts when a Microsoft Graph resource they're interested in changes; that is, created, updated, or deleted. Microsoft Graph sends notifications to the specified client endpoint, and the client service processes the notifications according to the business requirements. For example, the service may fetch more data, update its cache and views, and so on.
 
-After Microsoft Graph accepts the subscription request, it pushes change notifications to the URL specified in the subscription. The app then takes action according to its business logic. For example, it fetches more data, updates its cache and views, and so on.
+## Why get change notifications?
 
+Change notifications follow an event-driven model where customers receive alerts when changes occur instead of them polling Microsoft Graph. Depending on your business logic, change notifications are suitable when:
+
+- You're subscribing to a resource that changes frequently.
+- You need to react to changes in near real-time.
+- You want to avoid frequently polling Microsoft Graph which might cause you to hit the throttling limits.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/rC1bunenaq4]
- 
-> [!div class="nextstepaction"]
-> [Training module: Use change notifications and track changes with Microsoft Graph](/training/modules/msgraph-changenotifications-trackchanges)
 
-By default, change notifications do not contain resource data, other than the `id`. If the app requires resource data, it can make calls to Microsoft Graph APIs to get the full resource. This article uses the **user** resource as an example for working with change notifications.
+<!-- Add illustration-->
 
-An app can also subscribe to change notifications that include resource data, to avoid having to make additional API calls to access the data. Such apps will need to implement extra code to handle the requirements of such notifications, specifically: responding to subscription lifecycle notifications, validating the authenticity of notifications, and decrypting the resource data. For details about how to work with these notifications, see [Set up change notifications that include resource data](webhooks-with-resource-data.md).
+## Types of change notifications
+
+Microsoft Graph supports three types of change notifications:
+
+- **Basic notifications**: Change notifications that don't contain resource data other than the **id** of the resource that changed. All Microsoft Graph resources support basic notifications. When an app receives a basic notification, the service can use the **id** to query to changed object.
+- **Rich notifications**: Change notifications that include the resource data of the object that changed. For more information about rich notifications, see [Rich notifications](./webhooks-with-resource-data.md).
+- **Lifecycle notifications**: Notifications that alert the customer when they are at risk of missing change notifications due to the lifecycle of their subscription. For more information about lifecycle notifications, see [Lifecycle notifications](./webhooks-lifecycle.md).
 
 ## Supported resources
 
 [!INCLUDE [change-notifications-supported-resources-expanded](includes/change-notifications-supported-resources-expanded.md)]
 
-## Subscription lifetime
+## Receiving change notifications
 
-Subscriptions have a limited lifetime. Apps need to renew their subscriptions before the expiration time. Otherwise, they need to create a new subscription. For a list of maximum expiration times, see [Maximum length of subscription per resource type](/graph/api/resources/subscription#maximum-length-of-subscription-per-resource-type).
+Microsoft Graph can deliver change notifications to clients via the following channels.
 
-Apps can also unsubscribe at any time to stop getting change notifications.
+- **Webhooks**. For more information, see [Receive change notifications through webhooks](./change-notifications-delivery-webhooks.md).
+- **Azure Event Hubs**. For more information, see [Receive change notifications through Azure Event Hubs](./change-notifications-delivery-event-hubs.md).
+- **Azure Event Grid** (preview). For more information, see [Receive change notifications through Azure Event Grid](/azure/event-grid/subscribe-to-graph-api-events?context=graph%2Fcontext).
 
 ## Managing subscriptions
 
-Clients can create subscriptions, renew subscriptions, and delete subscriptions.
+Clients can create subscriptions, renew subscriptions, and delete subscriptions. Then while the subscription is valid and when changes occur in the subscribed resource, Microsoft Graph sends change notifications to the specified notification endpoint.
 
-### Creating a subscription
+You manage the subscription using the [subscription resource type](/graph/api/resources/subscription) and its related methods. While the subscription is valid and changes occur in the subscribed resource, Microsoft Graph sends a change notification in a structure defined in the [changeNotificationCollection resource type](/graph/api/resources/changenotificationcollection).
 
-Creating a subscription is the first step to start receiving change notifications for a resource. The subscription process is as follows:
+### Subscription lifetime
 
-1. The client sends a subscription (POST) request for a specific resource.
+Subscriptions have a limited lifetime. Apps need to renew their subscriptions before the expiration time; Otherwise, they need to create a new subscription. Apps can also unsubscribe at any time to stop getting change notifications.
 
-1. Microsoft Graph verifies the request.
+The following table shows the maximum expiration times for subscriptions per resource in Microsoft Graph.
 
-    - If the request is valid, Microsoft Graph sends a validation token to the notification URL.
-    - If the request is invalid, Microsoft Graph sends an error response with code and details.
+[!INCLUDE [change-notifications-subscription-lifetime](includes/change-notifications-subscription-lifetime.md)]
 
-1. The client sends the validation token back to Microsoft Graph.
+### Manage subscriptions for different delivery channels
 
+<<<<<<< HEAD
 1. The Microsoft Graph sends a response back to the client.
 
 The client must store the subscription ID to correlate change notifications with the subscription.
@@ -246,7 +256,13 @@ While an endpoint is throttled, notifications are subjected to the following add
 -	Notifications are automatically offloaded to a set of workers dedicated to failed and throttled notifications and an additional delay of 10 minutes is incurred.
 -	Notifications are dropped if the throttled endpoint slow % is >= 15%.
 -	Notifications that failed to deliver due to an unsuccessful HTTP call are retried again in 10 minutes.
+=======
+For more information about managing subscriptions for the different delivery channels using Microsoft Graph, see the following articles.
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
+- [Receive change notifications through webhooks](./change-notifications-delivery-webhooks.md).
+- [Receive change notifications through Azure Event Hubs](./change-notifications-delivery-event-hubs.md).
+- [Receive change notifications through Azure Event Grid](/azure/event-grid/subscribe-to-graph-api-events?context=graph%2Fcontext) (preview).
 
 ## Code samples
 
@@ -257,49 +273,25 @@ The following code samples are available on GitHub.
 - [Microsoft Graph Webhooks Sample for ASP.NET Core](https://github.com/microsoftgraph/aspnetcore-webhooks-sample)
 - [Microsoft Graph Webhooks Sample for Java Spring](https://github.com/microsoftgraph/java-spring-webhooks-sample)
 
-## Firewall configuration
-
-You can optionally configure the firewall that protects your notification URL to allow inbound connections only from Microsoft Graph. This allows you to reduce further exposure to invalid change notifications that are sent to your notification URL. These invalid change notifications can be trying to trigger the custom logic that you implemented. For a complete list of IP addresses used by Microsoft Graph to deliver change notifications, see [additional endpoints for Microsoft 365](/office365/enterprise/additional-office365-ip-addresses-and-urls).
-
-> [!NOTE]
-> The listed IP addresses that are used to deliver change notifications can be updated at any time without notice.
-
 ## Latency
 
-The following table lists the latency to expect between an event happening in the service and the delivery of the change notification.
+[!INCLUDE [change-notifications-delivery-latency](includes/change-notifications-delivery-latency.md)]
 
-| Resource                | Average latency      | Maximum latency |
-|:-------------------------|:----------------------|:-----------------|
-| [alert][]               | Less than 3 minutes  | 5 minutes       |
-| [callRecord][]          | Less than 15 minutes | 60 minutes      |
-| [channel][]             | Less than 10 seconds | 60 minutes      |
-| [chat][]                | Less than 10 seconds | 60 minutes      |
-| [chatMessage][]         | Less than 10 seconds | 1 minute        |
-| [contact][]             | Unknown              | Unknown         |
-| [conversation][]        | Unknown              | Unknown         |
-| [conversationMember][]  | Less than 10 seconds | 60 minutes      |
-| [driveItem][]           | Less than 1 minute   | 5 minutes       |
-| [event][]               | Unknown              | Unknown         |
-| [group][]               | Less than 2 minutes  | 15 minutes      |
-| [list][]                | Less than 1 minute   | 5 minutes       |
-| [message][]             | Unknown              | Unknown         |
-| [onlineMeeting][]       | Less than 10 seconds | 1 minute        |
-| [presence][]            | Less than 10 seconds | 1 minute        |
-| [printer][]             | Less than 1 minute   | 5 minutes       |
-| [printTaskDefinition][] | Less than 1 minute   | 5 minutes       |
-| [team][]                | Less than 10 seconds | 60 minutes      |
-| [todoTask][]            | Less than 2 minutes  | 15 minutes      |
-| [user][]                | Less than 2 minutes  | 15 minutes      |
+## Deployment resources
 
-> [!NOTE]
-> The latency provided for the **alert** resource is only applicable after the alert itself has been created. It does not include the time it takes for a rule to create an alert from the data.
+- [Get change notifications through webhooks](./change-notifications-delivery-webhooks.md)
+- [Get change notifications through Azure Event Hubs](./change-notifications-delivery-event-hubs.md)
+- [Get change notifications through Azure Event Grid](/azure/event-grid/subscribe-to-graph-api-events?context=graph%2Fcontext)
+- [Rich notifications (notifications with resource data)](./webhooks-with-resource-data.md)
+- [Lifecycle notifications](./webhooks-lifecycle.md)
+- Tutorials
+    - [Change notifications for cloud printing](./universal-print-webhook-notifications.md)
+    - [Change notifications for Outlook resources](./outlook-change-notifications-overview.md)
+    - [Change notifications for Microsoft Teams resources](./teams-change-notification-in-microsoft-teams-overview.md)
 
 ## See also
 
-- [subscription resource type](/graph/api/resources/subscription)
-- [changeNotificationCollection](/graph/api/resources/changenotificationcollection) resource type
-- [Training module: Use change notifications and track changes with Microsoft Graph](/training/modules/msgraph-changenotifications-trackchanges)
-- [Lifecycle notifications](./webhooks-lifecycle.md)
+- [Training: Use change notifications and track changes with Microsoft Graph](/training/modules/msgraph-changenotifications-trackchanges)
 
 [contact]: /graph/api/resources/contact
 [conversation]: /graph/api/resources/conversation
@@ -315,7 +307,7 @@ The following table lists the latency to expect between an event happening in th
 [list]: /graph/api/resources/list
 [printer]: /graph/api/resources/printer
 [printTaskDefinition]: /graph/api/resources/printtaskdefinition
-[To Do task]: /graph/api/resources/todotask
+[todoTask]: /graph/api/resources/todotask
 [channel]: /graph/api/resources/channel
 [chat]: /graph/api/resources/chat
 [conversationMember]: /graph/api/resources/conversationmember

@@ -2,8 +2,14 @@
 description: "Automatically generated file. DO NOT MODIFY"
 ---
 
+<<<<<<< HEAD
 ```cli
 
+=======
+```bash
+
+// THE CLI IS IN PREVIEW. NON-PRODUCTION USE ONLY
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 mgc solutions booking-businesses get-staff-availability post --booking-business-id {bookingBusiness-id} --body '{\
     "staffIds": [\
         "311a5454-08b2-4560-ba1c-f715e938cb79"\

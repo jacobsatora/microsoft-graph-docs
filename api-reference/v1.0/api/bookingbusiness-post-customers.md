@@ -19,7 +19,7 @@ One of the following permissions is required to call this API. To learn more, in
 |:--------------------|:---------------------------------------------------------|
 |Delegated (work or school account) |  BookingsAppointment.ReadWrite.All, Bookings.ReadWrite.All, Bookings.Manage.All   |
 |Delegated (personal Microsoft account) | Not supported.   |
-|Application | Not supported.  |
+|Application | BookingsAppointment.ReadWrite.All  |
 
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
@@ -43,8 +43,10 @@ If successful, this method returns a `201 Created` response code and a [bookingC
 ### Request
 The following is an example of the request.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
+  "name" : "bookingbusinesspostcustomers",
   "sampleKeys": ["Contosolunchdelivery@contoso.onmicrosoft.com"]
 }-->
 ```http
@@ -87,6 +89,12 @@ Content-type: application/json
      ]
 }
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/bookingbusinesspostcustomers-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 The following is an example of the response. 

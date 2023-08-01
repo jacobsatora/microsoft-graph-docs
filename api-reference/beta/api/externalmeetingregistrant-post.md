@@ -1,7 +1,7 @@
 ---
 title: "Create externalMeetingRegistrant"
 description: "Enroll an external meeting registrant."
-author: "mkhribech"
+author: "awang119"
 ms.localizationpriority: medium
 ms.prod: "cloud-communications"
 doc_type: apiPageType
@@ -85,6 +85,14 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/add-externalregistratrant-public-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 #### Response
 
@@ -131,6 +139,14 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/add-externalregistratrant-private-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 #### Response
 

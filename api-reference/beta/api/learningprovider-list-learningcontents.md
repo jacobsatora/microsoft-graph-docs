@@ -23,7 +23,7 @@ One of the following permissions is required to call this API. To learn more, in
 |:---|:---|
 |Delegated (work or school account)|Not supported.|
 |Delegated (personal Microsoft account)|Not supported.|
-|Application|LearningContent.Read.All|
+|Application|LearningContent.Read.All, LearningContent.ReadWrite.All|
 
 ## HTTP request
 
@@ -62,9 +62,18 @@ The following is an example of a request.
 }
 -->
 ``` http
-GET /employeeExperience/learningProviders/13727311-e7bb-470d-8b20-6a23d9030d70/learningContents 
+GET https://graph.microsoft.com/beta/employeeExperience/learningProviders/13727311-e7bb-470d-8b20-6a23d9030d70/learningContents 
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-learningcontent-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 The following is an example of the response.
 >**Note:** The response object shown here might be shortened for readability.

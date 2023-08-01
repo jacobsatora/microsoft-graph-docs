@@ -43,6 +43,7 @@ This method supports some of the OData query parameters to help customize the re
 |:----------|:----------|
 | Authorization | Bearer {token}. Required. |
 | Content-type | application/json. Required.|
+| MS-APP-ACTS-AS  | A user ID (GUID). Required only if the authorization token is an application token; otherwise, optional. |
 
 ## Request body
 In the request body, provide a JSON representation of a new [swapShiftsChangeRequest](../resources/swapshiftschangerequest.md) object.
@@ -56,8 +57,10 @@ If successful, this method returns a `200 OK` response code and the created [swa
 ### Request
 
 The following is an example of the request.
+# [HTTP](#tab/http)
 <!-- {
-  "blockType": "request"
+  "blockType": "request",
+  "name": "swapshiftschangerequest_post"
 }-->
 
 ```http
@@ -72,6 +75,12 @@ Content-type: application/json
   "recipientShiftId": "e73408ca-3ea5-4bbf-96a8-2e06c95f7a2c"
 }
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/swapshiftschangerequest-post-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 

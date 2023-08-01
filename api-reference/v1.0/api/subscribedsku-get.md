@@ -2,7 +2,7 @@
 title: "Get subscribedSku"
 description: "Retrieve a specific commercial subscription that an organization has acquired."
 ms.localizationpriority: medium
-author: "SumitParikh"
+author: "jconley76"
 ms.prod: "directory-management"
 doc_type: apiPageType
 ---
@@ -57,7 +57,11 @@ Here is an example of the request.
 GET https://graph.microsoft.com/v1.0/subscribedSkus/dcd219dd-bc68-4b9b-bf0b-4a33a796be35_c7df2760-2c81-4ef7-b578-5b5392b571df
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-subscribedsku-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -81,6 +85,7 @@ Content-type: application/json
     "id": "48a80680-7326-48cd-9935-b556b81d3a4e_c7df2760-2c81-4ef7-b578-5b5392b571df",
     "prepaidUnits": {
         "enabled": 25,
+        "lockedOut": 0,
         "suspended": 0,
         "warning": 0
     },

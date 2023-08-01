@@ -23,7 +23,7 @@ This post off-boarding scenario will run a workflow on-demand and accomplish the
 
 To complete this tutorial, you need the following resources and privileges:
 
-+ A working Azure AD tenant with an Azure AD Premium P2 or EMS E5 license enabled.
++ Using this feature requires Microsoft Entra ID Governance licenses. To find the right license for your requirements, see [Compare generally available features of Micorosft Azure AD](https://www.microsoft.com/security/business/identity-access-management/azure-ad-pricing).
 + Sign in to an API client such as [Graph Explorer](https://aka.ms/ge), Postman, or create your own client app to call Microsoft Graph. To call Microsoft Graph APIs in this tutorial, you need to use an account with the Lifecycle Administrator or Global Administrator Azure AD role.
 + Grant yourself the following *LifecycleWorkflows.ReadWrite.All* delegated permission.
 + Create a test user account that you'll use to represent an employee leaving your organization. This test user account will be deleted when the workflow runs. Assign licenses and Teams memberships to the test user account.
@@ -88,6 +88,15 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/beta/tutorial-lifecycle-workflows-leaverondemand-create-workflow-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 <!-- {
@@ -141,6 +150,15 @@ POST https://graph.microsoft.com/beta/identityGovernance/LifecycleWorkflows/work
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/beta/tutorial-lifecycle-workflows-leaverondemand-run-workflow-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 <!-- {
@@ -167,6 +185,15 @@ The following request retrieves the summary of tasks run at the user level.
 GET https://graph.microsoft.com/beta/identityGovernance/LifecycleWorkflows/workflows/368dfba3-2303-4e02-b258-87d742187e1b/userProcessingResults
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/beta/tutorial-lifecycle-workflows-leaverondemand-list-userprocessingresults-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 <!-- {
@@ -213,6 +240,15 @@ You can request the aggregate high-level summary of the user-level results for a
 GET https://graph.microsoft.com/beta/identityGovernance/LifecycleWorkflows/workflows/368dfba3-2303-4e02-b258-87d742187e1b/userProcessingResults/summary(startDateTime=2022-10-01T00:00:00Z,endDateTime=2022-10-30T00:00:00Z)
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/beta/tutorial-lifecycle-workflows-leaverondemand-list-userprocessingresultssummary-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 <!-- {
@@ -247,6 +283,15 @@ You can also retrieve the detailed log of all tasks that were executed for a spe
 GET https://graph.microsoft.com/beta/identityGovernance/LifecycleWorkflows/workflows/368dfba3-2303-4e02-b258-87d742187e1b/userProcessingResults/bc5b9d36-55fb-4036-8551-582668a6b78e/taskProcessingResults
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/beta/tutorial-lifecycle-workflows-leaverondemand-list-taskprocessingresults-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 <!-- {
@@ -333,6 +378,6 @@ Content-Type: application/json
 
 ## Next steps
 
-- [Execute employee offboarding tasks in real-time on their last day of work with Azure portal (preview)](/azure/active-directory/governance/tutorial-offboard-custom-workflow-portal)
+- [Execute employee offboarding tasks in real-time on their last day of work with Azure portal](/azure/active-directory/governance/tutorial-offboard-custom-workflow-portal)
 - [Overview of Azure AD Lifecycle Workflows](/graph/api/resources/identitygovernance-lifecycleworkflows-overview)
 - [Overview of reporting in Azure AD Lifecycle Workflows](/graph/api/resources/identitygovernance-lifecycleworkflows-reporting-overview)

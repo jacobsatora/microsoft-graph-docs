@@ -44,9 +44,9 @@ One of the following permissions is required to call this API. To learn more, in
 
 |Permission type      | Permissions (from least to most privileged)              |
 |:--------------------|:---------------------------------------------------------|
-|Delegated (work or school account) | Calendars.Read    |
-|Delegated (personal Microsoft account) | Calendars.Read    |
-|Application | Calendars.Read |
+|Delegated (work or school account) | Calendars.ReadBasic, Calendars.Read    |
+|Delegated (personal Microsoft account) | Calendars.ReadBasic, Calendars.Read    |
+|Application | Calendars.ReadBasic, Calendars.Read |
 
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
@@ -62,8 +62,8 @@ GET /groups/{id}/calendar/events/{id}
 GET /me/calendars/{id}/events/{id}
 GET /users/{id | userPrincipalName}/calendars/{id}/events/{id}
 
-GET /me/calendargroups/{id}/calendars/{id}/events/{id}
-GET /users/{id | userPrincipalName}/calendargroups/{id}/calendars/{id}/events/{id}
+GET /me/calendarGroups/{id}/calendars/{id}/events/{id}
+GET /users/{id | userPrincipalName}/calendarGroups/{id}/calendars/{id}/events/{id}
 ```
 ## Optional query parameters
 This method supports the [OData query parameters](/graph/query-parameters) to help customize the response.
@@ -102,6 +102,15 @@ GET https://graph.microsoft.com/beta/me/events/AAMkAGIAAAoZDOFAAA=?$select=subje
 Prefer: outlook.timezone="Pacific Standard Time"
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-event-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 Here is an example of the response. Because no `Prefer: outlook.body-content-type` header was specified, the **body** property is returned in the default HTML format. 
@@ -207,6 +216,15 @@ GET https://graph.microsoft.com/beta/me/events/AAMkAGI1AAAoZDOFAAA=?$select=subj
 Prefer: outlook.body-content-type="text"
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-event-in-text-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 Here is an example of the response. The **body** property is returned in text format. 
@@ -251,6 +269,15 @@ to return specific properties.
 GET https://graph.microsoft.com/beta/me/events/AAMkADAGAADDdm4NAAA=?$select=subject,body,bodyPreview,organizer,attendees,start,end,location,locations
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-event-multiple-locations-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 Here is an example of the response. The **locations** property includes details for the 3 locations that the event is organized for. 
@@ -369,6 +396,15 @@ The following example shows expanding a series master event of a recurring serie
 GET https://graph.microsoft.com/beta/me/events/AAMkADAGAADDdm4NAAA=?$select=subject,start,end,occurrenceId,exceptionOccurrences,cancelledOccurrences&$expand=exceptionOccurrences
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-event-seriesmaster-expansion-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The GET operation returns the selected properties for the series master event. Specifically, for events in the **exceptionOccurrences** collection, the operation returns the **id** property, and the applicable, selected properties (**subject**, **start**, **end**, **occurrenceId**). As for events in the **cancelledOccurrences** collection, because the events no longer exist, the operation returns only their **occurrenceId** property values.

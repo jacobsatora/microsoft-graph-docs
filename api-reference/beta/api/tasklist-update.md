@@ -76,8 +76,11 @@ Content-length: 82
 }
 ```
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 **Note:** The response object shown here might be shortened for readability.
 <!-- {
@@ -98,4 +101,3 @@ Content-Type: application/json
     "id": "AAMkAGVjMzJmMWZjLTgyYjgtNGIyNi1hOGQ0LWRjMjNmMGRmOWNiYQAuAAAAAAAboFs"
 }
 ```
-

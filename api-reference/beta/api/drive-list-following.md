@@ -27,10 +27,15 @@ One of the following permissions is required to call this API. To learn more, in
 
 ## HTTP request
 
+<!-- { "blockType": "ignored" } -->
 
+<<<<<<< HEAD
 <!-- { "blockType": "request", "name": "get-followed-items", "scopes": "files.read" } -->
 
 ```msgraph-interactive
+=======
+```http
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 GET /me/drive/following
 ```
 
@@ -39,6 +44,26 @@ GET /me/drive/following
 
 This method returns a collection of [driveItem](../resources/driveitem.md) resources for items which the owner of the drive is following.
 If no items were found, an empty collection is returned.
+
+## Examples
+
+### Request
+
+# [HTTP](#tab/http)
+<!-- { "blockType": "request", "name": "get-followed-items" } -->
+
+```msgraph-interactive
+GET /me/drive/following
+```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-followed-items-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+### Response
+
 
 <!-- { "blockType": "response", "@odata.type": "Collection(microsoft.graph.driveItem)", "truncated": true } -->
 
@@ -75,5 +100,3 @@ Content-type: application/json
   ]
 }
 -->
-
-

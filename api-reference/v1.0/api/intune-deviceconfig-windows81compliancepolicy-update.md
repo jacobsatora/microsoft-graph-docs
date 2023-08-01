@@ -73,6 +73,9 @@ If successful, this method returns a `200 OK` response code and an updated [wind
 
 ### Request
 Here is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- { "blockType": "request" , "name" : "intune_deviceconfig_windows81compliancepolicy_update_update_windows81compliancepolicy" }-->
 ``` http
 PATCH https://graph.microsoft.com/v1.0/deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicyId}
 Content-type: application/json
@@ -97,8 +100,16 @@ Content-length: 602
 }
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/intune-deviceconfig-windows81compliancepolicy-update-update-windows81compliancepolicy-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+
+<!-- { "blockType": "response" , "@odata.type" : "microsoft.graph.windows81CompliancePolicy" }-->
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json

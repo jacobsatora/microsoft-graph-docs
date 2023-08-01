@@ -11,7 +11,7 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-Retrieve the properties and relationships of a calendar group object.
+Retrieve the properties and relationships of a [calendar group](../resources/calendargroup.md) object.
 
 ## Permissions
 
@@ -19,9 +19,9 @@ One of the following permissions is required to call this API. To learn more, in
 
 | Permission type                        | Permissions (from least to most privileged) |
 | :------------------------------------- | :------------------------------------------ |
-| Delegated (work or school account)     | Calendars.Read                              |
-| Delegated (personal Microsoft account) | Calendars.Read                              |
-| Application                            | Calendars.Read                              |
+| Delegated (work or school account)     | Calendars.ReadBasic, Calendars.Read         |
+| Delegated (personal Microsoft account) | Calendars.ReadBasic, Calendars.Read         |
+| Application                            | Calendars.ReadBasic, Calendars.Read         |
 
 ## HTTP request
 
@@ -36,7 +36,7 @@ GET /users/{id | userPrincipalName}/calendarGroups/{id}
 
 ## Optional query parameters
 
-This method supports the [OData Query Parameters](/graph/query-parameters) to help customize the response.
+This method supports the [OData query parameters](/graph/query-parameters) to help customize the response.
 
 ## Request headers
 
@@ -50,14 +50,13 @@ Do not supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and [calendarGroup](../resources/calendargroup.md) object in the response body.
+If successful, this method returns a `200 OK` response code and a [calendarGroup](../resources/calendargroup.md) object in the response body.
 
 ## Example
 
-##### Request
+### Request
 
-Here is an example of the request.
-
+The following is an example of the request.
 
 # [HTTP](#tab/http)
 <!-- {
@@ -70,15 +69,25 @@ Here is an example of the request.
 GET https://graph.microsoft.com/v1.0/me/calendarGroups/AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OABGAAAAAAAiQ8W967B7TKBjgx9rVEURBwAiIsqMbYjsT5e-T7KzowPTAAAAAAEGAAAiIsqMbYjsT5e-T7KzowPTAAABuC34AAA=
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-calendargroup-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
+<<<<<<< HEAD
 ##### Response
+=======
+### Response
 
-Here is an example of the response. Note: The response object shown here might be shortened for readability.
+The following is an example of the response. 
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
+
+>**Note:** The response object shown here might be shortened for readability.
 
 <!-- {
   "blockType": "response",

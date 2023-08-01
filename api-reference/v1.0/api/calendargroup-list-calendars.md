@@ -19,9 +19,9 @@ One of the following permissions is required to call this API. To learn more, in
 
 | Permission type                        | Permissions (from least to most privileged) |
 | :------------------------------------- | :------------------------------------------ |
-| Delegated (work or school account)     | Calendars.Read                              |
-| Delegated (personal Microsoft account) | Calendars.Read                              |
-| Application                            | Calendars.Read                              |
+| Delegated (work or school account)     | Calendars.ReadBasic, Calendars.Read         |
+| Delegated (personal Microsoft account) | Calendars.ReadBasic, Calendars.Read         |
+| Application                            | Calendars.ReadBasic, Calendars.Read         |
 
 ## HTTP request
 
@@ -77,7 +77,11 @@ Here is an example of the request.
 GET https://graph.microsoft.com/v1.0/me/calendarGroups/AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OABGAAAAAAAiQ8W967B7TKBjgx9rVEURBwAiIsqMbYjsT5e-T7KzowPTAAAAAAEGAAAiIsqMbYjsT5e-T7KzowPTAAABuC34AAA=/calendars
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/calendargroup-get-calendars-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

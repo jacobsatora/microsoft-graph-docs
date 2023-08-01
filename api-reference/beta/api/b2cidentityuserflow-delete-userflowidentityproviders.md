@@ -70,7 +70,10 @@ The following is an example of the request.
 DELETE https://graph.microsoft.com/beta/identity/b2cUserFlows/B2C_test_signin_signup/userflowIdentityProviders/MSA-OIDC/$ref
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 <!-- {

@@ -19,6 +19,7 @@ Delete a [conditionalAccessPolicy](../resources/conditionalaccesspolicy.md) obje
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
+<!-- { "blockType": "ignored"  } // Note: Removing this line will result in the permissions autogeneration tool overwriting the table. -->
 |Permission type                        | Permissions (from least to most privileged)                    |
 |:--------------------------------------|:---------------------------------------------------------------|
 |Delegated (work or school account)     | Policy.Read.All and Policy.ReadWrite.ConditionalAccess |
@@ -62,6 +63,15 @@ The following is an example of the request.
 DELETE https://graph.microsoft.com/beta/identity/conditionalAccess/policies/{id}
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-conditionalaccesspolicy-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.

@@ -7,7 +7,7 @@ ms.prod: "applications"
 doc_type: apiPageType
 ---
 
-# acquireAccessToken
+# synchronization: acquireAccessToken
 Namespace: microsoft.graph
 
 Acquire an OAuth Access token to authorize the Azure AD provisioning service to provision users into an application.
@@ -17,9 +17,11 @@ One of the following permissions is required to call this API. To learn more, in
 
 |Permission type|Permissions (from least to most privileged)|
 |:---|:---|
-|Delegated (work or school account)|Directory.ReadWrite.All|
+|Delegated (work or school account)|Synchronization.ReadWrite.All|
 |Delegated (personal Microsoft account)|Not supported.|
-|Application|Application.ReadWrite.OwnedBy, Directory.ReadWrite.All|
+|Application|Application.ReadWrite.OwnedBy, Synchronization.ReadWrite.All|
+
+[!INCLUDE [rbac-synchronization-apis](../includes/rbac-for-apis/rbac-synchronization-apis.md)]
 
 ## HTTP request
 
@@ -75,8 +77,16 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/synchronization-acquireaccesstoken-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
-**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
   "truncated": true

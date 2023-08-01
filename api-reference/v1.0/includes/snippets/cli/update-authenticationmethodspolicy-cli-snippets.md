@@ -2,11 +2,19 @@
 description: "Automatically generated file. DO NOT MODIFY"
 ---
 
+<<<<<<< HEAD
 ```cli
 
 mgc policies authentication-methods-policy patch --body '{\
     "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#authenticationMethodsPolicy",\
     "registrationEnforcement": {\
+=======
+```bash
+
+// THE CLI IS IN PREVIEW. NON-PRODUCTION USE ONLY
+mgc policies authentication-methods-policy patch --body '{\
+  "registrationEnforcement": {\
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
     "authenticationMethodsRegistrationCampaign": {\
         "snoozeDurationInDays": 1,\
         "state": "enabled",\
@@ -18,6 +26,7 @@ mgc policies authentication-methods-policy patch --body '{\
                 "targetedAuthenticationMethod": "microsoftAuthenticator"\
             }\
         ]\
+<<<<<<< HEAD
       }\
     },\
     "authenticationMethodConfigurations": [\
@@ -34,6 +43,10 @@ mgc policies authentication-methods-policy patch --body '{\
             }\
         }\
     ]\
+=======
+    }\
+  }\
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 }\
 '
 

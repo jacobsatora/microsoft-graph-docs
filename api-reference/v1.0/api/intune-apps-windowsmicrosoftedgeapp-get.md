@@ -52,12 +52,23 @@ If successful, this method returns a `200 OK` response code and [windowsMicrosof
 
 ### Request
 Here is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- { "blockType": "request" , "name" : "intune_apps_windowsmicrosoftedgeapp_get_get_windowsmicrosoftedgeapp" }-->
 ``` http
 GET https://graph.microsoft.com/v1.0/deviceAppManagement/mobileApps/{mobileAppId}
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/intune-apps-windowsmicrosoftedgeapp-get-get-windowsmicrosoftedgeapp-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+
+<!-- { "blockType": "response" , "@odata.type" : "microsoft.graph.windowsMicrosoftEdgeApp" }-->
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json

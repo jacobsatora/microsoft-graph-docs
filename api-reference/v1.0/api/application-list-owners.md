@@ -25,10 +25,14 @@ One of the following permissions is required to call this API. To learn more, in
 [!INCLUDE [permissions-applicationreadwriteownedby-disclaimer](../../includes/permissions-applicationreadwriteownedby-disclaimer.md)]
 
 ## HTTP request
+
+You can address the application using either its **id** or **appId**. **id** and **appId** are referred to as the **Object ID** and **Application (Client) ID**, respectively, in the Azure portal.
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /applications/{id}/owners
+GET /applications(appId='{appId}')/owners
 ```
+
 ## Optional query parameters
 This method supports the [OData query parameters](/graph/query-parameters) to help customize the response.
 
@@ -57,7 +61,11 @@ Here is an example of the request.
 GET https://graph.microsoft.com/v1.0/applications/acc848e9-e8ec-4feb-a521-8d58b5482e09/owners
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/application-get-owners-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

@@ -57,7 +57,10 @@ Here is an example of the request.
 POST https://graph.microsoft.com/beta/drive/root/workbook/worksheets/{id}/pivotTables/{id}/refresh
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 Here is an example of the response.
 <!-- {

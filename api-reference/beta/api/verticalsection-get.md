@@ -33,7 +33,7 @@ One of the following permissions is required to call this API. To learn more, in
 -->
 
 ```http
-GET /sites/{sitesId}/pages/{sitePageId}/canvasLayout/verticalSection
+GET /sites/{sitesId}/pages/{sitePageId}/microsoft.graph.sitePage/canvasLayout/verticalSection
 ```
 
 ## Optional query parameters
@@ -61,7 +61,9 @@ If successful, this method returns a `200 OK` response code and a [verticalSecti
 
 The following is an example of a request.
 
+<!-- { "blockType": "ignored" } -->
 
+<<<<<<< HEAD
 <!-- {
   "blockType": "request",
   "name": "get_verticalsection"
@@ -70,6 +72,10 @@ The following is an example of a request.
 
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/sites/{sitesId}/pages/{sitePageId}/canvasLayout/verticalSection
+=======
+```http
+GET https://graph.microsoft.com/beta/sites/{sitesId}/pages/{sitePageId}/microsoft.graph.sitePage/canvasLayout/verticalSection
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ```
 
 #### Response
@@ -90,10 +96,8 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": {
-    "@odata.type": "#microsoft.graph.verticalSection",
-    "emphasis": "neutral"
-  }
+  "@odata.type": "#microsoft.graph.verticalSection",
+  "emphasis": "neutral"
 }
 ```
 
@@ -102,7 +106,9 @@ Content-Type: application/json
 
 With `select` and `expand` statements, you can retrieve verticalSection metadata and associated webParts in a single request.
 
+<!-- { "blockType": "ignored" } -->
 
+<<<<<<< HEAD
 <!-- {
   "blockType": "request",
   "name": "get_verticalsection"
@@ -111,6 +117,10 @@ With `select` and `expand` statements, you can retrieve verticalSection metadata
 
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/sites/{sitesId}/pages/{sitePageId}/canvasLayout/verticalSection?select=emphasis,expand=webparts
+=======
+```http
+GET https://graph.microsoft.com/beta/sites/{sitesId}/pages/{sitePageId}/microsoft.graph.sitePage/canvasLayout/verticalSection?select=emphasis,expand=webparts
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ```
 
 #### Response
@@ -127,14 +137,10 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": {
-    "@odata.type": "#microsoft.graph.verticalSection",
-    "emphasis": "neutral",
-    "webparts":[{
-      "@odata.type": "#microsoft.graph.textWebPart",
-      "id": "1212fc8d-dd6b-408a-8d5d-9f1cc787efbb",
-      "innerHtml": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel.</p>"
-    }]
-  }
+  "emphasis": "neutral",
+  "webparts":[{
+    "id": "1212fc8d-dd6b-408a-8d5d-9f1cc787efbb",
+    "innerHtml": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel.</p>"
+  }]
 }
 ```

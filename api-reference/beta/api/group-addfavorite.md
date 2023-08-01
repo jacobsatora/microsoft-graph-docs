@@ -2,7 +2,7 @@
 title: "group: addFavorite"
 description: "Add the group to the list of the current user's favorite groups. Supported for Microsoft 365 groups only."
 ms.localizationpriority: medium
-author: "psaffaie"
+author: "Jordanndahl"
 ms.prod: "groups"
 doc_type: apiPageType
 ---
@@ -65,6 +65,15 @@ The following is an example of the request.
 POST https://graph.microsoft.com/beta/groups/{id}/addFavorite
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/group-addfavorite-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.

@@ -54,7 +54,10 @@ Here is an example of the request.
 GET https://graph.microsoft.com/v1.0/directory/administrativeUnits/8a07f5a8-edc9-4847-bbf2-dde106594bf4/members/5bde3e51-d13b-4db1-9948-fe4b109d11a7
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 Here is an example of the response.
 >**Note:** The response object shown here might be shortened for readability.

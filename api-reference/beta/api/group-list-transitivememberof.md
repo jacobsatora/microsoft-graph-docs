@@ -2,7 +2,7 @@
 title: "List group transitive memberOf"
 description: "Get groups and administrative units that the group is a member of."
 ms.localizationpriority: medium
-author: "psaffaie"
+author: "Jordanndahl"
 ms.prod: "groups"
 doc_type: apiPageType
 ---
@@ -73,6 +73,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/groups/{id}/transitiveMemberOf
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-group-transitivememberof-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.

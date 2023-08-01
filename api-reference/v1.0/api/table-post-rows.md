@@ -75,16 +75,26 @@ Here is an example of the request.
 }-->
 
 ```http
-POST https://graph.microsoft.com/beta/me/drive/items/01CCETFLK7GVZTZHSQNRD2AEI5XWTCU6FJ/workbook/tables/Table1/rows
+POST https://graph.microsoft.com/v1.0/me/drive/items/01CCETFLK7GVZTZHSQNRD2AEI5XWTCU6FJ/workbook/tables/Table1/rows
 Content-type: application/json
 
 {
-  "values": "[
+  "values": [
     [1, 2, 3],
     [4, 5, 6]
-  ]"
+  ]
 }
 ```
+<<<<<<< HEAD
+=======
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/tablerowcollection-add-table-row-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 
@@ -103,7 +113,7 @@ Content-type: application/json
 
 {
   "index": 99,
-  "values": "[[1, 2, 3]]"
+  "values": [[1, 2, 3]]
 }
 ```
 
@@ -125,19 +135,27 @@ Here is an example of the async request. Note that `202 Accepted` will only happ
 }-->
 
 ```http
-POST https://graph.microsoft.com/beta/me/drive/items/01CCETFLK7GVZTZHSQNRD2AEI5XWTCU6FJ/workbook/tables/Table1/rows
+POST https://graph.microsoft.com/v1.0/me/drive/items/01CCETFLK7GVZTZHSQNRD2AEI5XWTCU6FJ/workbook/tables/Table1/rows
 Content-type: application/json
 Prefer: respond-async
 Workbook-Session-Id: {Workbook-Session-Id}
 
 {
-  "values": "[
+  "values": [
     [1, 2, 3],
     [4, 5, 6]
-  ]"
+  ]
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/tablerowcollection-add-table-row-async-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 #### Response
 

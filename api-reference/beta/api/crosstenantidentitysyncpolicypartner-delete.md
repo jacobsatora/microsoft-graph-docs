@@ -8,6 +8,7 @@ doc_type: apiPageType
 ---
 
 # Delete crossTenantIdentitySyncPolicyPartner
+
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
@@ -15,17 +16,18 @@ Namespace: microsoft.graph
 Delete the user synchronization policy for a partner-specific configuration.
 
 ## Permissions
+
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
 |Permission type|Permissions (from least to most privileged)|
 |:---|:---|
 |Delegated (work or school account)|Policy.ReadWrite.CrossTenantAccess|
-|Delegated (personal Microsoft account)|Not applicable|
+|Delegated (personal Microsoft account)|Not supported.|
 |Application|Policy.ReadWrite.CrossTenantAccess|
 
 The signed-in user must also be assigned the following minimum [directory role](/azure/active-directory/roles/permissions-reference):
 
-+ Hybrid Identity Administrator
+* Security Administrator
 
 ## HTTP request
 
@@ -38,11 +40,13 @@ DELETE /policies/crossTenantAccessPolicy/partners/{id}/identitySynchronization
 ```
 
 ## Request headers
+
 |Name|Description|
 |:---|:---|
 |Authorization|Bearer {token}. Required.|
 
 ## Request body
+
 Do not supply a request body for this method.
 
 ## Response
@@ -52,6 +56,7 @@ If successful, this method returns a `204 No Content` response code.
 ## Examples
 
 ### Request
+
 The following is an example of a request.
 
 <!-- {
@@ -63,7 +68,18 @@ The following is an example of a request.
 DELETE https://graph.microsoft.com/beta/policies/crossTenantAccessPolicy/partners/9c5d131d-b1c3-4fc4-9e3f-c6557947d551/identitySynchronization
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-crosstenantidentitysyncpolicypartner-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
+
+The following is an example of the response.
 
 <!-- {
   "blockType": "response",
@@ -73,4 +89,3 @@ DELETE https://graph.microsoft.com/beta/policies/crossTenantAccessPolicy/partner
 ``` http
 HTTP/1.1 204 No Content
 ```
-

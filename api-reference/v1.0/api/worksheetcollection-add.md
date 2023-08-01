@@ -24,8 +24,8 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /me/drive/items/{id}/workbook/worksheets/
-POST /me/drive/root:/{item-path}:/workbook/worksheets/
+POST /me/drive/items/{id}/workbook/worksheets
+POST /me/drive/root:/{item-path}:/workbook/worksheets
 
 ```
 ## Request headers
@@ -64,7 +64,11 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/worksheetcollection-add-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

@@ -21,7 +21,7 @@ One of the following permissions is required to call this API. To learn more, in
 |:---|:---|
 |Delegated (work or school account)|Not supported.|
 |Delegated (personal Microsoft account)|Not supported.|
-|Application|LearningContent.Read.All|
+|Application|LearningContent.Read.All, LearningContent.ReadWrite.All|
 
 ## HTTP request
 
@@ -63,15 +63,22 @@ The following example shows a request that retrieves the metadata of a learning 
 #### Request
 The following example shows the request.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "get_learningcontent",
-  "sampleKeys": ["13727311-e7bb-470d-8b20-6a23d9030d70", "LP4471"]
+  "sampleKeys": ["13727311-e7bb-470d-8b20-6a23d9030d70", "77029588-a660-46b6-ba58-3ce4d21d5678"]
 }
 -->
 ``` http
-GET /employeeExperience/learningProviders/13727311-e7bb-470d-8b20-6a23d9030d70/learningContents(externalId='LP4471') 
+GET https://graph.microsoft.com/beta/employeeExperience/learningProviders/13727311-e7bb-470d-8b20-6a23d9030d70/learningContents/77029588-a660-46b6-ba58-3ce4d21d5678
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-learningcontent-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 #### Response
 The following example shows the response.
@@ -134,7 +141,7 @@ The following example shows the request.
 }
 -->
 ``` http
-GET /employeeExperience/learningProviders/13727311-e7bb-470d-8b20-6a23d9030d70/learningContents(externalId='LP4471') 
+GET https://graph.microsoft.com/beta/employeeExperience/learningProviders/13727311-e7bb-470d-8b20-6a23d9030d70/learningContents(externalId='LP4471') 
 ```
 
 #### Response
@@ -165,7 +172,10 @@ Content-type: application/json
     "format": "Book",
     "createdDateTime": "2018-01-01T00:00:00",
     "lastModifiedDateTime": "2021-04-01T04:26:06.1995367Z",
-    "contributor": "Scott Simpson",
+    "contributors": [
+        "Lina Wagner",
+        "Lisa Richter"
+    ],
     "additionalTags": [
         "Create private or public teams",
         "Add members to teams"

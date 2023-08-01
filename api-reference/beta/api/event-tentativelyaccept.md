@@ -38,8 +38,8 @@ POST /users/{id | userPrincipalName}/calendar/events/{id}/tentativelyAccept
 POST /me/calendars/{id}/events/{id}/tentativelyAccept
 POST /users/{id | userPrincipalName}/calendars/{id}/events/{id}/tentativelyAccept
 
-POST /me/calendargroups/{id}/calendars/{id}/events/{id}/tentativelyAccept
-POST /users/{id | userPrincipalName}/calendargroups/{id}/calendars/{id}/events/{id}/tentativelyAccept
+POST /me/calendarGroups/{id}/calendars/{id}/events/{id}/tentativelyAccept
+POST /users/{id | userPrincipalName}/calendarGroups/{id}/calendars/{id}/events/{id}/tentativelyAccept
 ```
 ## Request headers
 | Name       | Type | Description|
@@ -94,6 +94,15 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/event-tentativelyaccept-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 Here is an example of the response.

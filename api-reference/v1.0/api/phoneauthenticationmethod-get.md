@@ -33,20 +33,25 @@ One of the following permissions is required to call this API. To learn more, in
 | Delegated (personal Microsoft account) | Not supported. |
 | Application                            | UserAuthenticationMethod.Read.All, UserAuthenticationMethod.ReadWrite.All |
 
-For delegated scenarios where an admin is acting on another user, the admin needs one of the following [Azure AD roles](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles):
-* Global administrator
-* Global reader
-* Privileged authentication administrator
-* Authentication administrator (only sees masked phone numbers)
+[!INCLUDE [rbac-authentication-methods-apis-read-others](../includes/rbac-for-apis/rbac-authentication-methods-apis-read-others.md)]
+
+> [!NOTE]
+> The authentication administrator only sees masked phone numbers.
 
 ## HTTP request
 
+Retrieve details of your own phone authentication method.
 <!-- { "blockType": "ignored" } -->
-
-```http
+``` http
 GET /me/authentication/phoneMethods/{phoneMethodId}
+```
+
+Retrieve details of your own or another user's phone authentication method.
+<!-- { "blockType": "ignored" } -->
+``` http
 GET /users/{userId | userPrincipalName}/authentication/phoneMethods/{phoneMethodId}
 ```
+
 The value of `phoneMethodId` corresponding to the phoneType is one of the following:
 + `b6332ec1-7057-4abe-9331-3d72feddfe41` to retrieve the `alternateMobile` **phoneType**.
 + `e37fc753-ff3b-4958-9484-eaa9425c82bc` to retrieve the `office` **phoneType**.
@@ -87,15 +92,22 @@ The following is an example of the request.
 GET https://graph.microsoft.com/v1.0/me/authentication/phoneMethods/3179e48a-750b-4051-897c-87b9720928f7
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-phoneauthenticationmethod-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
+<<<<<<< HEAD
 ---
 
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.

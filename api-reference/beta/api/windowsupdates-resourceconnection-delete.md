@@ -1,7 +1,7 @@
 ---
 title: "Delete resourceConnection"
 description: "Delete a resourceConnection object."
-author: "aarononeal"
+author: "ryan-k-williams"
 ms.localizationpriority: medium
 ms.prod: "w10"
 doc_type: apiPageType
@@ -59,6 +59,15 @@ The following is an example of a request.
 DELETE https://graph.microsoft.com/beta/admin/windows/updates/resourceConnections/85fbecb2-e407-34e9-9298-4d587857795d
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-resourceconnection-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 The following is an example of the response.
 <!-- {

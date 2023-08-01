@@ -19,18 +19,36 @@ Retrieve the properties of an [approvalStep](../resources/approvalstep.md) objec
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
+### Permissions required for calling this API for entitlement management
+
 | Permission type                        | Permissions (from least to most privileged) |
 |:---------------------------------------|:--------------------------------------------|
 | Delegated (work or school account)     | EntitlementManagement.Read.All, EntitlementManagement.ReadWrite.All |
 | Delegated (personal Microsoft account) | Not supported. |
 | Application                            | Not supported. |
 
+### Permissions required for calling this API for PIM for groups
+
+| Permission type                        | Permissions (from least to most privileged) |
+|:---------------------------------------|:--------------------------------------------|
+| Delegated (work or school account)     | PrivilegedAssignmentSchedule.Read.AzureADGroup, PrivilegedAssignmentSchedule.ReadWrite.AzureADGroup |
+| Delegated (personal Microsoft account) | Not supported. |
+| Application                            | Not supported. |
+
 ## HTTP request
 
-<!-- { "blockType": "ignored" } -->
+To get an approval step in entitlement management:
 
+<!-- { "blockType": "ignored" } -->
 ```http
 GET /identityGovernance/entitlementManagement/accessPackageAssignmentApprovals/{id}/steps/{id}
+```
+
+To get an approval step in PIM for groups:
+
+<!-- { "blockType": "ignored" } -->
+```http
+GET /identityGovernance/privilegedAccess/group/assignmentApprovals/{id}/steps/{id}
 ```
 
 ## Request headers
@@ -53,8 +71,12 @@ If successful, this method returns a `200 OK` response code and the [approvalSte
 
 The following is an example of the request.
 
+<<<<<<< HEAD
 
 
+=======
+# [HTTP](#tab/http)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- {
   "blockType": "request",
   "name": "get_approvalstep_2"
@@ -64,10 +86,19 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/accessPackageAssignmentApprovals/abd306ef-f7b2-4a10-9fd1-493454322489/steps/d4fa4045-4716-436d-aec5-57b0a713f095
 ```
 
+<<<<<<< HEAD
 ---
 
 
 
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-approvalstep-2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.
@@ -105,5 +136,3 @@ Content-type: application/json
   "section": "documentation",
   "tocPath": ""
 }-->
-
-

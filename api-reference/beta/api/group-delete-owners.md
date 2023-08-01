@@ -2,7 +2,7 @@
 title: "Remove group owner"
 description: "Use this API to remove an owner from a Microsoft 365 group or a security group through the owners navigation property."
 ms.localizationpriority: medium
-author: "psaffaie"
+author: "Jordanndahl"
 ms.prod: "groups"
 doc_type: apiPageType
 ---
@@ -15,7 +15,7 @@ Namespace: microsoft.graph
 
 Use this API to remove an owner from a Microsoft 365 group or a security group through the **owners** navigation property. When owners are assigned to a group, the last owner (a user object) of the group cannot be removed.
 
-> **Note:** For issues encountered when removing owner of a group associated with a [team](/graph/api/resources/team.md), see [Known Issues](/graph/known-issues#removing-a-group-owner-also-removes-the-user-as-a-group-member).
+> **Note:** For issues encountered when removing owner of a group associated with a [team](/graph/api/resources/team), see [Known Issues](/graph/known-issues#removing-a-group-owner-also-removes-the-user-as-a-group-member).
 
 ## Permissions
 
@@ -66,6 +66,15 @@ The following is an example of the request.
 DELETE https://graph.microsoft.com/beta/groups/{id}/owners/{id}/$ref
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-owner-from-group-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 In the request, specify the `id` of the directory object you want to remove after the $ref segment.
 
 ### Response

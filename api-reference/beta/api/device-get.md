@@ -27,6 +27,35 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (personal Microsoft account) | Not supported.    |
 |Application | Device.Read.All, Device.ReadWrite.All, Directory.Read.All, Directory.ReadWrite.All |
 
+The calling user must also be in one of the following [Azure AD roles](/azure/active-directory/roles/permissions-reference):
+
+* Global Administrator
+* Users
+* Directory Readers
+* Directory Writers
+* Compliance Administrator
+* Device Managers
+* Application Administrator
+* Security Reader
+* Security Administrator
+* Privileged Role Administrator
+* Cloud Application Administrator
+* Customer LockBox Access Approver
+* Dynamics 365 Administrator
+* Power BI Administrator
+* Desktop Analytics Administrator
+* Microsoft Managed Desktop Administrator
+* Teams Communications Administrator
+* Teams Communications Support Engineer
+* Teams Communications Support Specialist
+* Teams Administrator
+* Compliance Data Administrator
+* Security Operator
+* Kaizala Administrator
+* Global Reader
+* Directory Reviewer
+* Windows 365 Administrator
+
 ## HTTP request
 
 You can address the device using either its **id** or **deviceId**.
@@ -58,12 +87,21 @@ The following example shows a request.
 
 <!-- {
   "blockType": "request",
-  "name": "get_device"
+  "name": "get_device_e1"
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/devices/000005c3-b7a6-4c61-89fc-80bf5ccfc366
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-device-e1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following example shows a response for a device with no **hostNames**. 
 
@@ -120,12 +158,21 @@ The following request retrieves the **id** and **extensionAttributes** property 
 
 <!-- {
   "blockType": "request",
-  "name": "get_device_select"
+  "name": "get_device_select_e2"
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/devices/6a59ea83-02bd-468f-a40b-f2c3d1821983?$select=id,extensionAttributes
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-device-select-e2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.

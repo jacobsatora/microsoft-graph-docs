@@ -91,7 +91,11 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/create-unifiedroleeligibilityschedulerequest-from--cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -161,7 +165,7 @@ In the following request, the admin creates a request to revoke the eligibility 
 }
 -->
 ``` http
-POST https://graph.microsoft.com/beta/roleManagement/directory/roleEligibilityScheduleRequests
+POST https://graph.microsoft.com/v1.0/roleManagement/directory/roleEligibilityScheduleRequests
 Content-Type: application/json
 
 {
@@ -172,6 +176,15 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-unifiedroleeligibilityschedulerequest-from-unifiedroleeligibilityschedulerequests-adminremove-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response. The response object shows a previous role eligibility for a principal is `Revoked`. The principal will no longer see their previously eligible role.

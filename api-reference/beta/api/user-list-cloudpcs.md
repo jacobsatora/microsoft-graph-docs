@@ -7,7 +7,7 @@ ms.prod: "cloud-pc"
 doc_type: apiPageType
 ---
 
-# List cloudPCs
+# List cloudPCs for user
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
@@ -64,6 +64,15 @@ If successful, this method returns a `200 OK` response code and a collection of 
 GET https://graph.microsoft.com/beta/me/cloudPCs
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-cloudpc-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 <!-- {
   "blockType": "response",
@@ -89,7 +98,9 @@ Content-Type: application/json
       "status": "provisioned",
       "lastModifiedDateTime": "2020-11-03T10:29:57Z",
       "statusDetails": null,
-      "gracePeriodEndDateTime": "2020-11-010T20:00:34Z"
+      "gracePeriodEndDateTime": "2020-11-010T20:00:34Z",
+      "provisioningType": "dedicated",
+      "diskEncryptionState": "encryptedUsingPlatformManagedKey"
     }
   ]
 }

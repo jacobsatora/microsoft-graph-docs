@@ -66,6 +66,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/policies/tokenLifetimePolicies
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-tokenlifetimepolicies-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.
@@ -84,16 +93,18 @@ HTTP/1.1 200 OK
 Content-type: application/json
 
 {
-  "value": [
-    {
-      "definition": [
-        "definition-value"
-      ],
-      "displayName": "displayName-value",
-      "isOrganizationDefault": true,
-      "id": "id-value"
-    }
-  ]
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#policies/tokenLifetimePolicies",
+    "value": [
+        {
+            "id": "4d2f137b-e8a9-46da-a5c3-cc85b2b840a4",
+            "deletedDateTime": null,
+            "definition": [
+                "{\"TokenLifetimePolicy\":{\"Version\":1,\"AccessTokenLifetime\":\"8:00:00\"}}"
+            ],
+            "displayName": "Contoso token lifetime policy",
+            "isOrganizationDefault": true
+        }
+    ]
 }
 ```
 

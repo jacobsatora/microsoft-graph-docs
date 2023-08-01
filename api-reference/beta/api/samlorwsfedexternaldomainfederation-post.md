@@ -72,7 +72,7 @@ If successful, this method returns a `201 Created` response code and a [samlOrWs
 
 <!-- {
   "blockType": "request",
-  "name": "create_samlorwsfedexternaldomainfederation_from_"
+  "name": "create_samlorwsfedexternaldomainfederation_from_e1"
 }
 -->
 

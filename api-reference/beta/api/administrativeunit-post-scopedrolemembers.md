@@ -25,10 +25,7 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (personal Microsoft account) | Not supported.    |
 |Application | RoleManagement.ReadWrite.Directory |
 
-To assign Azure AD roles with an administrative unit scope, the calling principal must be assigned one of the following [Azure AD roles](/azure/active-directory/roles/permissions-reference):
-
-* Privileged Role Administrator
-* Global Administrator
+[!INCLUDE [rbac-admin-units-apis-write](../includes/rbac-for-apis/rbac-admin-units-apis-write.md)]
 
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
@@ -67,6 +64,15 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-scopedrolemembership-from-administrativeunit-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 In the request body, supply a JSON representation of [scopedRoleMembership](../resources/scopedrolemembership.md) object.
 
 ##### Response

@@ -42,7 +42,7 @@ PATCH security/threatSubmission/emailThreatSubmissionPolicies/{emailThreatSubmis
 ## Request body
 [!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
 
-These properties are related to the **user reported message settings**. For details, see [User reported message settings](/microsoft-365/security/office-365-security/user-submission.md).
+These properties are related to the **user reported message settings**. For details, see [User reported message settings](/microsoft-365/security/office-365-security/user-submission).
 
 | Property                                 | Type    | Description                                                                                |
 |:-----------------------------------------|:--------|:-------------------------------------------------------------------------------------------|
@@ -73,7 +73,8 @@ The following is an example of a request.
 
 <!-- {
   "blockType": "request",
-  "name": "update_emailthreatsubmissionpolicy"
+  "name": "update_emailthreatsubmissionpolicy",
+  "sampleKeys": ["DefaultReportSubmissionPolicy"]
 }
 -->
 ``` http
@@ -85,6 +86,15 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/update-emailthreatsubmissionpolicy-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 The following is an example of the response.
 

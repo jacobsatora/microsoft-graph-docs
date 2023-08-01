@@ -42,12 +42,12 @@ GET /users/{id}/mailFolders/{id}/messages/delta
 To specifically get only created, updated, or deleted messages in the specified **mailFolder**:
 <!-- { "blockType": "ignored" } -->
 ```http
-GET /me/mailfolders/{id}/messages/delta?changeType=created
-GET /users/{id}/mailfolders/{id}/messages/delta?changeType=created
-GET /me/mailfolders/{id}/messages/delta?changeType=updated
-GET /users/{id}/mailfolders/{id}/messages/delta?changeType=updated
-GET /me/mailfolders/{id}/messages/delta?changeType=deleted
-GET /users/{id}/mailfolders/{id}/messages/delta?changeType=deleted
+GET /me/mailFolders/{id}/messages/delta?changeType=created
+GET /users/{id}/mailFolders/{id}/messages/delta?changeType=created
+GET /me/mailFolders/{id}/messages/delta?changeType=updated
+GET /users/{id}/mailFolders/{id}/messages/delta?changeType=updated
+GET /me/mailFolders/{id}/messages/delta?changeType=deleted
+GET /users/{id}/mailFolders/{id}/messages/delta?changeType=deleted
 ```
 
 ## Query parameters
@@ -107,6 +107,15 @@ GET https://graph.microsoft.com/beta/me/mailFolders/{id}/messages/delta
 Prefer: odata.maxpagesize=2
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/message-delta-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 If the request is successful, the response would include a state token, which is either a _skipToken_  
 (in an _@odata.nextLink_ response header) or a _deltaToken_ (in an _@odata.deltaLink_ response header). 
@@ -127,7 +136,7 @@ HTTP/1.1 200 OK
 Content-type: application/json
 
 {
-  "@odata.nextLink":"https://graph.microsoft.com/beta/me/mailfolders/{id}/messages/delta?$skiptoken={_skipToken_}",
+  "@odata.nextLink":"https://graph.microsoft.com/beta/me/mailFolders/{id}/messages/delta?$skiptoken={_skipToken_}",
   "value": [
     {
       "receivedDateTime": "datetime-value",

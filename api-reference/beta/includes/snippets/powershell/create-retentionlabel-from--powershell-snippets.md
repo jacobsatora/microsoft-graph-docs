@@ -23,6 +23,16 @@ $params = @{
 	}
 	labelToBeApplied = "String"
 	defaultRecordBehavior = "String"
+<<<<<<< HEAD
+=======
+	descriptors = @{
+		"authorityTemplate@odata.bind" = "https://graph.microsoft.com/beta/security/labels/authorities('fie3f4fc-b966-4c40-94de-fb8a383658e4')"
+		"categoryTemplate@odata.bind" = "https://graph.microsoft.com/beta/security/labels/categories('0bjk8-b966-4c40-94de-fb8a383658e4')"
+		"citationTemplate@odata.bind" = "https://graph.microsoft.com/beta/security/labels/citations('0e23f4fc-b966-4c40-94de-fb8a383658e4')"
+		"departmentTemplate@odata.bind" = "https://graph.microsoft.com/beta/security/labels/departments('p99ef4fc-b966-4c40-94de-fb8a383658e4')"
+		"filePlanReferenceTemplate@odata.bind" = "https://graph.microsoft.com/beta/security/labels/filePlanReferences('e095f4fc-b966-4c40-94de-fb8a383658e4')"
+	}
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 }
 
 New-MgBetaSecurityLabelRetentionLabel -BodyParameter $params

@@ -30,8 +30,8 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /me/mailFolders/inbox/messagerules
-POST /users/{id | userPrincipalName}/mailFolders/inbox/messagerules
+POST /me/mailFolders/inbox/messageRules
+POST /users/{id | userPrincipalName}/mailFolders/inbox/messageRules
 ```
 ## Request headers
 | Name       | Description|
@@ -64,7 +64,7 @@ Here is an example of the request.
   "name": "create_messagerule_from_mailfolder"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/me/mailFolders/inbox/messagerules
+POST https://graph.microsoft.com/beta/me/mailFolders/inbox/messageRules
 Content-type: application/json
 
 {      
@@ -91,6 +91,15 @@ Content-type: application/json
 
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-messagerule-from-mailfolder-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.

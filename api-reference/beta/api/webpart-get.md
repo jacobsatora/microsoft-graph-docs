@@ -33,9 +33,9 @@ One of the following permissions is required to call this API. To learn more, in
 -->
 
 ```http
-GET /sites/{sitesId}/pages/{sitePageId}/webParts/{webPartId}
-GET /sites/{sitesId}/pages/{sitePageId}/canvasLayout/verticalSection/webparts/{webPartIndex}
-GET /sites/{sitesId}/pages/{sitePageId}/canvasLayout/horizontalSections/{horizontalSectionId}/columns/{horizontalSectionColumnId}/webparts/{webPartIndex}
+GET /sites/{sitesId}/pages/{sitePageId}/microsoft.graph.sitePage/webParts/{webPartId}
+GET /sites/{sitesId}/pages/{sitePageId}/microsoft.graph.sitePage/canvasLayout/verticalSection/webparts/{webPartIndex}
+GET /sites/{sitesId}/pages/{sitePageId}/microsoft.graph.sitePage/canvasLayout/horizontalSections/{horizontalSectionId}/columns/{horizontalSectionColumnId}/webparts/{webPartIndex}
 ```
 
 ## Optional query parameters
@@ -63,7 +63,9 @@ If successful, this method returns a `200 OK` response code and a [standardWebPa
 
 The following is an example of a request.
 
+<!-- { "blockType": "ignored" } -->
 
+<<<<<<< HEAD
 <!-- {
   "blockType": "request",
   "name": "get_webpart"
@@ -72,6 +74,10 @@ The following is an example of a request.
 
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/sites/{sitesId}/pages/{sitePageId}/webParts/{webPartId}
+=======
+```http
+GET https://graph.microsoft.com/beta/sites/{sitesId}/pages/{sitePageId}/microsoft.graph.sitePage/webParts/{webPartId}
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ```
 
 #### Response
@@ -105,14 +111,10 @@ Content-Type: application/json
 
 With `select` statement, you can retrieve selected webpart metadata in a request.
 
-<!-- {
-  "blockType": "request",
-  "name": "get_webpart"
-}
--->
+<!-- { "blockType": "ignored" } -->
 
 ```http
-GET /sites/{sitesId}/pages/{sitePageId}/webParts/{webPartId}?select=id
+GET https://graph.microsoft.com/beta/sites/{sitesId}/pages/{sitePageId}/microsoft.graph.sitePage/webParts/{webPartId}?select=id
 ```
 
 #### Response

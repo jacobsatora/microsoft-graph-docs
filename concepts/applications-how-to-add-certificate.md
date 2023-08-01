@@ -6,7 +6,7 @@ ms.reviewer: saurabh.madan
 ms.localizationpriority: medium
 ms.topic: how-to
 ms.prod: "applications"
-ms.date: 01/24/2022
+ms.date: 01/24/2023
 ---
 
 # Add a certificate to an app using Microsoft Graph
@@ -28,7 +28,7 @@ To complete this tutorial, you need the following resources and privileges:
 > [!CAUTION]
 > The use of certificates is highly recommended over secrets; however, we don't recommend using self-signed certificates. They can reduce the security bar of your application due to various factors like use of an outdated hash and cipher suites or lack of validation. We recommend procuring certificates from a well known trusted certificate authority.
 
-## Read the certificate details
+## Step 1: Read the certificate details
 
 To add a certificate programmatically using Microsoft Graph, you need the certificate's key. You can optionally add the certificate's thumbprint.
 
@@ -39,7 +39,9 @@ It's optional to add the certificate thumbprint to the request payload. If you w
 #### Request
 
 ```powershell-interactive
-Get-PfxCertificate -Filepath "C:\Users\admin\Desktop\20230112.cer" | Out-File -FilePath "C:\Users\admin\Desktop\20230112.cer.thumbprint.txt" ## Replace the file path with the source of your certificate
+## Replace the file path with the source of your certificate
+
+Get-PfxCertificate -Filepath "C:\Users\admin\Desktop\20230112.cer" | Out-File -FilePath "C:\Users\admin\Desktop\20230112.cer.thumbprint.txt"
 ```
 
 #### Response
@@ -59,7 +61,9 @@ To read the certificate's key using PowerShell, run the following request.
 #### Request
 
 ```powershell-interactive
-[convert]::ToBase64String((Get-Content C:\Users\admin\Desktop\20230112.cer -Encoding byte))  | Out-File -FilePath "C:\Users\admin\Desktop\20230112.key.txt" ## Replace the file path with the location of your certificate
+## Replace the file path with the location of your certificate
+
+[convert]::ToBase64String((Get-Content C:\Users\admin\Desktop\20230112.cer -Encoding byte))  | Out-File -FilePath "C:\Users\admin\Desktop\20230112.key.txt"
 ```
 
 #### Response
@@ -72,7 +76,7 @@ The output that's saved in the *.txt* file can be similar to the following.
 MIIDADCCAeigAwIBAgIQP6HEGDdZ65xJTcK4dCBvZzANBgkqhkiG9w0BAQsFADATMREwDwYDVQQDDAgyMDIzMDExMjAeFw0yMzAxMTIwODExNTZaFw0yNDAxMTIwODMxNTZaMBMxETAPBgNVBAMMCDIwMjMwMTEyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAseKf1weEacJ67D6/...dG+7WMIBsIUy0xz6MmyvfSohz3oNP4jHt7pJ9TyxnvDlaxQPUbuIL+DaXVkKRm1V3GgIpKTBqMzTf4tCpy7rpUZbhcwAFw6h9A==
 ```
 
-## Add the certificate details using Microsoft Graph
+## Step 2: Add the certificate details using Microsoft Graph
 
 ### Request
 
@@ -115,8 +119,13 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/applications-howto-add-certificate-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/applications-howto-add-certificate-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -156,8 +165,13 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/applications-howto-append-certificate-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/applications-howto-append-certificate-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -168,7 +182,7 @@ Content-type: application/json
 HTTP/1.1 204 No Content
 ```
 
-## Test app-only authentication
+## Step 3: Test app-only authentication
 
 You can test the app-only authentication using Microsoft Graph PowerShell, as shown in the following example.
 

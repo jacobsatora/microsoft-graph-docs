@@ -96,6 +96,15 @@ The following is an example of the request:
 GET https://graph.microsoft.com/beta/roleManagement/deviceManagement/roleAssignments?$filter=principalId eq '9e47fc6f-2d7a-464c-944e-d3dd0de522e4'
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-unifiedroleassignmentmultiple-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response:
@@ -145,6 +154,15 @@ Content-type: application/json
 GET  https://graph.microsoft.com/beta/roleManagement/cloudPC/roleAssignments
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-cloudpcunifiedroleassignmentmultiple-1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 > **Note:** The response object shown here might be shortened for readability. All the properties will be returned from an actual call.
@@ -208,6 +226,15 @@ Content-type: application/json
 GET  https://graph.microsoft.com/beta/roleManagement/cloudPC/roleAssignments?$filter=roleDefinitionId eq 'b5c08161-a7af-481c-ace2-a20a69a48fb1'
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-cloudpcunifiedroleassignmentmultiple-2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 > **Note:** The response object shown here might be shortened for readability. All the properties will be returned from an actual call.

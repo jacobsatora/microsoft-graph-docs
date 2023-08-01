@@ -55,10 +55,7 @@ Here is an example of the request.
 
 <!--{
   "blockType": "request",
-  "isComposable": true,
   "name": "tablerowcollection_itemat",
-  "idempotent": true,
-  "@type": "requestBodyResourceFor.tablerowcollection_itemat"
 }-->
 ```http
 POST https://graph.microsoft.com/v1.0/me/drive/items/{id}/workbook/tables/{id|name}/rows/itemAt

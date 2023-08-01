@@ -67,8 +67,16 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/teams
 ```
 
+<<<<<<< HEAD
 ---
 
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-teams-in-org-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 #### Response
 The following is an example of a response.
@@ -121,6 +129,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/teams?$filter=startswith(displayName, 'A')&$top=2
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-teams-filter-top-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of a response.
@@ -167,8 +184,16 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/teams?$filter=displayName eq 'A Contoso Team'&$select=id,description
 ```
 
+<<<<<<< HEAD
 ---
 
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-teams-filter-select-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 #### Response
 The following is an example of a response.
@@ -194,6 +219,7 @@ Content-type: application/json
 }
 ```
 
-
 ## See also
+
 - [Get team](../api/team-get.md)
+- [Microsoft Graph service-specific throttling limits](/graph/throttling-limits#microsoft-teams-service-limits)

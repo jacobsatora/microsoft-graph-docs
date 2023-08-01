@@ -61,6 +61,9 @@ If successful, this method returns a `200 OK` response code and an updated [onPr
 
 ### Request
 Here is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- { "blockType": "request" , "name" : "intune_onboarding_onpremisesconditionalaccesssettings_update_update_onpremisesconditionalaccesssettings" }-->
 ``` http
 PATCH https://graph.microsoft.com/v1.0/deviceManagement/conditionalAccessSettings
 Content-type: application/json
@@ -79,8 +82,16 @@ Content-length: 275
 }
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/intune-onboarding-onpremisesconditionalaccesssettings-update-update-onpremisesconditionalaccesssettings-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+
+<!-- { "blockType": "response" , "@odata.type" : "microsoft.graph.onPremisesConditionalAccessSettings" }-->
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json

@@ -74,7 +74,11 @@ The following is an example of the request.
 GET https://graph.microsoft.com/v1.0/me/mailFolders
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-mailfolders-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -200,6 +204,15 @@ This example uses the `includeHiddenFolders` query parameter to get a list of ma
 GET https://graph.microsoft.com/beta/me/mailFolders/?includeHiddenFolders=true
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-hiddenmailfolders-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following is an example of the response.
 

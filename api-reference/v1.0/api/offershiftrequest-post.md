@@ -37,6 +37,7 @@ POST /teams/{teamId}/schedule/offerShiftRequests
 |:----------|:----------|
 | Authorization | Bearer {token}. Required. |
 | Content-type | application/json. Required. |
+| MS-APP-ACTS-AS  | A user ID (GUID). Required only if the authorization token is an application token; otherwise, optional. |
 
 ## Request body
 Provide the new [offerShiftRequest](../resources/offershiftrequest.md) object in the request body for this method.
@@ -59,7 +60,7 @@ The following is an example of the request.
 }-->
 
 ```http
-POST https://graph.microsoft.com/v1.0/teams/788b75d2-a911-48c0-a5e2-dc98480457e3/schedule/offershiftrequests
+POST https://graph.microsoft.com/v1.0/teams/788b75d2-a911-48c0-a5e2-dc98480457e3/schedule/offerShiftRequests
 Authorization: Bearer {token}
 Content-type: application/json
 
@@ -70,14 +71,15 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-offershiftrequest-3-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
-
----
-
 
 ### Response
 

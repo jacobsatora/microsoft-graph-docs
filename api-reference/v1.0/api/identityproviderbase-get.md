@@ -74,7 +74,11 @@ The following is an example of the request.
 GET https://graph.microsoft.com/v1.0/identity/identityProviders/Amazon-OAUTH
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-socialidentityprovider-from-identityproviderbase-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -122,7 +126,11 @@ The following is an example of the request.
 GET https://graph.microsoft.com/v1.0/identity/identityProviders/MSASignup-OAUTH
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-builtinidentityprovider-from-identityproviderbase-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -169,7 +177,11 @@ The following is an example of the request.
 GET https://graph.microsoft.com/v1.0/identity/identityProviders/Apple-Managed-OIDC
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-applemanagedidentityprovider-from-identityproviderbase-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

@@ -1,7 +1,7 @@
 ---
 title: "Get cloudPcCrossCloudGovernmentOrganizationMapping"
 description: "Read the properties and relationships of a cloudPcCrossCloudGovernmentOrganizationMapping object."
-author: "SuyliuMS"
+author: "GuojMS"
 ms.localizationpriority: medium
 ms.prod: "cloud-pc"
 doc_type: apiPageType
@@ -40,7 +40,6 @@ This method supports some of the OData query parameters to help customize the re
 |Name|Description|
 |:---|:---|
 |Authorization|Bearer {token}. Required.|
-|X-MS-CloudPC-USGovCloudTenantAADToken|{token}. Required. Represents the Azure AD token of the government cloud tenant.|
 
 ## Request body
 Do not supply a request body for this method.
@@ -60,9 +59,17 @@ If successful, this method returns a `200 OK` response code and a [cloudPcCrossC
 -->
 ``` http
 GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/crossCloudGovernmentOrganizationMapping
-X-MS-CloudPC-USGovCloudTenantAADToken: {token}
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-cloudpccrosscloudgovernmentorganizationmapping-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 <!-- {
   "blockType": "response",

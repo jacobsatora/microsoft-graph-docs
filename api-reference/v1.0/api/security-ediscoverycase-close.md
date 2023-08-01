@@ -65,7 +65,11 @@ If successful, this action returns a `204 No Content` response code.
 POST https://graph.microsoft.com/security/cases/ediscoveryCases/061b9a92-8926-4bd9-b41d-abf35edc7583/close
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/close-ediscoverycase-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

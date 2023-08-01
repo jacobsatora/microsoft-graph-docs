@@ -51,13 +51,22 @@ If successful, this function returns a `200 OK` response code and a [cloudPcLaun
 
 <!-- {
   "blockType": "request",
-  "name": "cloudpcthis.getcloudpclaunchinfo"
+  "name": "cloudpc.getcloudpclaunchinfo"
 }
 -->
 ``` http
 GET https://graph.microsoft.com/beta/me/cloudPCs/{cloudPCId}/getCloudPcLaunchInfo
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/cloudpcgetcloudpclaunchinfo-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 <!-- {
   "blockType": "response",
@@ -72,7 +81,9 @@ Content-Type: application/json
 {
   "@odata.context": "https://graph.microsoft.com/beta/$metadata#microsoft.graph.cloudPcLaunchInfo",
   "cloudPcId": "a20d556d-85f7-88cc-bb9c-08d9902bb7bb",
-  "cloudPcLaunchUrl": "https://rdweb-r0.wvdselfhost.microsoft.com/api/arm/weblaunch/tenants/662009bc-7732-4f6f-8726-25883518b33e/resources/662009bc-7732-4f6f-8726-25883518b33e"
+  "cloudPcLaunchUrl": "https://rdweb-r0.wvdselfhost.microsoft.com/api/arm/weblaunch/tenants/662009bc-7732-4f6f-8726-25883518b33e/resources/662009bc-7732-4f6f-8726-25883518b33e",
+  "windows365SwitchCompatible":false,
+  "windows365SwitchNotCompatibleReason":"CPCHardwareNotMeetRequirement"
 }
 ```
 

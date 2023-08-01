@@ -35,7 +35,7 @@ The work or school account needs to belong to one of the following roles:
 <!-- { "blockType": "ignored" } -->
 
 ```http
-DELETE/identity/b2xUserFlows/{userflow-id}/userflowIdentityProviders/{id}/$ref
+DELETE /identity/b2xUserFlows/{userflow-id}/userflowIdentityProviders/{id}/$ref
 ```
 
 ## Request headers
@@ -69,6 +69,15 @@ The following is an example of the request.
 DELETE https://graph.microsoft.com/beta/identity/b2xUserFlows/{userflow-id}/userflowIdentityProviders/{identityProvider-id}/$ref
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-identity-b2xuserflows-userflow-userflowidentityproviders-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 <!-- {

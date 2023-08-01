@@ -21,9 +21,9 @@ One of the following permissions is required to call this API. To learn more, in
 
 | Permission type                        | Permissions (from least to most privileged) |
 |:---------------------------------------|:--------------------------------------------|
-| Delegated (work or school account)     | CloudPC.Read.All                            |
+| Delegated (work or school account)     | CloudPC.Read.All, CloudPC.ReadWrite.All     |
 | Delegated (personal Microsoft account) | Not supported.                              |
-| Application                            | CloudPC.ReadWrite.All                       |
+| Application                            | CloudPC.Read.All, CloudPC.ReadWrite.All     |
 
 ## HTTP request
 
@@ -67,6 +67,15 @@ The following is an example of a request.
 GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs/831dd62e-cfa1-4d49-a3b4-58d4e9920f8e/getSupportedCloudPcRemoteActions
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/cloudpc-getsupportedcloudpcremoteactions-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.

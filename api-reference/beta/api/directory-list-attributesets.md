@@ -8,6 +8,7 @@ doc_type: apiPageType
 ---
 
 # List attributeSets
+
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
@@ -15,6 +16,7 @@ Namespace: microsoft.graph
 Get a list of the [attributeSet](../resources/attributeset.md) objects and their properties.
 
 ## Permissions
+
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
 |Permission type|Permissions (from least to most privileged)|
@@ -23,14 +25,7 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (personal Microsoft account)|Not supported.|
 |Application|CustomSecAttributeDefinition.Read.All, CustomSecAttributeDefinition.ReadWrite.All|
 
-The signed-in user must also be assigned one of the following [directory roles](/azure/active-directory/roles/permissions-reference):
-
-+ Attribute Assignment Reader
-+ Attribute Definition Reader
-+ Attribute Assignment Administrator
-+ Attribute Definition Administrator
-
-By default, Global Administrator and other administrator roles do not have permissions to read, define, or assign custom security attributes.
+[!INCLUDE [rbac-customsecurityattibutes-apis-definition-assignment-read](../includes/rbac-for-apis/rbac-customsecurityattibutes-apis-definition-assignment-read.md)]
 
 ## HTTP request
 
@@ -43,14 +38,17 @@ GET /directory/attributeSets
 ```
 
 ## Optional query parameters
+
 This method supports the `$select`, `$top`, and `$orderBy` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
 
 ## Request headers
+
 |Name|Description|
 |:---|:---|
 |Authorization|Bearer {token}. Required.|
 
 ## Request body
+
 Do not supply a request body for this method.
 
 ## Response
@@ -65,6 +63,12 @@ The following example gets all attribute sets in a tenant.
 
 #### Request
 
+<<<<<<< HEAD
+=======
+The following is an example of a request.
+
+# [HTTP](#tab/http)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- {
   "blockType": "request",
   "name": "list_attributeset_all"
@@ -74,7 +78,18 @@ The following example gets all attribute sets in a tenant.
 GET https://graph.microsoft.com/beta/directory/attributeSets
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-attributeset-all-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
+
+The following is an example of the response.
 
 <!-- {
   "blockType": "response",
@@ -109,6 +124,12 @@ The following example gets the top 10 attribute sets with support for paging.
 
 #### Request
 
+<<<<<<< HEAD
+=======
+The following is an example of a request.
+
+# [HTTP](#tab/http)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- {
   "blockType": "request",
   "name": "list_attributeset_top"
@@ -118,7 +139,18 @@ The following example gets the top 10 attribute sets with support for paging.
 GET https://graph.microsoft.com/beta/directory/attributeSets?$top=10
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-attributeset-top-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
+
+The following is an example of the response.
 
 <!-- {
   "blockType": "response",
@@ -150,10 +182,15 @@ Content-Type: application/json
 
 ### Example 3: Get attribute sets in order
 
-The following example gets attribute sets ordered by id.
+The following example gets attribute sets ordered by ID.
 
 #### Request
 
+<<<<<<< HEAD
+=======
+The following is an example of a request.
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- {
   "blockType": "request",
   "name": "list_attributeset_orderby"
@@ -164,6 +201,8 @@ GET https://graph.microsoft.com/beta/directory/attributeSets?$orderBy=id
 ```
 
 #### Response
+
+The following is an example of the response.
 
 <!-- {
   "blockType": "response",

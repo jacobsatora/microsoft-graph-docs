@@ -115,6 +115,15 @@ The following is an example of the request. Because there is no `$select` parame
 GET https://graph.microsoft.com/beta/contacts/delta
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/orgcontact-delta-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response when using `@odata.deltaLink` obtained from the query initialization.
@@ -167,6 +176,15 @@ The next example shows the initial request selecting three properties for change
 GET https://graph.microsoft.com/beta/contacts/delta?$select=displayName,jobTitle,mail
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/orgcontact-delta-select-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response when using `@odata.deltaLink` obtained from the query initialization. Note that all three properties are included in the response and it is not known which ones have changed since the `@odata.deltaLink` was obtained.
@@ -212,6 +230,15 @@ GET https://graph.microsoft.com/beta/contacts/delta?$select=displayName,jobTitle
 Prefer: return=minimal
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/orgcontact-delta-minimal-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response when using `@odata.deltaLink` obtained from the query initialization. Note that the `mail` property is not included, which means it has not changed since the last delta query; `displayName` and `jobTitle` are included, which means their values have changed.

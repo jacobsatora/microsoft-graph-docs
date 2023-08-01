@@ -2,8 +2,14 @@
 description: "Automatically generated file. DO NOT MODIFY"
 ---
 
+<<<<<<< HEAD
 ```cli
 
+=======
+```bash
+
+// THE CLI IS IN PREVIEW. NON-PRODUCTION USE ONLY
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 mgc teams channels messages patch --team-id {team-id} --channel-id {channel-id} --chat-message-id {chatMessage-id} --body '{\
   "messageType": "message",\
   "subject": null,\
@@ -148,6 +154,139 @@ mgc teams channels messages patch --team-id {team-id} --channel-id {channel-id} 
         }\
       }\
     }\
+<<<<<<< HEAD
+=======
+  ],\
+  "messageHistory": [\
+    {\
+      "modifiedDateTime": "2018-10-21T08:10:30.489Z",\
+      "actions": "reactionAdded",\
+      "reaction": {\
+        "reactionType": "angry",\
+        "user": {\
+          "application": null,\
+          "device": null,\
+          "user": {\
+            "id": "f1b66449-b46d-49b0-9c3c-53c10a5c818e",\
+            "displayName": null,\
+            "userIdentityType": "aadUser"\
+          }\
+        }\
+      }\
+    },\
+    {\
+      "modifiedDateTime": "2018-10-21T08:10:32.489Z",\
+      "actions": "reactionAdded",\
+      "reaction": {\
+        "reactionType": "laugh",\
+        "user": {\
+          "application": null,\
+          "device": null,\
+          "user": {\
+            "id": "03a02232-d8f5-4970-a77e-6e8c76ce7a4e",\
+            "displayName": null,\
+            "userIdentityType": "aadUser"\
+          }\
+        }\
+      }\
+    },\
+    {\
+      "modifiedDateTime": "2018-10-21T02:17:14.67Z",\
+      "actions": "reactionAdded",\
+      "reaction": {\
+        "reactionType": "like",\
+        "user": {\
+          "application": null,\
+          "device": null,\
+          "user": {\
+            "id": "f1b66449-b46d-49b0-9c3c-53c10a5c818e",\
+            "displayName": null,\
+            "userIdentityType": "aadUser"\
+          }\
+        }\
+      }\
+    },\
+    {\
+      "modifiedDateTime": "2018-10-21T02:34:40.3Z",\
+      "actions": "reactionAdded",\
+      "reaction": {\
+        "reactionType": "like",\
+        "user": {\
+          "application": null,\
+          "device": null,\
+          "user": {\
+            "id": "4c9041b7-449a-40f7-8855-56da239b9fd1",\
+            "displayName": null,\
+            "userIdentityType": "aadUser"\
+          }\
+        }\
+      }\
+    },\
+    {\
+      "modifiedDateTime": "2018-10-21T08:10:25.489Z",\
+      "actions": "reactionAdded",\
+      "reaction": {\
+        "reactionType": "like",\
+        "user": {\
+          "application": null,\
+          "device": null,\
+          "user": {\
+            "id": "03a02232-d8f5-4970-a77e-6e8c76ce7a4e",\
+            "displayName": null,\
+            "userIdentityType": "aadUser"\
+          }\
+        }\
+      }\
+    },\
+    {\
+      "modifiedDateTime": "2018-10-21T08:10:31.489Z",\
+      "actions": "reactionAdded",\
+      "reaction": {\
+        "reactionType": "heart",\
+        "user": {\
+          "application": null,\
+          "device": null,\
+          "user": {\
+            "id": "03a02232-d8f5-4970-a77e-6e8c76ce7a4e",\
+            "displayName": null,\
+            "userIdentityType": "aadUser"\
+          }\
+        }\
+      }\
+    },\
+    {\
+      "modifiedDateTime": "2018-10-21T08:10:33.489Z",\
+      "actions": "reactionAdded",\
+      "reaction": {\
+        "reactionType": "sad",\
+        "user": {\
+          "application": null,\
+          "device": null,\
+          "user": {\
+            "id": "03a02232-d8f5-4970-a77e-6e8c76ce7a4e",\
+            "displayName": null,\
+            "userIdentityType": "aadUser"\
+          }\
+        }\
+      }\
+    },\
+    {\
+      "modifiedDateTime": "2018-10-21T08:10:34.489Z",\
+      "actions": "surprised",\
+      "reaction": {\
+        "reactionType": "sad",\
+        "user": {\
+          "application": null,\
+          "device": null,\
+          "user": {\
+            "id": "03a02232-d8f5-4970-a77e-6e8c76ce7a4e",\
+            "displayName": null,\
+            "userIdentityType": "aadUser"\
+          }\
+        }\
+      }\
+    }\
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
   ]\
 }\
 '

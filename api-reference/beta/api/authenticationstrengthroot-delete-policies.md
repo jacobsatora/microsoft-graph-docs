@@ -1,7 +1,7 @@
 ---
 title: "Delete authenticationStrengthPolicy"
 description: "Delete a custom authenticationStrengthPolicy object."
-author: "mmcla"
+author: "InbarckMS"
 ms.localizationpriority: medium
 ms.prod: "identity-and-sign-in"
 doc_type: apiPageType
@@ -22,6 +22,8 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (work or school account)|Policy.ReadWrite.ConditionalAccess, Policy.ReadWrite.AuthenticationMethod|
 |Delegated (personal Microsoft account)|Not supported.|
 |Application|Policy.ReadWrite.ConditionalAccess, Policy.ReadWrite.AuthenticationMethod|
+
+[!INCLUDE [rbac-authenticationstrength-apis-write](../includes/rbac-for-apis/rbac-authenticationstrength-apis-write.md)]
 
 ## HTTP request
 
@@ -59,8 +61,11 @@ The following is an example of a request.
 DELETE https://graph.microsoft.com/beta/policies/authenticationStrengthPolicies/6e7d7469-07c5-4bb2-a801-5eaef8fb7c1e/$ref
 ```
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 The following is an example of the response
 <!-- {

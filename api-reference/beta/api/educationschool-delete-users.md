@@ -63,7 +63,10 @@ The following is an example of a request.
 DELETE https://graph.microsoft.com/beta/education/schools/10001/users/13006
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response. 

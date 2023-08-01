@@ -165,6 +165,15 @@ User-agent: ContosoLobApp/1.0
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/sensitivitylabelthisevaluateapplication-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.
@@ -254,3 +263,20 @@ Content-type: application/json
     ]
 }
 ```
+<!--
+{
+  "type": "#page.annotation",
+  "description": "sensitivityLabel: evaluateApplication",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": "",
+  "suppressions": [
+    "Error: microsoft.graph.microsoft.graph/users:
+      /users/{var}/security/informationProtection/sensitivityLabels/evaluateApplication
+      Uri path requires navigating into unknown object hierarchy: missing property 'informationProtection' on 'security'. Possible issues:
+  	 1) Doc bug where 'informationProtection' isn't defined on the resource.
+  	 2) Doc bug where 'informationProtection' is an example key and should instead be replaced with a placeholder like {item-id} or declared in the sampleKeys annotation.
+  	 3) Doc bug where 'security' is supposed to be an entity type, but is being treated as a complex because it (and its ancestors) are missing the keyProperty annotation."
+  ]
+}
+-->

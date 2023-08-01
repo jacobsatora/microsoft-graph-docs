@@ -58,6 +58,8 @@ The following table shows the parameters that can be used with this action.
 |expirationDateTime|DateTimeOffset|A string with format of yyyy-MM-ddTHH:mm:ssZ of DateTime indicates the expiration time of the permission. Optional. |
 |password|String|The password of the sharing link that is set by the creator. Optional. |
 |recipients|[driveRecipient](../resources/driverecipient.md) collection|A collection of recipients who will receive access to the sharing link. Optional. |
+| retainInheritedPermissions |  Boolean          | Optional. If `true` (default), any existing inherited permissions are retained on the shared item when sharing this item for the first time. If `false`, all existing permissions are removed when sharing for the first time.  |
+|sendNotification|Boolean|If `true`, this method sends a [sharing link](../resources/permission.md#sharing-links) in an email to users specified in `recipients`. Applicable to OneDrive for Business and SharePoint. The default value is `false`. Optional.|
 
 ### Link types
 
@@ -95,17 +97,20 @@ The response will be `201 Created` if a new sharing link is created for the list
 ### Example 1: Create an anonymous sharing link
 The following example requests a sharing link to be created for the listItem specified by {itemId} in the list specified {listId}.
 The sharing link is configured to be read-only and usable by anyone with the link.
+For OneDrive for Business and SharePoint users, use the `sendNotification` parameter to create a sharing link. The `sharingLink` is then sent to recipients via email.
+All existing permissions are removed when sharing for the first time if `retainInheritedPermissions` is false.
 
 #### Request
 
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "listItem_createlink_for_itemID_in_specific_list"
 }-->
 
 ```http
-POST sites/{siteId}/lists/{listId}/items/{itemId}/createLink
+POST https://graph.microsoft.com/beta/sites/{siteId}/lists/{listId}/items/{itemId}/createLink
 Content-Type: application/json
 
 {
@@ -116,10 +121,17 @@ Content-Type: application/json
     {
       "@odata.type": "microsoft.graph.driveRecipient"
     }
-  ]
+  ],
+  "sendNotification": true,
+  "retainInheritedPermissions": false
 }
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/listitem-createlink-for-itemid-in-specific-list-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 #### Response
 >**Note:** The response object shown here might be shortened for readability.
@@ -173,6 +185,14 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/listitem-createlink-create-company-shareable-links-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 #### Response
 
@@ -200,7 +220,7 @@ Content-Type: application/json
 ### Example 3: Creating embeddable links
 
 When using the `embed` link type, the webUrl returned can be embedded in an `<iframe>` HTML element.
-When an embed link is created the `webHtml` property contains the HTML code for an `<iframe>` to host the content.
+When an embed link is created, the `webHtml` property contains the HTML code for an `<iframe>` to host the content.
 
 >**Note:** Embed links are only supported for OneDrive personal.
 
@@ -221,6 +241,14 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/listitem-createlink-3-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 #### Response
 

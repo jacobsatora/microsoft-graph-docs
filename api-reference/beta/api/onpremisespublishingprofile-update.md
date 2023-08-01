@@ -30,7 +30,7 @@ One of the following permissions is required to call this API. To learn more, in
 <!-- { "blockType": "ignored" } -->
 
 ```http
-PATCH ~/onPremisesPublishingProfiles/{publishingType}/hybridAgentUpdaterConfiguration
+PATCH /onPremisesPublishingProfiles/{publishingType}/hybridAgentUpdaterConfiguration
 ```
 
 ## Request headers
@@ -79,7 +79,10 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 <!-- {
@@ -113,7 +116,10 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 <!-- {
@@ -146,7 +152,10 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 <!-- {

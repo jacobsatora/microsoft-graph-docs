@@ -33,7 +33,7 @@ One of the following permissions is required to call this API. To learn more, in
 -->
 
 ```http
-GET /sites/{sitesId}/pages/{sitePageId}/canvasLayout/horizontalSections/{horizontalSectionId}
+GET /sites/{sitesId}/pages/{sitePageId}/microsoft.graph.sitePage/canvasLayout/horizontalSections/{horizontalSectionId}
 ```
 
 ## Optional query parameters
@@ -62,7 +62,9 @@ If successful, this method returns a `200 OK` response code and a [horizontalSec
 
 The following is an example of a request.
 
+<!-- { "blockType": "ignored" } -->
 
+<<<<<<< HEAD
 <!-- {
   "blockType": "request",
   "name": "get_horizontalsection"
@@ -71,6 +73,10 @@ The following is an example of a request.
 
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/sites/{sitesId}/pages/{sitePageId}/canvasLayout/horizontalSections/{horizontalSectionId}
+=======
+``` http
+GET https://graph.microsoft.com/beta/sites/{sitesId}/pages/{sitePageId}/microsoft.graph.sitePage/canvasLayout/horizontalSections/{horizontalSectionId}
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ```
 
 #### Response
@@ -91,12 +97,9 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": {
-    "@odata.type": "#microsoft.graph.horizontalSection",
-    "layout": "twoColumns",
-    "id": "1",
-    "emphasis": "soft"
-  }
+  "layout": "twoColumns",
+  "id": "1",
+  "emphasis": "soft"
 }
 ```
 
@@ -105,7 +108,9 @@ Content-Type: application/json
 
 With `select` and `expand` statements, you can retrieve horizontalSection metadata and column information in a single request.
 
+<!-- { "blockType": "ignored" } -->
 
+<<<<<<< HEAD
 <!-- {
   "blockType": "request",
   "name": "get_horizontalsection"
@@ -114,6 +119,10 @@ With `select` and `expand` statements, you can retrieve horizontalSection metada
 
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/sites/{sitesId}/pages/{sitePageId}/canvasLayout/horizontalSections/{horizontalSectionId}?select=id,expand=columns
+=======
+``` http
+GET https://graph.microsoft.com/beta/sites/{sitesId}/pages/{sitePageId}/microsoft.graph.sitePage/canvasLayout/horizontalSections/{horizontalSectionId}?select=id,expand=columns
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ```
 
 #### Response
@@ -130,17 +139,14 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": {
-    "@odata.type": "#microsoft.graph.horizontalSection",
-    "layout": "twoColumns",
+  "layout": "twoColumns",
+  "id": "1",
+  "columns":[{
     "id": "1",
-    "columns":[{
-      "id": "1",
-      "width": 6
-    },{
-      "id": "2",
-      "width": 6
-    }]
-  }
+    "width": 6
+  },{
+    "id": "2",
+    "width": 6
+  }]
 }
 ```

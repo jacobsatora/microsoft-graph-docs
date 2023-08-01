@@ -2,7 +2,7 @@
 title: "Remove group owner"
 description: "Use this API to remove an owner from a Microsoft 365 group or a security group through the owners navigation property."
 ms.localizationpriority: medium
-author: "psaffaie"
+author: "Jordanndahl"
 ms.prod: "groups"
 doc_type: apiPageType
 ---
@@ -64,7 +64,11 @@ The following is an example of the request.
 DELETE https://graph.microsoft.com/v1.0/groups/{id}/owners/{id}/$ref
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/delete-owner-from-group-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

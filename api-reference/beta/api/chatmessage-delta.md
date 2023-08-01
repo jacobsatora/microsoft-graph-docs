@@ -42,9 +42,6 @@ One of the following permissions is required to call this API. To learn more, in
 
 [!INCLUDE [teamwork-permissions-note](../../../includes/teamwork-permissions-note.md)]
 
-> [!NOTE]
-> Before calling this API with application permissions, you must request access. For details, see [Protected APIs in Microsoft Teams](/graph/teams-protected-apis).
-
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -117,6 +114,15 @@ The request specifies the optional request header, odata.top, returning 2 events
 GET https://graph.microsoft.com/beta/teams/fbe2bf47-16c8-47cf-b4a5-4b9b187c508b/channels/19:4a95f7d8db4c4e7fae857bcebe0623e6@thread.tacv2/messages/delta?$top=2
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-chatmessagedeltachannel-1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Initial request response
 
 The response includes two messages and a `@odata.nextLink` response header with a `skipToken`. The `@odata.nextLink` URL indicates there are more messages in the channel to get.
@@ -158,9 +164,11 @@ Content-type: application/json
                 "device": null,
                 "conversation": null,
                 "user": {
+                    "@odata.type": "#microsoft.graph.teamworkUserIdentity",
                     "id": "8ea0e38b-efb3-4757-924a-5f94061cf8c2",
                     "displayName": "Robin Kline",
-                    "userIdentityType": "aadUser"
+                    "userIdentityType": "aadUser",
+                    "tenantId": "e61ef81e-8bd8-476a-92e8-4a62f8426fca"
                 }
             },
             "body": {
@@ -200,9 +208,11 @@ Content-type: application/json
                 "device": null,
                 "conversation": null,
                 "user": {
+                    "@odata.type": "#microsoft.graph.teamworkUserIdentity",
                     "id": "8ea0e38b-efb3-4757-924a-5f94061cf8c2",
                     "displayName": "Robin Kline",
-                    "userIdentityType": "aadUser"
+                    "userIdentityType": "aadUser",
+                    "tenantId": "e61ef81e-8bd8-476a-92e8-4a62f8426fca"
                 }
             },
             "body": {
@@ -237,6 +247,15 @@ The second request specifies the `@odata.nextLink` URL returned from the previou
 GET https://graph.microsoft.com/beta/teams/fbe2bf47-16c8-47cf-b4a5-4b9b187c508b/channels/19:4a95f7d8db4c4e7fae857bcebe0623e6@thread.tacv2/messages/delta?$skiptoken=-FG3FPHv7HuyuazNLuy3eXlzQGbEjYLUsW9-pYkmXgn5KGsaOwrCoor2W23dGNNM1KtAX4AyvpFQNVsBgsEwUOX9lw8x9zDumgJy-C-UbjZLlZDQACyC9FyrVelZus9n.--rshdLwy_WBFJd8anPXJPbSUtUD7r3V4neB5tcrG58
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-chatmessagedeltachannel-2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Second request response
 
 The second response returns the next 2 messages and a `@odata.nextLink` response header with a `skipToken`, indicates there are more messages in the channel to get.
@@ -277,9 +296,11 @@ Content-type: application/json
                 "device": null,
                 "conversation": null,
                 "user": {
+                    "@odata.type": "#microsoft.graph.teamworkUserIdentity",
                     "id": "8ea0e38b-efb3-4757-924a-5f94061cf8c2",
                     "displayName": "Robin Kline",
-                    "userIdentityType": "aadUser"
+                    "userIdentityType": "aadUser",
+                    "tenantId": "e61ef81e-8bd8-476a-92e8-4a62f8426fca"
                 }
             },
             "body": {
@@ -317,9 +338,11 @@ Content-type: application/json
                 "device": null,
                 "conversation": null,
                 "user": {
+                    "@odata.type": "#microsoft.graph.teamworkUserIdentity",
                     "id": "8ea0e38b-efb3-4757-924a-5f94061cf8c2",
                     "displayName": "Robin Kline",
-                    "userIdentityType": "aadUser"
+                    "userIdentityType": "aadUser",
+                    "tenantId": "e61ef81e-8bd8-476a-92e8-4a62f8426fca"
                 }
             },
             "body": {
@@ -354,6 +377,15 @@ The third request continues to use the latest `@odata.nextLink` returned from th
 GET https://graph.microsoft.com/beta/teams/fbe2bf47-16c8-47cf-b4a5-4b9b187c508b/channels/19:4a95f7d8db4c4e7fae857bcebe0623e6@thread.tacv2/messages/delta?$skiptoken=8UusBixEHS9UUau6uGcryrA6FpnWwMJbuTYILM1PArHxnZzDVcsHQrijNzCyIVeEauMQsKUfMhNjLWFs1o4sBS_LofJ7xMftZUfec_pijuT6cAk5ugcWCca9RCjK7iVj.DKZ9w4bX9vCR7Sj9P0_qxjLAAPiEZgxlOxxmCLMzHJ4
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-chatmessagedeltachannel-3-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Third request response
 
 The third response returns the only remaining messages in the channel and a `@odata.deltaLink` response header with a `deltaToken` which indicates that all messages in the channel have been read. Save and use the `@odata.deltaLink` URL to query for any new messages starting from this point onwards.
@@ -394,9 +426,11 @@ Content-type: application/json
                 "device": null,
                 "conversation": null,
                 "user": {
+                    "@odata.type": "#microsoft.graph.teamworkUserIdentity",
                     "id": "8ea0e38b-efb3-4757-924a-5f94061cf8c2",
                     "displayName": "Robin Kline",
-                    "userIdentityType": "aadUser"
+                    "userIdentityType": "aadUser",
+                    "tenantId": "e61ef81e-8bd8-476a-92e8-4a62f8426fca"
                 }
             },
             "body": {
@@ -434,9 +468,11 @@ Content-type: application/json
                 "device": null,
                 "conversation": null,
                 "user": {
+                    "@odata.type": "#microsoft.graph.teamworkUserIdentity",
                     "id": "8ea0e38b-efb3-4757-924a-5f94061cf8c2",
                     "displayName": "Robin Kline",
-                    "userIdentityType": "aadUser"
+                    "userIdentityType": "aadUser",
+                    "tenantId": "e61ef81e-8bd8-476a-92e8-4a62f8426fca"
                 }
             },
             "body": {
@@ -473,6 +509,15 @@ Using the `@odata.deltaLink` from the last request in the last round, you will b
 GET https://graph.microsoft.com/beta/teams/fbe2bf47-16c8-47cf-b4a5-4b9b187c508b/channels/19:4a95f7d8db4c4e7fae857bcebe0623e6@thread.tacv2/messages/delta?$deltatoken=aQdvS1VwGCSRxVmZJqykmDik_JIC44iCZpv-GLiA2VnFuE5yG-kCEBROb2iaPT_y_eMWVQtBO_ejzzyIxl00ji-tQ3HzAbW4liZAVG88lO3nG_6-MBFoHY1n8y21YUzjocG-Cn1tCNeeLPLTzIe5Dw.EP9gLiCoF2CE_e6l_m1bTk2aokD9KcgfgfcLGqd1r_4
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-chatmessagedeltachannel-4-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 >**Note:** The response object shown here might be shortened for readability.
@@ -512,9 +557,11 @@ Content-type: application/json
                 "device": null,
                 "conversation": null,
                 "user": {
+                    "@odata.type": "#microsoft.graph.teamworkUserIdentity",
                     "id": "8ea0e38b-efb3-4757-924a-5f94061cf8c2",
                     "displayName": "Robin Kline",
-                    "userIdentityType": "aadUser"
+                    "userIdentityType": "aadUser",
+                    "tenantId": "e61ef81e-8bd8-476a-92e8-4a62f8426fca"
                 }
             },
             "body": {

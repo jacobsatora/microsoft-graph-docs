@@ -10,7 +10,9 @@ doc_type: apiPageType
 # Create permission
 Namespace: microsoft.graph
 
-Create a new [permission](../resources/permission.md) object on a site.
+Create a new [permission](../resources/permission.md) object on a site. 
+
+>**Note:** You can only use this method to create a new application permission; you can't use it to create a new user site permission.
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -69,7 +71,11 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/create-permission-from--cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

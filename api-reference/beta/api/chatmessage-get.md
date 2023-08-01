@@ -39,9 +39,6 @@ One of the following permissions is required to call this API. To learn more, in
 
 > **Note**: The _ChannelMessage.Read.Group_ and _ChatMessage.Read.Chat_ permissions use [resource-specific consent]( https://aka.ms/teams-rsc).
 
-> [!NOTE]
-> Before calling this API with application permissions, you must request access. For details, see [Protected APIs in Microsoft Teams](/graph/teams-protected-apis).
-
 ## HTTP request
 
 **Get message in a channel**
@@ -90,6 +87,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/chats/19:8ea0e38b-efb3-4757-924a-5f94061cf8c2_97f62344-57dc-409c-88ad-c4af14158ff5@unq.gbl.spaces/messages/1612289992105
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-chatmessagechannel-1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following example shows the response.`chatId` identifies the [chat](../resources/chat.md) that contains this message.
 
@@ -127,9 +133,11 @@ Content-type: application/json
         "device": null,
         "conversation": null,
         "user": {
+            "@odata.type": "#microsoft.graph.teamworkUserIdentity",
             "id": "8ea0e38b-efb3-4757-924a-5f94061cf8c2",
             "displayName": "Robin Kline",
-            "userIdentityType": "aadUser"
+            "userIdentityType": "aadUser",
+            "tenantId": "e61ef81e-8bd8-476a-92e8-4a62f8426fca"
         }
     },
     "body": {
@@ -157,6 +165,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/teams/fbe2bf47-16c8-47cf-b4a5-4b9b187c508b/channels/19:4a95f7d8db4c4e7fae857bcebe0623e6@thread.tacv2/messages/1614618259349
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-chatmessagechannel-2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following example shows the response.`channelIdentity` identifies the [team](../resources/team.md) and [channel](../resources/channel.md) that contains this message.
 
@@ -192,9 +209,11 @@ Content-type: application/json
         "device": null,
         "conversation": null,
         "user": {
+            "@odata.type": "#microsoft.graph.teamworkUserIdentity",
             "id": "8ea0e38b-efb3-4757-924a-5f94061cf8c2",
             "displayName": "Robin Kline",
-            "userIdentityType": "aadUser"
+            "userIdentityType": "aadUser",
+            "tenantId": "e61ef81e-8bd8-476a-92e8-4a62f8426fca"
         }
     },
     "body": {
@@ -227,6 +246,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/teams/fbe2bf47-16c8-47cf-b4a5-4b9b187c508b/channels/19:4a95f7d8db4c4e7fae857bcebe0623e6@thread.tacv2/messages/1612509044972/replies/1613671348387
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-chatmessagechannel-3-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following example shows the response.`replyToId` contains the `id` of the root message.
 
@@ -263,9 +291,11 @@ Content-type: application/json
         "device": null,
         "conversation": null,
         "user": {
+            "@odata.type": "#microsoft.graph.teamworkUserIdentity",
             "id": "8ea0e38b-efb3-4757-924a-5f94061cf8c2",
             "displayName": "Robin Kline",
-            "userIdentityType": "aadUser"
+            "userIdentityType": "aadUser",
+            "tenantId": "e61ef81e-8bd8-476a-92e8-4a62f8426fca"
         }
     },
     "body": {
@@ -289,6 +319,7 @@ Content-type: application/json
 - [List messages in a channel](channel-list-messages.md)
 - [List messages in a chat](chat-list-messages.md)
 - [Send message in a channel or a chat](chatmessage-post.md)
+- [Microsoft Graph service-specific throttling limits](/graph/throttling-limits#microsoft-teams-service-limits)
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

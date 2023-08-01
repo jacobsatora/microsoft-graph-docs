@@ -60,8 +60,10 @@ If successful, this method returns a `201 Created` response code and a [bookingC
 
 ### Request
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
+  "name" : "bookingbusinesspostcustomersquestios",
   "sampleKeys": ["Contosolunchdelivery@contoso.onmicrosoft.com"]
 }
 -->
@@ -77,6 +79,12 @@ Content-Type: application/json
   "answerOptions" : []
 }
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/bookingbusinesspostcustomersquestios-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 

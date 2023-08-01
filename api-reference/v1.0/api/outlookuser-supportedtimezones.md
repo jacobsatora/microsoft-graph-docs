@@ -68,7 +68,11 @@ The following example does not specify the `timeZoneStandard` parameter, and get
 GET https://graph.microsoft.com/v1.0/me/outlook/supportedTimeZones
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/user-supportedtimezones-default-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -123,7 +127,10 @@ The following example specifies `Iana` for the `TimeZoneStandard` parameter, and
 GET https://graph.microsoft.com/v1.0/me/outlook/supportedTimeZones(TimeZoneStandard=microsoft.graph.timeZoneStandard'Iana')
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response 2
 Here is an example of the response. 
 

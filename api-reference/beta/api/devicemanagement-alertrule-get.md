@@ -65,6 +65,15 @@ The following is an example of a request.
 GET https://graph.microsoft.com/beta/deviceManagement/monitoring/alertRules/30070507-6514-443b-8fa5-06979cedacdf
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-alertrule-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.

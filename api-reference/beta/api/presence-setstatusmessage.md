@@ -22,7 +22,7 @@ The following permission is required to call the API. To learn more, including h
 | :------------------------------------- | :------------------------------------------ |
 | Delegated (work or school account)     | Presence.ReadWrite                          |
 | Delegated (personal Microsoft account) | Not supported.                              |
-| Application                            | Not supported.                              |
+| Application                            | Presence.ReadWrite.All                              |
 
 ## HTTP Request
 <!-- { "blockType": "ignored" } -->
@@ -79,6 +79,13 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/setstatusmessage-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ---
 
 #### Response
@@ -92,11 +99,11 @@ Content-Type: application/json
 HTTP/1.1 200 OK
 ```
 
-### Example 2: Get status message of another user
+### Example 2: Set status message of another user
 
 The following request sets the presence status message as "Hey I'm currently in a meeting." for user `fa8bf3dc-eca7-46b7-bad1-db199b62afc3`. Then presence for user `fa8bf3dc-eca7-46b7-bad1-db199b62afc3` is obtained on behalf of other user via a [getPresence](presence-get.md) request.
 
-#### Set status message: request
+#### Request
 
 
 <!-- {
@@ -117,9 +124,19 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 ---
 
 #### Set status message: response
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/setstatusmessage-another-user-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 <!-- {
   "blockType": "response",
@@ -130,9 +147,10 @@ Content-Type: application/json
 HTTP/1.1 200 OK
 ```
 
-#### Get another user presence: request
+### Example 3:  Get another user presence
 This request should be executed on behalf of another user.
 
+#### Request
 
 <!-- {
   "blockType": "request",
@@ -142,9 +160,19 @@ This request should be executed on behalf of another user.
 GET https://graph.microsoft.com/beta/users/fa8bf3dc-eca7-46b7-bad1-db199b62afc3/presence
 ```
 
+<<<<<<< HEAD
 ---
 
 #### Get another user presence: response
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/setstatusmessage-another-user-get-presence-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 Since this presence request does not qualify as a [self presence](presence-get.md#example-1-get-your-own-presence-information) request, `statusMessage.expiryDateTime` and `statusMessage.publishedDateTime` properties are not included in the response body.
 
 <!-- {

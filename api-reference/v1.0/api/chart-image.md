@@ -23,7 +23,7 @@ One of the following permissions is required to call this API. To learn more, in
 
 ## HTTP request
 <!-- { "blockType": "samples" } -->
-```http
+```msgraph-interactive
 GET /me/drive/items/{id}/workbook/worksheets/{id|name}/charts/{name}/image
 GET /me/drive/root:/{item-path}:/workbook/worksheets/{id|name}/charts/{name}/image
 GET /me/drive/items/{id}/workbook/worksheets/{id|name}/charts/{name}/image(width=640)
@@ -58,14 +58,28 @@ Here is an example of how to call this API.
 ##### Request
 Here is an example of the request.
 
-<!-- { "blockType": "request" } -->
-```http
+# [HTTP](#tab/http)
+<!-- 
+{ 
+  "blockType": "request",
+  "name": "chart_image"
+} -->
+
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/me/drive/items/{id}/workbook/worksheets/{id|name}/charts/{name}/image(width=640,height=480,fittingMode='fit')
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/chart-image-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ##### Response
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
+
 <!-- { "blockType": "response", "@odata.type": "Edm.String" } -->
+
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json;odata.metadata=minimal;odata.streaming=true

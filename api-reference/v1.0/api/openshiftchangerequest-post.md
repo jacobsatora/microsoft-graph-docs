@@ -39,6 +39,7 @@ POST /teams/{id}/schedule/openShiftChangeRequests
 |:----------|:----------|
 | Authorization | Bearer {token}. Required. |
 | Content-type | application/json. Required. |
+| MS-APP-ACTS-AS  | A user ID (GUID). Required only if the authorization token is an application token; otherwise, optional. |
 
 ## Request body
 In the request body, provide a JSON representation of a new [openShiftChangeRequest](../resources/openshiftchangerequest.md) object.
@@ -52,8 +53,9 @@ If successful, this method returns a `200 OK` response code and the created [ope
 ### Request
 
 The following is an example of the request.
+# [HTTP](#tab/http)
 <!-- {
-  "blockType": "request"
+  "blockType": "request", "name": "openshiftchangerequest_post"
 }-->
 
 ```http
@@ -66,6 +68,12 @@ Content-type: application/json
   "openShiftId": "577b75d2-a927-48c0-a5d1-dc984894e7b8"
 }
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/openshiftchangerequest-post-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 

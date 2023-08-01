@@ -19,9 +19,9 @@ One of the following permissions is required to call this API. To learn more, in
 
 |Permission type|Permissions (from least to most privileged)|
 |:---|:---|
-|Delegated (work or school account)|Team.Create|
+|Delegated (work or school account)|TeamTemplates.Read|
 |Delegated (personal Microsoft account)|Not supported.|
-|Application|Team.Create|
+|Application|TeamTemplates.Read.All|
 
 ## HTTP request
 
@@ -69,6 +69,15 @@ The following is an example of a request.
 GET https://graph.microsoft.com/beta/teamwork/teamTemplates
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-teamtemplatedefinition-for-tenant-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following is an example of the response.
 
@@ -112,6 +121,15 @@ The following is an example of a request.
 GET https://graph.microsoft.com/beta/teamwork/teamTemplates?$expand=definitions&filter=definitions/any(a:a/languageTag eq 'en-US')
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-teamtemplatedefinition-extend-filter-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following is an example of the response.
 

@@ -45,8 +45,8 @@ POST /groups/{id}/calendar/events/{id}/cancel
 POST /me/calendars/{id}/events/{id}/cancel
 POST /users/{id | userPrincipalName}/calendars/{id}/events/{id}/cancel
 
-POST /me/calendargroups/{id}/calendars/{id}/events/{id}/cancel
-POST /users/{id | userPrincipalName}/calendargroups/{id}/calendars/{id}/events/{id}/cancel
+POST /me/calendarGroups/{id}/calendars/{id}/events/{id}/cancel
+POST /users/{id | userPrincipalName}/calendarGroups/{id}/calendars/{id}/events/{id}/cancel
 ```
 ## Request headers
 | Name       | Type | Description|
@@ -85,7 +85,11 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/event-cancel-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

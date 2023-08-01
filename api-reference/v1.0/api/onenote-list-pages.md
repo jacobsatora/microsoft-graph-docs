@@ -1,5 +1,5 @@
 ---
-title: "List pages"
+title: "List onenotePages"
 description: "Retrieve a list of page objects."
 author: "jewan-microsoft"
 ms.localizationpriority: medium
@@ -7,7 +7,7 @@ ms.prod: "onenote"
 doc_type: apiPageType
 ---
 
-# List pages
+# List onenotePages
 
 Namespace: microsoft.graph
 
@@ -48,16 +48,33 @@ Do not supply a request body for this method.
 ## Response
 
 If successful, this method returns a `200 OK` response code and a collection of [page](../resources/page.md) objects in the response body.
+
 ## Example
 ##### Request
 Here is an example of the request.
-<!-- { "blockType": "ignored" } -->
-```http
+
+# [HTTP](#tab/http)
+<!-- { 
+  "blockType": "request",
+  "name" : "onenote_list_pages_v1_e1"  
+} -->
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/me/onenote/pages
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/onenote-list-pages-v1-e1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ##### Response
 Here is an example of the response. Note: The response object shown here is truncated for brevity. All of the properties will be returned from an actual call.
-<!-- { "blockType": "ignored" } -->
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "Collection(microsoft.graph.onenotePage)"
+} -->
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
@@ -76,7 +93,6 @@ Content-type: application/json
         }
       },
       "contentUrl": "contentUrl-value",
-      "content": "content-value",
       "lastModifiedDateTime": "2016-10-19T10:37:00Z"
     }
   ]

@@ -2,7 +2,7 @@
 title: "Get subscription"
 description: "Retrieve the properties and relationships of a subscription."
 ms.localizationpriority: medium
-author: "jumasure"
+author: "keylimesoda"
 doc_type: apiPageType
 ms.prod: "change-notifications"
 ---
@@ -130,6 +130,15 @@ Here is an example of the request.
 GET https://graph.microsoft.com/beta/subscriptions/{id}
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-subscription-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response.

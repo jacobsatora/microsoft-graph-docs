@@ -1,7 +1,7 @@
 ---
 title: "Create registeredUser"
 description: "Add a registered user for the device."
-author: "spunukol"
+author: "myra-ramdenbourg"
 ms.localizationpriority: medium
 ms.prod: "directory-management"
 doc_type: apiPageType
@@ -24,6 +24,8 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (work or school account) | Directory.AccessAsUser.All |
 |Delegated (personal Microsoft account) | Not supported.    |
 |Application | Not supported. |
+
+The calling user must also be in one of the following [Azure AD roles](/azure/active-directory/roles/permissions-reference): *Global Administrator*, *Intune Administrator*, or *Windows 365 Administrator*.
 
 ## HTTP request
 
@@ -62,6 +64,15 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-directoryobject-from-device-2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 In the request body, supply a JSON representation of [directoryObject](../resources/directoryobject.md) object.
 
 ##### Response

@@ -1,5 +1,5 @@
 ---
-title: "Assign appliesTo"
+title: "Assign appliesTo on a featureRolloutPolicy"
 description: "Assign a directoryObject to feature rollout."
 ms.localizationpriority: medium
 author: "madhavpatel6"
@@ -7,7 +7,7 @@ ms.prod: "identity-and-sign-in"
 doc_type: "apiPageType"
 ---
 
-# Assign appliesTo
+# Assign appliesTo on a featureRolloutPolicy
 
 Namespace: microsoft.graph
 
@@ -67,7 +67,11 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/create-directoryobject-from-featurerolloutpolicy-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

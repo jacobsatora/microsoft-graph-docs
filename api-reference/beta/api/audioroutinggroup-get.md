@@ -48,7 +48,7 @@ If successful, this method returns a `200 OK` response code and an [audioRouting
 
 ## Example
 
-##### Request
+### Request
 The following example shows the request.
 
 
@@ -60,7 +60,17 @@ The following example shows the request.
 GET https://graph.microsoft.com/beta/communications/calls/{id}/audioRoutingGroups/{id}
 ```
 
+<<<<<<< HEAD
 ##### Response
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-audioroutinggroup-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+### Response
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 > **Note:** The response object shown here might be shortened for readability.
 

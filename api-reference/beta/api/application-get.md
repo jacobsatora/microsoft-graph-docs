@@ -71,6 +71,15 @@ Here is an example of the request.
 GET https://graph.microsoft.com/beta/applications/03ef14b0-ca33-4840-8f4f-d6e91916010e
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-application-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 Here is an example of the response.
@@ -164,6 +173,7 @@ Content-type: application/json
 #### Request
 Here is an example of the request.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "get_application_by_appId_select"
@@ -171,6 +181,12 @@ Here is an example of the request.
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/applications(appId='46e6adf4-a9cf-4b60-9390-0ba6fb00bf6b')?$select=id,appId,displayName,requiredResourceAccess
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-application-by-appid-select-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 #### Response
 Here is an example of the response.

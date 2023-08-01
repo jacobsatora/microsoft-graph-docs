@@ -40,6 +40,9 @@ For an item attachment that is a [contact](../resources/contact.md), [event](../
 
 Attempting to get the `$value` of a reference attachment returns HTTP 405.
 
+> [!NOTE]
+> When certain files are requested, MIME can encode the byte stream output in the response and provide a link to download the file as an email attachment.
+> 
 ## Permissions
 
 Depending on the resource (**event**, **message**, **outlookTask**, or **post**) that the attachment is attached to and the permission type (delegated or application) requested, the permission specified in the following table is the least privileged required to call this API. To learn more, including [taking caution](/graph/auth/auth-concepts#best-practices-for-requesting-permissions) before choosing more privileged permissions, search for the following permissions in [Permissions](/graph/permissions-reference).
@@ -174,6 +177,15 @@ Here is an example of the request to get the properties of a file attachment on 
 GET https://graph.microsoft.com/beta/me/messages/AAMkAGUzY5QKjAAA=/attachments/AAMkAGUzY5QKjAAABEgAQAMkpJI_X-LBFgvrv1PlZYd8=
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-file-attachment-beta-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -216,9 +228,17 @@ The next example shows how to get an item attachment on a message. The propertie
 }-->
 
 ```msgraph-interactive
-GET https://graph.microsoft.com/beta/me/messages('AAMkADA1M-zAAA=')/attachments('AAMkADA1M-CJKtzmnlcqVgqI=')
+GET https://graph.microsoft.com/beta/me/messages/AAMkADA1M-zAAA=/attachments/AAMkADA1M-CJKtzmnlcqVgqI=
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-item-attachment-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 #### Response
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -251,6 +271,7 @@ Content-type: application/json
 The next example shows how to use `$expand` to get the properties of the item (contact, event, or message) that is attached to the message. In this example, that item is
 a message; the properties of that attached message are also returned.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "get_and_expand_item_attachment",
@@ -258,9 +279,14 @@ a message; the properties of that attached message are also returned.
 }-->
 
 ```msgraph-interactive
-GET https://graph.microsoft.com/beta/me/messages('AAMkADA1M-zAAA=')/attachments('AAMkADA1M-CJKtzmnlcqVgqI=')/?$expand=microsoft.graph.itemattachment/item
+GET https://graph.microsoft.com/beta/me/messages/AAMkADA1M-zAAA=/attachments/AAMkADA1M-CJKtzmnlcqVgqI=/?$expand=microsoft.graph.itemattachment/item
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-and-expand-item-attachment-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 #### Response
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -347,6 +373,7 @@ Content-type: application/json
 #### Request
 The next example uses the same request as in [example 3](#example-3-expand-and-get-the-properties-of-the-item-attached-to-a-message) to get the properties of an item attachment on a message by using `$expand`. In this case, because the attached item also has a file attachment, the response includes the properties of the file attachment as well. 
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "get_and_expand_nested_item_attachment",
@@ -354,8 +381,14 @@ The next example uses the same request as in [example 3](#example-3-expand-and-g
 }-->
 
 ```msgraph-interactive
-GET https://graph.microsoft.com/beta/me/messages('AAMkADA1M-zAAA=')/attachments('AAMkADA1M-CJKtzmnlcqVgqI=')/?$expand=microsoft.graph.itemattachment/item
+GET https://graph.microsoft.com/beta/me/messages/AAMkADA1M-zAAA=/attachments/AAMkADA1M-CJKtzmnlcqVgqI=/?$expand=microsoft.graph.itemattachment/item
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-and-expand-nested-item-attachment-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 #### Response
 <!-- {
@@ -460,6 +493,15 @@ Here is an example of the request to get a reference attachment on an event.
 GET https://graph.microsoft.com/beta/me/events/AAMkAGE1M88AADUv0uAAAG=/attachments/AAMkAGE1Mg72tgf7hJp0PICVGCc0g=
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-reference-attachment-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
 <!-- {

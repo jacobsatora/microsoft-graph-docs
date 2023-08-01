@@ -14,7 +14,9 @@ Namespace: microsoft.graph
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Update the properties of **plannertask** object.
+
 ## Permissions
+
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
 |Permission type      | Permissions (from least to most privileged)              |
@@ -35,7 +37,8 @@ PATCH /planner/tasks/{id}
 | If-Match  | Last known ETag value for the **plannerTask** to be updated. Required.|
 
 ## Request body
-In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance,  don't include existing values that haven't changed.
+
+[!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
@@ -49,18 +52,19 @@ In the request body, supply the values for relevant fields that should be update
 |percentComplete|Int32|Percentage of task completion. When set to `100`, the task is considered completed. |
 |planId|String|Plan id to which the task belongs.|
 |priority|Int32|Priority of the task. Valid range of values is between `0` and `10` (inclusive), with increasing value being lower priority (`0` has the highest priority and `10` has the lowest priority).  Currently, Planner interprets values `0` and `1` as "urgent", `2` and `3` and `4` as "important", `5`, `6`, and `7` as "medium", and `8`, `9`, and `10` as "low".  Currently, Planner sets the value `1` for "urgent", `3` for "important", `5` for "medium", and `9` for "low".|
-|startDateTime|DateTimeOffset|Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`|
+|recurrence|[plannerTaskRecurrence](../resources/plannertaskrecurrence.md)|The recurrence for the task, if defined. Optional.|
+|startDateTime|DateTimeOffset|Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`.|
 |title|String|Title of the task.|
 
 ## Response
 
-If successful, this method returns `204 No Content` response and empty content. If the request specifies `Prefer` header with `return=representation` preference, then this method returns a `200 OK` response code and an updated [plannerTask](../resources/plannertask.md) object in the response body.
+If successful, this method returns a `204 No Content` response code and an empty content. If the request specifies the `Prefer` header with a `return=representation` preference, then this method returns a `200 OK` response code and an updated [plannerTask](../resources/plannertask.md) object in the response body.
 
 This method can return any of the [HTTP status codes](/graph/errors). The most common errors that apps should handle for this method are the 400, 403, 404, 409, and 412 responses. For more information about these errors, see [Common Planner error conditions](../resources/planner-overview.md#common-planner-error-conditions).
 
 ## Example
-##### Request
-Here is an example of the request.
+### Request
+The following is an example of the request.
 
 <!-- {
   "blockType": "request",
@@ -83,13 +87,33 @@ If-Match: W/"JzEtVGFzayAgQEBAQEBAQEBAQEBAQEBAWCc="
   "appliedCategories": {
     "category3": true,
     "category4": false
+  },
+  "recurrence": {
+    "schedule": {
+      "pattern": {
+        "type": "daily",
+        "interval": 3
+      },
+      "patternStartDateTime": "2022-02-22T02:10:33Z"
+    }
   }
 }
 ```
 
+<<<<<<< HEAD
 ##### Response
 
 Here is an example of the response. 
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/update-plannertask-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+### Response
+The following is an example of the response. 
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
@@ -148,9 +172,32 @@ Content-type: application/json
   "appliedCategories": {
     "category3": true,
     "category5": true,
-    "category6": true,
+    "category6": true
   },
-  "id":"01gzSlKkIUSUl6DF_EilrmQAKDhh"
+  "id": "01gzSlKkIUSUl6DF_EilrmQAKDhh",
+  "recurrence": {
+    "@odata.type": "#microsoft.graph.plannerTaskRecurrence",
+    "seriesId": "qOqWwPLt4U-LIsWV5ByUuA",
+    "occurrenceId": 1,
+    "previousInSeriesTaskId": null,
+    "nextInSeriesTaskId": null,
+    "schedule": {
+      "@odata.type": "#microsoft.graph.plannerRecurrenceSchedule",
+      "pattern": {
+        "odata.type": "#microsoft.graph.recurrencePattern",
+        "type": "daily",
+        "interval": 3,
+        "firstDayOfWeek": "sunday",
+        "dayOfMonth": 0,
+        "daysOfWeek": [],
+        "index": "first",
+        "month": 0
+      },
+      "patternStartDateTime": "2022-02-22T02:10:33Z",
+      "nextOccurrenceDateTime": "2022-02-25T02:10:33Z"
+    },
+    "recurrenceStartDateTime": "2022-02-22T02:10:33Z"
+  }
 }
 ```
 
@@ -167,5 +214,3 @@ Content-type: application/json
   ]
 }
 -->
-
-

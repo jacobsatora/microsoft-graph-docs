@@ -64,7 +64,7 @@ The following is an example of the request.
 
 <!-- {
   "blockType": "request",
-  "name": "restore-item",
+  "name": "restore-item-e1",
   "scopes": "files.readwrite",
   "target": "action"
 }-->
@@ -81,6 +81,15 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/restore-item-e1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.

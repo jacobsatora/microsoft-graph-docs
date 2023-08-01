@@ -1,6 +1,6 @@
 ---
 title: "List partners"
-description: "Get a list of all partner configurations within a cross-tenant access policy. You can also use the $expand parameter to list the user synchronization policy for all partner configurations."
+description: "Get a list of all partner configurations within a cross-tenant access policy."
 author: "jkdouglas"
 ms.localizationpriority: medium
 ms.prod: "identity-and-sign-in"
@@ -22,7 +22,7 @@ One of the following permissions is required to call this API. To learn more, in
 |Permission type|Permissions (from least to most privileged)|
 |:---|:---|
 |Delegated (work or school account)|Policy.Read.All, Policy.ReadWrite.CrossTenantAccess|
-|Delegated (personal Microsoft account)|Not applicable|
+|Delegated (personal Microsoft account)|Not supported.|
 |Application|Policy.Read.All, Policy.ReadWrite.CrossTenantAccess|
 
 ## HTTP request
@@ -37,6 +37,7 @@ GET /policies/crossTenantAccessPolicy/partners
 ```
 
 ## Optional query parameters
+
 This method supports the `$select` and `$expand` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
 
 ## Request headers
@@ -57,8 +58,11 @@ If successful, this method returns a `200 OK` response code and a collection of 
 
 ### Example 1: List all partner configurations within a cross-tenant access policy
 
+The following example shows how to list all partner configurations within a cross-tenant access policy.
+
 #### Request
 
+The following is an example of the request.
 
 <!-- {
   "blockType": "request",
@@ -70,7 +74,18 @@ If successful, this method returns a `200 OK` response code and a collection of 
 GET https://graph.microsoft.com/beta/policies/crossTenantAccessPolicy/partners
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-crosstenantaccesspolicyconfigurationpartner-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
+
+The following is an example of the response.
 
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
@@ -89,18 +104,15 @@ Content-Type: application/json
     {
       "tenantId": "123f4846-ba00-4fd7-ba43-dac1f8f63013",
       "inboundTrust": null,
-      "automaticUserConsentSettings":
-      {
+      "automaticUserConsentSettings": {
         "inboundAllowed": null,
         "outboundAllowed": null
       },
       "b2bCollaborationInbound": null,
       "b2bCollaborationOutbound": null,
       "b2bDirectConnectOutbound": null,
-      "b2bDirectConnectInbound":
-      {
-        "usersAndGroups": 
-        {
+      "b2bDirectConnectInbound": {
+        "usersAndGroups": {
           "accessType": "allowed",
           "targets": [
             {
@@ -109,12 +121,34 @@ Content-Type: application/json
             }
           ]
         },
-        "applications":
-        {
+        "applications": {
           "accessType": "allowed",
           "targets": [
             {
               "target": "Office365",
+              "targetType": "application"
+            }
+          ]
+        }
+      },
+      "tenantRestrictions": 
+      {
+        "usersAndGroups": 
+        {
+          "accessType": "blocked",
+          "targets": [
+            {
+              "target": "AllUsers",
+              "targetType": "user"
+            }
+          ]
+        },
+        "applications": 
+        {
+          "accessType": "blocked",
+          "targets": [
+            {
+              "target": "AllApplications",
               "targetType": "application"
             }
           ]
@@ -127,8 +161,11 @@ Content-Type: application/json
 
 ### Example 2: List the user synchronization policy for all partner configurations
 
+The following example uses the `$expand` parameter to list the user synchronization policy for all partner configurations.
+
 #### Request
 
+The following is an example of the request.
 
 <!-- {
   "blockType": "request",
@@ -139,7 +176,18 @@ Content-Type: application/json
 GET https://graph.microsoft.com/beta/policies/crossTenantAccessPolicy/partners?$select=tenantId&$expand=identitySynchronization
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-crosstenantidentitysyncpolicypartner-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
+
+The following is an example of the response.
 
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
@@ -153,16 +201,13 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value":
-  [
+  "value": [
     {
       "tenantId": "9c5d131d-b1c3-4fc4-9e3f-c6557947d551",
-      "identitySynchronization":
-      {
+      "identitySynchronization": {
         "tenantId": "9c5d131d-b1c3-4fc4-9e3f-c6557947d551",
         "displayName": "Fabrikam",
-        "userSyncInbound":
-        {
+        "userSyncInbound": {
           "isSyncAllowed": true
         }
       }

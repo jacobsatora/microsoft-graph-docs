@@ -23,20 +23,19 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (personal Microsoft account) | Files.Read, Files.ReadWrite, Files.Read.All, Files.ReadWrite.All    |
 |Application | Files.Read.All, Files.ReadWrite.All, Sites.Read.All, Sites.ReadWrite.All |
 
-## List a group's drives
+## HTTP request
 
+### List a group's drives
 To list the document libraries for a group, your app requests the **drives** relationship on the Group.
 
-### HTTP request
 
+<!-- {"blockType": "ignored" } -->
 
-# [HTTP](#tab/http)
-<!-- {"blockType": "request", "name": "group-list-drives", "scopes": "groups.read.all", "tags": "service.graph" } -->
-
-```msgraph-interactive
-GET https://graph.microsoft.com/v1.0/groups/02bd9fd6-8f93-4758-87c3-1fb73740a315/drives
+```http
+GET /groups/{groupId}/drives
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/group-list-drives-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -44,17 +43,19 @@ GET https://graph.microsoft.com/v1.0/groups/02bd9fd6-8f93-4758-87c3-1fb73740a315
 ---
 
 ## List a site's drives
+=======
+### List a site's drives
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 To list the document libraries for a site, your app requests the **drives** relationship on the Site.
 
+<!-- {"blockType": "ignored" } -->
 
-# [HTTP](#tab/http)
-<!-- {"blockType": "request", "name": "site-list-drives", "scopes": "sites.read.all", "tags": "service.graph" } -->
-
-```msgraph-interactive
+```http
 GET /sites/{siteId}/drives
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/site-list-drives-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -93,6 +94,24 @@ GET /me/drives
 
 ---
 
+=======
+### List a user's drives
+
+<!-- {"blockType": "ignored" } -->
+
+```http
+GET /users/{userId}/drives
+```
+
+### List the current user's drives
+
+<!-- {"blockType": "ignored" } -->
+
+```http
+GET /me/drives
+```
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ## Optional query parameters
 
 This method supports the `$expand`, `$select`, `$skipToken`, `$top`, and `$orderby` [OData query parameters](/graph/query-parameters) to customize the response.
@@ -102,9 +121,26 @@ This method supports the `$expand`, `$select`, `$skipToken`, `$top`, and `$order
 
 If successful, this method returns a `200 OK` response code and collection of [Drive](../resources/drive.md) objects in the response body.
 
+## Examples
+
+### Request
+
+# [HTTP](#tab/http)
+<!-- {"blockType": "request", "name": "enum-drives" } -->
+
+```msgraph-interactive
+GET /me/drives
+```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/enum-drives-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+### Response
 <!-- { "blockType": "response", 
        "@odata.type": "Collection(microsoft.graph.drive)",
-       "name": ["group-list-drives", "site-list-drives", "user-list-drives", "enum-drives"],
        "truncated": true } -->
 
 ```http
@@ -173,4 +209,3 @@ To list them, include `system` in your `$select` statement.
   "suppressions": [
   ]
 } -->
-

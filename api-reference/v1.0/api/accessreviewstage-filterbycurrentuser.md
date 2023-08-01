@@ -67,7 +67,11 @@ If successful, this function returns a `200 OK` response code and a [accessRevie
 GET https://graph.microsoft.com/v1.0/identityGovernance/accessReviews/definitions/08531375-eff6-4e21-b1a8-de0eb37ec913/instances/86889534-b102-4226-bfce-0c2aeee845df/stages/filterByCurrentUser(on='reviewer')
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/accessreviewstage-filterbycurrentuser-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

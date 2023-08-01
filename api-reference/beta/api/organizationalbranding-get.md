@@ -23,7 +23,7 @@ One of the following permissions is required to call this API. To learn more, in
 
 | Permission type                        | Permissions (from least to most privileged) |
 |:---------------------------------------|:--------------------------------------------|
-| Delegated (work or school account)     | User.Read, Organization.Read.All, User.ReadBasic.All, User.Read.All |
+| Delegated (work or school account)     | User.Read, Organization.Read.All, User.Read.All |
 | Delegated (personal Microsoft account) | Not supported. |
 | Application                            | Organization.Read.All |
 
@@ -73,6 +73,15 @@ GET https://graph.microsoft.com/beta/organization/84841066-274d-4ec0-a5c1-276be6
 Accept-Language: 0
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-organizationalbranding-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -101,6 +110,95 @@ Content-Type: application/json
         "aadcdn.msftauthimages.net",
         "aadcdn.msauthimages.net"
     ],
+    "contentCustomization": {
+      "attributeCollectionRelativeUrl": "dbd5a2dd-dt17xdjgu8kxc14xcav-rckknamct7yytiih-vm-ksm/logintenantbranding/1033/attributecollection?ts=638151133931615483",
+      "attributeCollection": [
+            {
+                "key": "AttributeCollection_Description",
+                "value": "We just need a little more information to set up your account."
+            },
+            {
+                "key": "AttributeCollection_Title",
+                "value": "Add details"
+            },
+            {
+                "key": "Attribute_City",
+                "value": "City"
+            },
+            {
+                "key": "Attribute_Country",
+                "value": "Country/Region"
+            },
+            {
+                "key": "Attribute_DisplayName",
+                "value": "Display Name"
+            },
+            {
+                "key": "Attribute_Email",
+                "value": "Email Address"
+            },
+            {
+                "key": "Attribute_Generic_ConfirmationLabel",
+                "value": "Re-enter"
+            },
+            {
+                "key": "Attribute_GivenName",
+                "value": "Given Name"
+            },
+            {
+                "key": "Attribute_JobTitle",
+                "value": "Job Title"
+            },
+            {
+                "key": "Attribute_Password",
+                "value": "Password"
+            },
+            {
+                "key": "Attribute_Password_MismatchErrorString",
+                "value": "Passwords do not match."
+            },
+            {
+                "key": "Attribute_PostalCode",
+                "value": "Postal Code"
+            },
+            {
+                "key": "Attribute_State",
+                "value": "State/Province"
+            },
+            {
+                "key": "Attribute_StreetAddress",
+                "value": "Street Address"
+            },
+            {
+                "key": "Attribute_Surname",
+                "value": "Sasha Surname"
+            },
+            {
+                "key": "SignIn_Description",
+                "value": "Sign in to access"
+            },
+            {
+                "key": "SignIn_Title",
+                "value": "Sign in"
+            },
+            {
+                "key": "SignUp_Description",
+                "value": "Sign up to access"
+            },
+            {
+                "key": "SignUp_Title",
+                "value": "Create account"
+            },
+            {
+                "key": "SisuOtc_Title",
+                "value": "Enter code"
+            },
+            {
+                "key": "Attribute_extension_82936c774db949fcac549215e8857017_Total_Job_Experience_Years",
+                "value": "Total_Job_Experience_Years"
+            }
+        ]
+    },    
     "customAccountResetCredentialsUrl": null,
     "customCannotAccessYourAccountText": null,
     "customCannotAccessYourAccountUrl": null,
@@ -151,6 +249,15 @@ GET https://graph.microsoft.com/beta/organization/d69179bf-f4a4-41a9-a9de-249c0f
 Accept-Language: 0
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-organizationalbranding-error-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -181,6 +288,15 @@ GET https://graph.microsoft.com/beta/organization/d69179bf-f4a4-41a9-a9de-249c0f
 Accept-Language: fr-FR
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-organizationalbranding-locale-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -264,6 +380,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/organization/d69179bf-f4a4-41a9-a9de-249c0f2efb1d/branding/localizations/default/bannerLogo
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-organizationalbranding-frlocale-defaultbannerlogo-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.

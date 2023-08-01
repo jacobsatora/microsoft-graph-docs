@@ -1,6 +1,6 @@
 ---
 title: "Create securityAction"
-description: Create a new securityAction object."
+description: "Create a new securityAction object."
 ms.localizationpriority: medium
 author: "preetikr"
 ms.prod: "security"
@@ -45,7 +45,7 @@ In the request body, supply a JSON representation of a [securityAction](../resou
 
 ## Response
 
-If successful, this method returns `201 Created` response code and a [securityAction](../resources/securityaction.md) object in the response body.
+If successful, this method returns a `201 Created` response code and a [securityAction](../resources/securityaction.md) object in the response body.
 
 ## Examples
 
@@ -78,12 +78,20 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-securityaction-from-security-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.
 
-> [!NOTE]
-> The response object shown here might be shortened for readability.
+> **Note**: The response object shown here might be shortened for readability.
 
 <!-- {
   "blockType": "response",

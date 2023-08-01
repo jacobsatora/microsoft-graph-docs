@@ -53,7 +53,10 @@ The following is an example of the request.
 DELETE https://graph.microsoft.com/v1.0/education/classes/{class-id}/members/{member-id}
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 The following is an example of the response. 
 <!-- {

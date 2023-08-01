@@ -94,6 +94,15 @@ See:</br>
 GET https://graph.microsoft.com/beta/servicePrincipals/delta
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/serviceprincipal-delta-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 >Note: The response object shown here might be shortened for readability.
 <!-- { 

@@ -1,7 +1,7 @@
 ---
 title: "List rejectedSenders"
 description: "Get a list of users or groups that are in the rejected-senders list for this group. "
-author: "psaffaie"
+author: "Jordanndahl"
 ms.localizationpriority: medium
 ms.prod: "groups"
 doc_type: apiPageType
@@ -72,6 +72,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/groups/{id}/rejectedSenders
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-rejectedsenders-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.

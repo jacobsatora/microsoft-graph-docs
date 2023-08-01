@@ -2,7 +2,7 @@
 title: "Update phoneAuthenticationMethod"
 description: "Update a user's phone number associated with a phoneAuthenticationMethod object."
 ms.localizationpriority: medium
-author: "mmcla"
+author: "jpettere"
 ms.prod: "identity-and-sign-in"
 doc_type: "apiPageType"
 ---
@@ -21,36 +21,25 @@ If a user is enabled by policy to use SMS to sign in and the `mobile` number is 
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
-### Permissions acting on self
-
-|Permission type      | Permissions (from least to most privileged)              |
-|:---------------------------------------|:-------------------------|
-| Delegated (work or school account)     | UserAuthenticationMethod.ReadWrite |
-| Delegated (personal Microsoft account) | Not supported. |
-| Application                            | Not supported. |
-
-### Permissions acting on other users
-
 |Permission type      | Permissions (from least to most privileged)              |
 |:---------------------------------------|:-------------------------|
 | Delegated (work or school account)     | UserAuthenticationMethod.ReadWrite.All |
 | Delegated (personal Microsoft account) | Not supported. |
 | Application                            | UserAuthenticationMethod.ReadWrite.All |
 
-For delegated scenarios where an admin is acting on another user, the admin needs one of the following [Azure AD roles](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles):
-* Global administrator
-* Privileged authentication administrator
-* Authentication administrator
+[!INCLUDE [rbac-authentication-methods-apis-write-others](../includes/rbac-for-apis/rbac-authentication-methods-apis-write-others.md)]
+
+Users cannot update their own phone authentication method.
 
 ## HTTP request
 
+Update another user's phone authentication method.
 <!-- { "blockType": "ignored" } -->
-
-```http
-PATCH /me/authentication/phoneMethods/{id}
-PATCH /users/{id | userPrincipalName}/authentication/phoneMethods/{id}
+``` http
+PATCH /users/{id | userPrincipalName}/authentication/phoneMethods/{phoneMethodId}
 ```
-The value of `id` corresponding to the phoneType to update is one of the following:
+
+The value of `phoneMethodId` corresponding to the phoneType to update is one of the following:
 + `b6332ec1-7057-4abe-9331-3d72feddfe41` to update the `alternateMobile` **phoneType**.
 + `e37fc753-ff3b-4958-9484-eaa9425c82bc` to update the `office` **phoneType**.
 + `3179e48a-750b-4051-897c-87b9720928f7` to update the `mobile` **phoneType**.
@@ -85,11 +74,12 @@ The following is an example of the request.
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "update_phoneauthenticationmethod"
+  "name": "update_phoneauthenticationmethod",
+  "sampleKeys": ["kim@contoso.com", "3179e48a-750b-4051-897c-87b9720928f7"]
 }-->
 
 ```http
-PATCH https://graph.microsoft.com/v1.0/me/authentication/phoneMethods/3179e48a-750b-4051-897c-87b9720928f7
+PATCH https://graph.microsoft.com/v1.0/users/kim@contoso.com/authentication/phoneMethods/3179e48a-750b-4051-897c-87b9720928f7
 Content-type: application/json
 
 {
@@ -98,15 +88,22 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/update-phoneauthenticationmethod-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
+<<<<<<< HEAD
 ---
 
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.

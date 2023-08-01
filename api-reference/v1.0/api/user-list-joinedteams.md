@@ -68,7 +68,11 @@ The following example shows a request.
 GET https://graph.microsoft.com/v1.0/me/joinedTeams
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-joinedteams-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -103,6 +107,8 @@ Content-type: application/json
 - [List all teams](/graph/teams-list-all-teams)
 - [Get team](../api/team-get.md)
 - [List associated teams](../api/associatedteaminfo-list.md)
+- [Microsoft Graph service-specific throttling limits](/graph/throttling-limits#microsoft-teams-service-limits)
+- [List teams](../api/teams-list.md)
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

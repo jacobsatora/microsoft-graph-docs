@@ -66,7 +66,7 @@ The following is an example of a request.
 
 <!-- {
   "blockType": "request",
-  "name": "browsersitelist_publish",
+  "name": "browsersitelist_publish_e1",
   "sampleKeys": ["36ba61eb-c492-4283-a38b-963a1dbb2f69"]
 }
 -->
@@ -79,6 +79,15 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/browsersitelist-publish-e1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following is an example of the response.
 >**Note:** The response object shown here might be shortened for readability.
@@ -123,9 +132,10 @@ Content-Type: application/json
 #### Request
 
 The following is an example of a request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "browsersitelist_publish",
+  "name": "browsersitelist_publish_e2",
   "sampleKeys": ["36ba61eb-c492-4283-a38b-963a1dbb2f69"]
 }
 -->
@@ -151,6 +161,11 @@ Content-Type: application/json
 }
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/browsersitelist-publish-e2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 #### Response
 The following is an example of the response. The **status** will show `pending` if the request contains sites or shared cookies that you have not published yet.

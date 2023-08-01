@@ -76,6 +76,14 @@ Here is an example of the request which retrieves available thumbnails for an it
 GET /me/drive/items/{item-id}/thumbnails
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/enum-item-thumbnails-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 This returns an array of available **thumbnailSets** for the item. 
 Any item in a drive can have zero or more thumbnails.
@@ -117,7 +125,10 @@ Retrieve the metadata for a single thumbnail and size by addressing it directly 
 GET /me/drive/items/{item-id}/thumbnails/{thumb-id}/{size}
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Path parameters
 
 | Name         | Type   | Description                                                                              |
@@ -152,7 +163,10 @@ You can directly retrieve the content of the thumbnail by requesting the **conte
 GET /me/drive/items/{item-id}/thumbnails/{thumb-id}/{size}/content
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The service responds with a redirect to the thumbnail URL.
@@ -181,6 +195,14 @@ This enables your app to retrieve thumbnails and items in a single request, inst
 GET /me/drive/items/{item-id}/children?$expand=thumbnails
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-thumbnail-while-listing-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 ### Response
 
@@ -248,6 +270,14 @@ For example if your app needs thumbnails that are 300x400, it can request that s
 GET /me/drive/items/{item-id}/thumbnails?select=c300x400_crop
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-thumbnail-custom-size-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 Which responds with just the custom thumbnail size selected:
 

@@ -93,6 +93,15 @@ GET https://graph.microsoft.com/beta/me/contactFolders/{id}/contacts/delta?$sele
 Prefer: odata.maxpagesize=2
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/contact-delta-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 If the request is successful, the response would include a state token, which is either a _skipToken_  
 (in an _@odata.nextLink_ response header) or a _deltaToken_ (in an _@odata.deltaLink_ response header). 

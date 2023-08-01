@@ -21,11 +21,7 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (personal Microsoft account)|Not supported.|
 |Application|Policy.Read.All, Policy.ReadWrite.AuthenticationMethod|
 
-For delegated scenarios, the administrator needs one of the following [Azure AD roles](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles):
-
-* Global Reader
-* Authentication Policy Administrator
-* Global Administrator
+[!INCLUDE [rbac-authentication-methods-policy-apis-read](../includes/rbac-for-apis/rbac-authentication-methods-policy-apis-read.md)]
 
 ## HTTP request
 <!-- {
@@ -65,7 +61,11 @@ If successful, this method returns a `200 OK` response code and a [x509Certifica
 GET https://graph.microsoft.com/v1.0/policies/authenticationMethodsPolicy/authenticationMethodConfigurations/x509Certificate
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-x509certificateauthenticationmethodconfiguration-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -111,7 +111,8 @@ Content-Type: application/json
             "id": "all_users",
             "isRegistrationRequired": false
         }
-    ]
+    ],
+    "excludeTargets": []
 }
 ```
 

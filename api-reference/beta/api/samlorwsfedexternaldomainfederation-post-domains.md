@@ -67,7 +67,7 @@ If successful, this method returns a `201 Created` response code and an [externa
 
 <!-- {
   "blockType": "request",
-  "name": "create_externaldomainname_from_"
+  "name": "create_externaldomainname_from_e1"
 }
 -->
 
@@ -81,7 +81,10 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 The following is an example of the response.
 >**Note:** The response object shown here might be shortened for readability.

@@ -11,7 +11,11 @@ $params = @{
 	description = "Configure new hire tasks for onboarding employees on their first day"
 	displayName = "Australia Onboard new hire employee"
 	isEnabled = $true
+<<<<<<< HEAD
 	isSchedulingEnabled = $false
+=======
+	isSchedulingEnabled = $true
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 	executionConditions = @{
 		"@odata.type" = "#microsoft.graph.identityGovernance.triggerAndScopeBasedConditions"
 		scope = @{
@@ -21,7 +25,11 @@ $params = @{
 		trigger = @{
 			"@odata.type" = "#microsoft.graph.identityGovernance.timeBasedAttributeTrigger"
 			timeBasedAttribute = "employeeHireDate"
+<<<<<<< HEAD
 			offsetInDays = 0
+=======
+			offsetInDays = 
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 		}
 	}
 	tasks = @(

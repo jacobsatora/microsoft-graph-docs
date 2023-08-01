@@ -65,7 +65,11 @@ The following example deletes an **identityProvider**.
 DELETE https://graph.microsoft.com/v1.0/identityProviders/Amazon-OAuth
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/delete-identityprovider-amazon-oauth-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

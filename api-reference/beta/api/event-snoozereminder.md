@@ -36,8 +36,8 @@ POST /users/{id | userPrincipalName}/calendar/events/{id}/snoozeReminder
 POST /me/calendars/{id}/events/{id}/snoozeReminder
 POST /users/{id | userPrincipalName}/calendars/{id}/events/{id}/snoozeReminder
 
-POST /me/calendargroups/{id}/calendars/{id}/events/{id}/snoozeReminder
-POST /users/{id | userPrincipalName}/calendargroups/{id}/calendars/{id}/events/{id}/snoozeReminder
+POST /me/calendarGroups/{id}/calendars/{id}/events/{id}/snoozeReminder
+POST /users/{id | userPrincipalName}/calendarGroups/{id}/calendars/{id}/events/{id}/snoozeReminder
 ```
 ## Request headers
 | Name       | Type | Description|
@@ -77,6 +77,15 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/event-snoozereminder-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 Here is an example of the response.
 <!-- {

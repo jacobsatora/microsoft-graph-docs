@@ -91,7 +91,11 @@ GET https://graph.microsoft.com/v1.0/me/contactFolders/{id}/contacts/delta?$sele
 Prefer: odata.maxpagesize=2
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/contact-delta-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

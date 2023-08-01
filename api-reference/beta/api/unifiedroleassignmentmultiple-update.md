@@ -48,14 +48,14 @@ To update an existing unfiedRoleAssignmentMultiple for a Cloud PC provider:
 <!-- { "blockType": "ignored" } -->
 
 ```http
-PATCH /roleManagement/cloudPC/roleAssignments
+PATCH /roleManagement/cloudPC/roleAssignments/{id}
 ```
 
 To update an existing unfiedRoleAssignmentMultiple for an Intune provider:
 <!-- { "blockType": "ignored" } -->
 
 ```http
-PATCH /roleManagement/deviceManagement/roleAssignments
+PATCH /roleManagement/deviceManagement/roleAssignments/{id}
 ```
 
 ## Request headers
@@ -96,6 +96,15 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/update-unifiedroleassignmentmultiple-from-rbacapplication-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.
@@ -131,6 +140,15 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/update-unifiedroleassignmentmultiple-from-rbacapplication-cloudpc-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 > **Note:** The response object shown here might be shortened for readability. All the properties will be returned from an actual call.

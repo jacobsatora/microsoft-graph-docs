@@ -23,7 +23,10 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (personal Microsoft account)|Not supported|
 |Application|Domain.ReadWrite.All|
 
-The calling user must be assigned the Global Administrator [Azure AD role](/azure/active-directory/roles/permissions-reference).
+The calling user must be assigned one of the following [Azure AD roles](/azure/active-directory/roles/permissions-reference):
+
+- Security Administrator
+- External Identity Provider Administrator
 
 ## HTTP request
 
@@ -61,6 +64,15 @@ If successful, this method returns a `204 No Content` response code.
 DELETE https://graph.microsoft.com/beta/domains/contoso.com/federationConfiguration/96db02e2-80c1-5555-bc3a-de92ffb8c5be
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-internaldomainfederation-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 <!-- {
   "blockType": "response",

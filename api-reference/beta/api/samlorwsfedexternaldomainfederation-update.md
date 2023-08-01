@@ -71,7 +71,7 @@ If successful, this method returns a `200 OK` response code and an updated [saml
 
 <!-- {
   "blockType": "request",
-  "name": "update_samlorwsfedexternaldomainfederation"
+  "name": "update_samlorwsfedexternaldomainfederation_e1"
 }
 -->
 
@@ -91,7 +91,10 @@ Content-Type: application/json
 
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.

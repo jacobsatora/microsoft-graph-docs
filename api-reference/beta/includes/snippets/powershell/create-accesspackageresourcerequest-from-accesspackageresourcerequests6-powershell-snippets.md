@@ -27,7 +27,11 @@ $params = @{
 					question = @{
 						"@odata.type" = "#microsoft.graph.accessPackageTextInputQuestion"
 						isRequired = $false
+<<<<<<< HEAD
 						sequence = 0
+=======
+						sequence = 
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 						isSingleLineQuestion = $true
 					}
 				}

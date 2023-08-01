@@ -72,9 +72,10 @@ Do not supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and collection of [contact](../resources/contact.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a collection of [contact](../resources/contact.md) objects in the response body.
+
 ## Example
-##### Request
+### Request
 The following example gets the **displayName** and **emailAddresses** properties of the signed-in user's contacts.
 
 <!-- {
@@ -85,8 +86,20 @@ The following example gets the **displayName** and **emailAddresses** properties
 GET https://graph.microsoft.com/beta/me/contacts?$select=displayName,emailAddresses
 ```
 
+<<<<<<< HEAD
 ##### Response
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/user-get-contacts-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+### Response
+The following is an example of the response. 
+>**Note:** The response object shown here might be shortened for readability.
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- {
   "blockType": "response",
   "truncated": true,
@@ -153,5 +166,3 @@ Content-type: application/json
   ]
 }
 -->
-
-

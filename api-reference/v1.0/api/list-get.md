@@ -27,9 +27,9 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 
 ```http
-GET https://graph.microsoft.com/v1.0/sites/{site-id}/lists/{list-id}
-GET https://graph.microsoft.com/v1.0/sites/{site-id}/lists/{list-title}
-GET https://graph.microsoft.com/v1.0/sites/{site-id}/lists/{list-id}?expand=columns,items(expand=fields)
+GET /sites/{site-id}/lists/{list-id}
+GET /sites/{site-id}/lists/{list-title}
+GET /sites/{site-id}/lists/{list-id}?expand=columns,items(expand=fields)
 ```
 
 ## Request body
@@ -48,7 +48,11 @@ Do not supply a request body with this method.
 GET /sites/{site-id}/lists/{list-id}
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-list-1-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -86,7 +90,11 @@ The following example shows how to get a list from a SharePoint Online list titl
 GET /sites/{site-id}/lists/{list-title}
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-list-2-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

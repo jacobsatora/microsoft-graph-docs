@@ -7,6 +7,10 @@ description: "Automatically generated file. DO NOT MODIFY"
 Import-Module Microsoft.Graph.Beta.Users
 
 # A UPN can also be used as -UserId.
+<<<<<<< HEAD
 Get-MgBetaUserTodoListTaskLinkedResource -UserId $userId -TodoTaskListId $todoTaskListId -TodoTaskId $todoTaskId
+=======
+Get-MgBetaUserTodoTaskLinkedResource -UserId $userId -TodoTaskListId $todoTaskListId -TodoTaskId $todoTaskId
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 ```

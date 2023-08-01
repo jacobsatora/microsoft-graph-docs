@@ -25,14 +25,15 @@ One of the following permissions is required to call this API. To learn more, in
 
 ## HTTP request
 
-<!-- {
-  "blockType": "ignored"
-}
--->
-``` http
-DELETE /applications/{id}/federatedIdentityCredentials/{federatedIdentityCredentialId}
+You can address the application using either its **id** or **appId**. **id** and **appId** are referred to as the **Object ID** and **Application (Client) ID**, respectively, in the Azure portal.
 
+You can also address the federated identity credential with either its **id** or **name**.
+<!-- { "blockType": "ignored" } -->
+```http
+DELETE /applications/{id}/federatedIdentityCredentials/{federatedIdentityCredentialId}
 DELETE /applications/{id}/federatedIdentityCredentials/{federatedIdentityCredentialName}
+DELETE /applications(appId='{appId}')/federatedIdentityCredentials/{federatedIdentityCredentialId}
+DELETE /applications(appId='{appId}')/federatedIdentityCredentials/{federatedIdentityCredentialName}
 ```
 
 ## Request headers
@@ -63,7 +64,11 @@ If successful, this method returns a `204 No Content` response code.
 DELETE https://graph.microsoft.com/v1.0/applications/bcd7c908-1c4d-4d48-93ee-ff38349a75c8/federatedIdentityCredentials/d9b7bf1e-429e-4678-8132-9b00c9846cc4
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/delete-federatedidentitycredential-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

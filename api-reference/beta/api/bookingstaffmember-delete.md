@@ -51,9 +51,18 @@ The following is an example of the request.
   "sampleKeys": ["contosolunchdelivery@contoso.onmicrosoft.com", "5fae928f-6d2d-417a-ad96-4b0caeb362d6"]
 }-->
 ```http
-DELETE https://graph.microsoft.com/beta/bookingBusinesses/contosolunchdelivery@contoso.onmicrosoft.com/staffmembers/5fae928f-6d2d-417a-ad96-4b0caeb362d6
+DELETE https://graph.microsoft.com/beta/bookingBusinesses/contosolunchdelivery@contoso.onmicrosoft.com/staffMembers/5fae928f-6d2d-417a-ad96-4b0caeb362d6
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-bookingstaffmember-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 The following is an example of the response.

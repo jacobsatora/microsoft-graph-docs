@@ -52,7 +52,7 @@ If successful, this method returns a `201 Created` response code and a new [toke
 
 ### Request
 
-The following is an example of the request.
+The following is an example of a request that creates a token lifetime policy that sets the access and ID token lifetime to eight hours.
 
 <!-- {
   "blockType": "request",
@@ -64,14 +64,23 @@ POST https://graph.microsoft.com/beta/policies/tokenLifetimePolicies
 Content-type: application/json
 
 {
-  "definition": [
-    "definition-value"
-  ],
-  "displayName": "displayName-value",
-  "isOrganizationDefault": true
+    "definition": [
+        "{\"TokenLifetimePolicy\":{\"Version\":1,\"AccessTokenLifetime\":\"8:00:00\"}}"
+    ],
+    "displayName": "Contoso token lifetime policy",
+    "isOrganizationDefault": true
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-tokenlifetimepolicy-from-tokenlifetimepolicies-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.
@@ -89,12 +98,14 @@ HTTP/1.1 201 Created
 Content-type: application/json
 
 {
-  "definition": [
-    "definition-value"
-  ],
-  "displayName": "displayName-value",
-  "isOrganizationDefault": true,
-  "id": "id-value"
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#policies/tokenLifetimePolicies/$entity",
+    "id": "4d2f137b-e8a9-46da-a5c3-cc85b2b840a4",
+    "deletedDateTime": null,
+    "definition": [
+        "{\"TokenLifetimePolicy\":{\"Version\":1,\"AccessTokenLifetime\":\"8:00:00\"}}"
+    ],
+    "displayName": "Contoso token lifetime policy",
+    "isOrganizationDefault": true
 }
 ```
 

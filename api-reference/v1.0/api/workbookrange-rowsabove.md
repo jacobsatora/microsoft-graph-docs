@@ -64,7 +64,10 @@ Here is an example of the request.
 GET https://graph.microsoft.com/v1.0/me/drive/root/workbook/worksheets/{id}/range/rowsAbove(count=2)
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
 
@@ -101,7 +104,10 @@ If called without the optional `count` parameter, this function returns the sing
 GET https://graph.microsoft.com/v1.0/me/drive/root/workbook/worksheets/{id}/range/rowsAbove
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 <!-- {
   "blockType": "response",

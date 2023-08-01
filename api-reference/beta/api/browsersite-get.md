@@ -63,6 +63,15 @@ The following is an example of a request.
 GET https://graph.microsoft.com/beta/admin/edge/internetExplorerMode/siteLists/20579923-e6c8-425a-b728-47f43c10bc05/sites/a22cbc85-d5d2-4e61-8414-42e6704c36f7
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-browsersite-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 The following is an example of the response.
 >**Note:** The response object shown here might be shortened for readability.

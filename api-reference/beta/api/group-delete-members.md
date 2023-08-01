@@ -2,7 +2,7 @@
 title: "Remove member"
 description: "Remove a member from a Microsoft 365 group or a security group through the members navigation property."
 ms.localizationpriority: medium
-author: "psaffaie"
+author: "Jordanndahl"
 ms.prod: "groups"
 doc_type: apiPageType
 ---
@@ -69,6 +69,15 @@ The following is an example of the request.
 DELETE https://graph.microsoft.com/beta/groups/{group-id}/members/{directory-object-id}/$ref
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-member-from-group-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 In the request, specify the identifier of the group and the identifier of the directory object you want to remove.
 
 #### Response

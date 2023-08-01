@@ -35,7 +35,9 @@ GET /users
 
 ## Optional query parameters
 
-This method supports the `$count`, `$expand`, `$filter`, `$orderBy`, `$search`, `$select`, and `$top` [OData query parameters](/graph/query-parameters) to help customize the response. `$skip` isn't supported. The default and maximum page sizes are 100 and 999 user objects respectively. Some queries are supported only when you use the **ConsistencyLevel** header set to `eventual` and `$count`. For more information, see [Advanced query capabilities on Azure AD directory objects](/graph/aad-advanced-queries). The `$count` and `$search` parameters are currently not available in Azure AD B2C tenants.
+This method supports the `$count`, `$expand`, `$filter`, `$orderBy`, `$search`, `$select`, and `$top` [OData query parameters](/graph/query-parameters) to help customize the response. `$skip` isn't supported. You must specify `$select=signInActivity` or `$filter=signInActivity` while [listing users](../api/user-list.md), as the signInActivity property is not returned by default.
+
+Some queries are supported only when you use the **ConsistencyLevel** header set to `eventual` and `$count`. For more information, see [Advanced query capabilities on Azure AD directory objects](/graph/aad-advanced-queries). The `$count` and `$search` parameters are currently not available in Azure AD B2C tenants.
 
 By default, only a limited set of properties are returned (**businessPhones**, **displayName**, **givenName**, **id**, **jobTitle**, **mail**, **mobilePhone**, **officeLocation**, **preferredLanguage**, **surname**, and **userPrincipalName**).To return an alternative property set, specify the desired set of [user](../resources/user.md) properties using the OData `$select` query parameter. For example, to return **displayName**, **givenName**, and **postalCode**, add the following to your query `$select=displayName,givenName,postalCode`.
 
@@ -88,7 +90,11 @@ The following is an example of the request.
 GET https://graph.microsoft.com/v1.0/users
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-users-2-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -163,7 +169,11 @@ The following is an example of the request.
 GET https://graph.microsoft.com/v1.0/users?$select=displayName,id&$filter=identities/any(c:c/issuerAssignedId eq 'j.smith@yahoo.com' and c/issuer eq 'My B2C tenant')
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-signinname-users-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -290,7 +300,11 @@ GET https://graph.microsoft.com/v1.0/users?$filter=endswith(mail,'a@contoso.com'
 ConsistencyLevel: eventual
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-a-count-endswith-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -346,7 +360,11 @@ GET https://graph.microsoft.com/v1.0/users?$search="displayName:wa"&$orderby=dis
 ConsistencyLevel: eventual
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-wa-count-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -401,7 +419,11 @@ GET https://graph.microsoft.com/v1.0/users?$search="displayName:wa" OR "displayN
 ConsistencyLevel: eventual
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-to-count-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -443,7 +465,69 @@ Content-type: application/json
 }
 ```
 
-### Example 8: Use $filter to get users who are assigned a specific license
+
+### Example 8: Get guest (B2B) users from a specific tenant or domain by userPrincipalName
+
+#### Request
+
+The following is an example of the request. The userPrincipalName value for guest (B2B collaboration) users always contains the "#EXT#" identifier. For example, the userPrincipalName of a user in their home tenant is *AdeleV@adatum.com*. When you invite the user to collaborate in your tenant, *contoso.com*, their userPrincipalName in your tenant is "AdeleV_adatum.com#EXT#@contoso.com".
+
+This request requires the **ConsistencyLevel** header set to `eventual` and the `$count=true` query string because the request includes the endsWith operator. For more information about the use of **ConsistencyLevel** and `$count`, see [Advanced query capabilities on Azure AD directory objects](/graph/aad-advanced-queries).
+
+>**NOTE:** You must encode the reserved character "#" in the userPrincipalName value as "%23" in the request URL. For more information, see [Encoding special characters](/graph/query-parameters#encoding-query-parameters).
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "get_b2b_users"
+}-->
+```msgraph-interactive
+GET https://graph.microsoft.com/v1.0/users?$select=id,displayName,mail,identities&$filter=endsWith(userPrincipalName,'%23EXT%23@contoso.com')&$count=true
+ConsistencyLevel: eventual
+```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-b2b-users-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+
+The following is an example of the response.
+> **Note:** The response object shown here might be shortened for readability.
+
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.user",
+  "isCollection": true
+} -->
+```http
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users(id,displayName,mail,identities)",
+    "@odata.count": 2,
+    "value": [
+        {
+            "id": "39807bd1-3dde-48f3-8165-81ddd4e46de0",
+            "displayName": "Adele Vance",
+            "mail": "AdeleV@adatum.com",
+            "identities": [
+                {
+                    "signInType": "userPrincipalName",
+                    "issuer": "contoso.com",
+                    "issuerAssignedId": "AdeleV_adatum.com#EXT#@cntoso.com"
+                }
+            ]
+        }
+    ]
+}
+```
+
+### Example 9: Use $filter to get users who are assigned a specific license
 
 #### Request
 
@@ -499,7 +583,7 @@ Content-type: application/json
 ```
 
 
-### Example 9: Get the value of a schema extension for all users
+### Example 10: Get the value of a schema extension for all users
 
 In this example, the ID of the schema extension is `ext55gb1l09_msLearnCourses`.
 
@@ -509,14 +593,19 @@ In this example, the ID of the schema extension is `ext55gb1l09_msLearnCourses`.
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "list_schemaextension"
+  "name": "list_users_schemaextension"
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/users?$select=ext55gb1l09_msLearnCourses
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/list-schemaextension-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-users-schemaextension-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -551,6 +640,73 @@ Content-type: application/json
 ```
 
 >**Note:** You can also apply `$filter` on the schema extension property to retrieve objects where a property in the collection matches a specified value. The syntax is `/users?$filter={schemaPropertyID}/{propertyName} eq 'value'`. For example, `GET /users?$select=ext55gb1l09_msLearnCourses&$filter=ext55gb1l09_msLearnCourses/courseType eq 'Developer'`. The `eq` and `not` operators are supported.
+
+### Example 11: Get users including their last sign-in time
+
+#### Request
+
+The following is an example of the request. Details for the **signInActivity** property require an Azure AD Premium P1/P2 license and the AuditLog.Read.All permission. 
+
+>**Note:** When you specify `$select=signInActivity` or `$filter=signInActivity` while listing users, the maximum page size for `$top` is 120. Requests with `$top` set higher than 120 will return pages with up to 120 users. signInActivity supports `$filter` (`eq`, `ne`, `not`, `ge`, `le`) *but* not with any other filterable properties. 
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "get_users_signin_last_time"
+}-->
+```msgraph-interactive
+GET https://graph.microsoft.com/v1.0/users?$select=displayName,userPrincipalName,signInActivity
+```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-users-signin-last-time-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+
+The following is an example of the response.
+> **Note:** The response object shown here might be shortened for readability.
+
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.user",
+  "isCollection": true
+} -->
+```http
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users(displayName,userPrincipalName,signInActivity)",
+  "value": [
+    {
+      "displayName": "Adele Vance",
+      "userPrincipalName": "AdeleV@contoso.com",
+      "id": "1aecaf40-dc3a-461f-88a8-d06994e12898",
+      "signInActivity": {
+        "lastSignInDateTime": "2021-06-17T16:41:33Z",
+        "lastSignInRequestId": "d4d31c40-4c36-4775-ad59-7d1e6a171f00",
+        "lastNonInteractiveSignInDateTime": "0001-01-01T00:00:00Z",
+        "lastNonInteractiveSignInRequestId": ""
+      }
+    },
+    {
+      "displayName": "Alex Wilber",
+      "userPrincipalName": "AlexW@contoso.com",
+      "id": "f0662ee5-84b1-43d6-8338-769cce1bc141",
+      "signInActivity": {
+        "lastSignInDateTime": "2021-07-29T15:53:27Z",
+        "lastSignInRequestId": "f3149ee1-e347-4181-b45b-99a1f82b1c00",
+        "lastNonInteractiveSignInDateTime": "2021-07-29T17:53:42Z",
+        "lastNonInteractiveSignInRequestId": "868efa6a-b2e9-40e9-9b1c-0aaea5b50200"
+      }
+    }
+  ]
+}
+```
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

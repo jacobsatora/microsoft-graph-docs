@@ -23,10 +23,14 @@ One of the following permissions is required to call this API. To learn more, in
 |Application | Application.ReadWrite.OwnedBy, Application.ReadWrite.All |
 
 ## HTTP request
+
+You can address the application using either its **id** or **appId**. **id** and **appId** are referred to as the **Object ID** and **Application (Client) ID**, respectively, in the Azure portal.
 <!-- { "blockType": "ignored" } -->
 ```http
 DELETE /applications/{id}/owners/{id}/$ref
+DELETE /applications(appId='{appId}')/owners/{id}/$ref
 ```
+
 > [!CAUTION]
 > If `/$ref` is not appended to the request and the calling app has permissions to manage the user who is the app owner, the user will also be deleted from Azure Active Directory (Azure AD); otherwise, a `403 Forbidden` error is returned. You can restore deleted users through the [Restore deleted items API](directory-deleteditems-restore.md).
 
@@ -58,7 +62,11 @@ The following example shows the request.
 DELETE https://graph.microsoft.com/v1.0/applications/{id}/owners/{id}/$ref
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/application-delete-owners-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

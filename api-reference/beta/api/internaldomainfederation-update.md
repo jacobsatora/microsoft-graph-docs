@@ -23,7 +23,10 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (personal Microsoft account)|Not supported|
 |Application|Domain.ReadWrite.All|
 
-The calling user must be assigned the Global Administrator [Azure AD role](/azure/active-directory/roles/permissions-reference).
+The calling user must be assigned one of the following [Azure AD roles](/azure/active-directory/roles/permissions-reference):
+
+- Security Administrator
+- External Identity Provider Administrator
 
 ## HTTP request
 
@@ -101,6 +104,15 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/update-internaldomainfederation-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {

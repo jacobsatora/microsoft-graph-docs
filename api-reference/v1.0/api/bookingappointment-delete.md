@@ -49,13 +49,21 @@ If successful, this method returns a `204 No Content` response code. It does not
 
 The following is an example of a request.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
+  "name": "bookingappointment_delete",
   "sampleKeys": ["AAMkADKqAAA=", "Contosolunchdelivery@contoso.onmicrosoft.com"]
 }-->
 ```http
 DELETE https://graph.microsoft.com/v1.0/solutions/bookingBusinesses/Contosolunchdelivery@contoso.onmicrosoft.com/appointments/AAMkADKqAAA=
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/bookingappointment-delete-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 

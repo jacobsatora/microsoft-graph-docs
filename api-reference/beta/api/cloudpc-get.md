@@ -82,6 +82,15 @@ The following is an example of a request.
 GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs/9ec90ff8-fd63-4fb9-ab5a-aa4fdcc43ec9
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-cloudpc-default-properties-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -127,7 +136,9 @@ Content-Type: application/json
     },
     "userPrincipalName": "pmitchell@cpccustomer001.onmicrosoft.com",
     "lastModifiedDateTime": "2020-11-03T18:14:34Z",
-    "gracePeriodEndDateTime": "2020-11-010T20:00:34Z"
+    "gracePeriodEndDateTime": "2020-11-010T20:00:34Z",
+    "provisioningType": "shared",
+    "diskEncryptionState": "notAvailable"
 }
 ```
 
@@ -148,6 +159,15 @@ The following is an example of a request.
 GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs/40cee9d2-03fb-4066-8d35-dbdf2875c33f?$select=id,displayName,imageDisplayName,lastModifiedDateTime,lastRemoteActionResult,lastLoginResult,connectivityResult
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-cloudpc-selected-properties-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -214,6 +234,15 @@ The following is an example of a request.
 GET https://graph.microsoft.com/beta/me/cloudPCs/36bd4942-0ca8-11ed-861d-0242ac120002
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/user-get-cloudpc-default-properties-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -259,6 +288,8 @@ Content-Type: application/json
     },
     "userPrincipalName": "pmitchell@cpccustomer001.onmicrosoft.com",
     "lastModifiedDateTime": "2020-11-03T18:14:34Z",
-    "gracePeriodEndDateTime": "2020-11-010T20:00:34Z"
+    "gracePeriodEndDateTime": "2020-11-010T20:00:34Z",
+    "provisioningType": "shared",
+    "diskEncryptionState": "notAvailable"
 }
 ```

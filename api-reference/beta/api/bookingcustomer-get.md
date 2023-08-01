@@ -30,6 +30,8 @@ One of the following permissions is required to call this API. To learn more, in
 GET /bookingBusinesses/{id}/customers/{id}
 ```
 
+> **Note:** This method currently requires the ID to be Base64 encoded. GUID IDs do not work.
+
 ## Optional query parameters
 
 This method supports the [OData query parameters](/graph/query-parameters) to help customize the response.
@@ -56,6 +58,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/bookingBusinesses/contosolunchdelivery@contoso.onmicrosoft.com/customers/8bb19078-0f45-4efb-b2c5-da78b860f73a
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-bookingcustomer-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response. 

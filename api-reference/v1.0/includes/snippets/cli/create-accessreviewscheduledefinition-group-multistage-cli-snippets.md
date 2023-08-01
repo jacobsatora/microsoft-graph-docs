@@ -2,8 +2,14 @@
 description: "Automatically generated file. DO NOT MODIFY"
 ---
 
+<<<<<<< HEAD
 ```cli
 
+=======
+```bash
+
+// THE CLI IS IN PREVIEW. NON-PRODUCTION USE ONLY
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 mgc identity-governance access-reviews definitions create --body '{\
   "displayName": "Group Multi-stage Access Review",\
   "descriptionForAdmins": "New scheduled access review",\
@@ -52,11 +58,14 @@ mgc identity-governance access-reviews definitions create --body '{\
     }\
   ],\
   "settings": {\
+<<<<<<< HEAD
     "mailNotificationsEnabled": true,\
     "reminderNotificationsEnabled": true,\
     "justificationRequiredOnApproval": true,\
     "defaultDecisionEnabled": false,\
     "defaultDecision": "None",\
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
     "instanceDurationInDays": 4,\
     "recurrence": {\
       "pattern": {\

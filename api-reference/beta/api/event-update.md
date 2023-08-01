@@ -53,8 +53,8 @@ PATCH /groups/{id}/calendar/events/{id}
 PATCH /me/calendars/{id}/events/{id}
 PATCH /users/{id | userPrincipalName}/calendars/{id}/events/{id}
 
-PATCH /me/calendargroups/{id}/calendars/{id}/events/{id}
-PATCH /users/{id | userPrincipalName}/calendargroups/{id}/calendars/{id}/events/{id}
+PATCH /me/calendarGroups/{id}/calendars/{id}/events/{id}
+PATCH /users/{id | userPrincipalName}/calendarGroups/{id}/calendars/{id}/events/{id}
 ```
 ## Request headers
 | Name       | Type | Description|
@@ -129,6 +129,15 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/update-event-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.

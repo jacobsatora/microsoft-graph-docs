@@ -48,22 +48,40 @@ If successful, this method returns a `200 OK` response code and [userSettings](.
 
 ##### Request
 
-```http
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "get_usersettings"
+}-->
+
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/me/settings
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-usersettings-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
 
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  
+} -->
+
 ```http
 HTTP/1.1 200 OK
-Content-type: application/json
+```
+<!--Content-type: application/json
 
 {
   "contributionToContentDiscoveryAsOrganizationDisabled": false,
   "contributionToContentDiscoveryDisabled": false
-}
+} 
 ```
-
-
+-->

@@ -61,6 +61,15 @@ If successful, this method returns a `200 OK` response code and a [cloudPcOrgani
 GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/organizationSettings
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-cloudpcorganizationsettings-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 <!-- {
   "blockType": "response",
@@ -76,6 +85,7 @@ Content-Type: application/json
   "value": {
     "@odata.type": "#microsoft.graph.cloudPcOrganizationSettings",
     "enableMEMAutoEnroll": false,
+    "enableSingleSignOn": true,
     "id": "8660bf17-bf17-8660-17bf-608617bfffff",
     "osVersion": "windows11",
     "userAccountType": "standardUser",

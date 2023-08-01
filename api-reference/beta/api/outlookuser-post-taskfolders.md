@@ -54,7 +54,7 @@ The following example creates a task folder called Volunteer in the default task
   "name": "create_outlooktaskfolder_from_outlookuser"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/me/outlook/taskfolders 
+POST https://graph.microsoft.com/beta/me/outlook/taskFolders 
 Content-type: application/json
 
 {
@@ -62,6 +62,15 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-outlooktaskfolder-from-outlookuser-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 In the request body, supply a JSON representation of [outlookTaskFolder](../resources/outlooktaskfolder.md) object.
 
 ##### Response

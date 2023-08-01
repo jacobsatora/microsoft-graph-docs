@@ -1,7 +1,7 @@
 ---
 title: "Create audio routing group"
 description: "Create a new **audioRoutingGroup**."
-author: "mkhribech"
+author: "rahulva-msft"
 ms.localizationpriority: medium
 ms.prod: "cloud-communications"
 doc_type: apiPageType
@@ -47,7 +47,7 @@ If successful, this method returns `200 OK` response code and [audioRoutingGroup
 
 ### Example 1: One-to-one audio routing group
 
-##### Request
+#### Request
 The following example shows the request.
 
 
@@ -72,9 +72,18 @@ Content-Length: 233
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-audioroutinggroup-from-call-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 In the request body, supply a JSON representation of [audioRoutingGroup](../resources/audioroutinggroup.md) object.
 
-##### Response
+#### Response
 
 > **Note:** The response object shown here might be shortened for readability.
 
@@ -101,7 +110,7 @@ Content-Length: 233
 ```
 ### Example 2: Multicast audioRoutingGroup
 
-##### Request
+#### Request
 The following example shows the request.
 
 ```http
@@ -132,7 +141,7 @@ Content-Length: 233
 
 In the request body, supply a JSON representation of [audioRoutingGroup](../resources/audioroutinggroup.md) object.
 
-##### Response
+#### Response
 
 > **Note:** The response object shown here might be shortened for readability.
 

@@ -70,7 +70,10 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 If successful, it returns the following JSON response. 

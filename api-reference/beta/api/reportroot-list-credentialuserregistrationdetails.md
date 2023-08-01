@@ -13,6 +13,9 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
+> [!IMPORTANT] 
+> The credential user registration details API is deprecated and will stop returning data on June 30, 2024. Use the [User registration details](../resources/userregistrationdetails.md) API instead.
+
 Get a list of [credentialUserRegistrationDetails](../resources/credentialuserregistrationdetails.md) objects for a given tenant.
 
 ## Permissions
@@ -79,6 +82,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/reports/credentialUserRegistrationDetails
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-credentialuserregistrationdetails-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.

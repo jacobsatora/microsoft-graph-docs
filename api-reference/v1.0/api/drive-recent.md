@@ -25,25 +25,37 @@ One of the following permissions is required to call this API. To learn more, in
 |Application | Files.Read.All, Files.ReadWrite.All, Sites.Read.All, Sites.ReadWrite.All |
 
 ## HTTP request
+<!-- { "blockType": "ignored" } -->
 
+```http
+GET /me/drive/recent
+```
+
+## Response
+This method returns a collection of [DriveItem](../resources/driveitem.md) resources for items which the owner of the drive has recently accessed.
+
+## Examples
+
+### Request
 
 # [HTTP](#tab/http)
-<!-- { "blockType": "request",
-       "name": "view-recent-files", 
-       "scopes": "files.read",
-       "tags": "service.graph",
-       "target": "action" } -->
+<!-- { "blockType": "request", "name": "view-recent-files" } -->
 
 ```msgraph-interactive
 GET /me/drive/recent
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/view-recent-files-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
+<<<<<<< HEAD
 ## Response
 
 This method returns a collection of [DriveItem](../resources/driveitem.md) resources for items which the owner of the drive has recently accessed.
@@ -51,6 +63,15 @@ This method returns a collection of [DriveItem](../resources/driveitem.md) resou
 <!-- { "blockType": "response",
        "@odata.type": "Collection(microsoft.graph.driveItem)",
        "truncated": true} -->
+=======
+### Response
+
+<!-- { 
+    "blockType": "response",
+     "@odata.type": "Collection(microsoft.graph.driveItem)",
+     "truncated": true
+} -->
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 ```http
 HTTP/1.1 200 OK
@@ -112,4 +133,3 @@ GET /drives/{remoteItem-driveId}/items/{remoteItem-id}
   "suppressions": [
   ]
 } -->
-

@@ -16,6 +16,18 @@ $params = @{
 	appliedCategories = @{
 		category3 = $true
 		category4 = $false
+<<<<<<< HEAD
+=======
+	}
+	recurrence = @{
+		schedule = @{
+			pattern = @{
+				type = "daily"
+				interval = 3
+			}
+			patternStartDateTime = [System.DateTime]::Parse("2022-02-22T02:10:33Z")
+		}
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 	}
 }
 

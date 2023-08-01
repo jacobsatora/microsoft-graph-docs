@@ -1,7 +1,7 @@
 ---
 title: "groupLifecyclePolicy: addGroup"
 description: "Adds a group to a lifecycle policy."
-author: "psaffaie"
+author: "Jordanndahl"
 ms.localizationpriority: medium
 ms.prod: "groups"
 doc_type: apiPageType
@@ -60,8 +60,9 @@ If successful, this method returns `200 OK` response code. If the group is added
 
 The following is an example of a request.
 
+# [HTTP](#tab/http)
 <!-- {
-  "blockType": "ignored",
+  "blockType": "request",
   "name": "grouplifecyclepolicy_addgroup"
 } -->
 
@@ -74,19 +75,22 @@ Content-type: application/json
 }
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/grouplifecyclepolicy-addgroup-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 
 The following is an example of the response.
 
-<!-- { "blockType": "ignored" } -->
+<!-- {
+  "blockType": "response"
+} -->
 
 ```http
 HTTP/1.1 200 OK
-Content-type: application/json
-
-{
-  "value": true
-}
 ```
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79

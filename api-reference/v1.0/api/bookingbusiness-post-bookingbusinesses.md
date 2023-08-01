@@ -45,8 +45,10 @@ If successful, this method returns a `201 Created` response code and a [bookingB
 ### Request
 The following is an example of the request.
 
+# [HTTP](#tab/http)
 <!-- {
-  "blockType": "request"
+  "blockType": "request",
+  "name" : "bookingbusinesspostbookingbusiness"
 }-->
 ```http
 POST https://graph.microsoft.com/v1.0/solutions/bookingBusinesses
@@ -68,6 +70,12 @@ Content-type: application/json
     "defaultCurrencyIso":"USD"
 }
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/bookingbusinesspostbookingbusiness-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 The following is an example of the response. Note: The response object shown here might be shortened for readability.

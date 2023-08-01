@@ -37,23 +37,8 @@ This method supports the `$select`, `$top`, `$skip`,`$orderBy`, and `$filter` OD
 The default page size for this API is 100 **accessReviewScheduleDefinition** objects. To improve efficiency and avoid timeouts due to large result sets, apply pagination using the `$skip` and `$top` query parameters. For more information, see [Paging Microsoft Graph data in your app](/graph/paging).
 
 ### Use the $filter query parameter
-The `$filter` query parameter with the `contains` operator is supported on the **scope** property of accessReviewScheduleDefinition. Use the following format for the request:
 
-```http
-GET /identityGovernance/accessReviews/definitions?$filter=contains(scope/microsoft.graph.accessReviewQueryScope/query, '{object}')
-```
-
-The value of `{object}` can be one of the following:
-
-|Value|Description|
-|:---     |:---       |
-|`/groups`  |List every accessReviewScheduleDefinition on individual groups (excludes definitions scoped to all Microsoft 365 groups with guest users).|
-|`/groups/{group id}`  |List every accessReviewScheduleDefinition on a specific group (excludes definitions scoped to all Microsoft 365 groups with guest users).|
-|`./members`  |List every accessReviewScheduleDefinition scoped to all Microsoft 365 groups with guest users.|
-|`accessPackageAssignments`  |List every accessReviewScheduleDefinition on an access package.|
-|`roleAssignmentScheduleInstances`  |List every accessReviewScheduleDefinition for service principals assigned to a privileged role.|
-
-The `$filter` query parameter is not supported on **accessReviewInactiveUserQueryScope** or **principalResourceMembershipScope**.
+[!INCLUDE [accessreviews-definition-filter-scope](../../includes/accessreviews-definition-filter-scope.md)]
 
 ## Request headers
 |Name|Description|
@@ -83,7 +68,11 @@ If successful, this method returns a `200 OK` response code and a collection of 
 GET https://graph.microsoft.com/v1.0/identityGovernance/accessReviews/definitions?$top=100&$skip=0
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/list-accessreviewscheduledefinition-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -173,7 +162,11 @@ The following example shows a request to retrieve all the access review series s
 GET https://graph.microsoft.com/v1.0/identityGovernance/accessReviews/definitions?$filter=contains(scope/microsoft.graph.accessReviewQueryScope/query, './members')
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/list-accessreviewscheduledefinition-allgroups-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

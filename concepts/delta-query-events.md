@@ -2,6 +2,7 @@
 title: "Get incremental changes to events in a calendar view"
 description: "Track event changes in calendar view using GET requests with the delta function. Example shows how to synchronize a user's default calendar in a set time range."
 author: "iamgirishck"
+ms.prod: "change-notifications"
 ms.localizationpriority: high
 ms.custom: graphiamtop20
 ---
@@ -13,7 +14,7 @@ By using delta query, you can get new, updated, or deleted events in a specified
 > [!NOTE]
 > The capability for the former&mdash;getting incremental changes to events in a calendar not bound to a fixed start and end date range&mdash;is currently available only in the beta version. For more information, see [delta](/graph/api/event-delta) function.
 
-A calendar view is a collection of events in a date/time range (../me/calendarview) from the default calendar or some other specified calendar of a user or from a group calendar. The returned events may include single instances or occurrences and exceptions of a recurring series. The delta data enables you to maintain and synchronize a local store of a user's events without having to fetch the entire set of the user's events from the server every time.
+A calendar view is a collection of events in a date/time range (../me/calendarView) from the default calendar or some other specified calendar of a user or from a group calendar. The returned events may include single instances or occurrences and exceptions of a recurring series. The delta data enables you to maintain and synchronize a local store of a user's events without having to fetch the entire set of the user's events from the server every time.
 
 Delta query supports both full synchronization that retrieves all the events in the specified calendar view, and incremental synchronization that retrieves those events that have changed in the calendar view since the last synchronization. Typically, you would do an initial full synchronization, and subsequently get incremental changes to that calendar view periodically.
 
@@ -184,8 +185,13 @@ GET https://graph.microsoft.com/v1.0/me/calendarView/delta?$skiptoken=R0usmcCM99
 Prefer: odata.maxpagesize=2
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/get-calendarview-delta-2-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/get-calendarview-delta-2-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -284,8 +290,13 @@ GET https://graph.microsoft.com/v1.0/me/calendarView/delta?$skiptoken=R0usmci39O
 Prefer: odata.maxpagesize=2
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/get-calendarview-delta-3-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/get-calendarview-delta-3-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -363,8 +374,13 @@ GET https://graph.microsoft.com/v1.0/me/calendarView/delta?$deltatoken=R0usmcMDN
 Prefer: odata.maxpagesize=2
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/get-calendarview-delta-next-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/get-calendarview-delta-next-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---

@@ -25,12 +25,14 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (personal Microsoft account) | Files.Read, Files.ReadWrite, Files.Read.All, Files.ReadWrite.All    |
 |Application | Files.Read.All, Files.ReadWrite.All, Sites.Read.All, Sites.ReadWrite.All |
 
-## List a group's drives
+## HTTP request
 
+### List a group's drives
 To list the document libraries for a group, your app requests the **drives** relationship on the Group.
 
-### HTTP request
+<!-- {"blockType": "ignored" } -->
 
+<<<<<<< HEAD
 
 <!-- {"blockType": "request", "name": "group-list-drives", "scopes": "groups.read.all" } -->
 
@@ -40,10 +42,18 @@ GET /groups/{groupId}/drives
 
 
 ## List a site's drives
+=======
+```http
+GET /groups/{groupId}/drives
+```
+
+### List a site's drives
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 To list the document libraries for a site, your app requests the **drives** relationship on the Site.
 
 
+<<<<<<< HEAD
 <!-- {"blockType": "request", "name": "site-list-drives", "scopes": "sites.read.all" } -->
 
 ```msgraph-interactive
@@ -71,6 +81,28 @@ GET /me/drives
 ```
 
 
+=======
+```http
+GET /sites/{siteId}/drives
+```
+
+### List a user's drives
+
+<!-- {"blockType": "ignored" } -->
+
+```http
+GET /users/{userId}/drives
+```
+
+### List the current user's drives
+
+<!-- {"blockType": "ignored" } -->
+
+```http
+GET /me/drives
+```
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ## Optional query parameters
 
 This method supports the `$expand`, `$select`, `$skipToken`, `$top`, and `$orderby` [OData query parameters](/graph/query-parameters) to customize the response.
@@ -79,9 +111,28 @@ This method supports the `$expand`, `$select`, `$skipToken`, `$top`, and `$order
 
 If successful, this method returns a `200 OK` response code and collection of [Drive](../resources/drive.md) objects in the response body.
 
+
+## Examples
+
+### Request
+
+# [HTTP](#tab/http)
+<!-- {"blockType": "request", "name": "enum-drives", "scopes": "files.read" } -->
+
+```msgraph-interactive
+GET /me/drives
+```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/enum-drives-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+### Response
+
 <!-- { "blockType": "response", 
        "@odata.type": "Collection(microsoft.graph.drive)",
-       "name": ["group-list-drives", "site-list-drives", "user-list-drives", "enum-drives"],
        "truncated": true } -->
 
 ```http
@@ -138,5 +189,4 @@ To list them, include `system` in your `$select` statement.
   ]
 }
 -->
-
 

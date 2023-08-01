@@ -52,16 +52,27 @@ If successful, this method returns a `200 OK` response code and [mobileThreatDef
 
 ### Request
 Here is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- { "blockType": "request" , "name" : "intune_onboarding_mobilethreatdefenseconnector_get_get_mobilethreatdefenseconnector" }-->
 ``` http
 GET https://graph.microsoft.com/v1.0/deviceManagement/mobileThreatDefenseConnectors/{mobileThreatDefenseConnectorId}
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/intune-onboarding-mobilethreatdefenseconnector-get-get-mobilethreatdefenseconnector-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+
+<!-- { "blockType": "response" , "@odata.type" : "microsoft.graph.mobileThreatDefenseConnector" }-->
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 502
+Content-Length: 874
 
 {
   "value": {
@@ -69,12 +80,19 @@ Content-Length: 502
     "id": "e4bede14-de14-e4be-14de-bee414debee4",
     "lastHeartbeatDateTime": "2016-12-31T23:59:37.9174975-08:00",
     "partnerState": "available",
+    "androidMobileApplicationManagementEnabled": true,
+    "iosMobileApplicationManagementEnabled": true,
     "androidEnabled": true,
     "iosEnabled": true,
+    "windowsEnabled": true,
     "androidDeviceBlockedOnMissingPartnerData": true,
     "iosDeviceBlockedOnMissingPartnerData": true,
+    "windowsDeviceBlockedOnMissingPartnerData": true,
     "partnerUnsupportedOsVersionBlocked": true,
-    "partnerUnresponsivenessThresholdInDays": 6
+    "partnerUnresponsivenessThresholdInDays": 6,
+    "allowPartnerToCollectIOSApplicationMetadata": true,
+    "allowPartnerToCollectIOSPersonalApplicationMetadata": true,
+    "microsoftDefenderForEndpointAttachEnabled": true
   }
 }
 ```

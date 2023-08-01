@@ -71,6 +71,15 @@ If successful, this function returns a `200 OK` response code and a [contentType
 GET https://graph.microsoft.com/beta/sites/{siteId}/getApplicableContentTypesForList(listId='{list-id}')
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/site-getapplicablecontenttypesforlist-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 <!-- {

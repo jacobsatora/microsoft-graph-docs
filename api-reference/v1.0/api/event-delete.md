@@ -38,8 +38,8 @@ DELETE /groups/{id}/calendar/events/{id}/
 DELETE /me/calendars/{id}/events/{id}
 DELETE /users/{id | userPrincipalName}/calendars/{id}/events/{id}
 
-DELETE /me/calendargroups/{id}/calendars/{id}/events/{id}
-DELETE /users/{id | userPrincipalName}/calendargroups/{id}/calendars/{id}/events/{id}
+DELETE /me/calendarGroups/{id}/calendars/{id}/events/{id}
+DELETE /users/{id | userPrincipalName}/calendarGroups/{id}/calendars/{id}/events/{id}
 ```
 ## Request headers
 | Name       | Type | Description|
@@ -66,7 +66,11 @@ Here is an example of the request.
 DELETE https://graph.microsoft.com/v1.0/me/events/{id}
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/delete-event-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

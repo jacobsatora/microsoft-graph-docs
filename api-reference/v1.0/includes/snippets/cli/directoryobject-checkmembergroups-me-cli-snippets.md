@@ -2,8 +2,14 @@
 description: "Automatically generated file. DO NOT MODIFY"
 ---
 
+<<<<<<< HEAD
 ```cli
 
+=======
+```bash
+
+// THE CLI IS IN PREVIEW. NON-PRODUCTION USE ONLY
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 mgc users check-member-groups post --user-id {user-id} --body '{\
   "groupIds": [\
         "fee2c45b-915a-4a64b130f4eb9e75525e",\

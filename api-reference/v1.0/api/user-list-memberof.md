@@ -1,7 +1,7 @@
 ---
 title: "List a user's direct memberships"
 description: "Get groups, directory roles, and administrative units that the user is a direct member of. This operation is not transitive."
-author: "psaffaie"
+author: "Jordanndahl"
 ms.localizationpriority: high
 ms.prod: "users"
 doc_type: apiPageType
@@ -74,7 +74,11 @@ The following is an example of the request.
 GET https://graph.microsoft.com/v1.0/users/6e7b768e-07e2-4810-8459-485f84f8f204/memberOf
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/user-get-memberof-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

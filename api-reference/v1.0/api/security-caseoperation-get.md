@@ -63,7 +63,11 @@ The following is an example of a request.
 GET https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/b0073e4e-4184-41c6-9eb7-8c8cc3e2288b/operations/850c2f64b1ee44a4a69729327aac2b04
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-caseoperation-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -101,4 +105,12 @@ Content-Type: application/json
     }
 }
 ```
+> **Note:** If you need to perform an export operation, the response will include the download URL, file name, and size in the **exportfileMetadata property. You will be responsible for managing the actual download process. You can choose to download the file to your local computer or export it to your storage account.
+> To automate the process and avoid the interactive sign-in page:
+> 1. Provision the Microsoft Purview eDiscovery application by using [Create ServicePrincpal](../api/serviceprincipal-post-serviceprincipals.md) for the application ID b26e684c-5068-4120-a679-64a5d2c909d9.
+> 2. When the application is provisioned, request user-delegated permissions for discovery.Download.Read from the tenant admin. This request should be made from your third-party application interacting with Microsoft Graph.
+> 3. Make sure the tenant admin approves the request.
+> 4. Add the scope for the application to your existing script and make sure the headers include ("X-AllowWithAADToken", "true");. 
+> By following these steps, the user authorization process will be automated, and you won't encounter a manual interactive sign-in page.
+
 

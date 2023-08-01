@@ -65,6 +65,15 @@ The following is an example of a request.
 GET https://graph.microsoft.com/beta/identity/conditionalAccess/templates/c7503427-338e-4c5e-902d-abe252abfb43
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-conditionalaccesstemplate-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following is an example of the response
 >**Note:** The response object shown here might be shortened for readability.
@@ -153,6 +162,15 @@ The following is an example of a request.
 GET https://graph.microsoft.com/beta/identity/conditionalAccess/templates/c7503427-338e-4c5e-902d-abe252abfb43?$select=details
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-conditionalaccesstemplate-select-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following is an example of the response
 >**Note:** The response object shown here might be shortened for readability.

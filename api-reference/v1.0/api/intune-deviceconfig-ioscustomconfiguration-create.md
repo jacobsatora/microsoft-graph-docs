@@ -65,6 +65,9 @@ If successful, this method returns a `201 Created` response code and a [iosCusto
 
 ### Request
 Here is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- { "blockType": "request" , "name" : "intune_deviceconfig_ioscustomconfiguration_create_create_ioscustomconfiguration" }-->
 ``` http
 POST https://graph.microsoft.com/v1.0/deviceManagement/deviceConfigurations
 Content-type: application/json
@@ -81,8 +84,16 @@ Content-length: 279
 }
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/intune-deviceconfig-ioscustomconfiguration-create-create-ioscustomconfiguration-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+
+<!-- { "blockType": "response" , "@odata.type" : "microsoft.graph.iosCustomConfiguration" }-->
 ``` http
 HTTP/1.1 201 Created
 Content-Type: application/json

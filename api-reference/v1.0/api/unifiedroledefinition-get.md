@@ -94,7 +94,11 @@ The following is an example of the request.
 GET https://graph.microsoft.com/v1.0/roleManagement/directory/roleDefinitions/f189965f-f560-4c59-9101-933d4c87a91a
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-custom-role-unifiedroledefinition-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -156,7 +160,11 @@ The following is an example of the request.
 GET https://graph.microsoft.com/v1.0/roleManagement/directory/roleDefinitions/3a2c62db-5318-420d-8d74-23affee5d9d5
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-built-in-role-unifiedroledefinition-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -223,6 +231,7 @@ Content-type: application/json
     ]
 }
 ```
+<<<<<<< HEAD
 ### Example 3: Get the definition of an Azure AD built-in role and $expand on the role it inherits from
 
 #### Request
@@ -373,6 +382,8 @@ Content-type: application/json
     ]
 }
 ```
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 <!-- uuid: 16cd6b66-4b1a-43a1-adaf-3a886856ed98
 2019-02-04 14:57:30 UTC -->

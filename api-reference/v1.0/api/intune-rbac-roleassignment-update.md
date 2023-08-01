@@ -60,6 +60,9 @@ If successful, this method returns a `200 OK` response code and an updated [role
 
 ### Request
 Here is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- { "blockType": "request" , "name" : "intune_rbac_roleassignment_update_update_roleassignment" }-->
 ``` http
 PATCH https://graph.microsoft.com/v1.0/deviceManagement/roleDefinitions/{roleDefinitionId}/roleAssignments/{roleAssignmentId}
 Content-type: application/json
@@ -75,8 +78,16 @@ Content-length: 193
 }
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/intune-rbac-roleassignment-update-update-roleassignment-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+
+<!-- { "blockType": "response" , "@odata.type" : "microsoft.graph.roleAssignment" }-->
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json

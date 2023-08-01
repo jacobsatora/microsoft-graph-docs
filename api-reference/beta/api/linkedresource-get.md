@@ -18,9 +18,9 @@ One of the following permissions is required to call this API. To learn more, in
 
 |Permission type|Permissions (from least to most privileged)|
 |:---|:---|
-|Delegated (work or school account)|Tasks.ReadWrite|
-|Delegated (personal Microsoft account)|Tasks.ReadWrite|
-|Application|Not supported|
+|Delegated (work or school account)|Tasks.Read, Tasks.ReadWrite|
+|Delegated (personal Microsoft account)|Tasks.Read, Tasks.ReadWrite|
+|Application|Tasks.Read.All, Tasks.ReadWrite.All|
 
 ## HTTP request
 
@@ -59,6 +59,15 @@ If successful, this method returns a `200 OK` response code and a [linkedResourc
 GET https://graph.microsoft.com/beta/me/todo/lists/dfsdc-f9dfdfs-dcsda9/tasks/e2dc-f9cce2-dce29/linkedResources/f9cddce2-dce2-f9cd-e2dc-cdf9e2dccdf9
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-linkedresource-1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 **Note:** The response object shown here might be shortened for readability.
 <!-- {

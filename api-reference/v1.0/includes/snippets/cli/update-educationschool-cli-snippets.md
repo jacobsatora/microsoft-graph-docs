@@ -2,8 +2,14 @@
 description: "Automatically generated file. DO NOT MODIFY"
 ---
 
+<<<<<<< HEAD
 ```cli
 
+=======
+```bash
+
+// THE CLI IS IN PREVIEW. NON-PRODUCTION USE ONLY
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 mgc education schools patch --education-school-id {educationSchool-id} --body '{\
   "displayName": "Fabrikam Arts High School",\
   "description": "Magnate school for the arts. Los Angeles School District"\

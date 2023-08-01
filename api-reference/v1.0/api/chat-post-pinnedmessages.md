@@ -66,7 +66,11 @@ Content-length: 63
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/create-pinnedchatmessageinfo-from--cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -90,3 +94,8 @@ Content-Type: application/json
   "id": "1616964509832"
 }
 ```
+
+## See also
+
+- [Pinned message C# sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-pinned-messages/csharp)
+- [Pinned message Node.js sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-pinned-messages/nodejs)

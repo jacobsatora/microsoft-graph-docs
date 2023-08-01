@@ -56,8 +56,10 @@ If successful, this method returns a `200 OK` response code and an updated [book
 
 The following is an example of the request.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
+  "name" : "bookingcustomerupdate",
   "sampleKeys": ["Contosolunchdelivery@contoso.onmicrosoft.com", "8bb19078-0f45-4efb-b2c5-da78b860f73a"]
 }-->
 ```http
@@ -70,6 +72,12 @@ Content-type: application/json
     "emailAddress": "adele@relecloud.com"
 }
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/bookingcustomerupdate-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 

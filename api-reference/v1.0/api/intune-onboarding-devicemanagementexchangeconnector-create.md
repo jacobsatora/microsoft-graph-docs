@@ -48,11 +48,11 @@ The following table shows the properties that are required when you create the d
 |:---|:---|:---|
 |id|String|Not yet documented|
 |lastSyncDateTime|DateTimeOffset|Last sync time for the Exchange Connector|
-|status|[deviceManagementExchangeConnectorStatus](../resources/intune-onboarding-devicemanagementexchangeconnectorstatus.md)|Exchange Connector Status. Possible values are: `none`, `connectionPending`, `connected`, `disconnected`.|
+|status|[deviceManagementExchangeConnectorStatus](../resources/intune-onboarding-devicemanagementexchangeconnectorstatus.md)|Exchange Connector Status. Possible values are: `none`, `connectionPending`, `connected`, `disconnected`, `unknownFutureValue`.|
 |primarySmtpAddress|String|Email address used to configure the Service To Service Exchange Connector.|
 |serverName|String|The name of the Exchange server.|
 |connectorServerName|String|The name of the server hosting the Exchange Connector.|
-|exchangeConnectorType|[deviceManagementExchangeConnectorType](../resources/intune-onboarding-devicemanagementexchangeconnectortype.md)|The type of Exchange Connector Configured. Possible values are: `onPremises`, `hosted`, `serviceToService`, `dedicated`.|
+|exchangeConnectorType|[deviceManagementExchangeConnectorType](../resources/intune-onboarding-devicemanagementexchangeconnectortype.md)|The type of Exchange Connector Configured. Possible values are: `onPremises`, `hosted`, `serviceToService`, `dedicated`, `unknownFutureValue`.|
 |version|String|The version of the ExchangeConnectorAgent|
 |exchangeAlias|String|An alias assigned to the Exchange server|
 |exchangeOrganization|String|Exchange Organization to the Exchange server|
@@ -66,6 +66,9 @@ If successful, this method returns a `201 Created` response code and a [deviceMa
 
 ### Request
 Here is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- { "blockType": "request" , "name" : "intune_onboarding_devicemanagementexchangeconnector_create_create_devicemanagementexchangeconnector" }-->
 ``` http
 POST https://graph.microsoft.com/v1.0/deviceManagement/exchangeConnectors
 Content-type: application/json
@@ -85,8 +88,16 @@ Content-length: 490
 }
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/intune-onboarding-devicemanagementexchangeconnector-create-create-devicemanagementexchangeconnector-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+
+<!-- { "blockType": "response" , "@odata.type" : "microsoft.graph.deviceManagementExchangeConnector" }-->
 ``` http
 HTTP/1.1 201 Created
 Content-Type: application/json

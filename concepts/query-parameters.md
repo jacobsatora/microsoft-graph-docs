@@ -4,6 +4,7 @@ description: "Microsoft Graph provides optional query parameters that you can us
 author: "FaithOmbongi"
 ms.author: ombongifaith
 ms.reviewer: Luca.Spolidoro
+ms.prod: "applications"
 ms.localizationpriority: high
 ms.custom: graphiamtop20, scenarios:getting-started
 ms.date: 12/08/2022
@@ -20,9 +21,6 @@ Microsoft Graph supports optional query parameters that you can use to specify a
 Query parameters can be [OData system query options](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#_Toc31360955) or other query parameters.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/7BuFv3yETi4]
-
-> [!div class="nextstepaction"]
-> [Training module: Optimize data usage when using Microsoft Graph with query parameters](/training/modules/optimize-data-usage)
 
 ## OData system query options
 A Microsoft Graph API operation might support one or more of the following OData system query options. These query options are compatible with the [OData V4 query language][odata-query] and are supported in only GET operations.
@@ -76,8 +74,13 @@ For example, an unencoded URL looks like this:
 GET https://graph.microsoft.com/v1.0/users?$filter=startswith(givenName, 'J')
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/query-parameters-unencoded-url-example-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/query-parameters-unencoded-url-example-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -94,8 +97,13 @@ The properly percent-encoded URL looks like this:
 GET https://graph.microsoft.com/v1.0/users?$filter=startswith(givenName%2C+'J')
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/query-parameters-percentencoded-url-example-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/query-parameters-percentencoded-url-example-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -112,8 +120,13 @@ The double-encoded URL looks like this:
 GET https://graph.microsoft.com/v1.0/users?$filter=startswith%28givenName%2C%20%27J%27%29
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/query-parameters-doublepercentencoded-url-example-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/query-parameters-doublepercentencoded-url-example-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -132,8 +145,13 @@ For requests that use single quotes, if any parameter values also contain single
 GET https://graph.microsoft.com/v1.0/me/messages?$filter=subject eq 'let''s meet for lunch?'
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/query-parameters-escaped-quotes-example-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/query-parameters-escaped-quotes-example-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -162,8 +180,13 @@ For example, the following request returns both the **contact** collection of th
 GET  https://graph.microsoft.com/v1.0/me/contacts?$count=true
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/query-parameters-count-example-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/query-parameters-count-example-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -195,12 +218,71 @@ The following example gets root drive information along with the top-level child
 GET https://graph.microsoft.com/v1.0/me/drive/root?$expand=children
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/query-parameters-expand-example-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/query-parameters-expand-example-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
+<<<<<<< HEAD
+=======
+With some resource collections, you can also specify the properties to be returned in the expanded resources by adding a `$select` parameter. The following example performs the same query as the previous example but uses a [`$select`](#select-parameter) statement to limit the properties returned for the expanded child items to the **id** and **name** properties.
+
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "query-parameters-expand+nested.select-example"
+}-->
+```msgraph-interactive
+GET https://graph.microsoft.com/v1.0/me/drive/root?$expand=children($select=id,name)
+```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/query-parameters-expand+nestedselect-example-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+> [!NOTE]
+> + Not all relationships and resources support the `$expand` query parameter. For example, you can expand the **directReports**, **manager**, and **memberOf** relationships on a user, but you cannot expand its **events**, **messages**, or **photo** relationships. Not all resources or relationships support using `$select` on expanded items. 
+> 
+> + With Azure AD resources that derive from [directoryObject](/graph/api/resources/directoryobject), like [user](/graph/api/resources/user) and [group](/graph/api/resources/group), `$expand` typically returns a maximum of 100 items for the expanded relationship and has no [@odata.nextLink](./paging.md). See more [known issues](known-issues.md#query-parameters).
+>
+> + `$expand` is not currently supported with [advanced queries](/graph/aad-advanced-queries).
+
+## filter parameter
+
+Use the `$filter` query parameter to retrieve just a subset of a collection. For guidance on using `$filter`, see [Use the $filter query parameter to filter a collection of objects](/graph/filter-query-parameter).
+
+## format parameter
+
+Use the `$format` query parameter to specify the media format of the items returned from Microsoft Graph.
+
+For example, the following request returns the users in the organization in the json format:
+
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "query-parameters-format-example"
+}-->
+```msgraph-interactive
+GET https://graph.microsoft.com/v1.0/users?$format=json
+```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/query-parameters-format-example-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 > [!NOTE]
 > The `$format` query parameter supports a number of formats (for example, atom, xml, and json) but results may not be returned in all formats.
 
@@ -220,8 +302,13 @@ For example, the following request returns the users in the organization ordered
 GET https://graph.microsoft.com/v1.0/users?$orderby=displayName
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/query-parameters-orderby-example-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/query-parameters-orderby-example-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -238,8 +325,13 @@ You can also sort by complex type entities. The following request gets messages 
 GET https://graph.microsoft.com/v1.0/me/messages?$orderby=from/emailAddress/address
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/query-parameters-defaultorderby-collection-example-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/query-parameters-defaultorderby-collection-example-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -258,8 +350,13 @@ With some APIs, you can order results on multiple properties. For example, the f
 GET https://graph.microsoft.com/v1.0/me/mailFolders/Inbox/messages?$orderby=from/emailAddress/name desc,subject
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/query-parameters-descorderby-collection-example-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/query-parameters-descorderby-collection-example-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -280,8 +377,13 @@ The following example shows a query filtered by the **subject** and **importance
 GET https://graph.microsoft.com/v1.0/me/messages?$filter=Subject eq 'welcome' and importance eq 'normal'&$orderby=subject,importance,receivedDateTime desc
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/query-parameters-filter+orderby-example-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/query-parameters-filter+orderby-example-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -309,8 +411,13 @@ For example, when retrieving the messages of the signed-in user, you can specify
 GET https://graph.microsoft.com/v1.0/me/messages?$select=from,subject
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/query-parameters-select-example-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/query-parameters-select-example-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -335,8 +442,13 @@ For example, the following request returns events for the user sorted by date cr
 GET  https://graph.microsoft.com/v1.0/me/events?$orderby=createdDateTime&$skip=20
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/query-parameters-skip-example-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/query-parameters-skip-example-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -375,8 +487,13 @@ For example, the following [list messages](/graph/api/user-list-messages) reques
 GET https://graph.microsoft.com/v1.0/me/messages?$top=5
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/query-parameters-top-example-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/query-parameters-top-example-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -426,3 +543,4 @@ However, it is important to note that query parameters specified in a request mi
 - [Advanced query capabilities on Azure AD directory objects](/graph/aad-advanced-queries)
 - [Use the $search query parameter to match a search criterion](/graph/search-query-parameter)
 - [Query parameter limitations](known-issues.md#query-parameters)
+- [Training module: Optimize data usage when using Microsoft Graph with query parameters](/training/modules/optimize-data-usage)

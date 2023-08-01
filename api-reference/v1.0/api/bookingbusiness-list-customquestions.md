@@ -55,13 +55,21 @@ If successful, this method returns a `200 OK` response code and a collection of 
 
 ### Request
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
+  "name": "bookingbusinesslistcustomquestions",
   "sampleKeys": ["Contosolunchdelivery@contoso.onmicrosoft.com"]
 }-->
-```http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/solutions/bookingBusinesses/Contosolunchdelivery@contoso.onmicrosoft.com/customQuestions
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/bookingbusinesslistcustomquestions-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 

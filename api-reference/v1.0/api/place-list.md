@@ -107,7 +107,11 @@ The following example shows how to get all the [room](../resources/room.md) obje
 GET https://graph.microsoft.com/v1.0/places/microsoft.graph.room
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-all-rooms-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -218,7 +222,11 @@ The following example shows how to get all the [roomList](../resources/roomlist.
 GET https://graph.microsoft.com/v1.0/places/microsoft.graph.roomlist
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-all-roomlists-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -293,7 +301,6 @@ The following example shows how to get a list of [room](../resources/room.md) ob
 ```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/places/Building2Rooms@M365x214355.onmicrosoft.com/microsoft.graph.roomlist/rooms
 ```
-
 
 #### Response
 

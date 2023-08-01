@@ -74,6 +74,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/education/me/assignments
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-me-assignments-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response. 
@@ -191,6 +200,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/education/users/80cefd93-8d88-40e2-b5d3-67898383e226/assignments
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-user-assignments-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 If user tries to query a different user-id than his own, this method returns a `403 Forbidden` response code.
@@ -313,6 +331,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/education/users/80cefd93-8d88-40e2-b5d3-67898383e226/assignments?expand=submissions
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-user-assignments-expand-submissions-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response. 

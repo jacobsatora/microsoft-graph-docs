@@ -35,7 +35,7 @@ GET /appCatalogs/teamsApps/{app-id}/appDefinitions/{app-definition-id}/bot
 ```
 
 ## Optional query parameters
-This method supports the `$select` [OData query parameters](/graph/query-parameter) to help customize the response.
+This method supports the `$select` [OData query parameters](/graph/query-parameters) to help customize the response.
 
 ## Request headers
 |Name|Description|
@@ -63,6 +63,15 @@ If successful, this method returns a `200 OK` response code and a [teamworkBot](
 GET https://graph.microsoft.com/beta/appCatalogs/teamsApps/e4c5c249-bb4b-419e-b7c5-b1d98559368b/appDefinitions/ZTRjNWMyNDktYmI0Yi00MTllLWI3YzUtYjFkOTg1NTkzNjhiIyMyLjAuMSMjUHVibGlzaGVk/bot
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-teamworkbot-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 **Note:** The response object shown here might be shortened for readability.
 <!-- {
@@ -80,10 +89,12 @@ Content-Type: application/json
   "id": "1f81bb29-bb29-1f81-29bb-811f29bb811f"
 }
 ```
+
 ## See also
 
 - To get bots installed in a team, see example 2 in [List apps in team](team-list-installedapps.md).
 - To get bots installed in a chat, see example 2 in [List apps in chat](chat-list-installedapps.md).
 - To get bots installed in the personal scope of a user, see example 2 in [List apps installed for user](userteamwork-list-installedapps.md).
+- [Microsoft Graph service-specific throttling limits](/graph/throttling-limits#microsoft-teams-service-limits)
 
 

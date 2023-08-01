@@ -71,7 +71,7 @@ This method supports the `$count`, `$select`, `$filter`, and `$orderBy` OData qu
 |Name|Description|
 |:---|:---|
 |Authorization|Bearer {token}. Required.|
-|ConsistencyLevel|eventual. Required. For more information about the use of **ConsistencyLevel** and `$count`, see [Advanced query capabilities on Azure AD directory objects](/graph/aad-advanced-queries).|
+|ConsistencyLevel|eventual. Required. For more information about the use of **ConsistencyLevel**, see [Advanced query capabilities on Azure AD directory objects](/graph/aad-advanced-queries).|
 
 ## Request body
 Do not supply a request body for this method.
@@ -152,7 +152,10 @@ Using the same scenario, the following examples show the counts that will be ret
 GET https://graph.microsoft.com/beta/roleManagement/directory/roleDefinitions/644ef478-e28f-4e28-b9dc-3fdde9aa0b1f/assignedPrincipals(directoryScopeType='administrativeUnit', directoryScopeId ='d0c2e067-9ae9-4dbf-a280-51a51c46f432')
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
@@ -189,7 +192,10 @@ Content-Type: application/json
 GET https://graph.microsoft.com/beta/roleManagement/directory/roleDefinitions/644ef478-e28f-4e28-b9dc-3fdde9aa0b1f/assignedPrincipals
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
@@ -243,7 +249,10 @@ Content-Type: application/json
 GET https://graph.microsoft.com/beta/roleManagement/directory/roleDefinitions/644ef478-e28f-4e28-b9dc-3fdde9aa0b1f/assignedPrincipals(directoryScopeType='tenant')/microsoft.graph.user
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
@@ -283,7 +292,10 @@ The following example gets the directly assigned principals and displays an inli
 GET https://graph.microsoft.com/beta/roleManagement/directory/roleDefinitions/644ef478-e28f-4e28-b9dc-3fdde9aa0b1f/assignedPrincipals?$count=true
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {

@@ -38,7 +38,7 @@ GET /users
 
 ## Optional query parameters
 
-This method supports the `$count`, `$expand`, `$filter`, `$orderBy`, `$search`, `$select`, and `$top` [OData query parameters](/graph/query-parameters) to help customize the response. `$skip` isn't supported. The default and maximum page sizes are 100 and 999 user objects respectively. Some queries are supported only when you use the **ConsistencyLevel** header set to `eventual` and `$count`. For more information, see [Advanced query capabilities on Azure AD directory objects](/graph/aad-advanced-queries). The `$count` and `$search` parameters are currently not available in Azure AD B2C tenants.
+This method supports the `$count`, `$expand`, `$filter`, `$orderBy`, `$search`, `$select`, and `$top` [OData query parameters](/graph/query-parameters) to help customize the response. `$skip` isn't supported. The default and maximum page sizes are 100 and 999 user objects respectively, except when you specify `$select=signInActivity` or `$filter=signInActivity`. When `signInActivity` is selected or filtered on, the maximum page size is 999. Some queries are supported only when you use the **ConsistencyLevel** header set to `eventual` and `$count`. For more information, see [Advanced query capabilities on Azure AD directory objects](/graph/aad-advanced-queries). The `$count` and `$search` parameters are currently not available in Azure AD B2C tenants.
 
 [Extension properties](/graph/extensibility-overview) also support query parameters, in some cases, only with advanced query parameters. For more information, see [support for `$filter` by extension properties](/graph/aad-advanced-queries#:~:text=The%20following%20table%20shows%20support%20for%20%24filter%20by%20extension%20properties%20on%20the%20user%20object.).
 
@@ -73,12 +73,21 @@ The following is an example of the request.
 
 <!-- {
   "blockType": "request",
-  "name": "get_users"
+  "name": "get_users_e1"
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/users
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-users-e1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 
@@ -121,12 +130,21 @@ The following is an example of the request.
 
 <!-- {
   "blockType": "request",
-  "name": "get_signinname_users"
+  "name": "get_signinname_users_e2"
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/users?$select=displayName,id&$filter=identities/any(c:c/issuerAssignedId eq 'j.smith@yahoo.com' and c/issuer eq 'My B2C tenant')
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-signinname-users-e2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 
@@ -153,23 +171,34 @@ Content-type: application/json
 }
 ```
 
-### Example 3: Get users including their last sign-in time
+### Example 3: Get guest (B2B) users from a specific tenant or domain by userPrincipalName
 
 #### Request
 
-The following is an example of the request. Details for the **signInActivity** property require an Azure AD Premium P1/P2 license and the AuditLog.Read.All permission. 
+The following is an example of the request. The userPrincipalName value for guest (B2B collaboration) users always contains the "#EXT#" identifier. For example, the userPrincipalName of a user in their home tenant is *AdeleV@adatum.com*. When you invite the user to collaborate in your tenant, *contoso.com*, their userPrincipalName in your tenant is "AdeleV_adatum.com#EXT#@contoso.com".
 
->**Note:** There's a [known issue](/graph/known-issues#license-check-errors-for-azure-ad-activity-reports) with retrieving the **signInActivity** property.
+This request requires the **ConsistencyLevel** header set to `eventual` and the `$count=true` query string because the request includes the endsWith operator. For more information about the use of **ConsistencyLevel** and `$count`, see [Advanced query capabilities on Azure AD directory objects](/graph/aad-advanced-queries).
 
+>**NOTE:** You must encode the reserved character "#" in the userPrincipalName value as "%23" in the request URL. For more information, see [Encoding special characters](/graph/query-parameters#encoding-query-parameters).
 
 <!-- {
   "blockType": "request",
-  "name": "get_signin_last_time"
+  "name": "get_b2b_users"
 }-->
 ```msgraph-interactive
-GET https://graph.microsoft.com/beta/users?$select=displayName,userPrincipalName,signInActivity
+GET https://graph.microsoft.com/beta/users?$select=id,displayName,mail,identities&$filter=endsWith(userPrincipalName,'%23EXT%23@contoso.com')&$count=true
+ConsistencyLevel: eventual
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-b2b-users-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 
@@ -187,29 +216,22 @@ HTTP/1.1 200 OK
 Content-type: application/json
 
 {
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#users(displayName,userPrincipalName,signInActivity)",
-  "value": [
-    {
-      "displayName": "Adele Vance",
-      "userPrincipalName": "AdeleV@contoso.com",
-      "signInActivity": {
-        "lastSignInDateTime": "2021-06-17T16:41:33Z",
-        "lastSignInRequestId": "d4d31c40-4c36-4775-ad59-7d1e6a171f00",
-        "lastNonInteractiveSignInDateTime": "0001-01-01T00:00:00Z",
-        "lastNonInteractiveSignInRequestId": ""
-      }
-    },
-    {
-      "displayName": "Alex Wilber",
-      "userPrincipalName": "AlexW@contoso.com",
-      "signInActivity": {
-        "lastSignInDateTime": "2021-07-29T15:53:27Z",
-        "lastSignInRequestId": "f3149ee1-e347-4181-b45b-99a1f82b1c00",
-        "lastNonInteractiveSignInDateTime": "2021-07-29T17:53:42Z",
-        "lastNonInteractiveSignInRequestId": "868efa6a-b2e9-40e9-9b1c-0aaea5b50200"
-      }
-    }
-  ]
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#users(id,displayName,mail,identities)",
+    "@odata.count": 2,
+    "value": [
+        {
+            "id": "39807bd1-3dde-48f3-8165-81ddd4e46de0",
+            "displayName": "Adele Vance",
+            "mail": "AdeleV@adatum.com",
+            "identities": [
+                {
+                    "signInType": "userPrincipalName",
+                    "issuer": "contoso.com",
+                    "issuerAssignedId": "AdeleV_adatum.com#EXT#@cntoso.com"
+                }
+            ]
+        }
+    ]
 }
 ```
 
@@ -217,18 +239,25 @@ Content-type: application/json
 
 #### Request
 
-The following is an example of the request. Details for the **signInActivity** property require an Azure AD Premium P1/P2 license and the AuditLog.Read.All permission. 
-
->**Note:** There's a [known issue](/graph/known-issues#license-check-errors-for-azure-ad-activity-reports) with retrieving the **signInActivity** property.
+The following is an example of the request. Details for the **signInActivity** property require an Azure AD Premium P1/P2 license and the *AuditLog.Read.All* permission. 
 
 <!-- {
   "blockType": "request",
-  "name": "get_signin_last_time_filter"
+  "name": "get_signin_last_time_filter_e4"
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/users?$filter=startswith(displayName,'Eric')&$select=displayName,signInActivity
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-signin-last-time-filter-e4-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -264,13 +293,11 @@ Content-type: application/json
 
 #### Request
 
-The following is an example of the request. Details for the **signInActivity** property require an Azure AD Premium P1/P2 license and the AuditLog.Read.All permission. 
-
->**Note:** There's a [known issue](/graph/known-issues#license-check-errors-for-azure-ad-activity-reports) with retrieving the **signInActivity** property.
+The following is an example of the request. Details for the **signInActivity** property require an Azure AD Premium P1/P2 license and the *AuditLog.Read.All* permission. 
 
 <!-- {
   "blockType": "ignored",
-  "name": "get_signin_last_time_range"
+  "name": "get_signin_last_time_range_e5"
 }-->
 ```http
 GET https://graph.microsoft.com/beta/users?filter=signInActivity/lastSignInDateTime le 2021-07-21T00:00:00Z
@@ -328,7 +355,7 @@ The following is an example of the request. This request requires the **Consiste
 
 <!-- {
   "blockType": "ignored",
-  "name": "get_count_only"
+  "name": "get_count_only_e6"
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/users/$count
@@ -362,7 +389,7 @@ The following is an example of the request. This request requires the **Consiste
 
 <!-- {
   "blockType": "ignored",
-  "name": "list_users_startswith"
+  "name": "list_users_startswith_e7"
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/users?$filter=startswith(displayName,'a')&$orderby=displayName&$count=true&$top=1
@@ -410,13 +437,22 @@ The following is an example of the request. This request requires the **Consiste
 
 <!-- {
   "blockType": "request",
-  "name": "get_a_count_endsWith"
+  "name": "get_a_count_endsWith_e8"
 } -->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/users?$filter=endswith(mail,'a@contoso.com')&$orderby=userPrincipalName&$count=true
 ConsistencyLevel: eventual
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-a-count-endswith-e8-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -459,13 +495,22 @@ The following is an example of the request. This request requires the **Consiste
 
 <!-- {
   "blockType": "request",
-  "name": "get_wa_count"
+  "name": "get_wa_count_e9"
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/users?$search="displayName:wa"&$orderby=displayName&$count=true
 ConsistencyLevel: eventual
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-wa-count-e9-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -508,13 +553,22 @@ The following is an example of the request. This request requires the **Consiste
 
 <!-- {
   "blockType": "request",
-  "name": "get_to_count"
+  "name": "get_to_count_e10"
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/users?$search="displayName:wa" OR "displayName:ad"&$orderby=displayName&$count=true
 ConsistencyLevel: eventual
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-to-count-e10-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -563,12 +617,21 @@ The following is an example of the request. This request requires the **Consiste
 
 <!-- {
   "blockType": "request",
-  "name": "get_user_assignedLicenses"
+  "name": "get_user_assignedLicenses_e11"
 } -->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/users?$select=id,mail,assignedLicenses&$filter=assignedLicenses/any(u:u/skuId eq cbdc14ab-d96c-4c30-b9f4-6ada7cdc1d46)
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-user-assignedlicenses-e11-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -619,12 +682,21 @@ In this example, the ID of the schema extension is `ext55gb1l09_msLearnCourses`.
 
 <!-- {
   "blockType": "request",
-  "name": "list_schemaextension"
+  "name": "list_schemaextension_e12"
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/users?$select=ext55gb1l09_msLearnCourses
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-schemaextension-e12-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 In the following response, the schema extension property `ext55gb1l09_msLearnCourses` is unassigned in two of the user objects.
@@ -656,6 +728,144 @@ Content-type: application/json
 
 > **Note:** You can also apply `$filter` on the schema extension property to retrieve objects where a property in the collection matches a specified value. The syntax is `/users?$filter={schemaPropertyID}/{propertyName} eq 'value'`. For example, `GET /users?$select=ext55gb1l09_msLearnCourses&$filter=ext55gb1l09_msLearnCourses/courseType eq 'Developer'`. The `eq` and `not` operators are supported.
 
+### Example 13: List all users with a custom security attribute assignment that equals a value
+
+The following example shows how to list all users with a custom security attribute assignment that equals a value. The example retrieves users with a custom security attribute named `AppCountry` with a value that equals `Canada`. The filter value is case sensitive. You must add `ConsistencyLevel=eventual` in the request or the header. You must also include `$count=true` to ensure the request is routed correctly.
+
+User #1
+
+- Attribute set: `Marketing`
+- Attribute: `AppCountry`
+- Attribute data type: Collection of Strings
+- Attribute value: `["India","Canada"]`
+
+User #2
+
+- Attribute set: `Marketing`
+- Attribute: `AppCountry`
+- Attribute data type: Collection of Strings
+- Attribute value: `["Canada","Mexico"]`
+
+To get custom security attribute assignments, the calling principal must be assigned the Attribute Assignment Reader or Attribute Assignment Administrator role and must be granted the *CustomSecAttributeAssignment.Read.All* or *CustomSecAttributeAssignment.ReadWrite.All* permission.
+
+For examples of custom security attribute assignments, see [Examples: Assign, update, list, or remove custom security attribute assignments using the Microsoft Graph API](/graph/custom-security-attributes-examples).
+
+#### Request
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "customsecurityattribute_filter_users_equals_value_e13"
+}-->
+```msgraph-interactive
+GET https://graph.microsoft.com/beta/users?$count=true&$select=id,displayName,customSecurityAttributes&$filter=customSecurityAttributes/Marketing/AppCountry eq 'Canada'
+ConsistencyLevel: eventual
+```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/customsecurityattribute-filter-users-equals-value-e13-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.user"
+} -->
+```http
+HTTP/1.1 200 OK
+
+{
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#users(id,displayName,customSecurityAttributes)",
+    "@odata.count": 2,
+    "value": [
+        {
+            "id": "dbaf3778-4f81-4ea0-ac1c-502a293c12ac",
+            "displayName": "Jiya",
+            "customSecurityAttributes": {
+                "Engineering": {
+                    "@odata.type": "#microsoft.graph.customSecurityAttributeValue",
+                    "Datacenter@odata.type": "#Collection(String)",
+                    "Datacenter": [
+                        "India"
+                    ]
+                },
+                "Marketing": {
+                    "@odata.type": "#microsoft.graph.customSecurityAttributeValue",
+                    "AppCountry@odata.type": "#Collection(String)",
+                    "AppCountry": [
+                        "India",
+                        "Canada"
+                    ],
+                    "EmployeeId": "KX19476"
+                }
+            }
+        },
+        {
+            "id": "6bac433c-48c6-4213-a316-1428de32701b",
+            "displayName": "Jana",
+            "customSecurityAttributes": {
+                "Marketing": {
+                    "@odata.type": "#microsoft.graph.customSecurityAttributeValue",
+                    "AppCountry@odata.type": "#Collection(String)",
+                    "AppCountry": [
+                        "Canada",
+                        "Mexico"
+                    ],
+                    "EmployeeId": "GS46982"
+                }
+            }
+        }
+    ]
+}
+```
+
+### Example 14: List all users whose management is restricted
+
+#### Request
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "get_user_restricted"
+}-->
+```msgraph-interactive
+GET https://graph.microsoft.com/beta/users?$filter=isManagementRestricted eq true&$select=displayName,userPrincipalName
+```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-user-restricted-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.administrativeUnit"
+} -->
+```http
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#users(displayName,userPrincipalName)",
+    "value": [
+        {
+            "displayName": "Adele",
+            "userPrincipalName": "Adele@contoso.com"
+        },
+        {
+            "displayName": "Bob",
+            "userPrincipalName": "Bob@contoso.com"
+        }
+    ]
+}
+```
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

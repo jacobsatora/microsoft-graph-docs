@@ -52,7 +52,6 @@ If successful, this method returns a `200 OK` response code and a [crossTenantAc
 
 ### Request
 
-
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
@@ -64,7 +63,11 @@ If successful, this method returns a `200 OK` response code and a [crossTenantAc
 GET https://graph.microsoft.com/v1.0/policies/crossTenantAccessPolicy/default
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-crosstenantaccesspolicyconfigurationdefault-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -92,6 +95,11 @@ Content-Type: application/json
     "isMfaAccepted": false,
     "isCompliantDeviceAccepted": false,
     "isHybridAzureADJoinedDeviceAccepted": false,
+  },
+  "automaticUserConsentSettings":
+  {
+    "inboundAllowed": false,
+    "outboundAllowed": false
   },
   "b2bCollaborationOutbound":
   {

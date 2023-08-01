@@ -8,6 +8,7 @@ doc_type: apiPageType
 ---
 
 # Update allowedValue
+
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
@@ -15,6 +16,7 @@ Namespace: microsoft.graph
 Update the properties of an [allowedValue](../resources/allowedvalue.md) object.
 
 ## Permissions
+
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
 |Permission type|Permissions (from least to most privileged)|
@@ -23,7 +25,7 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (personal Microsoft account)|Not supported.|
 |Application|CustomSecAttributeDefinition.ReadWrite.All|
 
-The signed-in user must also be assigned the Attribute Definition Administrator [directory role](/azure/active-directory/roles/permissions-reference). By default, Global Administrator and other administrator roles do not have permissions to read, define, or assign custom security attributes.
+[!INCLUDE [rbac-customsecurityattibutes-apis-write](../includes/rbac-for-apis/rbac-customsecurityattibutes-apis-write.md)]
 
 ## HTTP request
 
@@ -35,23 +37,20 @@ The signed-in user must also be assigned the Attribute Definition Administrator 
 PATCH /directory/customSecurityAttributeDefinitions/{customSecurityAttributeDefinitionId}/allowedValues/{allowedValueId}
 ```
 
-
 ## Request headers
+
 |Name|Description|
 |:---|:---|
 |Authorization|Bearer {token}. Required.|
 |Content-Type|application/json. Required.|
 
 ## Request body
-In the request body, supply *only* the values for properties that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values.
 
-The following table specifies the properties that can be updated. 
+[!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
 
 |Property|Type|Description|
 |:---|:---|:---|
-|isActive|Boolean|Indicates whether the predefined value is active or deactivated. If set to `false`, this predefined value cannot be assigned to any additional supported directory objects. Optional.|
-
-
+|isActive|Boolean|Indicates whether the predefined value is active or deactivated. If `false`, this predefined value cannot be assigned to any additional supported directory objects. Optional.|
 
 ## Response
 
@@ -59,7 +58,7 @@ If successful, this method returns a `204 No Content` response code.
 
 ## Examples
 
-### Example: Deactivate a predefined value
+### Request
 
 The following example deactivates a predefined value for a custom security attribute definition.
 
@@ -67,8 +66,12 @@ The following example deactivates a predefined value for a custom security attri
 + Attribute: `Project`
 + Predefined value: `Alpine`
 
+<<<<<<< HEAD
 #### Request
 
+=======
+# [HTTP](#tab/http)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- {
   "blockType": "request",
   "name": "update_allowedvalue",
@@ -85,7 +88,20 @@ Content-length: 80
 }
 ```
 
+<<<<<<< HEAD
 #### Response
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/update-allowedvalue-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+### Response
+
+The following is an example of the response.
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- {
   "blockType": "response",
   "truncated": true

@@ -49,13 +49,21 @@ If successful, this method returns a `204 No Content` response code.
 
 ### Request
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
+  "name": "bookingcustomquestiondetete",
   "sampleKeys": ["Contosolunchdelivery@contoso.onmicrosoft.com", "80b5ddda-1e3b-4c9d-abe2-d606cc075e2e"]
 }-->
 ```http
 DELETE https://graph.microsoft.com/v1.0/solutions/bookingBusinesses/Contosolunchdelivery@contoso.onmicrosoft.com/customQuestions/80b5ddda-1e3b-4c9d-abe2-d606cc075e2e
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/bookingcustomquestiondetete-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 

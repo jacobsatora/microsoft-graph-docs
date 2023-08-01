@@ -73,6 +73,10 @@ Content-type: application/json
   "underline": "underline-value"
 }
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.

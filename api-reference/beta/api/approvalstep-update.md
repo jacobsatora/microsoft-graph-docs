@@ -19,18 +19,36 @@ Apply approve or deny decision on an [approvalStep](../resources/approvalStep.md
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
+### Permissions required for calling this API for entitlement management
+
 | Permission type                        | Permissions (from least to most privileged) |
 |:---------------------------------------|:--------------------------------------------|
 | Delegated (work or school account)     | EntitlementManagement.ReadWrite.All |
 | Delegated (personal Microsoft account) | Not supported. |
 | Application                            | Not supported. |
 
+### Permissions required for calling this API for PIM for groups
+
+| Permission type                        | Permissions (from least to most privileged) |
+|:---------------------------------------|:--------------------------------------------|
+| Delegated (work or school account)     | PrivilegedAssignmentSchedule.ReadWrite.AzureADGroup |
+| Delegated (personal Microsoft account) | Not supported. |
+| Application                            | Not supported. |
+
 ## HTTP request
 
-<!-- { "blockType": "ignored" } -->
+To update an approval decision in entitlement management:
 
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /identityGovernance/entitlementManagement/accessPackageAssignmentApprovals/{id}/steps/{id}
+```
+
+To update an approval decision in PIM for groups:
+
+<!-- { "blockType": "ignored" } -->
+```http
+PATCH /identityGovernance/privilegedAccess/group/assignmentApprovals/{id}/steps/{id}
 ```
 
 ## Request headers
@@ -59,7 +77,11 @@ If successful, this method returns a `204 No Content` response code in the respo
 
 The following is an example of the request.
 
+<<<<<<< HEAD
 
+=======
+# [HTTP](#tab/http)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- {
   "blockType": "request",
   "name": "patch_approvalstep"
@@ -69,10 +91,19 @@ The following is an example of the request.
 PATCH https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/accessPackageAssignmentApprovals/abd306ef-f7b2-4a10-9fd1-493454322489/steps/d4fa4045-4716-436d-aec5-57b0a713f095
 ```
 
+<<<<<<< HEAD
 ---
 
 
 
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/patch-approvalstep-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.

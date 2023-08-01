@@ -26,6 +26,12 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (personal Microsoft account) | Not supported.    |
 |Application | Domain.ReadWrite.All |
 
+The work or school account needs to belong to one of the following roles:
+
+* Global Administrator
+* Domain Name Administrator
+* Partner Tier2 Support
+
 ## HTTP request
 
 <!-- { "blockType": "ignored" } -->
@@ -52,10 +58,12 @@ If successful, this method returns `201 Created` response code and [domain](../r
 
 In the request body, supply a JSON representation of [domain](../resources/domain.md) object.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "id": "create_domain_from_domains"
+  "name": "create_domain_from_domains"
 }-->
+
 ```http
 POST https://graph.microsoft.com/v1.0/domains
 Content-type: application/json
@@ -64,6 +72,12 @@ Content-type: application/json
   "id": "contoso.com"
 }
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-domain-from-domains-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ##### Response
 Note: The response object shown here might be shortened for readability.

@@ -52,7 +52,7 @@ PATCH /tenantRelationships/delegatedAdminRelationships/{delegatedAdminRelationsh
 
 If successful, this method returns a `200 OK` or a `202 Accepted` response code.
 
-## Response headers
+### Response headers
 |Name|Description|
 |:---|:---|
 |Content-Type|application/json.|
@@ -69,7 +69,7 @@ This method typically returns a `202 Accepted` response code with a URL to a lon
   "blockType": "request",
   "name": "update_delegatedadminaccessassignment",
   "@odata.type": "microsoft.graph.delegatedAdminAccessAssignment",
-  "sampleKeys": ["5e5594d3-6f82-458b-b567-77db4811f0cd-00000000-0000-0000-0000-000000001234", "a9d6cf90-083a-47dc-ace2-1da98be3f344"]
+  "sampleKeys": ["5e5594d3-6f82-458b-b567-77db4811f0cd-00000000-0000-0000-0000-000000001234", "da9d6cf90-083a-47dc-ace2-1da98be3f344"]
 }
 -->
 ``` http
@@ -94,6 +94,15 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/update-delegatedadminaccessassignment-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 The following is an example response that returns a `202 Accepted` response code along with **Location** and **Retry-After** headers.
 >**Note:** The response object shown here might be shortened for readability.

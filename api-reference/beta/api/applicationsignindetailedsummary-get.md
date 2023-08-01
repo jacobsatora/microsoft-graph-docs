@@ -1,6 +1,6 @@
 ---
 title: "Get applicationSignInDetailedSummary"
-description: "Retrieve the properties and relationships of an applicationSignInDetailSummary object."
+description: "Retrieve the properties and relationships of an applicationSignInDetailedSummary object."
 ms.localizationpriority: medium
 author: "besiler"
 ms.prod: "identity-and-access-reports"
@@ -13,7 +13,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Retrieve the properties and relationships of an [applicationSignInDetailSummary](../resources/applicationsignindetailedsummary.md) object.
+Retrieve the properties and relationships of an [applicationSignInDetailedSummary](../resources/applicationsignindetailedsummary.md) object.
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -59,6 +59,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/reports/applicationSignInDetailedSummary/{id}
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-applicationsignindetailedsummary-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 The following is an example of the response. 
 

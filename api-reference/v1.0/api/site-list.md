@@ -20,11 +20,13 @@ Specific filter criteria and query options are also supported and described belo
 |`siteCollection/root ne null` | `siteCollection,webUrl` | Lists all root-level site collections in the organization. Useful for discovering the home site for each geography.
 
 In addition, you can use a **[$search][]** query against the `/sites` collection to find sites matching given keywords.
+If you want to list all sites across all geographies, refer to [getAllSites][].
 
 [$search]: site-search.md
 [sites]: ../resources/site.md
+[getAllSites]: ../api/site-getallsites.md
 
-For more guidance about building applications that use site discovery for scanning purposes, see [Best practices for discovering files and detecting changes at scale](/onedrive/developer/rest-api/concepts/scan-guidance?view=odsp-graph-online).
+For more guidance about building applications that use site discovery for scanning purposes, see [Best practices for discovering files and detecting changes at scale](/onedrive/developer/rest-api/concepts/scan-guidance?view=odsp-graph-online&preserve-view=true).
 
 ## Permissions
 
@@ -48,25 +50,44 @@ One of the following permissions is required to call this API. To learn more, in
 
 ## HTTP request
 
+To list all available sites in an organization:
 <!-- { "blockType": "ignored" } -->
 
 ```http
 GET /sites
-GET /sites?$filter=siteCollection/root ne null
 ```
 
-## Example
-
-### Request
-
-
+To list all root-level site collections in an organization:
 <!-- { "blockType": "ignored" } -->
 
 ```http
+GET /sites?$filter=siteCollection/root ne null
+```
+
+## Examples
+
+### Example 1: List sites using query parameters
+
+#### Request
+
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "list_sites_example1"
+}-->
+
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/sites?$select=siteCollection,webUrl&$filter=siteCollection/root%20ne%20null
 ```
 
-### Response
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-sites-example1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
 
 <!-- { "blockType": "response", "@type": "microsoft.graph.site", "isCollection": true, "truncated": true } -->
 
@@ -102,15 +123,26 @@ Content-type: application/json
 }
 ```
 
-### Request
+### Example 2: List all sites
+#### Request
 
-<!-- { "blockType": "ignored" } -->
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "list_sites_example2"
+}-->
 
-```http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/sites
 ```
 
-### Response
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-sites-example2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
 
 <!-- { "blockType": "response", "@type": "microsoft.graph.site", "isCollection": true, "truncated": true } -->
 

@@ -70,7 +70,11 @@ The following is an example of a request.
 GET https://graph.microsoft.com/v1.0/me/teamwork/associatedTeams
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/list-associatedteaminfo-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -115,4 +119,5 @@ Content-Type: application/json
 
 - [List joinedTeams](../api/user-list-joinedteams.md)
 - [Get team](../api/team-get.md)
+- [List teams](../api/teams-list.md)
 

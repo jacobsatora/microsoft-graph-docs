@@ -49,16 +49,30 @@ If successful, this method returns `204 No Content` response code. It does not r
 ## Example
 ### Request
 The following is an example of a request.
+
+# [HTTP](#tab/http)
 <!-- {
-  "blockType": "ignored",
-  "name": "get_team"
+  "blockType": "request",
+  "name": "channeldeletetabs"
 }-->
+
 ```http
 DELETE https://graph.microsoft.com/v1.0/teams/{id}/channels/{id}/tabs/{id}
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/channeldeletetabs-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 The following is an example of the response.
+
+<!-- {
+  "blockType": "response"
+} -->
+
 ```http
 HTTP/1.1 204 No Content
 ```
@@ -75,3 +89,6 @@ HTTP/1.1 204 No Content
 }
 -->
 
+## See also
+
+[Microsoft Graph service-specific throttling limits](/graph/throttling-limits#microsoft-teams-service-limits)

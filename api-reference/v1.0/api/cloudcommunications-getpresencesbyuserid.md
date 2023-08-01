@@ -1,7 +1,7 @@
 ---
 title: "cloudCommunications: getPresencesByUserId"
 description: "Get the presence information for multiple users."
-author: "mkhribech"
+author: "awang119"
 ms.localizationpriority: medium
 doc_type: apiPageType
 ms.prod: "cloud-communications"
@@ -73,12 +73,19 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/get-presence-multiple-users-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-presence-multiple-users-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ---
 
 ### Response

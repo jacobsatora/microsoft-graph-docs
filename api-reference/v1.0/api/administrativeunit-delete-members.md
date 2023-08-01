@@ -33,6 +33,10 @@ To remove a member from an administrative unit, the calling principal must be as
 ```http
 DELETE /directory/administrativeUnits/{id}/members/{id}/$ref
 ```
+
+> [!CAUTION]
+> If you don't append `/$ref` to the request and the calling app has permissions to manage the member object, the object will also be deleted from Azure Active Directory (Azure AD); otherwise, a `403 Forbidden` error is returned. You can restore specific objects through the [Restore deleted items API](directory-deleteditems-restore.md).
+
 ## Request headers
 | Name      |Description|
 |:----------|:----------|
@@ -59,7 +63,11 @@ The following is an example of the request. In the example below, `{id1}` repres
 DELETE https://graph.microsoft.com/v1.0/directory/administrativeUnits/{id1}/members/{id2}/$ref
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/delete-administrativeunit-members-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

@@ -29,7 +29,7 @@ One of the following permissions is required to call this API. To learn more, in
 }-->
 
 ``` http
-PATCH sites/{site-id}/termStore/sets/{set-id}/terms/{term-id}
+PATCH /sites/{site-id}/termStore/sets/{set-id}/terms/{term-id}
 ```
 
 ## Request headers
@@ -82,7 +82,11 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/update-term-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

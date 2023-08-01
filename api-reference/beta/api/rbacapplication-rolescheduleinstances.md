@@ -69,8 +69,11 @@ If successful, this method returns a `200 OK` response code and a [unifiedRoleSc
 GET https://graph.microsoft.com/beta/roleManagement/directory/roleScheduleInstances(directoryScopeId='parameterValue',appScopeId='parameterValue',principalId='parameterValue',roleDefinitionId='parameterValue')
 ```
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.

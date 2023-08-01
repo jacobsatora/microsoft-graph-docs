@@ -63,6 +63,15 @@ If successful, this method returns a `200 OK` response code and an [accessPackag
 POST https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/accessPackages/fb449cf8-3a59-4d86-bdfd-a1b7299681de/getApplicablePolicyRequirements
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/accesspackage-getapplicablepolicyrequirements-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 > **Note:** The response object shown here might be shortened for readability.
@@ -111,9 +120,15 @@ Content-Type: application/json
 
 #### Request
 
-<!-- { "blockType": "ignored" } -->
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "sampleKeys": ["b15419bb-5ffc-ea11-b207-c8d9d21f4e9a"],
+  "name": "get_req_for_given_user"
+}-->
+
 ```http
-POST /identityGovernance/entitlementManagement/accessPackages(‘b15419bb-5ffc-ea11-b207-c8d9d21f4e9a’)/getApplicablePolicyRequirements
+POST /identityGovernance/entitlementManagement/accessPackages/b15419bb-5ffc-ea11-b207-c8d9d21f4e9a/getApplicablePolicyRequirements
 
 {
         "subject": {
@@ -122,9 +137,20 @@ POST /identityGovernance/entitlementManagement/accessPackages(‘b15419bb-5ffc-e
     }
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-req-for-given-user-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+---
 
 #### Response
+
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "Collection(microsoft.graph.accessPackageAssignmentRequestRequirements)"
+}
+-->
 
 ```http
 HTTP/1.1 200 OK
@@ -175,5 +201,76 @@ Content-Type: application/json
             "schedule": []
         }
     ]
+}
+```
+
+### Example 3: Get policy requirements for verifiable credential status requirements
+
+#### Request
+
+<!-- { "blockType": "ignored" } -->
+```http
+POST /identityGovernance/entitlementManagement/accessPackages(‘b15419bb-5ffc-ea11-b207-c8d9d21f4e9a’)/getApplicablePolicyRequirements
+```
+
+
+#### Response
+
+Here is an example of the response if this is the first time credentials are requested and the requestor has not yet scanned the QR code or clicked the URL.
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "value": [
+        {
+            "policyId": "a93f6641-bcba-ec11-9d14-001a7dda7113",
+            "policyDisplayName": "VC Policy 1",
+            "policyDescription": "VC Policy Description 1",
+            "isApprovalRequiredForAdd": false,
+            "isApprovalRequiredForUpdate": false,
+            "isApprovalRequired": false,
+            "isApprovalRequiredForExtension": false,
+            "isCustomAssignmentScheduleAllowed": true,
+            "allowCustomAssignmentSchedule": true,
+            "isRequestorJustificationRequired": false,
+            "schedule": {
+                "startDateTime": null,
+                "duration": "P365D",
+                "stopDateTime": null,
+                "expiration": {
+                "endDateTime": null,
+                "duration": "P365D",
+                "type": "afterDuration"
+                },
+                "recurrence": null
+            },
+            "questions": [],
+            "existingAnswers": [],
+            "verifiableCredentialRequirementStatus": {
+                "@odata.type": "#microsoft.graph.verifiableCredentialRequired",
+                "expiryDateTime": "2022-05-10T23:32:47.8232759Z",
+                "url": "openid://vc/?request_uri=https://beta.did.msidentity.com/v1.0/87654321-0000-0000-0000-000000000000/verifiablecredentials/request/e4ef27ca-eb8c-4b63-823b-3b95140eac11",
+            }
+        }
+    ]
+}
+```
+
+If the requestor has scanned the QR code or clicked the URL, the verifiableCredentialRequirementStatus will be in the following format.
+
+```json
+"verifiableCredentialRequirementStatus": {
+    "@odata.type": "#microsoft.graph.verifiableCredentialRetrieved",
+    "expiryDateTime": "2022-05-10T23:32:47.8232759Z"
+}
+```
+
+If the requestor has presented valid credential, the verifiableCredentialRequirementStatus will be in the following format.
+
+```json
+"verifiableCredentialRequirementStatus": {
+    "@odata.type": "#microsoft.graph.verifiableCredentialVerified"
 }
 ```

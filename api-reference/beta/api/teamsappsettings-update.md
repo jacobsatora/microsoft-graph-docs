@@ -25,9 +25,6 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (personal Microsoft account)|Not supported|
 |Application|Not supported|
 
-> [!NOTE]
-> TeamworkAppSettings.* permissions might not be visible in the Azure portal. For details and workarounds, see [known issues](/graph/known-issues#teamworkappsettings-permissions-are-not-visible-in-the-azure-portal).
-
 ## HTTP request
 
 <!-- {
@@ -50,8 +47,8 @@ PATCH /teamwork/teamsAppSettings
 
 |Property|Type|Description|
 |:---|:---|:---|
+|allowUserRequestsForAppAccess|Boolean|Indicates whether users are allowed to request access to the unavailable Teams apps.|
 |isChatResourceSpecificConsentEnabled|Boolean|Indicates whether resource-specific consent for chats/meetings has been enabled for the tenant. If true, Teams apps that are allowed in the tenant and require resource-specific permissions can be installed inside chats and meetings. If false, the installation of any Teams app that requires resource-specific permissions in a chat or a meeting will be blocked.|
-
 
 
 ## Response
@@ -64,13 +61,17 @@ If successful, this method returns a `204 No Content` response code.
 
 #### Request
 
+<<<<<<< HEAD
 
+=======
+# [HTTP](#tab/http)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- {
   "blockType": "request",
-  "name": "update_teamsappsettings"
+  "name": "update_teamsappsettings_1"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/teamwork/teamsAppSettings
 Content-Type: application/json
 
@@ -80,6 +81,51 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/update-teamsappsettings-1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+
+<!-- {
+  "blockType": "response"
+} -->
+
+```http
+HTTP/1.1 204 No Content
+```
+
+### Example 2: Allow Teams users to request admins for access to certain Teams Apps.
+
+#### Request
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "update_teamsappsettings_2"
+}
+-->
+```http
+PATCH https://graph.microsoft.com/beta/teamwork/teamsAppSettings
+Content-Type: application/json
+
+{
+  "@odata.type": "#microsoft.graph.teamsAppSettings",
+  "allowUserRequestsForAppAccess": "true"
+}
+```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/update-teamsappsettings-2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 <!-- {

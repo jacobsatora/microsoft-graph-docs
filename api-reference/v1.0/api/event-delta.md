@@ -21,9 +21,9 @@ One of the following permissions is required to call this API. To learn more, in
 
 |Permission type      | Permissions (from least to most privileged)              |
 |:--------------------|:---------------------------------------------------------|
-|Delegated (work or school account) | Calendars.Read    |
-|Delegated (personal Microsoft account) | Calendars.Read    |
-|Application | Calendars.Read |
+|Delegated (work or school account) | Calendars.ReadBasic, Calendars.Read        |
+|Delegated (personal Microsoft account) | Calendars.ReadBasic, Calendars.Read    |
+|Application | Calendars.ReadBasic, Calendars.Read                               |
 
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
@@ -51,7 +51,7 @@ includes the encoded, desired parameters.
 | $skiptoken | string | A [state token](/graph/delta-query-overview) returned in the `@odata.nextLink` URL of the previous **delta** function call, indicating there are further changes to be tracked in the same calendar view. |
 
 ### OData query parameters
-- Expect a **delta** function call on a **calendarView** to return the same properties you'd normally get from a `GET /calendarview` request. You cannot use `$select` to get only a subset of those properties.
+- Expect a **delta** function call on a **calendarView** to return the same properties you'd normally get from a `GET /calendarView` request. You cannot use `$select` to get only a subset of those properties.
 
 - There are other OData query parameters that the **delta** function for **calendarView** doesn't support: `$expand`, `$filter`,`$orderby`, and `$search`. 
 
@@ -83,15 +83,18 @@ in the response body to 2.
 To track changes in a calendar view, you would make one or more **delta** function calls, with 
 appropriate [state tokens](/graph/delta-query-overview), to get the set of incremental changes since the last delta query. 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- {
   "blockType": "request",
   "name": "event_delta"
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/me/calendarView/delta?startdatetime={start_datetime}&enddatetime={end_datetime}
-
 Prefer: odata.maxpagesize=2
+
 ```
 
 ##### Response

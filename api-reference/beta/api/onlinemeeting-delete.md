@@ -1,7 +1,7 @@
 ---
 title: "Delete onlineMeeting"
 description: "Delete an online meeting."
-author: "mkhribech"
+author: "awang119"
 ms.localizationpriority: medium
 ms.prod: "cloud-communications"
 doc_type: apiPageType
@@ -30,8 +30,8 @@ To use application permission for this API, tenant administrators must create an
 To delete an **onlineMeeting** using the meeting ID with delegated (`/me`) and app (`/users/{userId}`) permission:
 <!-- { "blockType": "ignored" } -->
 ```http
-DELETE https://graph.microsoft.com/beta/me/onlineMeetings/{meetingId}
-DELETE https://graph.microsoft.com/beta/users/{userId}/onlineMeetings/{meetingId}
+DELETE /me/onlineMeetings/{meetingId}
+DELETE /users/{userId}/onlineMeetings/{meetingId}
 ```
 
 > [!NOTE]
@@ -64,6 +64,15 @@ The following example shows the request.
 DELETE https://graph.microsoft.com/beta/me/onlineMeetings/550fae72-d251-43ec-868c-373732c2704f_19:meeting_M2IzYzczNTItYmY3OC00MDlmLWJjMzUtYmFiMjNlOTY4MGEz@thread.skype
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-call-2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following example shows the response.

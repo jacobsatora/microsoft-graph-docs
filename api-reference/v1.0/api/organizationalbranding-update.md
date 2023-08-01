@@ -83,7 +83,11 @@ Accept-Language: 0
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/update-organizationalbrandinglocaliation-1-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -122,8 +126,11 @@ Content-Type: image/jpeg
 <Image>
 ```
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -135,3 +142,14 @@ The following is an example of the response.
 ```http
 HTTP/1.1 204 No Content
 ```
+
+<!--
+{
+  "type": "#page.annotation",
+  "description": "Update organizationalBranding",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": "",
+  "suppressions": []
+}
+-->

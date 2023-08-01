@@ -1,7 +1,7 @@
 ---
 title: "Get updatableAsset"
 description: "Read the properties and relationships of an updatableAsset object."
-author: "aarononeal"
+author: "ryan-k-williams"
 ms.localizationpriority: medium
 ms.prod: "w10"
 doc_type: apiPageType
@@ -60,9 +60,18 @@ If successful, this method returns a `200 OK` response code and an [updatableAss
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/admin/windows/updates/updatableAssets/{updatableAssetId}
+GET https://graph.microsoft.com/beta/admin/windows/updates/updatableAssets/f5ba7065-7065-f5ba-6570-baf56570baf5
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-updatableasset-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 <!-- {
@@ -77,7 +86,7 @@ Content-Type: application/json
 
 {
   "value": {
-    "@odata.type": "#microsoft.graph.windowsUpdates.updatableAsset",
+    "@odata.type": "#microsoft.graph.windowsUpdates.azureADDevice",
     "id": "f5ba7065-7065-f5ba-6570-baf56570baf5"
   }
 }

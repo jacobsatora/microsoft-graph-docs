@@ -61,7 +61,7 @@ The following examples demonstrate how to update properties of the [workbookRang
 
 The result of this set of requests is a table with three cells formatted like the top three cells in the image below.
 
-![Excel chart table with three cells whose format, fill, and font properties have been updated.](/graph/concepts/images/ExcelRangeFormatting.png)
+<!--![Excel chart table with three cells whose format, fill, and font properties have been updated.](/images/ExcelRangeFormatting.png)-->
 
 ##### Request
 This request updates the vertical alignment, row height, and column height of the first cell. 
@@ -83,6 +83,10 @@ Content-type: application/json
   "wrapText": false
 }
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -123,6 +127,10 @@ Content-type: application/json
   "size": 26
 }
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -162,6 +170,10 @@ Content-type: application/json
   "color": "#FF0000"
 }
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -199,6 +211,10 @@ Content-type: application/json
   "wrapText": false
 }
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -238,6 +254,10 @@ Content-type: application/json
   "size": 26
 }
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -277,6 +297,10 @@ Content-type: application/json
   "color": "#00FF00"
 }
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -315,6 +339,10 @@ Content-type: application/json
   "wrapText": false
 }
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -355,6 +383,10 @@ Content-type: application/json
   "size": 26
 }
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -394,6 +426,10 @@ Content-type: application/json
   "color": "#0000FF"
 }
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -422,7 +458,19 @@ Content-type: application/json
   "section": "documentation",
   "tocPath": "",
   "suppressions": [
-    "Error: update_rangeformat_font_three/underline:\r\n       Expected type String but actual was Single. Property: underline, actual value: 'Single'"
+    "Error: update_rangeformat_font_three/underline:\r\n       Expected type String but actual was Single. Property: underline, actual value: 'Single'",
+    "Error: microsoft.graph.microsoft.graph/me:
+      /me/drive/items/{var}/workbook/worksheets/{var}/range(address={var})/format/fill
+      Uri path requires navigating into unknown object hierarchy: missing property 'range(address={var})' on 'workbookWorksheet'. Possible issues:
+  	 1) Doc bug where 'range(address={var})' isn't defined on the resource.
+  	 2) Doc bug where 'range(address={var})' is an example key and should instead be replaced with a placeholder like {item-id} or declared in the sampleKeys annotation.
+  	 3) Doc bug where 'workbookWorksheet' is supposed to be an entity type, but is being treated as a complex because it (and its ancestors) are missing the keyProperty annotation.",
+    "Error: microsoft.graph.microsoft.graph/me:
+      /me/drive/items/{var}/workbook/worksheets/{var}/range(address={var})/format/font
+      Uri path requires navigating into unknown object hierarchy: missing property 'range(address={var})' on 'workbookWorksheet'. Possible issues:
+  	 1) Doc bug where 'range(address={var})' isn't defined on the resource.
+  	 2) Doc bug where 'range(address={var})' is an example key and should instead be replaced with a placeholder like {item-id} or declared in the sampleKeys annotation.
+  	 3) Doc bug where 'workbookWorksheet' is supposed to be an entity type, but is being treated as a complex because it (and its ancestors) are missing the keyProperty annotation."
   ]
 }
 -->

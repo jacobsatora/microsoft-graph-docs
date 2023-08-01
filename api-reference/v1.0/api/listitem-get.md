@@ -31,16 +31,17 @@ One of the following permissions is required to call this API. To learn more, in
 
 Get a listItem
 ```http
-GET https://graph.microsoft.com/v1.0/sites/{site-id}/lists/{list-id}/items/{item-id}
+GET /sites/{site-id}/lists/{list-id}/items/{item-id}
 ```
 Get the column values of a listItem
 ```http
-GET https://graph.microsoft.com/v1.0/sites/{site-id}/lists/{list-id}/items/{item-id}?expand=fields
+GET /sites/{site-id}/lists/{list-id}/items/{item-id}?expand=fields
 ```
 Get specific column values of a listItem
 ```http
-GET https://graph.microsoft.com/v1.0/sites/{site-id}/lists/{list-id}/items/{item-id}?expand=fields(select=Column1,Column2)
+GET /sites/{site-id}/lists/{list-id}/items/{item-id}?expand=fields(select=Column1,Column2)
 ```
+
 ## Optional query parameters
 This method supports the [OData query parameters](/graph/query-parameters) to help customize the response.
 
@@ -70,7 +71,11 @@ If successful, this method returns a `200 OK` response code and an [item][] in t
 GET https://graph.microsoft.com/v1.0/sites/{site-id}/lists/{list-id}/items/{item-id}?expand=fields
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-list-item-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

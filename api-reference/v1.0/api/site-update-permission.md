@@ -10,7 +10,9 @@ doc_type: apiPageType
 # Update permission
 Namespace: microsoft.graph
 
-Update the [permission](../resources/permission.md) object on a site.
+Update an application [permission](../resources/permission.md) object on a site. 
+
+>**Note:** You can't use this method to update a user site permission.
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -63,7 +65,11 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/update-permission-from--cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

@@ -17,7 +17,7 @@ One of the following permissions is required to call this API. To learn more, in
 
 | Permission type                        | Permissions (from least to most privileged) |
 |:---------------------------------------|:--------------------------------------------|
-| Delegated (work or school account)     | User.Read, Organization.Read.All, User.ReadBasic.All, User.Read.All |
+| Delegated (work or school account)     | User.Read, Organization.Read.All, User.Read.All |
 | Delegated (personal Microsoft account) | Not supported. |
 | Application                            | Organization.Read.All |
 
@@ -63,7 +63,11 @@ The following is an example of the request.
 GET https://graph.microsoft.com/v1.0/organization/d69179bf-f4a4-41a9-a9de-249c0f2efb1d/branding/localizations/fr-FR
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-organizationalbrandinglocalization-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -118,8 +122,11 @@ The following is an example of the request.
 GET https://graph.microsoft.com/v1.0/organization/99b24e1b-abec-4598-9d63-a2baf0a3cea1/branding/localizations/fr-FR/signInPageText
 ```
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -153,7 +160,7 @@ The following is an example of the request.
 <!-- {
   "blockType": "ignored",
   "name": "get_organizationalbranding_defaultlocale_bannerLogo",
-  "sampleKeys": ["d69179bf-f4a4-41a9-a9de-249c0f2efb1d"]
+  "sampleKeys": ["d69179bf-f4a4-41a9-a9de-249c0f2efb1d", "default"]
 }-->
 
 ```http
@@ -190,14 +197,18 @@ The following is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "get_organizationalbranding_frlocale_bannerLogo_not_set",
-  "sampleKeys": ["d69179bf-f4a4-41a9-a9de-249c0f2efb1d"]
+  "sampleKeys": ["d69179bf-f4a4-41a9-a9de-249c0f2efb1d", "default"]
 }-->
 
 ```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/organization/d69179bf-f4a4-41a9-a9de-249c0f2efb1d/branding/localizations/default/bannerLogo
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-organizationalbranding-frlocale-bannerlogo-not-set-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -218,3 +229,12 @@ HTTP/1.1 200 OK
 
 {}
 ```
+
+<!-- {
+  "type": "#page.annotation",
+  "description": "Get organizationalBrandingLocalization",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": "",
+  "suppressions": []
+}-->

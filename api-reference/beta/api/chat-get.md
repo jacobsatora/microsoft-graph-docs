@@ -66,13 +66,22 @@ The following is an example of the request.
 
 <!-- {
   "blockType": "request",
-  "name": "get_group_chat",
+  "name": "get_group_chat_e1",
   "sampleKeys": ["19:b8577894a63548969c5c92bb9c80c5e1@thread.v2"]
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/chats/19:b8577894a63548969c5c92bb9c80c5e1@thread.v2
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-group-chat-e1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following example shows the response.
 
@@ -109,13 +118,22 @@ The following is an example of the request.
 
 <!-- {
   "blockType": "request",
-  "name": "get_chat",
+  "name": "get_chat_e2",
   "sampleKeys": ["8b081ef6-4792-4def-b2c9-c363a1bf41d5", "19:8b081ef6-4792-4def-b2c9-c363a1bf41d5_877192bd-9183-47d3-a74c-8aa0426716cf@unq.gbl.spaces"]
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/users/8b081ef6-4792-4def-b2c9-c363a1bf41d5/chats/19:8b081ef6-4792-4def-b2c9-c363a1bf41d5_877192bd-9183-47d3-a74c-8aa0426716cf@unq.gbl.spaces
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-chat-e2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following example shows the response.
 
@@ -152,13 +170,22 @@ The following is an example of the request.
 
 <!-- {
   "blockType": "request",
-  "name": "get_chat_withmembers",
+  "name": "get_chat_withmembers_e3",
   "sampleKeys": ["19:b8577894a63548969c5c92bb9c80c5e1@thread.v2"]
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/chats/19:b8577894a63548969c5c92bb9c80c5e1@thread.v2?$expand=members
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-chat-withmembers-e3-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following example shows the response.
 
@@ -257,13 +284,22 @@ The following is an example of the request.
 
 <!-- {
   "blockType": "request",
-  "name": "get_meeting_chat",
+  "name": "get_meeting_chat_e4",
   "sampleKeys": ["19:meeting_ZDZlYTYxOWUtYzdlMi00ZmMxLWIxMTAtN2YzODZlZjAxYzI4@thread.v2"]
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/chats/19:meeting_ZDZlYTYxOWUtYzdlMi00ZmMxLWIxMTAtN2YzODZlZjAxYzI4@thread.v2
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-meeting-chat-e4-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following example shows the response.
 
@@ -321,17 +357,26 @@ The following is an example of the request.
 
 <!-- {
   "blockType": "request",
-  "name": "get_meeting_chat",
-  "sampleKeys": ["19:meeting_ZDZlYTYxOWUtYzdlMi00ZmMxLWIxMTAtN2YzODZlZjAxYzI4@thread.v2"]
+  "name": "get_meeting_chat_e5",
+  "sampleKeys": ["19:ebe3857aa388434bab0cad9d2e09f4de@thread.v2"]
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/chats/19:ebe3857aa388434bab0cad9d2e09f4de@thread.v2?$expand=lastMessagePreview
 ```
 
+<<<<<<< HEAD
 ---
 
 
 
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-meeting-chat-e5-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following example shows the response.
 
@@ -392,3 +437,7 @@ Content-type: application/json
     }
 }
 ```
+
+## See also
+
+* [Microsoft Graph service-specific throttling limits](/graph/throttling-limits#microsoft-teams-service-limits)

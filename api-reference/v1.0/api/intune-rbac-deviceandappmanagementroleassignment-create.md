@@ -61,6 +61,9 @@ If successful, this method returns a `201 Created` response code and a [deviceAn
 
 ### Request
 Here is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- { "blockType": "request" , "name" : "intune_rbac_deviceandappmanagementroleassignment_create_create_deviceandappmanagementroleassignment" }-->
 ``` http
 POST https://graph.microsoft.com/v1.0/deviceManagement/roleAssignments
 Content-type: application/json
@@ -79,8 +82,16 @@ Content-length: 258
 }
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/intune-rbac-deviceandappmanagementroleassignment-create-create-deviceandappmanagementroleassignment-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+
+<!-- { "blockType": "response" , "@odata.type" : "microsoft.graph.deviceAndAppManagementRoleAssignment" }-->
 ``` http
 HTTP/1.1 201 Created
 Content-Type: application/json

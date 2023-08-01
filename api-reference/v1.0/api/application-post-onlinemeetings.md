@@ -1,7 +1,7 @@
 ---
 title: "Create onlineMeeting"
 description: "Create an online meeting on behalf of a user specified in the request body."
-author: "mkhribech"
+author: "awang119"
 ms.localizationpriority: high
 ms.prod: "cloud-communications"
 doc_type: apiPageType
@@ -54,7 +54,7 @@ In the request body, supply a JSON representation of an [onlineMeeting](../resou
 
 > [!CAUTION]
 >
-> Assigning the `presenter` role to users who are not registered in Azure Active Directory is not currently supported.
+> Assigning the `presenter` or `coorganizer` role to users who are not registered in Azure Active Directory is not currently supported.
 
 ## Response
 If successful, this method returns a `201 Created` response code and an [onlineMeeting](../resources/onlinemeeting.md) object in the response body.
@@ -85,7 +85,11 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/create-onlinemeeting-user-token-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -297,7 +301,11 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/create-online-meeting-with-passcode-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -388,7 +396,11 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/create-online-meeting-without-passcode-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

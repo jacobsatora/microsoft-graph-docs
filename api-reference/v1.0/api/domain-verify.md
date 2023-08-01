@@ -27,6 +27,12 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (personal Microsoft account) | Not supported.    |
 |Application | Domain.ReadWrite.All |
 
+The work or school account needs to belong to one of the following roles:
+
+* Global Administrator
+* Domain Name Administrator
+* Partner Tier2 Support
+
 ## HTTP request
 
 <!-- { "blockType": "ignored" } -->
@@ -61,7 +67,11 @@ If successful, this method returns `200 OK` response code and [domain](../resour
 POST https://graph.microsoft.com/v1.0/domains/{domain-name}/verify
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/domain-verify-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

@@ -72,6 +72,15 @@ The first example deletes the specified message.
 DELETE https://graph.microsoft.com/beta/me/messages/{id}
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-message-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response 1
 
 Here is an example of the response.
@@ -94,6 +103,15 @@ The next example deletes a certain **mention** in the specified message.
 DELETE https://graph.microsoft.com/beta/me/messages/{id}/mentions/{id}
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-mention-in-message-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response 2
 
 Here is an example of the response.

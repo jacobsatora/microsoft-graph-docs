@@ -63,9 +63,17 @@ The following is an example of the request.
   "sampleKeys": ["016b5565-3bbf-4067-b9ff-4d68167eb1a6"]
 }-->
 ```msgraph-interactive
-GET https://graph.microsoft.com/beta/print/reports/getPrinterArchivedPrintJobs(printerId='016b5565-3bbf-4067-b9ff-4d68167eb1a6',startDateTime=2021-05-24,endDateTime=2021-05-25)
+GET https://graph.microsoft.com/beta/reports/getPrinterArchivedPrintJobs(printerId='016b5565-3bbf-4067-b9ff-4d68167eb1a6',startDateTime=2021-05-24,endDateTime=2021-05-25)
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/reports-getprinterarchivedprintjobs-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 ##### Response
 The following is an example of the response.
@@ -83,11 +91,23 @@ Content-type: application/json
   "value": [
     {
       "id": "016b5565-3bbf-4067-b9ff-4d68167eb1a6",
-      "printer": {
-        "id": "016b5565-3bbf-4067-b9ff-4d68167eb1a6"
-      },
-      "createdBy": {},
-      "processingState": "completed"
+      "printerId": "016b5565-3bbf-4067-b9ff-4d68167eb1a6",
+      "printerName": "printerName1",
+      "processingState": "completed",
+      "createdDateTime": "2023-06-29T00:00:00.0000000Z",
+      "acquiredDateTime": "2023-06-29T00:00:01.0000000Z",
+      "completionDateTime": "2023-06-29T00:00:02.0000000Z",
+      "acquiredByPrinter": true,
+      "copiesPrinted": 1,
+      "pageCount": 1,
+      "blackAndWhitePageCount": 1,
+      "colorPageCount": 0,
+      "simplexPageCount": 0,
+      "duplexPageCount": 1,
+      "createdBy": {
+        "displayName": "username",
+        "userPrincipalName": "username@contoso.com",
+      }
     }
   ]
 }

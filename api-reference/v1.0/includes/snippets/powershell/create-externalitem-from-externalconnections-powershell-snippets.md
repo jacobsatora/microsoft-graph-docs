@@ -21,7 +21,11 @@ $params = @{
 	)
 	properties = @{
 		title = "Error in the payment gateway"
+<<<<<<< HEAD
 		priority = 1
+=======
+		priority = 
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 		assignee = "john@contoso.com"
 	}
 	content = @{

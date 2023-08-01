@@ -102,7 +102,11 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/post-chatmessage-1-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -143,9 +147,11 @@ Content-type: application/json
         "application": null,
         "device": null,
         "user": {
+            "@odata.type": "#microsoft.graph.teamworkUserIdentity",
             "id": "8ea0e38b-efb3-4757-924a-5f94061cf8c2",
             "displayName": "Robin Kline",
-            "userIdentityType": "aadUser"
+            "userIdentityType": "aadUser",
+            "tenantId": "e61ef81e-8bd8-476a-92e8-4a62f8426fca"
         }
     },
     "body": {
@@ -158,7 +164,8 @@ Content-type: application/json
     },
     "attachments": [],
     "mentions": [],
-    "reactions": []
+    "reactions": [],
+    "messageHistory": []
 }
 ```
 
@@ -199,7 +206,11 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/post-chatmessage-2-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -239,9 +250,11 @@ Content-type: application/json
         "application": null,
         "device": null,
         "user": {
+            "@odata.type": "#microsoft.graph.teamworkUserIdentity",
             "id": "8ea0e38b-efb3-4757-924a-5f94061cf8c2",
             "displayName": "Robin Kline",
-            "userIdentityType": "aadUser"
+            "userIdentityType": "aadUser",
+            "tenantId": "e61ef81e-8bd8-476a-92e8-4a62f8426fca"
         }
     },
     "body": {
@@ -269,7 +282,8 @@ Content-type: application/json
             }
         }
     ],
-    "reactions": []
+    "reactions": [],
+    "messageHistory": []
 }
 ```
 
@@ -310,7 +324,11 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/post-chatmessage-3-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -350,9 +368,11 @@ Content-type: application/json
         "application": null,
         "device": null,
         "user": {
+            "@odata.type": "#microsoft.graph.teamworkUserIdentity",
             "id": "8ea0e38b-efb3-4757-924a-5f94061cf8c2",
             "displayName": "Robin Kline",
-            "userIdentityType": "aadUser"
+            "userIdentityType": "aadUser",
+            "tenantId": "e61ef81e-8bd8-476a-92e8-4a62f8426fca"
         }
     },
     "body": {
@@ -374,7 +394,8 @@ Content-type: application/json
         }
     ],
     "mentions": [],
-    "reactions": []
+    "reactions": [],
+    "messageHistory": []
 }
 ```
 
@@ -412,7 +433,11 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/post-chatmessage-4-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -452,9 +477,11 @@ Content-type: application/json
         "application": null,
         "device": null,
         "user": {
+            "@odata.type": "#microsoft.graph.teamworkUserIdentity",
             "id": "8ea0e38b-efb3-4757-924a-5f94061cf8c2",
             "displayName": "Robin Kline",
-            "userIdentityType": "aadUser"
+            "userIdentityType": "aadUser",
+            "tenantId": "e61ef81e-8bd8-476a-92e8-4a62f8426fca"
         }
     },
     "body": {
@@ -476,7 +503,8 @@ Content-type: application/json
         }
     ],
     "mentions": [],
-    "reactions": []
+    "reactions": [],
+    "messageHistory": []
 }
 ```
 
@@ -515,7 +543,11 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/post-chatmessage-5-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -556,9 +588,11 @@ Content-type: application/json
         "application": null,
         "device": null,
         "user": {
+            "@odata.type": "#microsoft.graph.teamworkUserIdentity",
             "id": "8ea0e38b-efb3-4757-924a-5f94061cf8c2",
             "displayName": "Robin Kline",
-            "userIdentityType": "aadUser"
+            "userIdentityType": "aadUser",
+            "tenantId": "e61ef81e-8bd8-476a-92e8-4a62f8426fca"
         }
     },
     "body": {
@@ -567,7 +601,8 @@ Content-type: application/json
     },
     "attachments": [],
     "mentions": [],
-    "reactions": []
+    "reactions": [],
+    "messageHistory": []
 }
 ```
 
@@ -619,7 +654,11 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/post-chatmessage-6-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -660,9 +699,11 @@ Content-type: application/json
         "application": null,
         "device": null,
         "user": {
+            "@odata.type": "#microsoft.graph.teamworkUserIdentity",
             "id": "8ea0e38b-efb3-4757-924a-5f94061cf8c2",
             "displayName": "Robin Kline",
-            "userIdentityType": "aadUser"
+            "userIdentityType": "aadUser",
+            "tenantId": "e61ef81e-8bd8-476a-92e8-4a62f8426fca"
         }
     },
     "body": {
@@ -684,7 +725,8 @@ Content-type: application/json
         }
     ],
     "mentions": [],
-    "reactions": []
+    "reactions": [],
+    "messageHistory": []
 }
 ```
 
@@ -727,7 +769,11 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/post-chatmessage-atmentionchannel-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -768,9 +814,11 @@ Content-type: application/json
         "application": null,
         "device": null,
         "user": {
+            "@odata.type": "#microsoft.graph.teamworkUserIdentity",
             "id": "8ea0e38b-efb3-4757-924a-5f94061cf8c2",
             "displayName": "Robin Kline",
-            "userIdentityType": "aadUser"
+            "userIdentityType": "aadUser",
+            "tenantId": "e61ef81e-8bd8-476a-92e8-4a62f8426fca"
         }
     },
     "body": {
@@ -799,7 +847,8 @@ Content-type: application/json
             }
         }
     ],
-    "reactions": []
+    "reactions": [],
+    "messageHistory": []
 }
 ```
 
@@ -839,11 +888,16 @@ Content-type: application/json
             }
         }
     ],
-    "reactions": []
+    "reactions": [],
+    "messageHistory": []
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/post-chatmessage-atmentionteam-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -884,9 +938,11 @@ Content-type: application/json
         "application": null,
         "device": null,
         "user": {
+            "@odata.type": "#microsoft.graph.teamworkUserIdentity",
             "id": "8ea0e38b-efb3-4757-924a-5f94061cf8c2",
             "displayName": "Robin Kline",
-            "userIdentityType": "aadUser"
+            "userIdentityType": "aadUser",
+            "tenantId": "e61ef81e-8bd8-476a-92e8-4a62f8426fca"
         }
     },
     "body": {
@@ -915,7 +971,8 @@ Content-type: application/json
             }
         }
     ],
-    "reactions": []
+    "reactions": [],
+    "messageHistory": []
 }
 ```
 
@@ -932,7 +989,8 @@ The following is an example of the request.
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "post_chatmessage_9"
+  "name": "post_chatmessage_9",
+  "sampleKeys": ["fbe2bf47-16c8-47cf-b4a5-4b9b187c508b", "19:4a95f7d8db4c4e7fae857bcebe0623e6@thread.tacv2"]
 }-->
 
 ```http
@@ -959,7 +1017,11 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/post-chatmessage-9-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -1026,13 +1088,222 @@ Content-type: application/json
     ],
     "onBehalfOf": null,
     "mentions": [],
+    "reactions": [],
+    "messageHistory": []
+}
+```
+
+### Example 10: Send a message that contains an announcement
+
+#### Request
+
+The following is an example of the request.
+
+> **Note:** The Base64-encoded value for the **contentBytes** property is shortened for readability.
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "post_chatmessage_10",
+  "sampleKeys": ["5c884e2f-83f8-4cff-af8e-0177f260b9f8", "19:81f49626414645c99469ee65a1a7e1a4@thread.tacv2"]
+}-->
+
+```http
+POST https://graph.microsoft.com/beta/teams/5c884e2f-83f8-4cff-af8e-0177f260b9f8/channels/19:81f49626414645c99469ee65a1a7e1a4@thread.tacv2/messages
+Content-type: application/json
+
+{
+    "subject": "Announcement Subheading",
+    "body": {
+        "contentType": "text",
+        "content": "<attachment id=\"d7ddbf876ae340c3a03bada395ec7da7\"></attachment>Announcement text"
+    },
+    "attachments": [
+        {
+            "id": "d7ddbf876ae340c3a03bada395ec7da7",
+            "contentType": "application/vnd.microsoft.teams.messaging-announcementBanner",
+            "contentUrl": null,
+            "content": "{\"title\":\"Announcement heading\",\"cardImageType\":\"uploadedImage\",\"cardImageDetails\":{\"uploadedImageDetail\":{\"originalImage\":{\"source\":\"../hostedContents/1/$value\",\"width\":1379,\"height\":268,\"croppedWidth\":918.0,\"croppedHeight\":178.4075416968818,\"leftMargin\":0.0,\"topMargin\":90.7962291515591,\"imageContentType\":\"image/png\"},\"croppedImage\":{\"source\":\"../hostedContents/2/$value\"}}}}",
+            "name": null,
+            "thumbnailUrl": null
+        }
+    ],
+    "hostedContents": [
+        {
+            "@microsoft.graph.temporaryId": "1",
+            "contentBytes": "iVBORw0KGgoAAAANSUhEUgAABWMAAAEMCAYAAAChuaTsAAAAAXNSR0IArs4",
+            "contentType": "image/png"
+        },
+        {
+            "@microsoft.graph.temporaryId": "2",
+            "contentBytes": "iVBORw0KGgoAAAANSUhEUgAAA5YAAAB4CAYAAACJrW0RAAAAAXNSR0IArs4",
+            "contentType": "image/png"
+        }
+    ]
+}
+```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/post-chatmessage-10-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+
+The following is an example of the response.
+
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.chatMessage"
+} -->
+```http
+HTTP/1.1 201 Created
+Content-type: application/json
+
+{
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#teams('5c884e2f-83f8-4cff-af8e-0177f260b9f8')/channels('19%3A81f49626414645c99469ee65a1a7e1a4%40thread.tacv2')/messages/$entity",
+    "id": "1675104302171",
+    "replyToId": null,
+    "etag": "1675104302171",
+    "messageType": "message",
+    "createdDateTime": "2023-01-30T18:45:02.171Z",
+    "lastModifiedDateTime": "2023-01-30T18:45:02.171Z",
+    "lastEditedDateTime": null,
+    "deletedDateTime": null,
+    "subject": "Announcement Subheading",
+    "summary": null,
+    "chatId": null,
+    "importance": "normal",
+    "locale": "en-us",
+    "webUrl": "https://teams.microsoft.com/l/message/19%3A81f49626414645c99469ee65a1a7e1a4%40thread.tacv2/1675104302171?groupId=5c884e2f-83f8-4cff-af8e-0177f260b9f8&tenantId=2432b57b-0abd-43db-aa7b-16eadd115d34&createdTime=1675104302171&parentMessageId=1675104302171",
+    "onBehalfOf": null,
+    "policyViolation": null,
+    "eventDetail": null,
+    "from": {
+        "application": null,
+        "device": null,
+        "user": {
+            "id": "28c10244-4bad-4fda-993c-f332faef94f0",
+            "displayName": "Test User",
+            "userIdentityType": "aadUser"
+        }
+    },
+    "body": {
+        "contentType": "text",
+        "content": "<attachment id=\"d7ddbf876ae340c3a03bada395ec7da7\"></attachment>Announcement text"
+    },
+    "channelIdentity": {
+        "teamId": "5c884e2f-83f8-4cff-af8e-0177f260b9f8",
+        "channelId": "19:81f49626414645c99469ee65a1a7e1a4@thread.tacv2"
+    },
+    "attachments": [
+        {
+            "id": "d7ddbf876ae340c3a03bada395ec7da7",
+            "contentType": "application/vnd.microsoft.teams.messaging-announcementBanner",
+            "contentUrl": null,
+            "content": "{\"title\":\"Announcement heading\",\"cardImageType\":\"uploadedImage\",\"cardImageDetails\":{\"uploadedImageDetail\":{\"originalImage\":{\"source\":\"https://graph.microsoft.com/beta/teams/5c884e2f-83f8-4cff-af8e-0177f260b9f8/channels/19:81f49626414645c99469ee65a1a7e1a4@thread.tacv2/messages/1675104302171/hostedContents/aWQ9LHR5cGU9MSx1cmw9aHR0cHM6Ly91cy1hcGkuYXNtLnNreXBlLmNvbS92MS9vYmplY3RzLzAtd3VzLWQyLTY3OTJlM2ExMzFmNzc4YjY5NWMwYTE5ZGRkZmIwYWNiL3ZpZXdzL2ltZ28=/$value\",\"width\":1379,\"height\":268,\"croppedWidth\":918.0,\"croppedHeight\":178.4075416968818,\"leftMargin\":0.0,\"topMargin\":90.7962291515591,\"imageContentType\":\"image/png\"},\"croppedImage\":{\"source\":\"https://graph.microsoft.com/beta/teams/5c884e2f-83f8-4cff-af8e-0177f260b9f8/channels/19:81f49626414645c99469ee65a1a7e1a4@thread.tacv2/messages/1675104302171/hostedContents/aWQ9LHR5cGU9MSx1cmw9aHR0cHM6Ly91cy1hcGkuYXNtLnNreXBlLmNvbS92MS9vYmplY3RzLzAtd3VzLWQzLTAwYjhhNWZiZTA0MGRmY2MzMWZkNzM1ZDE4Yjk4NTM5L3ZpZXdzL2ltZ28=/$value\"}}}}",
+            "name": null,
+            "thumbnailUrl": null,
+            "teamsAppId": null
+        }
+    ],
+    "mentions": [],
+    "reactions": [],
+    "messageHistory": []
+}
+```
+
+### Example 11: Send a message with an emoji
+
+#### Request
+
+The following is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "post_chatmessage_11",
+  "sampleKeys": ["19:b7867210a3fa4848a5a2a30c210eb9ae@thread.v2"]
+}-->
+
+```http
+POST https://graph.microsoft.com/v1.0/chats/19:b7867210a3fa4848a5a2a30c210eb9ae@thread.v2/messages
+Content-type: application/json
+
+{
+    "body": {
+        "contentType": "html",
+        "content": "<emoji alt=\"😶‍🌫️\"></emoji>"
+    }
+}
+```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/post-chatmessage-11-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+---
+
+#### Response
+
+The following is an example of the response.
+
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.chatMessage"
+} -->
+
+```http
+HTTP/1.1 201 Created
+Content-type: application/json
+
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#chats('19%3Ab7867210a3fa4848a5a2a30c210eb9ae%40thread.v2')/messages/$entity",
+    "id": "1678894699092",
+    "replyToId": null,
+    "etag": "1678894699092",
+    "messageType": "message",
+    "createdDateTime": "2023-03-15T15:38:19.092Z",
+    "lastModifiedDateTime": "2023-03-15T15:38:19.092Z",
+    "lastEditedDateTime": null,
+    "deletedDateTime": null,
+    "subject": null,
+    "summary": null,
+    "chatId": "19:b7867210a3fa4848a5a2a30c210eb9ae@thread.v2",
+    "importance": "normal",
+    "locale": "en-us",
+    "webUrl": null,
+    "channelIdentity": null,
+    "policyViolation": null,
+    "eventDetail": null,
+    "from": {
+        "application": null,
+        "device": null,
+        "user": {
+            "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+            "id": "cf944cab-afa6-4b26-81d6-bdf9f6ea04f2",
+            "displayName": "Ramjot Singh",
+            "userIdentityType": "aadUser"
+        }
+    },
+    "body": {
+        "contentType": "html",
+        "content": "<span contenteditable=\"false\" title=\"Face in clouds\" type=\"(faceinclouds)\" class=\"animated-emoticon-50-faceinclouds\"><img itemscope=\"\" itemtype=\"http://schema.skype.com/Emoji\" itemid=\"faceinclouds\" src=\"https://statics.teams.cdn.office.net/evergreen-assets/personal-expressions/v2/assets/emoticons/faceinclouds/default/50_f.png\" title=\"Face in clouds\" alt=\"😶‍🌫️\" style=\"width:50px;height:50px;\"></span>"
+    },
+    "attachments": [],
+    "mentions": [],
     "reactions": []
 }
 ```
 
 ## See also
 
-- [Cards reference](/microsoftteams/platform/concepts/cards/cards-reference)
+* [Cards reference](/microsoftteams/platform/concepts/cards/cards-reference)
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

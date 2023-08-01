@@ -60,6 +60,24 @@ This method returns a `200 OK` response code and a [driveItem](../resources/driv
 
 You can use this method of addressing a special folder inline with additional calls to properties or relationships on the driveItem.
 
+## Examples
+
+### Example 1: Get special folder by name
+
+#### Request
+# [HTTP](#tab/http)
+<!-- { "blockType": "request", "name": "get-special-folder" } -->
+```msgraph-interactive
+GET /me/drive/special/{name}
+```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-special-folder-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
 <!-- { "blockType": "response", "@odata.type": "microsoft.graph.driveItem", "truncated": true } -->
 
 ```http
@@ -76,22 +94,30 @@ Content-type: application/json
 }
 ```
 
-## Get children of a special folder
+### Example 2: Get children of a special folder
 
 To request the children of a special folder, you can request the `children`
 collection or use the [expand](/graph/query-parameters) option to expand the children collection.
 
-### HTTP request
+#### Request
 
+<<<<<<< HEAD
 
 <!-- { "blockType": "request", "name": "get-special-children", "scopes": "files.read", "tags": "service.graph" } -->
+=======
+<!-- { "blockType": "request", "name": "get-special-children" } -->
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 ```msgraph-interactive
 GET /me/drive/special/{special-folder-name}/children
 ```
 
+<<<<<<< HEAD
 
 ### Response
+=======
+#### Response
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 <!-- { "blockType": "response", "@odata.type": "microsoft.graph.driveItem", "isCollection": true, "truncated": true} -->
 
@@ -126,4 +152,3 @@ error if the special folder does not already exist.
   "suppressions": [
   ]
 } -->
-

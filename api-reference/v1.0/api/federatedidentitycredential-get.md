@@ -25,14 +25,15 @@ One of the following permissions is required to call this API. To learn more, in
 
 ## HTTP request
 
-<!-- {
-  "blockType": "ignored"
-}
--->
-``` http
-GET /applications/{id}/federatedIdentityCredentials/{federatedIdentityCredentialId}
+You can address the application using either its **id** or **appId**. **id** and **appId** are referred to as the **Object ID** and **Application (Client) ID**, respectively, in the Azure portal.
 
+You can also address the federated identity credential with either its **id** or **name**.
+<!-- { "blockType": "ignored" } -->
+```http
+GET /applications/{id}/federatedIdentityCredentials/{federatedIdentityCredentialId}
 GET /applications/{id}/federatedIdentityCredentials/{federatedIdentityCredentialName}
+GET /applications(appId='{appId}')/federatedIdentityCredentials/{federatedIdentityCredentialId}
+GET /applications(appId='{appId}')/federatedIdentityCredentials/{federatedIdentityCredentialName}
 ```
 
 ## Optional query parameters
@@ -66,7 +67,11 @@ If successful, this method returns a `200 OK` response code and a [federatedIden
 GET https://graph.microsoft.com/v1.0/applications/acd7c908-1c4d-4d48-93ee-ff38349a75c8/federatedIdentityCredentials/bdad0963-4a7a-43ae-b569-e67e1da3f2c0
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-federatedidentitycredential-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

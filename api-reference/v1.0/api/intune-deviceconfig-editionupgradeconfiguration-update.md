@@ -66,6 +66,9 @@ If successful, this method returns a `200 OK` response code and an updated [edit
 
 ### Request
 Here is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- { "blockType": "request" , "name" : "intune_deviceconfig_editionupgradeconfiguration_update_update_editionupgradeconfiguration" }-->
 ``` http
 PATCH https://graph.microsoft.com/v1.0/deviceManagement/deviceConfigurations/{deviceConfigurationId}
 Content-type: application/json
@@ -83,8 +86,16 @@ Content-length: 311
 }
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/intune-deviceconfig-editionupgradeconfiguration-update-update-editionupgradeconfiguration-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+
+<!-- { "blockType": "response" , "@odata.type" : "microsoft.graph.editionUpgradeConfiguration" }-->
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json

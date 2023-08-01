@@ -93,6 +93,15 @@ This method returns `202 Accepted` when the request has been processed successfu
 GET https://graph.microsoft.com/beta/me
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-user-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -135,6 +144,15 @@ The following example shows a request.
 GET https://graph.microsoft.com/beta/users/{id}
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-other-user-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following example shows the response.
@@ -178,7 +196,11 @@ To retrieve specific properties, use the OData `$select` query parameter. For ex
 GET https://graph.microsoft.com/v1.0/users/{id | userPrincipalName}?$select=displayName,givenName,postalCode,identities
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-user-select-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -209,44 +231,50 @@ Content-type: application/json
 }
 ```
 
-### Example 4: Get the custom security attribute assignments of the specified user
+### Example 4: Get the custom security attribute assignments for a user
 
-The following example gets the custom security attributes of the specified user.
+The following example shows how to get the custom security attribute assignments for a user.
 
 Attribute #1
 
-+ Attribute set: `Engineering`
-+ Attribute: `Project`
-+ Attribute data type: Collection of Strings
-+ Attribute value: `["Baker","Cascade"]`
+- Attribute set: `Engineering`
+- Attribute: `Project`
+- Attribute data type: Collection of Strings
+- Attribute value: `["Baker","Cascade"]`
 
 Attribute #2
 
-+ Attribute set: `Engineering`
-+ Attribute: `CostCenter`
-+ Attribute data type: Collection of Integers
-+ Attribute value: `[1001]`
+- Attribute set: `Engineering`
+- Attribute: `CostCenter`
+- Attribute data type: Collection of Integers
+- Attribute value: `[1001]`
 
 Attribute #3
 
-+ Attribute set: `Engineering`
-+ Attribute: `Certification`
-+ Attribute data type: Boolean
-+ Attribute value: `true`
+- Attribute set: `Engineering`
+- Attribute: `Certification`
+- Attribute data type: Boolean
+- Attribute value: `true`
 
 Attribute #4
 
-+ Attribute set: `Marketing`
-+ Attribute: `Level`
-+ Attribute data type: String
-+ Attribute value: `"Public"`
+- Attribute set: `Marketing`
+- Attribute: `EmployeeId`
+- Attribute data type: String
+- Attribute value: `"QN26904"`
 
 To get custom security attribute assignments, the calling principal must be assigned the Attribute Assignment Reader or Attribute Assignment Administrator role and must be granted the *CustomSecAttributeAssignment.Read.All* or *CustomSecAttributeAssignment.ReadWrite.All* permission.
 
+For more examples of custom security attribute assignments, see [Examples: Assign, update, list, or remove custom security attribute assignments using the Microsoft Graph API](/graph/custom-security-attributes-examples).
+
 #### Request
 
+<<<<<<< HEAD
 
 
+=======
+# [HTTP](#tab/http)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- {
   "blockType": "request",
   "name": "get_user_customsecurityattributes"
@@ -255,6 +283,15 @@ To get custom security attribute assignments, the calling principal must be assi
 GET https://graph.microsoft.com/beta/users/{id}?$select=customSecurityAttributes
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-user-customsecurityattributes-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 <!-- {
@@ -269,6 +306,10 @@ Content-type: application/json
 {
     "@odata.context": "https://graph.microsoft.com/beta/$metadata#users(customSecurityAttributes)/$entity",
     "customSecurityAttributes": {
+        "Marketing": {
+            "@odata.type": "#microsoft.graph.customSecurityAttributeValue",
+            "EmployeeId": "QN26904"
+        },
         "Engineering": {
             "@odata.type": "#microsoft.graph.customSecurityAttributeValue",
             "Project@odata.type": "#Collection(String)",
@@ -281,10 +322,6 @@ Content-type: application/json
                 1001
             ],
             "Certification": true
-        },
-        "Marketing": {
-            "@odata.type": "#microsoft.graph.customSecurityAttributeValue",
-            "Level": "Public"
         }
     }
 }
@@ -301,8 +338,8 @@ Content-type: application/json
     "customSecurityAttributes": null
 }
 ```
-### Example 5: Use `$filter` to retrieve specific users based on a property value
 
+<<<<<<< HEAD
 This example shows how to use the `$filter` query parameter along with the `endswith` clause to retrieve a user with a specific value in the **mail** attribute. This request filters and returns all users with a mail address ending with contoso.com.
 
 #### Request
@@ -351,6 +388,9 @@ Content-type: application/json
 ```
 
 ### Example 6: Get the value of a schema extension for a user
+=======
+### Example 5: Get the value of a schema extension for a user
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 In this example, the ID of the schema extension is `ext55gb1l09_msLearnCourses`.
 
@@ -365,6 +405,15 @@ In this example, the ID of the schema extension is `ext55gb1l09_msLearnCourses`.
 GET https://graph.microsoft.com/beta/users/4562bcc8-c436-4f95-b7c0-4f8ce89dca5e?$select=ext55gb1l09_msLearnCourses
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-schemaextension-for-ext55gb1l09-mslearncourses--cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 <!-- {

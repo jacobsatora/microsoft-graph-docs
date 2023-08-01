@@ -30,7 +30,8 @@ One of the following permissions is required to call this API. To learn more, in
 <!-- { "blockType": "ignored" } -->
 
 ```http
-DELETE /applications/{application ObjectId}/extensionProperties/{id}
+DELETE /applications/{application ObjectId}/extensionProperties/{extensionPropertyId}
+DELETE /applications(appId='{appId}')/extensionProperties/{extensionPropertyId}
 ```
 
 ## Request headers
@@ -62,6 +63,15 @@ The following is an example of the request.
 DELETE https://graph.microsoft.com/beta/applications/fd918e4b-c821-4efb-b50a-5eddd23afc6f/extensionProperties/1f0f15e3-925d-40f0-8fc8-9d3ad135bce0
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-extensionproperty-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.

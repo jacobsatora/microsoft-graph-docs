@@ -2,7 +2,7 @@
 title: "List groups"
 description: "List all the groups available in an organization, excluding dynamic distribution groups."
 ms.localizationpriority: high
-author: "psaffaie"
+author: "Jordanndahl"
 ms.prod: "groups"
 doc_type: apiPageType
 ---
@@ -93,6 +93,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/groups
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-groups-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -145,6 +154,8 @@ Content-type: application/json
          "resourceProvisioningOptions":[
          ],
          "securityEnabled":false,
+         "serviceProvisioningErrors": [
+         ],
          "theme":null,
          "visibility":"Public",
          "onPremisesProvisioningErrors":[
@@ -181,6 +192,8 @@ Content-type: application/json
          "resourceProvisioningOptions":[
          ],
          "securityEnabled":false,
+         "serviceProvisioningErrors": [
+         ],
          "theme":null,
          "visibility":null,
          "onPremisesProvisioningErrors":[
@@ -209,6 +222,15 @@ GET https://graph.microsoft.com/beta/groups?$count=true&$filter=hasMembersWithLi
 ConsistencyLevel: eventual
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-groups-withlicenseerrors-count-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response which includes only the requested properties.
@@ -295,6 +317,15 @@ GET https://graph.microsoft.com/beta/groups?$filter=startswith(displayName, 'a')
 ConsistencyLevel: eventual
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-groups-startswith-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -324,6 +355,7 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 ### Example 5: Use $search to get groups with display names that contain the letters 'Video' including a count of returned objects
 
 #### Request
@@ -374,6 +406,9 @@ Content-type: application/json
 ```
 
 ### Example 6: Use $search to get groups with display names that contain the letters 'Video' or a description that contains the letters 'prod' including a count of returned objects
+=======
+### Example 5: Use $search to get groups with display names that contain the letters 'Video' or a description that contains the letters 'prod' including a count of returned objects
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 #### Request
 
@@ -392,6 +427,15 @@ GET https://graph.microsoft.com/beta/groups?$search="displayName:Video" OR "desc
 ConsistencyLevel: eventual
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-video-count-or-description-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -428,7 +472,7 @@ Content-type: application/json
 }
 ```
 
-### Example 7: List dynamic groups
+### Example 6: List dynamic groups
 
 #### Request
 
@@ -447,6 +491,15 @@ The following is an example of the request that filters by the **membershipRuleP
 GET https://graph.microsoft.com/beta/groups?$filter=mailEnabled eq false and securityEnabled eq true and NOT(groupTypes/any(s:s eq 'Unified')) and membershipRuleProcessingState eq 'On'&$count=true&$select=id,membershipRule,membershipRuleProcessingState
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-enabled-dynamic-groups-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -476,7 +529,7 @@ Content-type: application/json
 }
 ```
 
-### Example 8: List any groups with any licenses
+### Example 7: List any groups with any licenses and get the group's members
 
 #### Request
 
@@ -488,9 +541,18 @@ Content-type: application/json
 }-->
 
 ```msgraph-interactive
-GET https://graph.microsoft.com/beta/groups?$select=id,assignedLicenses&$filter=assignedLicenses/any()
+GET https://graph.microsoft.com/beta/groups?$select=id,assignedLicenses&$filter=assignedLicenses/any()&$expand=members($select=id,displayName)
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-groups-with-licenses-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -507,40 +569,40 @@ HTTP/1.1 200 OK
 Content-type: application/json
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#groups(id,assignedLicenses)",
-    "value": [
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#groups(id,assignedLicenses,members())",
+  "value": [
+    {
+      "id": "5caf712c-8483-4b3d-8384-d8da988c0ca4",
+      "assignedLicenses": [
         {
-            "id": "5caf712c-8483-4b3d-8384-d8da988c0ca4",
-            "assignedLicenses": [
-                {
-                    "disabledPlans": [],
-                    "skuId": "6fd2c87f-b296-42f0-b197-1e91e994b900"
-                }
-            ]
-        },
-        {
-            "id": "aae8ec2a-5a08-4013-ae70-fafbb5c20de1",
-            "assignedLicenses": [
-                {
-                    "disabledPlans": [
-                        "7547a3fe-08ee-4ccb-b430-5077c5041653"
-                    ],
-                    "skuId": "18181a46-0d4e-45cd-891e-60aabd171b4e"
-                }
-            ]
-        },
-        {
-            "id": "e55bdaa0-e104-479a-979e-b0457fff6380",
-            "assignedLicenses": [
-                {
-                    "disabledPlans": [
-                        "7547a3fe-08ee-4ccb-b430-5077c5041653"
-                    ],
-                    "skuId": "6fd2c87f-b296-42f0-b197-1e91e994b900"
-                }
-            ]
+          "disabledPlans": [],
+          "skuId": "6fd2c87f-b296-42f0-b197-1e91e994b900"
         }
-    ]
+      ],
+      "members": [
+        {
+          "@odata.type": "#microsoft.graph.user",
+          "id": "0952e4c8-432f-4950-a65c-769c45993527"
+        },
+        {
+          "@odata.type": "#microsoft.graph.user",
+          "id": "49e373b6-4717-40c6-ad43-843c45a258f0"
+        }
+      ]
+    },
+    {
+      "id": "aae8ec2a-5a08-4013-ae70-fafbb5c20de1",
+      "assignedLicenses": [
+        {
+          "disabledPlans": [
+            "7547a3fe-08ee-4ccb-b430-5077c5041653"
+          ],
+          "skuId": "18181a46-0d4e-45cd-891e-60aabd171b4e"
+        }
+      ],
+      "members": []
+    }
+  ]
 }
 ```
 

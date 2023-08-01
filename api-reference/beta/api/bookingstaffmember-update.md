@@ -60,7 +60,7 @@ The following example changes the staff member's schedule to have Mondays off.
   "sampleKeys": ["contosolunchdelivery@contoso.onmicrosoft.com", "8ee1c803-a1fa-406d-8259-7ab53233f148"]
 }-->
 ```http
-PATCH https://graph.microsoft.com/beta/bookingBusinesses/contosolunchdelivery@contoso.onmicrosoft.com/staffmembers/8ee1c803-a1fa-406d-8259-7ab53233f148
+PATCH https://graph.microsoft.com/beta/bookingBusinesses/contosolunchdelivery@contoso.onmicrosoft.com/staffMembers/8ee1c803-a1fa-406d-8259-7ab53233f148
 Content-type: application/json
 
 {
@@ -130,6 +130,15 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/update-bookingstaffmember-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.

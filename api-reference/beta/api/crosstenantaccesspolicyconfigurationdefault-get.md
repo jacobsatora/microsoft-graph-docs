@@ -54,7 +54,11 @@ If successful, this method returns a `200 OK` response code and a [crossTenantAc
 
 ### Request
 
+<<<<<<< HEAD
 
+=======
+# [HTTP](#tab/http)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- {
   "blockType": "request",
   "name": "get_crosstenantaccesspolicyconfigurationdefault"
@@ -65,9 +69,19 @@ If successful, this method returns a `200 OK` response code and a [crossTenantAc
 GET https://graph.microsoft.com/beta/policies/crossTenantAccessPolicy/default
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-crosstenantaccesspolicyconfigurationdefault-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following response object shows a default cross-tenant policy inherited from Azure AD, as identified by **isServiceDefault** set to `true`.
+
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
@@ -163,6 +177,29 @@ Content-Type: application/json
     }
   },
   "b2bDirectConnectInbound":
+  {
+    "usersAndGroups":
+    {
+      "accessType": "blocked",
+      "targets": [
+        {
+          "target": "AllUsers",
+          "targetType": "user"
+        }
+      ]
+    },
+    "applications":
+    {
+      "accessType": "blocked",
+      "targets": [
+        {
+          "target": "AllApplications",
+          "targetType": "application"
+        }
+      ]
+    }
+  },
+  "tenantRestrictions":
   {
     "usersAndGroups":
     {

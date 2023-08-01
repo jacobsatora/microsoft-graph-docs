@@ -59,13 +59,18 @@ If successful, this call returns a `200 OK` response and a Boolean value that sp
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "domain_promote"
+  "name": "domain_promote",
+  "sampleKeys": ["contoso.com"]
 }-->
 ```http
 POST https://graph.microsoft.com/v1.0/domains/contoso.com/promote
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/domain-promote-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

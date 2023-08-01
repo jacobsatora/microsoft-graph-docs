@@ -1,7 +1,7 @@
 ---
 title: "Get customAccessPackageWorkflowExtension"
 description: "Read the properties and relationships of a customAccessPackageWorkflowExtension object."
-author: "currenmehta"
+author: "currenmehta-zz"
 ms.localizationpriority: medium
 ms.prod: "governance"
 doc_type: apiPageType
@@ -61,6 +61,15 @@ If successful, this method returns a `200 OK` response code and a [customAccessP
 GET https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/accessPackageCatalogs/32efb28c-9a7a-446c-986b-ca6528c6669d/customAccessPackageWorkflowExtensions/98ffaec5-ae8e-4902-a434-5ffc5d3d3cd0
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-customaccesspackageworkflowextension-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {

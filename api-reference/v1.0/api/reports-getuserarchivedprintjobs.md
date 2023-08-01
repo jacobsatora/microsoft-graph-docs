@@ -69,7 +69,11 @@ If successful, this function returns a `200 OK` response code and a [archivedPri
 GET https://graph.microsoft.com/v1.0/reports/getUserArchivedPrintJobs(userId='{id}',startDateTime=<timestamp>,endDateTime=<timestamp>)
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/reportroot-getuserarchivedprintjobs-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -91,9 +95,18 @@ Content-Type: application/json
   "value": [
     {
       "id": "016b5565-3bbf-4067-b9ff-4d68167eb1a6",
-      "printerId": "fe6ff85a-f0d3-4c4f-aec6-b9d5154356a1",
-      "createdBy": {},
-      "processingState": "completed"
+      "printerId": "016b5565-3bbf-4067-b9ff-4d68167eb1a6",
+      "printerName": "printerName1",
+      "processingState": "completed",
+      "createdDateTime": "2023-06-29T00:00:00.0000000Z",
+      "acquiredDateTime": "2023-06-29T00:00:01.0000000Z",
+      "completionDateTime": "2023-06-29T00:00:02.0000000Z",
+      "acquiredByPrinter": true,
+      "copiesPrinted": 1,
+      "createdBy": {
+        "displayName": "username",
+        "userPrincipalName": "username@contoso.com",
+      }
     }
   ]
 }

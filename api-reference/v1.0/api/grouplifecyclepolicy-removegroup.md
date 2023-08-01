@@ -1,7 +1,7 @@
 ---
 title: "groupLifecyclePolicy: removeGroup"
 description: "Removes a group from a lifecycle policy."
-author: "psaffaie"
+author: "Jordanndahl"
 ms.localizationpriority: medium
 ms.prod: "groups"
 doc_type: apiPageType
@@ -54,8 +54,9 @@ If successful, this method returns `200 OK` response code. If the group is remov
 
 ##### Request
 
+# [HTTP](#tab/http)
 <!-- {
-  "blockType": "ignored",
+  "blockType": "request",
   "name": "grouplifecyclepolicy_removegroup"
 } -->
 
@@ -68,17 +69,18 @@ Content-type: application/json
 }
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/grouplifecyclepolicy-removegroup-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ##### Response
 
 <!-- { "blockType": "response" } -->
 
 ```http
 HTTP/1.1 200 OK
-Content-type: application/json
-
-{
-  "value": true
-}
 ```
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79

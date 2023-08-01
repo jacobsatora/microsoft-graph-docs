@@ -62,7 +62,11 @@ If successful, this method returns a `200 OK` response code and a collection of 
 GET https://graph.microsoft.com/v1.0/reports/dailyPrintUsageByPrinter
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/list-printusagebyprinter-1-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -85,6 +89,7 @@ Content-Type: application/json
     {
       "id": "016b5565-3bbf-4067-b9ff-4d68167eb1a6",
       "printerId": "016b5565-3bbf-4067-b9ff-4d68167eb1a6",
+      "printerName": "printerName1",
       "usageDate": "Date",
       "completedBlackAndWhiteJobCount": 42,
       "completedColorJobCount": 0,

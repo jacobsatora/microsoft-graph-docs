@@ -34,8 +34,8 @@ POST /users/{id | userPrincipalName}/calendar/events/{id}/snoozeReminder
 POST /me/calendars/{id}/events/{id}/snoozeReminder
 POST /users/{id | userPrincipalName}/calendars/{id}/events/{id}/snoozeReminder
 
-POST /me/calendargroups/{id}/calendars/{id}/events/{id}/snoozeReminder
-POST /users/{id | userPrincipalName}/calendargroups/{id}/calendars/{id}/events/{id}/snoozeReminder
+POST /me/calendarGroups/{id}/calendars/{id}/events/{id}/snoozeReminder
+POST /users/{id | userPrincipalName}/calendarGroups/{id}/calendars/{id}/events/{id}/snoozeReminder
 ```
 ## Request headers
 | Name       | Type | Description|
@@ -76,7 +76,11 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/event-snoozereminder-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

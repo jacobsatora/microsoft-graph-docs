@@ -1,7 +1,7 @@
 ---
 title: "updatableAssetGroup: removeMembersById"
 description: "Remove members of the same type from an updatableAssetGroup."
-author: "aarononeal"
+author: "ryan-k-williams"
 ms.localizationpriority: medium
 ms.prod: "w10"
 doc_type: apiPageType
@@ -65,7 +65,7 @@ If successful, this action returns a `202 Accepted` response code. It does not r
 }
 -->
 ``` http
-POST https://graph.microsoft.com/beta/admin/windows/updates/updatableAssets/{updatableAssetGroupId}/removeMembersById
+POST https://graph.microsoft.com/beta/admin/windows/updates/updatableAssets/5c55730b-730b-5c55-0b73-555c0b73555c/removeMembersById
 Content-Type: application/json
 
 {
@@ -78,6 +78,15 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/updatableassetgroup-removemembersbyid-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 <!-- {

@@ -35,6 +35,14 @@ Depending on the RBAC provider and the permission type (delegated or application
 |Delegated (personal Microsoft account) | Not supported.    |
 |Application | Not supported. |
 
+### For an Exchange Online provider
+
+|Permission type      | Permissions (from least to most privileged)              |
+|:--------------------|:---------------------------------------------------------|
+|Delegated (work or school account) |  RoleManagement.Read.Exchange, RoleManagement.Read.All, RoleManagement.ReadWrite.Exchange   |
+|Delegated (personal Microsoft account) | Not supported.    |
+|Application | Not supported. |
+
 ## HTTP request
 
 Get a role assignment for a directory provider:
@@ -51,6 +59,14 @@ Get a role assignment for the entitlement management provider:
 
 ```http
 GET /roleManagement/entitlementManagement/roleAssignments/{id}
+```
+
+Get a role assignment for the Exchange Online provider:
+
+<!-- { "blockType": "ignored" } -->
+
+```http
+GET /roleManagement/exchange/roleAssignments/{id}
 ```
 
 ## Optional query parameters
@@ -90,6 +106,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/roleManagement/directory/roleAssignments/lAPpYvVpN0KRkAEhdxReEJC2sEqbR_9Hr48lds9SGHI-1
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-unifiedroleassignment-1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -132,6 +157,15 @@ The following is an example of the request with the `$expand` query parameter.
 GET https://graph.microsoft.com/beta/roleManagement/directory/roleAssignments/lAPpYvVpN0KRkAEhdxReEJC2sEqbR_9Hr48lds9SGHI-1?$expand=roleDefinition
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-unifiedroleassignment-2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -170,6 +204,55 @@ Content-type: application/json
     "directoryScopeId": "28ca5a85-489a-49a0-b555-0a6d81e56f0d"
 }
 ```
+### Example 3: Get details of a role assignment from Exchange Online Provider
+
+#### Request
+
+The following is an example of the request.
+
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "get_unifiedroleassignment_3",
+  "sampleKeys": ["6f0be5be-49f3-42e6-8086-cdcd67b6eac0"]
+}-->
+
+```msgraph-interactive
+GET https://graph.microsoft.com/beta/roleManagement/exchange/roleAssignments/6f0be5be-49f3-42e6-8086-cdcd67b6eac0
+```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-unifiedroleassignment-3-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+
+The following is an example of the response.
+> **Note:** The response object shown here might be shortened for readability.
+
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.unifiedRoleAssignment"
+} -->
+
+```http
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#roleManagement/exchange/roleAssignments/$entity",
+    "id": "6f0be5be-49f3-42e6-8086-cdcd67b6eac0",
+    "principalId": "/ServicePrincipals/5d39cc4d-ba68-4c44-92c7-5056e3a1ce39",
+    "roleDefinitionId": "ba6ab9a1-045c-4812-9e0b-f851f0da3907",
+    "directoryScopeId": "/Users/62ef60ab-0736-495b-b2b0-a4ca2c5b11d7",
+    "appScopeId": null
+}
+```
+
 <!-- uuid: 16cd6b66-4b1a-43a1-adaf-3a886856ed98
 2019-02-04 14:57:30 UTC -->
 <!-- {

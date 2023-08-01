@@ -2,7 +2,7 @@
 title: "List group members"
 description: "Get a list of the group's direct members. A group can have users, organizational contacts, devices, service principals and other groups as members."
 ms.localizationpriority: high
-author: "psaffaie"
+author: "Jordanndahl"
 ms.prod: "groups"
 doc_type: apiPageType
 ---
@@ -11,11 +11,10 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-Get a list of the group's direct members. A group can have users, organizational contacts, devices, service principals and other groups as members. Currently service principals are not listed as group members due to staged roll-out of service principals on Graph V1.0 endpoint. This operation is not transitive.
+Get a list of the group's direct members. A group can have users, organizational contacts, devices, service principals and other groups as members. This operation is not transitive.
 
-When a group contains more than 100 members, Microsoft Graph returns a `@odata.nextLink` property in the response that contains a URL to the next page of results. If that property is present, continue making additional requests with the `@odata.nextLink` URL in each response, until all the results are returned, as described in [paging Microsoft Graph data in your app](/graph/paging).
-
-An attempt to filter by an OData cast that represents an unsupported member type returns a `400 Bad Request` error with the `Request_UnsupportedQuery` code.
+> [!IMPORTANT]
+> This API has a known issue where service principals are not listed as group members in v1.0. Use this API on the `beta` endpoint instead or the `/groups/{id}?members` API.
 
 ## Permissions
 
@@ -39,7 +38,9 @@ GET /groups/{id}/members
 
 ## Optional query parameters
 
-This method supports the `$filter`, `$count`, `$select`, `$search`, and `$expand` [OData query parameters](/graph/query-parameters) to help customize the response. OData cast is also enabled, for example, you can cast to get just the group members that are users. You can use `$search` on the **displayName** and **description** properties. When items are added or updated for this resource, they are specially indexed for use with the `$count` and `$search` query parameters. There can be a slight delay between when an item is added or updated and when it is available in the index.
+This method supports the `$filter`, `$count`, `$select`, `$search`, `$top`, `$search`, and `$expand` [OData query parameters](/graph/query-parameters) to help customize the response. The default and maximum page sizes are 100 and 999 group objects respectively. Some queries are supported only when you use the **ConsistencyLevel** header set to `eventual` and `$count`. For more information, see [Advanced query capabilities on directory objects](/graph/aad-advanced-queries).
+
+OData cast is also enabled. For example, `/groups/{id}}/members/microsoft.graph.user` retrives group members that are users.
 
 ## Request headers
 
@@ -77,7 +78,11 @@ The following is an example of the request.
 GET https://graph.microsoft.com/v1.0/groups/02bd9fd6-8f93-4758-87c3-1fb73740a315/members
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-group-members-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -117,8 +122,9 @@ Content-type: application/json
 
 The following is an example of the request.
 
+# [HTTP](#tab/http)
 <!-- {
-  "blockType": "ignored",
+  "blockType": "request",
   "name": "get_count_only"
 }-->
 
@@ -127,12 +133,21 @@ GET https://graph.microsoft.com/v1.0/groups/02bd9fd6-8f93-4758-87c3-1fb73740a315
 ConsistencyLevel: eventual
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-count-only-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 #### Response
 
 The following is an example of the response.
 
 <!-- {
-  "blockType": "response"
+  "blockType": "response",
+  "name": "get_count_only",
+  "truncated": true,
+  "@odata.type": "string"
 } -->
 
 ```http
@@ -148,22 +163,32 @@ Content-type: text/plain
 
 The following is an example of the request.
 
+# [HTTP](#tab/http)
 <!-- {
-  "blockType": "ignored",
+  "blockType": "request",
   "name": "get_count_user_only"
 }-->
 
-```http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/groups/{id}/members/microsoft.graph.user/$count
 ConsistencyLevel: eventual
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-count-user-only-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 #### Response
 
 The following is an example of the response.
 
 <!-- {
-  "blockType": "response"
+  "blockType": "response",
+  "name": "get_count_user_only",
+  "truncated": true,
+  "@odata.type": "string"
 } -->
 
 ```http
@@ -191,7 +216,11 @@ GET https://graph.microsoft.com/v1.0/groups/{id}/members/microsoft.graph.user?$c
 ConsistencyLevel: eventual
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-pr-count-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -248,7 +277,11 @@ GET https://graph.microsoft.com/v1.0/groups/{id}/members?$count=true&$filter=sta
 ConsistencyLevel: eventual
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/list-groups-members-startswith-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

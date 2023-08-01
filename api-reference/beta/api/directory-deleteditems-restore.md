@@ -18,45 +18,18 @@ Restore a recently deleted [application](../resources/application.md), [group](.
 A recently deleted item will remain available for up to 30 days. After 30 days, the item is permanently deleted.
 
 ## Permissions
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
-### For applications and service principals:
+The following table shows the least privileged permission or permissions required to call this API on each supported resource type. Follow [best practices](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions) to request least privileged permissions. For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-|Permission type      | Permissions (from least to most privileged)              |
-|:--------------------|:---------------------------------------------------------|
-|Delegated (work or school account) | Application.ReadWrite.All     |
-|Delegated (personal Microsoft account) | Not supported.    |
-|Application | Application.ReadWrite.OwnedBy, Application.ReadWrite.All |
+| Supported resource | Delegated (work or school account) | Delegated (personal Microsoft account) | Application |
+|:-|:-|:-|:-|
+| [administrativeUnit](../resources/administrativeunit.md) | AdministrativeUnit.ReadWrite.All | Not supported. | AdministrativeUnit.ReadWrite.All |
+| [application](../resources/application.md) | Application.ReadWrite.All | Not supported. | Application.ReadWrite.OwnedBy |
+| [group](../resources/group.md) | Group.ReadWrite.All | Not supported. | Not supported. |
+| [servicePrincipal](../resources/serviceprincipal.md) | Application.ReadWrite.All | Not supported. | Application.ReadWrite.OwnedBy |
+| [user](../resources/user.md) | User.ReadWrite.All | Not supported. | Not supported. |
 
-The calling app must be assigned one of the following [Azure AD roles](/azure/active-directory/roles/permissions-reference):
-+ Global Administrator
-+ Application Administrator
-+ Cloud Application Administrator
-+ Hybrid Identity Administrator
-
-### For users:
-
-|Permission type      | Permissions (from least to most privileged)              |
-|:--------------------|:---------------------------------------------------------|
-|Delegated (work or school account) | User.ReadWrite.All |
-|Delegated (personal Microsoft account) | Not supported. |
-|Application | User.ReadWrite.All |
-
-### For groups:
-
-|Permission type      | Permissions (from least to most privileged)              |
-|:--------------------|:---------------------------------------------------------|
-|Delegated (work or school account) | Group.ReadWrite.All |
-|Delegated (personal Microsoft account) | Not supported.    |
-|Application | Group.ReadWrite.All |
-
-### For administrative units:
-
-|Permission type      | Permissions (from least to most privileged)              |
-|:--------------------|:---------------------------------------------------------|
-|Delegated (work or school account) | AdministrativeUnit.ReadWrite.All |
-|Delegated (personal Microsoft account) | Not supported.    |
-|Application | AdministrativeUnit.ReadWrite.All |
+[!INCLUDE [rbac-deleted-items-restore-apis](../includes/rbac-for-apis/rbac-deleted-items-restore-apis.md)]
 
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
@@ -83,12 +56,21 @@ If successful, this method returns a `200 OK` response code and a [directoryObje
 
 <!-- {
   "blockType": "request",
-  "name": "create_directoryobject_from_directory"
+  "name": "restore_directory_deleteditem"
 }-->
 ```http
 POST https://graph.microsoft.com/beta/directory/deleteditems/46cc6179-19d0-473e-97ad-6ff84347bbbb/restore
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/restore-directory-deleteditem-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 Note: The response object shown here might be shortened for readability.

@@ -20,6 +20,7 @@ The following RBAC providers are currently supported:
 - device management (Intune)
 - directory (Azure AD directory roles)
 - entitlement management (Azure AD entitlement management)
+- Exchange Online
 
 ## Permissions
 
@@ -57,6 +58,14 @@ Depending on the RBAC provider and the permission type (delegated or application
 |Delegated (personal Microsoft account) | Not supported.    |
 |Application | EntitlementManagement.Read.All, EntitlementManagement.ReadWrite.All |
 
+### For an Exchange Online provider
+
+|Permission type      | Permissions (from least to most privileged)              |
+|:--------------------|:---------------------------------------------------------|
+|Delegated (work or school account) |  RoleManagement.Read.Exchange, RoleManagement.Read.All, RoleManagement.ReadWrite.Exchange   |
+|Delegated (personal Microsoft account) | Not supported.    |
+|Application | Not supported. |
+
 ## HTTP request
 
 Get a role definition for a Cloud PC provider:
@@ -83,6 +92,13 @@ Get a role definition for the entitlement management provider:
 
 ```http
 GET /roleManagement/entitlementManagement/roleDefinitions/{id}
+```
+
+Get a role definition for the Exchange Online provider:
+<!-- { "blockType": "ignored" } -->
+
+```http
+GET /roleManagement/exchange/roleDefinitions/{id}
 ```
 
 ## Optional query parameters
@@ -122,6 +138,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/roleManagement/directory/roleDefinitions/f189965f-f560-4c59-9101-933d4c87a91a
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-custom-role-unifiedroledefinition-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -177,9 +202,18 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/roleManagement/directory/roleDefinitions/fdd7a751-b60b-444a-984c-02652fe8fa1c
 ```
 
+<<<<<<< HEAD
 ---
 
 
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-built-in-role-unifiedroledefinition-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -241,8 +275,8 @@ Content-type: application/json
     ]
 }
 ```
-### Example 3: Get the definition of an Azure AD built-in role and $expand on the role it inherits from
 
+<<<<<<< HEAD
 #### Request
 
 The following is an example of the request.
@@ -389,6 +423,9 @@ Content-type: application/json
 ```
 
 ### Example 4: Get the definition of a built-in role for a Cloud PC provider
+=======
+### Example 3: Get the definition of a built-in role for a Cloud PC provider
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 #### Request
 
@@ -403,6 +440,15 @@ Content-type: application/json
 GET https://graph.microsoft.com/beta/roleManagement/cloudPC/roleDefinitions/d40368cb-fbf4-4965-bbc1-f17b3a78e510
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-built-in-cloudpc-role-unifiedroledefinition-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 > **Note:** The response object shown here might be shortened for readability. All the properties will be returned from an actual call.
 
@@ -444,7 +490,7 @@ Content-type: application/json
 }
 ```
 
-## Example 5: Get the definition of a built-in role for the entitlement management provider
+## Example 4: Get the definition of a built-in role for the entitlement management provider
 
 #### Request
 
@@ -459,6 +505,15 @@ Content-type: application/json
 GET https://graph.microsoft.com/beta/roleManagement/entitlementManagement/roleDefinitions/ba92d953-d8e0-4e39-a797-0cbedb0a89e8
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-built-in-entitlementmanagement-role-unifiedroledefinition-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 > **Note:** The response object shown here might be shortened for readability. All the properties will be returned from an actual call.
 
@@ -486,6 +541,63 @@ Content-type: application/json
             "allowedResourceActions": [
                 "microsoft.entitlementManagement/AccessPackageCatalog/Create"
             ]
+        }
+    ]
+}
+```
+
+## Example 5: Get the definition of a built-in role for the Exchange Online provider
+
+#### Request
+
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "get_built-in_exchange_role_unifiedroledefinition",
+  "sampleKeys": ["7224da60-d8e2-4f45-9380-8e4fda64e133"]
+}-->
+
+```msgraph-interactive
+GET https://graph.microsoft.com/beta/roleManagement/exchange/roleDefinitions/7224da60-d8e2-4f45-9380-8e4fda64e133
+```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-built-in-exchange-role-unifiedroledefinition-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+> **Note:** The response object shown here might be shortened for readability. All the properties will be returned from an actual call.
+
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.unifiedRoleDefinition"
+} -->
+
+```http
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#roleManagement/exchange/roleDefinitions/$entity",
+    "id": "7224da60-d8e2-4f45-9380-8e4fda64e133",
+    "description": "This role enables administrators to manage address lists, global address lists, and offline address lists in an organization.",
+    "displayName": "Address Lists",
+    "isEnabled": true,
+    "version": "0.12 (14.0.451.0)",
+    "isBuiltIn": true,
+    "templateId": null,
+    "allowedPrincipalTypes": "user,group",
+    "rolePermissions": [
+        {
+            "allowedResourceActions": [
+                "(Microsoft.Exchange.Management.PowerShell.E2010) Get-AddressBookPolicy -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -WarningAction -WarningVariable"
+            ],
+            "excludedResourceActions": [],
+            "condition": null
         }
     ]
 }

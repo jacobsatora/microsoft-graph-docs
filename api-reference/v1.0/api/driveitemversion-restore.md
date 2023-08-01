@@ -51,7 +51,11 @@ This example restores a version of a file identified by `{item-id}` and `{versio
 POST /drives/{drive-id}/items/{item-id}/versions/{version-id}/restoreVersion
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/restore-item-version-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

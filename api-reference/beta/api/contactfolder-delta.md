@@ -92,6 +92,15 @@ GET https://graph.microsoft.com/beta/me/contactFolders/delta
 Prefer: odata.maxpagesize=2
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/contactfolder-delta-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 If the request is successful, the response would include a state token, which is either a _skipToken_  

@@ -17,7 +17,9 @@ Retrieve a [callTranscript](../resources/calltranscript.md) object associated wi
 
 Retrieving the transcript returns the metadata of the single transcript associated with the online meeting. Retrieving the content of the transcript returns the stream of text associated with the transcript.
 
-> **Note:** In the future, Microsoft may require you or your customers to pay additional fees based on the amount of data accessed through the API.
+> **Notes:** 
+> - In the future, Microsoft may require you or your customers to pay additional fees based on the amount of data accessed through the API.
+> - This API works differently in one or more national clouds. For details, see [Implementation differences in national clouds](/graph/teamwork-national-cloud-differences). 
 
 ## Permissions
 
@@ -32,7 +34,7 @@ One of the following permissions is required to call this API. To learn more, in
 To use application permission for this API, tenant administrators must create an application access policy and grant it to a user. This authorizes the app configured in the policy to fetch online meetings and/or online meeting artifacts on behalf of that user (with the user ID specified in the request path). For more details, see [Allow applications to access online meetings on behalf of a user](/graph/cloud-communication-online-meeting-application-access-policy).
 
 > [!NOTE]
-> This API would work for a meeting only if the meeting has not expired. For more details, see [Limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams#meeting-expiration).
+> This API works for a meeting only if the meeting has not expired. For more details, see [Limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams#meeting-expiration).
 
 ## HTTP request
 
@@ -41,15 +43,15 @@ To use application permission for this API, tenant administrators must create an
 Get a single transcript of an online meeting.
 
 ```http
-GET /me/onlineMeetings({meetingId})/transcripts({transcriptId})
-GET /users({userId})/onlineMeetings({meetingId})/transcripts({transcriptId})
+GET /me/onlineMeetings/{meetingId}/transcripts/{transcriptId}
+GET /users/{userId}/onlineMeetings/{meetingId}/transcripts/{transcriptId}
 ```
 
 Get the content of a single transcript of an online meeting.
 
 ```http
-GET me/onlineMeetings({meetingId})/transcripts({transcriptId})/content
-GET users({userId})/onlineMeetings({meetingId})/transcripts({transcriptId})/content
+GET me/onlineMeetings/{meetingId}/transcripts/{transcriptId}/content
+GET users/{userId}/onlineMeetings/{meetingId}/transcripts/{transcriptId}/content
 ```
 
 ## Request headers
@@ -68,6 +70,9 @@ If successful, this method returns a `200 OK` response code and a [callTranscrip
 
 ## Examples
 
+> [!NOTE]
+> The docx format for transcripts is deprecated as of May 31, 2023.
+
 ### Example 1: Get a callTranscript
 #### Request
 
@@ -81,6 +86,15 @@ If successful, this method returns a `200 OK` response code and a [callTranscrip
 GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/onlineMeetings/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts/MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-calltranscript-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 > **Note:** The response object shown here might be shortened for readability.
@@ -115,10 +129,23 @@ Content-type: application/json
 GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/onlineMeetings/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts/MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4/content
 ```
 
+<<<<<<< HEAD
 #### Response
 
 
 Response contains bytes for the transcript in the body. `content-type` header specifies type of the transcript content.
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-calltranscript-content-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+
+Response contains bytes for the transcript in the body. `content-type` header specifies type of the transcript content. Negative offsets indicate that the transcription began while the conversation was ongoing.
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
@@ -149,6 +176,15 @@ WEBVTT
 GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/onlineMeetings/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts/MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4/content?$format=text/vtt
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-calltranscript-content-format-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 
@@ -169,20 +205,24 @@ WEBVTT
 0:0:0.0 --> 0:0:5.320
 <v User Name>This is a transcript test.</v>
 ```
-### Example 4: Get a callTranscript content specifying Accept header
-#### Request
 
+<<<<<<< HEAD
+=======
+### Example 4: Get a callTranscript metadataContent
+#### Request
+# [HTTP](#tab/http)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- {
-  "blockType": "request",
-  "name": "get_callTranscript_content_Accept",
+  "blockType": "request",
+  "name": "get_callTranscript_metadatacontent",
   "sampleKeys": ["ba321e0d-79ee-478d-8e28-85a19507f456", "MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ", "MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4"]
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/onlineMeetings/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts/MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4/content
-Accept: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/onlineMeetings/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts/MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4/metadataContent
 ```
 
+<<<<<<< HEAD
 #### Response
 
 
@@ -225,6 +265,20 @@ Response contains bytes for the transcript in the body. `Content-Type` header sp
   "blockType": "response",
   "truncated": true,
   "@odata.type": "stream"
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-calltranscript-metadatacontent-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+> **Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "stream"
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 }
 -->
 ```http
@@ -233,6 +287,6 @@ Content-type: text/vtt
 
 WEBVTT
 
-0:0:0.0 --> 0:0:5.320
-<v User Name>This is a transcript test.</v>
+00:00:16.246 --> 00:00:17.726
+{"startDateTime":"2023-03-08T08:22:30.0461639+00:00","endDateTime":"2023-03-08T08:22:31.5261639+00:00","speakerName":"User Name","spokenText":"This is a transcription test.","spokenLanguage":"en-us"}
 ```

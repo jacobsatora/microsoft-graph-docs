@@ -59,6 +59,15 @@ The following is an example of a request.
 DELETE https://graph.microsoft.com/beta/security/cases/ediscoveryCases/22aa2acd-7554-4330-9ba9-ce20014aaae4
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-ediscoverycase-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 The following is an example of the response.
 

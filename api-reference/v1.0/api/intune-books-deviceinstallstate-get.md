@@ -53,12 +53,23 @@ If successful, this method returns a `200 OK` response code and [deviceInstallSt
 
 ### Request
 Here is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- { "blockType": "request" , "name" : "intune_books_deviceinstallstate_get_get_deviceinstallstate" }-->
 ``` http
 GET https://graph.microsoft.com/v1.0/deviceAppManagement/managedEBooks/{managedEBookId}/deviceStates/{deviceInstallStateId}
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/intune-books-deviceinstallstate-get-get-deviceinstallstate-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+
+<!-- { "blockType": "response" , "@odata.type" : "microsoft.graph.deviceInstallState" }-->
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json

@@ -32,20 +32,19 @@ One of the following permissions is required to call this API. To learn more, in
 | Delegated (personal Microsoft account) | Not supported. |
 | Application                            | UserAuthenticationMethod.Read.All, UserAuthenticationMethod.ReadWrite.All |
 
-For delegated scenarios where an admin is acting on another user, the admin needs [one of the following directory roles](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles):
-* Global Reader
-* Authentication administrator
-* Privileged authentication administrator
-* Global administrator
+[!INCLUDE [rbac-authentication-methods-apis-read](../includes/rbac-for-apis/rbac-authentication-methods-apis-read.md)]
 
 ## HTTP request
 
-<!-- {
-  "blockType": "ignored"
-}
--->
+Retrieve details of your own software OATH token authentication method.
+<!-- { "blockType": "ignored" } -->
 ``` http
 GET /me/authentication/softwareOathMethods/{id}
+```
+
+Retrieve details of your own or another user's software OATH token authentication method.
+<!-- { "blockType": "ignored" } -->
+``` http
 GET /users/{id | userPrincipalName}/authentication/softwareOathMethods/{id}
 ```
 
@@ -76,16 +75,23 @@ If successful, this method returns a `200 OK` response code and a [softwareOathA
 GET https://graph.microsoft.com/v1.0/me/authentication/softwareOathMethods/b172893e-893e-b172-3e89-72b13e8972b1
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-softwareoathauthenticationmethod-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
+<<<<<<< HEAD
 ---
 
 
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {

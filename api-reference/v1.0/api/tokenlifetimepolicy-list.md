@@ -30,7 +30,7 @@ One of the following permissions is required to call this API. To learn more, in
 <!-- { "blockType": "ignored" } -->
 
 ```http
-GET policies/tokenLifetimePolicies
+GET /policies/tokenLifetimePolicies
 ```
 
 ## Optional query parameters
@@ -68,7 +68,11 @@ The following is an example of the request.
 GET https://graph.microsoft.com/v1.0/policies/tokenLifetimePolicies
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-tokenlifetimepolicies-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -92,16 +96,18 @@ HTTP/1.1 200 OK
 Content-type: application/json
 
 {
-  "value": [
-    {
-      "definition": [
-        "definition-value"
-      ],
-      "displayName": "displayName-value",
-      "isOrganizationDefault": true,
-      "id": "id-value"
-    }
-  ]
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#policies/tokenLifetimePolicies",
+    "value": [
+        {
+            "id": "4d2f137b-e8a9-46da-a5c3-cc85b2b840a4",
+            "deletedDateTime": null,
+            "definition": [
+                "{\"TokenLifetimePolicy\":{\"Version\":1,\"AccessTokenLifetime\":\"8:00:00\"}}"
+            ],
+            "displayName": "Contoso token lifetime policy",
+            "isOrganizationDefault": true
+        }
+    ]
 }
 ```
 

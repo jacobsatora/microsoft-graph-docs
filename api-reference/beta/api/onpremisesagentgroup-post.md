@@ -30,7 +30,7 @@ One of the following permissions is required to call this API. To learn more, in
 <!-- { "blockType": "ignored" } -->
 
 ```http
-POST ~/onPremisesPublishingProfiles/{publishingType}/agentGroups/{id}/agents
+POST /onPremisesPublishingProfiles/{publishingType}/agentGroups/{id}/agents
 ```
 
 ## Request headers
@@ -68,6 +68,15 @@ The following is an example of the request.
 POST https://graph.microsoft.com/beta/onPremisesPublishingProfiles/provisioning/agentGroups
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-onpremisesagent-from-onpremisesagentgroup-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 In the request body, supply a JSON representation of [onPremisesAgentGroup](../resources/onpremisesagentgroup.md) object.
 
 ```json

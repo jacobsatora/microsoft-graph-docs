@@ -4,7 +4,7 @@ description: "Retrieve a list of agreement objects."
 ms.localizationpriority: medium
 doc_type: apiPageType
 ms.prod: "governance"
-author: "raprakasMSFT"
+author: "AlexFilipin"
 ---
 
 # List agreements
@@ -23,10 +23,7 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (personal Microsoft account) | Not supported. |
 |Application                            | Not supported. |
 
-When calling on behalf of a user, the user needs to belong to one of the following directory roles. To learn more about directory roles, see [Azure AD built-in roles](/azure/active-directory/roles/permissions-reference):
-+ Global Administrator
-+ Conditional Access Administrator
-+ Security Administrator
+[!INCLUDE [rbac-tou-apis](../includes/rbac-for-apis/rbac-tou-apis.md)]
 
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
@@ -59,6 +56,15 @@ If successful, this method returns a `200 OK` response code and collection of [a
 GET https://graph.microsoft.com/beta/identityGovernance/termsOfUse/agreements
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-agreements-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {

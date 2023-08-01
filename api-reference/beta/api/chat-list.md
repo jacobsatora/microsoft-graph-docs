@@ -17,6 +17,8 @@ Retrieve the list of [chats](../resources/chat.md) that the user is part of.
 
 This method supports federation. When a user ID is provided, the calling application must belong to the same tenant that the user belongs to.
 
+>**Note:** This API works differently in one or more national clouds. For details, see [Implementation differences in national clouds](/graph/teamwork-national-cloud-differences). 
+
 ## Permissions
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -63,6 +65,9 @@ This method supports the following [OData query parameters](/graph/query-paramet
 
 The other [OData query parameters](/graph/query-parameters) are not currently supported.
 
+> [!NOTE]
+> The `$top` query parameter might not return all chats within a single response object. If the result set for all chats spans multiple pages, the response object includes an **@odata.nextLink** property that contains a URL to the next page of results. If that property is present, continue making additional requests with the **@odata.nextLink** URL in each response, until all the results are returned.
+
 ## Request headers
 
 | Header       | Value |
@@ -93,6 +98,13 @@ The following is an example of a request.
 GET https://graph.microsoft.com/beta/users/8b081ef6-4792-4def-b2c9-c363a1bf41d5/chats
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-chats-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ---
 
 #### Response
@@ -167,6 +179,13 @@ The following is an example of a request.
 GET https://graph.microsoft.com/beta/users/8b081ef6-4792-4def-b2c9-c363a1bf41d5/chats?$expand=members
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-chats-expand-members-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ---
 
 #### Response
@@ -333,6 +352,15 @@ The following example shows a request to list chats along with the preview of th
 GET https://graph.microsoft.com/beta/chats?$expand=lastMessagePreview
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-chats-expand-lastmessagepreview-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -506,6 +534,13 @@ The following is an example of a request that will filter all the chats based on
 GET https://graph.microsoft.com/beta/users/8b081ef6-4792-4def-b2c9-c363a1bf41d5/chats?$expand=members&$filter=members/any(o: o/displayname eq 'Peter Parker')
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-chats-expand-members-and-filter-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ---
 
 #### Response
@@ -619,8 +654,11 @@ The following is an example of a request. **lastMessagePreview/createdDateTime**
 GET https://graph.microsoft.com/beta/chats?$orderBy=lastMessagePreview/createdDateTime desc
 ```
 
+<<<<<<< HEAD
 ---
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.

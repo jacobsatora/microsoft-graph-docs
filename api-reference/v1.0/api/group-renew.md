@@ -2,7 +2,7 @@
 title: "group: renew"
 description: "Renews a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy."
 ms.localizationpriority: medium
-author: "psaffaie"
+author: "Jordanndahl"
 ms.prod: "groups"
 doc_type: apiPageType
 ---
@@ -60,7 +60,11 @@ If successful, this method returns `204 No Content` response code. It does not r
 POST https://graph.microsoft.com/v1.0/groups/{id}/renew
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/group-renew-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

@@ -25,6 +25,12 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (personal Microsoft account) | Not supported. |
 |Application | Organization.ReadWrite.All |
 
+The calling user must also be in one of the following [Azure AD roles](/azure/active-directory/roles/permissions-reference):
+
+* Global Administrator
+* Partner Tier2 Support
+* Billing Administrator
+
 ## HTTP request
 
 <!-- { "blockType": "ignored" } -->
@@ -86,6 +92,15 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/update-organization-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response.

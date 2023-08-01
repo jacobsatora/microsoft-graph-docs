@@ -19,7 +19,7 @@ One of the following permissions is required to call this API. To learn more, in
 
 | Permission type                        | Permissions (from least to most privileged) |
 |:---------------------------------------|:--------------------------------------------|
-| Delegated (work or school account)     | User.Read, Organization.Read.All, User.ReadBasic.All, User.Read.All |
+| Delegated (work or school account)     | User.Read, Organization.Read.All, User.Read.All |
 | Delegated (personal Microsoft account) | Not supported. |
 | Application                            | Organization.Read.All |
 
@@ -63,6 +63,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/organization/84841066-274d-4ec0-a5c1-276be684bdd3/branding/localizations/
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-organizationalbrandinglocalization-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 <!-- {
   "blockType": "response",
@@ -88,6 +97,10 @@ Content-Type: application/json
                 "aadcdn.msftauthimages.net",
                 "aadcdn.msauthimages.net"
             ],
+            "contentCustomization": {
+              "attributeCollectionRelativeUrl": "dbd5a2dd-dt17xdjgu8kxc14xcav-rckknamct7yytiih-vm-ksm/logintenantbranding/1033/attributecollection?ts=638151133931615483",
+              "attributeCollection": []
+             },            
             "customAccountResetCredentialsUrl": null,
             "customCannotAccessYourAccountText": null,
             "customCannotAccessYourAccountUrl": null,
@@ -126,6 +139,10 @@ Content-Type: application/json
             "backgroundImageRelativeUrl": null,
             "bannerLogoRelativeUrl": null,
             "cdnList": [],
+            "contentCustomization": {
+              "attributeCollectionRelativeUrl": "dbd5a2dd-dt17xdjgu8kxc14xcav-rckknamct7yytiih-vm-ksm/logintenantbranding/1033/attributecollection?ts=638151133931615483",
+              "attributeCollection": []
+             },             
             "customAccountResetCredentialsUrl": null,
             "customCannotAccessYourAccountText": null,
             "customCannotAccessYourAccountUrl": null,

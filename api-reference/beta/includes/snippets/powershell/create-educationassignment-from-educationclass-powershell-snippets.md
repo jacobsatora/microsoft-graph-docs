@@ -15,7 +15,11 @@ $params = @{
 	}
 	grading = @{
 		"@odata.type" = "#microsoft.graph.educationAssignmentPointsGradeType"
+<<<<<<< HEAD
 		maxPoints = 50
+=======
+		maxPoints = 
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 	}
 	assignTo = @{
 		"@odata.type" = "#microsoft.graph.educationAssignmentClassRecipient"

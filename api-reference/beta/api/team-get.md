@@ -61,6 +61,15 @@ The following is an example of a request.
 GET https://graph.microsoft.com/beta/teams/893075dd-2487-4122-925f-022c42e20265
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-team-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 The following is an example of the response.
 
@@ -124,3 +133,7 @@ Content-type: application/json
   "suppressions": []
 }
 -->
+
+## See also
+
+[Microsoft Graph service-specific throttling limits](/graph/throttling-limits#microsoft-teams-service-limits)

@@ -52,16 +52,27 @@ If successful, this method returns a `200 OK` response code and [deviceManagemen
 
 ### Request
 Here is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- { "blockType": "request" , "name" : "intune_onboarding_devicemanagementpartner_get_get_devicemanagementpartner" }-->
 ``` http
 GET https://graph.microsoft.com/v1.0/deviceManagement/deviceManagementPartners/{deviceManagementPartnerId}
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/intune-onboarding-devicemanagementpartner-get-get-devicemanagementpartner-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+
+<!-- { "blockType": "response" , "@odata.type" : "microsoft.graph.deviceManagementPartner" }-->
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 590
+Content-Length: 909
 
 {
   "value": {
@@ -74,7 +85,16 @@ Content-Length: 590
     "displayName": "Display Name value",
     "isConfigured": true,
     "whenPartnerDevicesWillBeRemovedDateTime": "2016-12-31T23:56:38.2655023-08:00",
-    "whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime": "2016-12-31T23:58:42.2131231-08:00"
+    "whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime": "2016-12-31T23:58:42.2131231-08:00",
+    "groupsRequiringPartnerEnrollment": [
+      {
+        "@odata.type": "microsoft.graph.deviceManagementPartnerAssignment",
+        "target": {
+          "@odata.type": "microsoft.graph.configurationManagerCollectionAssignmentTarget",
+          "collectionId": "Collection Id value"
+        }
+      }
+    ]
   }
 }
 ```

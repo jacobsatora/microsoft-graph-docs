@@ -70,12 +70,21 @@ The following is an example of the request.
 
 <!-- {
   "blockType": "request",
-  "name": "get_mailfolders"
+  "name": "get_mailfolders_e1"
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/me/mailFolders
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-mailfolders-e1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response. 
@@ -201,12 +210,21 @@ The next example uses the `includeHiddenFolders` query parameter to get a list o
 
 <!-- {
   "blockType": "request",
-  "name": "get_hiddenmailfolders"
+  "name": "get_hiddenmailfolders_e2"
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/me/mailFolders/?includeHiddenFolders=true
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-hiddenmailfolders-e2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following is an example of the response.
 

@@ -21,7 +21,7 @@ This pre-hire scenario will generate a temporary password for the new employee a
 
 To complete this tutorial, you need the following resources and privileges:
 
-+ A working Azure AD tenant with an Azure AD Premium P2 or EMS E5 license enabled.
++ Using this feature requires Microsoft Entra ID Governance licenses. To find the right license for your requirements, see [Compare generally available features of Micorosft Azure AD](https://www.microsoft.com/security/business/identity-access-management/azure-ad-pricing).
 + Sign in to an API client such as [Graph Explorer](https://aka.ms/ge), Postman, or create your own client app to call Microsoft Graph. To call Microsoft Graph APIs in this tutorial, you need to use an account with the Lifecycle Administrator or Global Administrator Azure AD role.
 + Grant yourself the following *LifecycleWorkflows.ReadWrite.All* delegated permission.
 + You must have two user accounts to use for this tutorial, one for the new hire and another for their manager.
@@ -103,6 +103,15 @@ Content-type: application/json
 } 
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/beta/tutorial-lifecycle-workflows-joineronboarding-create-workflow-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 <!-- {
@@ -165,6 +174,15 @@ POST https://graph.microsoft.com/beta/identityGovernance/LifecycleWorkflows/work
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/beta/tutorial-lifecycle-workflows-joineronboarding-run-workflow-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 
@@ -192,6 +210,15 @@ The following request retrieves the summary of tasks run at the user level.
 GET https://graph.microsoft.com/beta/identityGovernance/LifecycleWorkflows/workflows/ea71190c-075a-4ae7-9bca-34abf3b7b056/userProcessingResults
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/beta/tutorial-lifecycle-workflows-joineronboarding-list-userprocessingresults-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 <!-- {
@@ -238,6 +265,15 @@ You can request the aggregate high-level summary of the user-level results for a
 GET https://graph.microsoft.com/beta/identityGovernance/LifecycleWorkflows/workflows/ea71190c-075a-4ae7-9bca-34abf3b7b056/userProcessingResults/summary(startDateTime=2022-10-01T00:00:00Z,endDateTime=2022-10-30T00:00:00Z)
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/beta/tutorial-lifecycle-workflows-joineronboarding-list-userprocessingresultssummary-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 <!-- {
@@ -273,6 +309,15 @@ You can also retrieve the detailed log of all tasks that were executed for a spe
 GET https://graph.microsoft.com/beta/identityGovernance/LifecycleWorkflows/workflows/ea71190c-075a-4ae7-9bca-34abf3b7b056/userProcessingResults/5772d894-3bcf-4d1c-9cfc-8c182331215b/taskProcessingResults
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/beta/tutorial-lifecycle-workflows-joineronboarding-list-taskprocessingresults-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 <!-- {
@@ -341,6 +386,15 @@ Content-type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/beta/tutorial-lifecycle-workflows-joineronboarding-update-workflow-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 When a workflow is scheduled, Lifecycle Workflows will check every three hours for users in the associated execution condition and execute the configured tasks for those users. You can customize this recurrence from between one hour to 24 hours.
 
 ### Response
@@ -355,6 +409,6 @@ HTTP/1.1 204 No Content
 
 ## See also
 
-- [Automate employee onboarding tasks before their first day of work with Azure portal (preview)](/azure/active-directory/governance/tutorial-onboard-custom-workflow-portal)
+- [Automate employee onboarding tasks before their first day of work with Azure portal](/azure/active-directory/governance/tutorial-onboard-custom-workflow-portal)
 - [Overview of Azure AD Lifecycle Workflows](/graph/api/resources/identitygovernance-lifecycleworkflows-overview)
 - [Overview of reporting in Azure AD Lifecycle Workflows](/graph/api/resources/identitygovernance-lifecycleworkflows-reporting-overview)

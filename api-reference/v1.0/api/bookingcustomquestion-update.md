@@ -59,8 +59,10 @@ If successful, this method returns a `200 OK` response code and an updated [book
 
 ### Request
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
+  "name" : "bookingcustomquestionupdate",
   "sampleKeys": ["Contosolunchdelivery@contoso.onmicrosoft.com", "91f1ef26-ca00-451c-1c64-8f3560c80d3d"]
 }-->
 ```http
@@ -74,6 +76,12 @@ Content-Type: application/json
   "answerOptions": []
 }
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/bookingcustomquestionupdate-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 

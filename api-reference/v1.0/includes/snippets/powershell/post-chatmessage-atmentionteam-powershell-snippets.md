@@ -25,6 +25,11 @@ $params = @{
 		}
 	)
 	reactions = @(
+<<<<<<< HEAD
+=======
+	)
+	messageHistory = @(
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 	)
 }
 

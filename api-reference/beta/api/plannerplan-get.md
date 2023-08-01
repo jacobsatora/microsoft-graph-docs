@@ -54,6 +54,15 @@ Here is an example of the request.
 GET https://graph.microsoft.com/beta/planner/plans/{id}
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-plannerplan-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. 
@@ -84,6 +93,11 @@ Content-type: application/json
     "containerId": "ebf3b108-5234-4e22-b93d-656d7dae5874",
     "type": "group"
   },
+  "sharedWithContainers": [
+    {
+      "@odata.type": "microsoft.graph.plannerSharedWithContainer"
+    }
+  ],
   "title": "title-value",
   "id": "xqQg5FS2LkCp935s-FIFm2QAFkHM"
 }

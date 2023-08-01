@@ -2,7 +2,7 @@
 title: "Delete subscription"
 description: "Delete a subscription."
 ms.localizationpriority: medium
-author: "jumasure"
+author: "keylimesoda"
 doc_type: apiPageType
 ms.prod: "change-notifications"
 ---
@@ -128,6 +128,15 @@ The following is an example of a request.
 DELETE https://graph.microsoft.com/beta/subscriptions/7f105c7d-2dc5-4530-97cd-4e7ae6534c07
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-subscription-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.

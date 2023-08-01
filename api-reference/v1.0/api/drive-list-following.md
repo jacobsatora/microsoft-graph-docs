@@ -25,6 +25,21 @@ One of the following permissions is required to call this API. To learn more, in
 
 ## HTTP request
 
+<!-- { "blockType": "ignored" } -->
+
+```http
+GET /me/drive/following
+```
+
+## Response
+
+This method returns a collection of [driveItem](../resources/driveitem.md) resources for items which the owner of the drive is following.
+If no items were found, an empty collection is returned.
+
+## Examples
+
+### Request
+
 
 # [HTTP](#tab/http)
 <!-- { "blockType": "request", "name": "get-followed-items", "scopes": "files.read" } -->
@@ -33,17 +48,25 @@ One of the following permissions is required to call this API. To learn more, in
 GET /me/drive/following
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-followed-items-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
+<<<<<<< HEAD
 ## Response
 
 This method returns a collection of [driveItem](../resources/driveitem.md) resources for items which the owner of the drive is following.
 If no items were found, an empty collection is returned.
 
+=======
+### Response
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- { "blockType": "response", "@odata.type": "Collection(microsoft.graph.driveItem)", "truncated": true } -->
 
 ```http
@@ -79,4 +102,3 @@ Content-type: application/json
   ]
 }
 -->
-

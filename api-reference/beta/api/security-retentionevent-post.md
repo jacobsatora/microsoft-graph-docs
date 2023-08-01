@@ -48,7 +48,7 @@ Specify the following properties when creating a **retentionEvent**.
 |:---|:---|:---|
 |description|String|Optional information about the event.|
 |displayName|String|Name of the event.|
-|eventQueries|[microsoft.graph.security.eventQueries](../resources/security-eventqueries.md) collection| Represents the workload (SharePoint Online, OneDrive for Business, Exchange Online) and identification information associated with a retention event.|
+|eventQuery|[microsoft.graph.security.eventQueries](../resources/security-eventqueries.md) collection| Represents the workload (SharePoint Online, OneDrive for Business, Exchange Online) and identification information associated with a retention event.|
 |eventTriggerDateTime|DateTimeOffset|Optional time when the event should be triggered.|
 |retentionEventType|String|Name of the event type associated with the event.|
 
@@ -95,6 +95,15 @@ Content-length: 616
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-retentionevent-from--cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 The following is an example of the response
 >**Note:** The response object shown here might be shortened for readability.

@@ -1,5 +1,5 @@
 ---
-title: "Update task (within a workflow)"
+title: "Update task"
 description: "Update the properties of a task object within a workflow object."
 author: "AlexFilipin"
 ms.localizationpriority: medium
@@ -7,7 +7,7 @@ ms.prod: "governance"
 doc_type: apiPageType
 ---
 
-# Update task (within a workflow)
+# Update task
 
 Namespace: microsoft.graph.identityGovernance
 
@@ -25,10 +25,7 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (personal Microsoft account)|Not supported.|
 |Application|LifecycleWorkflows.ReadWrite.All|
 
-For delegated scenarios, the admin needs one of the following [Azure AD roles](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles):
-
-- Global administrator
-- Lifecycle workflows administrator
+[!INCLUDE [rbac-lifecycle-workflows-apis-write](../includes/rbac-for-apis/rbac-lifecycle-workflows-apis-write.md)]
 
 ## HTTP request
 
@@ -56,6 +53,9 @@ PATCH /identityGovernance/lifecycleWorkflows/workflows/{workflowId}/tasks/{taskI
 |description|String|Describes the purpose of the task for administrative use.|
 |displayName|String|A unique string that identifies the task within the workflow.|
 
+> [!NOTE]
+> All other properties can be updated by creating a new workflow version. For details, see [workflow: createNewVersion](identitygovernance-workflow-createnewversion.md).
+
 ## Response
 
 If successful, this action returns a `204 No Content` response code.
@@ -66,6 +66,7 @@ If successful, this action returns a `204 No Content` response code.
 
 The following is an example of a request.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "lifecycleworkflows_update_task"
@@ -82,6 +83,11 @@ Content-length: 454
 }
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/lifecycleworkflows-update-task-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 

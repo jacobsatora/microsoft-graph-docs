@@ -1,5 +1,5 @@
 ---
-title: "Get user"
+title: "Get a user"
 description: "Retrieve the properties and relationships of user object."
 author: "yyuank"
 ms.localizationpriority: high
@@ -7,7 +7,7 @@ ms.prod: "users"
 doc_type: apiPageType
 ---
 
-# Get user
+# Get a user
 
 Namespace: microsoft.graph
 
@@ -98,7 +98,11 @@ By default, only a limited set of properties are returned ( _businessPhones, dis
 GET https://graph.microsoft.com/v1.0/users/87d349ed-44d7-43e1-9a83-5f2406dee5bd
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-user-1-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -149,7 +153,11 @@ You can get the user information for the signed-in user by replacing `/users/{id
 GET https://graph.microsoft.com/v1.0/me
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-user-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -192,14 +200,19 @@ To retrieve specific properties, use the OData `$select` query parameter. For ex
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "get_user_select"
+  "name": "get_user_select_e3"
 } -->
 ```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/users/87d349ed-44d7-43e1-9a83-5f2406dee5bd?$select=displayName,givenName,postalCode,identities
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/get-user-select-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-user-select-e3-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -245,7 +258,11 @@ In this example, the ID of the schema extension is `ext55gb1l09_msLearnCourses`.
 GET https://graph.microsoft.com/v1.0/users/4562bcc8-c436-4f95-b7c0-4f8ce89dca5e?$select=ext55gb1l09_msLearnCourses
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-schemaextension-selectcourse-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -284,6 +301,7 @@ Content-type: application/json
   "suppressions": [
   ]
 }-->
+<<<<<<< HEAD
 
 ### Example 5: Use `$filter` to retrieve specific users based on a property value
 
@@ -340,3 +358,5 @@ Content-type: application/json
     ]
 }
 ```
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b

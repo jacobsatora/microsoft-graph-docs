@@ -7,10 +7,13 @@ ms.prod: "cloud-communications"
 doc_type: apiPageType
 ---
 
-# Create virtualAppointment
+# Create virtualAppointment (deprecated)
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+> [!CAUTION]
+> The **virtualAppointment** resource and supporting methods are deprecated and will stop returning data on June 30, 2023. We recommend that you update existing apps that use this API to use the new [Get join link](../api/virtualappointment-getvirtualappointmentjoinweburl.md) function.
 
 Create a new [virtualAppointment](../resources/virtualappointment.md) object.
 
@@ -75,7 +78,7 @@ The following is an example of a request.
 }
 -->
 ``` http
-PUT https://graph.microsoft.com/beta/me/onlineMeeting/MSpkYzE3Njc0Yy04MWQ5LTRhZGItYmZi/virtualAppointment
+PUT https://graph.microsoft.com/beta/me/onlineMeetings/MSpkYzE3Njc0Yy04MWQ5LTRhZGItYmZi/virtualAppointment
 Content-Type: application/json
 ETag: W/"ZfYdV7Meckeip07P//nwjAAADyI7NQ=="
 Content-length: 379
@@ -99,8 +102,11 @@ Content-length: 379
 }
 ```
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 The following is an example of the response.
 >**Note:** The response object shown here might be shortened for readability.

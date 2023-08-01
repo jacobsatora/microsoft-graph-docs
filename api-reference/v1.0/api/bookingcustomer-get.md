@@ -28,6 +28,7 @@ One of the following permissions is required to call this API. To learn more, in
 ```http
 GET /solutions/bookingBusinesses/{id}/customers/{id}
 ```
+> **Note:** This method currently requires the ID to be Base64 encoded. GUID IDs do not work.
 
 ## Optional query parameters
 
@@ -53,13 +54,21 @@ If successful, this method returns a `200 OK` response code and a [bookingCustom
 
 The following is an example of the request.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
+  "name" : "bookingcustomerget",
   "sampleKeys": ["Contosolunchdelivery@contoso.onmicrosoft.com", "8bb19078-0f45-4efb-b2c5-da78b860f73a"]
 }-->
-```http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/solutions/bookingBusinesses/Contosolunchdelivery@contoso.onmicrosoft.com/customers/8bb19078-0f45-4efb-b2c5-da78b860f73a
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/bookingcustomerget-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 

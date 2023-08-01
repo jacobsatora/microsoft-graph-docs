@@ -39,7 +39,7 @@ POST /solutions/bookingBusinesses/{id}/getStaffAvailability
 
 ## Request body
 
-In the request body, pass the list of staff IDs along with two other parameters of [dateTimeTimeZone resource type](/graph/resources/datetimetimezone) called **startDateTime** and **endDateTime**. These correspond to the two timestamps between which the staff availability will be returned.
+In the request body, pass the list of staff IDs along with two other parameters of [dateTimeTimeZone resource type](/graph/api/resources/datetimetimezone) called **startDateTime** and **endDateTime**. These correspond to the two timestamps between which the staff availability will be returned.
 
 ## Response
 
@@ -78,7 +78,11 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/bookingbusiness-getstaffavailability-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

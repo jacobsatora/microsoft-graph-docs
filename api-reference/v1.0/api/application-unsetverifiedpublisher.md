@@ -23,10 +23,12 @@ Unset the [verifiedPublisher](../resources/verifiedPublisher.md) previously set 
 
 ## HTTP request
 
+You can address the application using either its **id** or **appId**. **id** and **appId** are referred to as the **Object ID** and **Application (Client) ID**, respectively, in the Azure portal.
 <!-- { "blockType": "ignored" } -->
 
 ```http
 POST /applications/{id}/unsetVerifiedPublisher
+POST /applications(appId='{appId}')/unsetVerifiedPublisher
 ```
 
 ## Request headers
@@ -60,7 +62,11 @@ The following is an example of the request.
 POST https://graph.microsoft.com/v1.0/applications/{id}/unsetVerifiedPublisher
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/application-unsetverifiedpublisher-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

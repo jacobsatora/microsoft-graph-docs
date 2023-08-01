@@ -2,8 +2,14 @@
 description: "Automatically generated file. DO NOT MODIFY"
 ---
 
+<<<<<<< HEAD
 ```cli
 
+=======
+```bash
+
+// THE CLI IS IN PREVIEW. NON-PRODUCTION USE ONLY
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 mgc users onenote notebooks copy-notebook post --user-id {user-id} --notebook-id {notebook-id} --body '{\
   "groupId": "groupId-value",\
   "renameAs": "renameAs-value"\

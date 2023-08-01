@@ -56,7 +56,7 @@ Do not supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a JSON representation of the [b2cIdentityUserFlow](../resources/b2cidentityuserflow.md) in the response body.
+If successful, this method returns a `200 OK` response code and a [b2cIdentityUserFlow](../resources/b2cidentityuserflow.md) object in the response body.
 
 ## Example
 
@@ -75,6 +75,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/identity/b2cUserFlows/{id}
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-b2cuserflows-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response.

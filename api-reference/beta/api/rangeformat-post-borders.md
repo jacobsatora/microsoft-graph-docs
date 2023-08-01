@@ -67,6 +67,10 @@ Content-type: application/json
   "weight": "weight-value"
 }
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 In the request body, supply a JSON representation of [workbookRangeBorder](../resources/workbookrangeborder.md) object.
 
 ##### Response

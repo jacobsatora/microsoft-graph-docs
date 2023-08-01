@@ -62,6 +62,9 @@ If successful, this method returns a `200 OK` response code and an updated [tele
 
 ### Request
 Here is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- { "blockType": "request" , "name" : "intune_tem_telecomexpensemanagementpartner_update_update_telecomexpensemanagementpartner" }-->
 ``` http
 PATCH https://graph.microsoft.com/v1.0/deviceManagement/telecomExpenseManagementPartners/{telecomExpenseManagementPartnerId}
 Content-type: application/json
@@ -77,8 +80,16 @@ Content-length: 248
 }
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/intune-tem-telecomexpensemanagementpartner-update-update-telecomexpensemanagementpartner-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+
+<!-- { "blockType": "response" , "@odata.type" : "microsoft.graph." }-->
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json

@@ -60,6 +60,9 @@ If successful, this method returns a `201 Created` response code and a [mobileAp
 
 ### Request
 Here is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- { "blockType": "request" , "name" : "intune_apps_mobileappcategory_create_create_mobileappcategory" }-->
 ``` http
 POST https://graph.microsoft.com/v1.0/deviceAppManagement/mobileAppCategories
 Content-type: application/json
@@ -71,8 +74,16 @@ Content-length: 99
 }
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/intune-apps-mobileappcategory-create-create-mobileappcategory-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+
+<!-- { "blockType": "response" , "@odata.type" : "microsoft.graph.mobileAppCategory" }-->
 ``` http
 HTTP/1.1 201 Created
 Content-Type: application/json

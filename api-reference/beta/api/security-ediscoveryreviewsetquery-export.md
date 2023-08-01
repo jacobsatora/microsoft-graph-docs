@@ -12,7 +12,7 @@ Namespace: microsoft.graph.security
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Initiate an export from a **reviewSet** query.  For details, see [Export documents from a review set in eDiscovery (Premium)](/microsoft-365/compliance/export-documents-from-review-set).
+Initiate an export from a [ediscoveryReviewSetQuery](../resources/security-ediscoveryreviewsetquery.md).  For details, see [Export documents from a review set in eDiscovery (Premium)](/microsoft-365/compliance/export-documents-from-review-set).
 
 
 ## Permissions
@@ -48,13 +48,12 @@ The following table shows the parameters that can be used with this action.
 
 |Parameter|Type|Description|
 |:---|:---|:---|
-|outputName|String| Name of the export. Required. |
-|description|String| Description of the export |
-|azureBlobContainer|String| when you export to your own Azure storage account, this is the container URL. |
-|azureBlobToken|String| when you export to your own Azure storage account, SAS token for the container URL. |
-|exportOptions|String|Specifies options that control the format of the export. Possible values are: `originalFiles`, `text`, `pdfReplacement`, `fileInfo`, `tags`.|
+|description|String| Description of the export. |
+|exportOptions|String|Specifies options that control the format of the export. Possible values are: `originalFiles`, `text`, `pdfReplacement`, `fileInfo` (deprecated), `tags`. The `fileInfo` member is deprecated and will stop returning data on April 30th, 2023. Going forward, the summary and load file are always included.|
 |exportStructure|String| Options that control file structure and packaging of the export. Possible values are: `none`, `directory`, `pst`.|
-
+|outputName|String| Name of the export. Required. |
+|azureBlobContainer (deprecated) |String| When you export to your own Azure storage account, this is the container URL. The **azureBlobContainer** property is deprecated and will stop returning data on April 30th, 2023. |
+|azureBlobToken (deprecated) |String| When you export to your own Azure storage account, SAS token for the container URL. The **azureBlobToken** property is deprecated and will stop returning data on April 30th, 2023. |
 
 ## Response
 
@@ -82,6 +81,15 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/ediscoveryreviewsetquerythisexport-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 The following is an example of the response.
 

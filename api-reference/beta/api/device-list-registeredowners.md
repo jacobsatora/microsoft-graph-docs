@@ -2,7 +2,7 @@
 title: "List registeredOwners"
 description: "Retrieve a list of users that are registered owners of the device."
 ms.localizationpriority: medium
-author: "spunukol"
+author: "myra-ramdenbourg"
 ms.prod: "directory-management"
 doc_type: apiPageType
 ---
@@ -69,6 +69,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/devices/{id}/registeredOwners
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-registeredowners-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 The following is an example of the response. 

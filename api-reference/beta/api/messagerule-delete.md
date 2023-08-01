@@ -27,8 +27,8 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-DELETE /me/mailFolders/inbox/messagerules/{id}
-DELETE /users/{id | userPrincipalName}/mailFolders/inbox/messagerules/{id}
+DELETE /me/mailFolders/inbox/messageRules/{id}
+DELETE /users/{id | userPrincipalName}/mailFolders/inbox/messageRules/{id}
 ```
 ## Request headers
 | Name       | Description|
@@ -53,10 +53,19 @@ Here is an example of the request.
   "sampleKeys": ["AQAAAJ5dZp8="]
 }-->
 ```http
-DELETE https://graph.microsoft.com/beta/me/mailfolders/inbox/messagerules('AQAAAJ5dZp8=')
+DELETE https://graph.microsoft.com/beta/me/mailFolders/inbox/messageRules/AQAAAJ5dZp8=
 
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-messagerule-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. 

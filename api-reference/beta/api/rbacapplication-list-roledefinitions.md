@@ -20,6 +20,7 @@ The following RBAC providers are currently supported:
 - device management (Intune)
 - directory (Azure AD) 
 - entitlement management (Azure AD)
+- Exchange Online
 
 ## Permissions
 
@@ -57,6 +58,14 @@ Depending on the RBAC provider and the permission type (delegated or application
 |Delegated (personal Microsoft account) | Not supported.    |
 |Application | Not supported. |
 
+### For an Exchange Online provider
+
+|Permission type      | Permissions (from least to most privileged)              |
+|:--------------------|:---------------------------------------------------------|
+|Delegated (work or school account) |  RoleManagement.Read.Exchange, RoleManagement.Read.All, RoleManagement.ReadWrite.Exchange   |
+|Delegated (personal Microsoft account) | Not supported.    |
+|Application | Not supported. |
+
 ## HTTP request
 
 To list role definitions for a Cloud PC provider:
@@ -83,8 +92,14 @@ To list role definitions for the entitlement management provider:
 GET /roleManagement/entitlementManagement/roleDefinitions
 ```
 
+To list role definitions for the Exchange Online provider:
+<!-- { "blockType": "ignored" } -->
+```http
+GET /roleManagement/exchange/roleDefinitions
+```
+
 ## Optional query parameters
-This method supports `$filter` query parameter on `id`, `displayName`, and `isBuiltIn` properties. For general information, see [OData query parameters](/graph/query-parameters).
+This method supports the `$filter` query parameter to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
 
 ## Request headers
 
@@ -118,6 +133,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/roleManagement/directory/roleDefinitions
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-roledefinitions-directory-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -242,6 +266,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/roleManagement/cloudPC/roleDefinitions
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-roledefinitions-cloudpc-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -346,6 +379,15 @@ The following is an example of the request.
 GET https://graph.microsoft.com/beta/roleManagement/entitlementManagement/roleDefinitions
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-roledefinitions-entitlementmanagement-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -403,6 +445,90 @@ Content-type: application/json
 }
 ```
 
+### Example 4: List role definitions for the Exchange Online provider
+
+#### Request
+
+The following is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "get_roledefinitions_exchange"
+}-->
+
+```msgraph-interactive
+GET https://graph.microsoft.com/beta/roleManagement/exchange/roleDefinitions
+```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-roledefinitions-exchange-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+
+The following is an example of the response.
+
+> **Note:** The response object shown here might be shortened for readability.
+
+<!-- {
+  "blockType": "response",
+  "name": "get_roledefinitions_exchange",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.unifiedRoleDefinition",
+  "isCollection": true
+} -->
+
+```http
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#roleManagement/exchange/roleDefinitions",
+    "value": [
+        {
+            "id": "7224da60-d8e2-4f45-9380-8e4fda64e133",
+            "description": "This role enables administrators to manage address lists, global address lists, and offline address lists in an organization.",
+            "displayName": "Address Lists",
+            "isEnabled": true,
+            "version": "0.12 (14.0.451.0)",
+            "isBuiltIn": true,
+            "templateId": null,
+            "allowedPrincipalTypes": "user,group",
+            "rolePermissions": [
+                {
+                    "allowedResourceActions": [
+                        "(Microsoft.Exchange.Management.PowerShell.E2010) Get-AddressBookPolicy -ErrorAction -ErrorVariable -Identity -OutBuffer -OutVariable -WarningAction -WarningVariable"
+                    ],
+                    "excludedResourceActions": [],
+                    "condition": null
+                }
+            ]
+        },
+        {
+            "id": "435bdc29-5ab0-454e-906e-afb7d563bd98",
+            "description": "This role enables applications to impersonate users in an organization in order to perform tasks on behalf of the user.",
+            "displayName": "ApplicationImpersonation",
+            "isEnabled": true,
+            "version": "0.12 (14.0.451.0)",
+            "isBuiltIn": true,
+            "templateId": null,
+            "allowedPrincipalTypes": "user,group",
+            "rolePermissions": [
+                {
+                    "allowedResourceActions": [
+                        "Impersonate-ExchangeUser"
+                    ],
+                    "excludedResourceActions": [],
+                    "condition": null
+                }
+            ]
+        }
+    ]
+}
+```
 
 <!-- uuid: 16cd6b66-4b1a-43a1-adaf-3a886856ed98
 2019-02-04 14:57:30 UTC -->

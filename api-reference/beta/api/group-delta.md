@@ -2,7 +2,7 @@
 title: "group: delta"
 description: "Get newly created, updated, or deleted groups, including group membership changes, without having to perform a full read of the entire group collection. See Using Delta Query for details."
 ms.localizationpriority: medium
-author: "psaffaie"
+author: "Jordanndahl"
 ms.prod: "groups"
 doc_type: apiPageType
 ---
@@ -108,16 +108,23 @@ Adding an optional request header - `prefer:return=minimal` - results in the fol
 The following is an example of the request. There is no `$select` parameter, so a default set of properties is tracked and returned.
 
 # [HTTP](#tab/http)
-
 <!-- {
   "blockType": "request",
-  "name": "group_delta"
+  "name": "group_delta_e1"
 }-->
 
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/groups/delta
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/group-delta-e1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 #### Response 1
 
@@ -173,13 +180,22 @@ The next example shows the initial request selecting 3 properties for change tra
 
 <!-- {
   "blockType": "request",
-  "name": "group_delta_with_selelct"
+  "name": "group_delta_with_selelct_e2"
 }-->
 
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/groups/delta?$select=displayName,description,mailNickname
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/group-delta-with-selelct-e2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response 2
 
 The following is an example of the response when using `@odata.deltaLink` obtained from the query initialization. Note that all 3 properties are included in the response and it is not known which ones have changed since the `@odata.deltaLink` was obtained.
@@ -216,7 +232,7 @@ The next example shows the initial request selecting 3 properties for change tra
 
 <!-- {
   "blockType": "request",
-  "name": "group_delta_minimal"
+  "name": "group_delta_minimal_e3"
 }-->
 
 ```msgraph-interactive
@@ -224,6 +240,15 @@ GET https://graph.microsoft.com/beta/groups/delta?$select=displayName,descriptio
 Prefer: return=minimal
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/group-delta-minimal-e3-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response 3
 
 The following is an example of the response when using `@odata.deltaLink` obtained from the query initialization. Note that the `mailNickname` property is not included, which means it has not changed since the last delta query; `displayName` and `description` are included which means their values have changed.

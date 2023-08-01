@@ -53,13 +53,21 @@ If successful, this method returns a `200 OK` response code and a [bookingAppoin
 
 The following is an example of the request.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
+  "name": "bookingappointment_get",
   "sampleKeys": ["AAMkADKnAAA=", "Contosolunchdelivery@contoso.onmicrosoft.com"]
 }-->
-```http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/solutions/bookingBusinesses/Contosolunchdelivery@contoso.onmicrosoft.com/appointments/AAMkADKnAAA=
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/bookingappointment-get-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 

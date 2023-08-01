@@ -68,40 +68,64 @@ If successful, this method returns a `204 No Content` response code.
 
 ### Request
 
-<!-- { "blockType": "ignored" } -->
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "update_teamsapp_beta_e1"
+}-->
 
 ```http
 POST https://graph.microsoft.com/beta/appCatalogs/teamsApps/06805b9e-77e3-4b93-ac81-525eb87513b8/appDefinitions
 Content-type: application/zip
 
-[Zip file containing a Teams app package]
+app.zip
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/update-teamsapp-beta-e1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 For details about the Teams application zip file, see [Create app package](/microsoftteams/platform/concepts/apps/apps-package).
-<!-- markdownlint-disable MD024 -->
 
 ### Response
 
 If successful, this method returns a `204 No Content` response code.
 
+<!-- {
+  "blockType": "response"
+}-->
+```http
+HTTP/1.1 204 No Content
+```
+
 ### Example 2: Update a new version of an existing app for admin review prior to publication in the current tenant catalog
 
 ### Request
 
-<!-- markdownlint-disable MD034 -->
 
 <!-- {
   "blockType": "request",
-  "name": "update_teamsapp"
+  "name": "update_teamsapp_beta_e2"
 }-->
 
 ```http
 POST https://graph.microsoft.com/beta/appCatalogs/teamsApps/e3e29acb-8c79-412b-b746-e6c39ff4cd22/appDefinitions?requiresReview=true
 Content-type: application/zip
 
-[Zip file containing a Teams app package]
+app.zip
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/update-teamsapp-beta-e2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 If successful, this method returns a `201 Created` response code and the key/value pair `publishingState`: `submitted` in the response body. *See* [teamsappdefinition](../resources/teamsappdefinition.md).
@@ -132,6 +156,10 @@ Content-Type: application/json
          "Member.Read.Group"
     ],
     "publishingState": "submitted",
-    "lastModifiedDateTime": "2020-02-10 22:48:33.841",
+    "lastModifiedDateTime": "2020-02-10 22:48:33.841"
 }
 ```
+
+## See also
+
+[Microsoft Graph service-specific throttling limits](/graph/throttling-limits#microsoft-teams-service-limits)

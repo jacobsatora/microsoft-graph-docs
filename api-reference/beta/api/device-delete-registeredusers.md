@@ -27,6 +27,8 @@ One of the following permissions is required to call this API. To learn more, in
 
 [!INCLUDE [limited-info](../../includes/limited-info.md)]
 
+The calling user must also be in one of the following [Azure AD roles](/azure/active-directory/roles/permissions-reference): *Global Administrator*, *Intune Administrator*, or *Windows 365 Administrator*.
+
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -59,6 +61,13 @@ Here is an example of the request.
 DELETE https://graph.microsoft.com/beta/devices/{id}/registeredUsers/{id}/$ref
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-registeredusers-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ---
 
 ##### Response

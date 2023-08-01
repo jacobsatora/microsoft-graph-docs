@@ -1,7 +1,7 @@
 ---
 title: "List groupLifecyclePolicies"
 description: "Retrieves a list of groupLifecyclePolicy objects to which a group belongs."
-author: "psaffaie"
+author: "Jordanndahl"
 ms.localizationpriority: medium
 ms.prod: "groups"
 doc_type: apiPageType
@@ -64,7 +64,11 @@ If successful, this method returns a `200 OK` response code and collection of [g
 GET https://graph.microsoft.com/v1.0/groups/{id}/groupLifecyclePolicies
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-grouplifecyclepolicies-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

@@ -33,18 +33,19 @@ One of the following permissions is required to call this API. To learn more, in
 | Delegated (personal Microsoft account) | Not supported. |
 | Application                            | UserAuthenticationMethod.Read.All, UserAuthenticationMethod.ReadWrite.All |
 
-For delegated scenarios where an admin is acting on another user, the admin needs one of the following [Azure AD roles](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles):
-* Global Administrator
-* Global Reader
-* Privileged Authentication Administrator
-* Authentication Administrator
+[!INCLUDE [rbac-authentication-methods-apis-read](../includes/rbac-for-apis/rbac-authentication-methods-apis-read.md)]
 
 ## HTTP request
 
+Get details of your own password authentication method.
 <!-- { "blockType": "ignored" } -->
-
 ```http
 GET /me/authentication/passwordMethods
+```
+
+Get details of your own or another user's password authentication method.
+<!-- { "blockType": "ignored" } -->
+``` http
 GET /users/{id | userPrincipalName}/authentication/passwordMethods
 ```
 
@@ -84,7 +85,11 @@ The following is an example of the request.
 GET https://graph.microsoft.com/v1.0/me/authentication/passwordMethods
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-passwordmethods-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

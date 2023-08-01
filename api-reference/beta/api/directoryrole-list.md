@@ -28,13 +28,15 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (personal Microsoft account) | Not supported.    |
 |Application | RoleManagement.Read.Directory, Directory.Read.All, RoleManagement.ReadWrite.Directory, Directory.ReadWrite.All |
 
+[!INCLUDE [rbac-directory-role-apis-read](../includes/rbac-for-apis/rbac-directory-role-apis-read.md)]
+
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /directoryRoles
 ```
 ## Optional query parameters
-This method supports the `$count`, `$select`, `$search`, `$filter` (`eq`), and `$expand` [OData query parameters](/graph/query-parameters) to help customize the response.
+This method supports the `$select`, `$filter` (`eq` only), and `$expand` [OData query parameters](/graph/query-parameters) to help customize the response.
 
 ## Request headers
 | Name       | Description|
@@ -59,6 +61,15 @@ Here is an example of the request.
 GET https://graph.microsoft.com/beta/directoryRoles
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-directoryroles-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.

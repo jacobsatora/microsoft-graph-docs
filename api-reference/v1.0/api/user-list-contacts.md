@@ -72,10 +72,10 @@ Do not supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and collection of [Contact](../resources/contact.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a collection of [contact](../resources/contact.md) objects in the response body.
 ## Example
-##### Request
-Here is an example of the request.
+### Request
+The following is an example of the request.
 
 # [HTTP](#tab/http)
 <!-- {
@@ -86,14 +86,24 @@ Here is an example of the request.
 GET https://graph.microsoft.com/v1.0/me/contacts
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/user-get-contacts-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
+<<<<<<< HEAD
 ##### Response
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
+=======
+### Response
+The following is an example of the response. 
+>**Note:** The response object shown here might be shortened for readability.
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- {
   "blockType": "response",
   "truncated": true,

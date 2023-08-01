@@ -1,5 +1,5 @@
 ---
-title: "Delete Outlook category"
+title: "Delete outlookCategory"
 description: "Delete the specified outlookCategory object."
 author: "abheek-das"
 ms.localizationpriority: medium
@@ -7,10 +7,9 @@ ms.prod: "outlook"
 doc_type: apiPageType
 ---
 
-# Delete Outlook category
+# Delete outlookCategory
 
 Namespace: microsoft.graph
-
 
 Delete the specified [outlookCategory](../resources/outlookcategory.md) object.
 
@@ -40,11 +39,11 @@ Do not supply a request body for this method.
 
 ## Response
 
-If successful, this method returns `204 No Content` response code. It does not return anything in the response body.
+If successful, this method returns a `204 No Content` response code. It does not return anything in the response body.
 
 ## Example
-##### Request
-Here is an example of the request.
+### Request
+The following is an example of the request.
 
 # [HTTP](#tab/http)
 <!-- {
@@ -56,14 +55,18 @@ Here is an example of the request.
 DELETE https://graph.microsoft.com/v1.0/me/outlook/masterCategories/4b1c2495-54c9-4a5e-90a2-0ab0b31987d8
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/delete-outlookcategory-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
-##### Response
-Here is an example of the response.
+### Response
+The following is an example of the response.
 <!-- {
   "blockType": "response",
   "name": "delete_outlookcategory",
@@ -84,4 +87,3 @@ HTTP/1.1 204 No Content
   "suppressions": [
   ]
 }-->
-

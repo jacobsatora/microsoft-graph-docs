@@ -56,6 +56,7 @@ If successful, this method returns `200 OK` response code and [workbookRange](..
 Here is an example of how to call this API.
 ##### Request
 Here is an example of the request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "worksheet_cell"
@@ -63,6 +64,12 @@ Here is an example of the request.
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/me/drive/items/{id}/workbook/worksheets/{id|name}/Cell(row=<row>,column=<column>)
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/worksheet-cell-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ##### Response
 Here is an example of the response. Note: The response object shown here might be shortened for readability.

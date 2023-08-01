@@ -78,6 +78,11 @@ If successful, this action returns a `202 Accepted` response code.
 The following example shows how to send an activity feed notification to multiple users in bulk. This example notifies multiple stakeholders about pending finance approval requests.
 
 #### Request
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "teamworksendactivitynotificationtorecipients_v1_e1"
+}-->
 
 ``` http
 POST https://graph.microsoft.com/v1.0/teamwork/sendActivityNotificationToRecipients
@@ -115,6 +120,12 @@ Content-Type: application/json
 }
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/teamworksendactivitynotificationtorecipients-v1-e1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ---
 
 
@@ -135,6 +146,12 @@ HTTP/1.1 202 Accepted
 If you want to link an aspect that is not represented by Microsoft Graph, or you want to customize the name, you can set the source of the `topic` to `text` and pass in a custom value for it. **webUrl** is required when using `topic` source as `text`.
 
 #### Request
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "teamworksendactivitynotificationtorecipients_notifymultipleusers_v1_e2"
+}-->
 
 ``` http
 POST https://graph.microsoft.com/v1.0/teamwork/sendActivityNotificationToRecipients
@@ -172,6 +189,12 @@ Content-Type: application/json
     ]
 }
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/teamworksendactivitynotificationtorecipients-notifymultipleusers-v1-e2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ---
 

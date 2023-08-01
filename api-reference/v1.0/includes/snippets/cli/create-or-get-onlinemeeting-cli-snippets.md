@@ -2,8 +2,14 @@
 description: "Automatically generated file. DO NOT MODIFY"
 ---
 
+<<<<<<< HEAD
 ```cli
 
+=======
+```bash
+
+// THE CLI IS IN PREVIEW. NON-PRODUCTION USE ONLY
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 mgc users online-meetings create-or-get post --user-id {user-id} --body '{\
     "startDateTime": "2020-02-06T01:49:21.3524945+00:00",\
     "endDateTime": "2020-02-06T02:19:21.3524945+00:00",\

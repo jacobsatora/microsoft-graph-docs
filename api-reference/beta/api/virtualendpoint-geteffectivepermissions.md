@@ -1,6 +1,6 @@
 ---
 title: "virtualEndpoint: getEffectivePermissions"
-description: "**GetEffectivePermissions is a function that retrieves the effective permissions of the currently authenticated user, which helps UX hide or disable content that the current user doesn't have access to.**"
+description: "Get the effective permissions of the currently authenticated user."
 author: "AshleyYangSZ"
 ms.localizationpriority: medium
 ms.prod: "cloud-pc"
@@ -13,7 +13,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-View the effective permissions of the currently authenticated user. GetEffectivePermissions is a function that retrieves the effective permissions of the currently authenticated user, which helps UX hide or disable content that the current user doesn't have access to.
+Get the effective permissions of the currently authenticated user, helping UX hide or disable content that the current user doesn't have access to.
 
 ## Permissions
 
@@ -54,6 +54,7 @@ If successful, this function returns a `200 OK` response code and a String colle
 
 ### Request
 
+The following is an example of the request.
 
 <!-- {
   "blockType": "request",
@@ -65,9 +66,20 @@ If successful, this function returns a `200 OK` response code and a String colle
 GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/getEffectivePermissions
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/virtualendpoint-geteffectivepermissions-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
-**Note:** The response object shown here might be shortened for readability.
+The following is an example of the response.
+
+> **Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
   "truncated": true,

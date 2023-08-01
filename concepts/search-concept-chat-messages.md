@@ -47,6 +47,15 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/beta/basicsearchteamsmessage-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 <!-- {
@@ -137,8 +146,13 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/searchtopteamsmessage-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/searchtopteamsmessage-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -247,8 +261,13 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/searchteamsmessagewithkql-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/v1/searchteamsmessagewithkql-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -314,6 +333,24 @@ Content-type: application/json
 - Sorting results is not supported for messages.
 - You can't use this API with other entity types at this time.
 
+## JSON representation
+
+The following is a JSON representation of all retrievable properties currently available for [chatMessage](/graph/api/resources/chatmessage) search.
+
+```json
+{
+  "channelIdentity": {"@odata.type": "microsoft.graph.channelIdentity"},
+  "chatId": "string",
+  "createdDateTime": "string (timestamp)",
+  "etag": "string",
+  "from": {"@odata.type": "microsoft.graph.chatMessageFromIdentitySet"},
+  "id": "string (identifier)",
+  "importance": "string",
+  "lastModifiedDateTime": "string (timestamp)",
+  "subject": "string",
+  "webUrl": "string"
+}
+```
 
 ## Next steps
 

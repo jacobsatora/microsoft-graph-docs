@@ -80,6 +80,10 @@ Content-type: application/json
   "wrapText": false
 }
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -105,10 +109,16 @@ Content-type: application/json
 This request updates the font style, size, and color of the first cell. 
 
 
+<<<<<<< HEAD
+=======
+# [HTTP](#tab/http)
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- {
   "blockType": "request",
   "name": "update_rangeformat_font"
 }-->
+
 ```http
 PATCH https://graph.microsoft.com/v1.0/me/drive/items/{id}/workbook/worksheets/{sheet-id}/range(address='$A$1')/format/font
 Content-type: application/json
@@ -119,6 +129,10 @@ Content-type: application/json
   "size": 26
 }
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -157,6 +171,10 @@ Content-type: application/json
   "color": "#FF0000"
 }
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -177,10 +195,16 @@ Content-type: application/json
 This request updates the vertical alignment, horizontal alignment, row height, and column height of the second cell. 
 
 
+<<<<<<< HEAD
+=======
+# [HTTP](#tab/http)
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- {
   "blockType": "request",
   "name": "update_rangeformat_two"
 }-->
+
 ```http
 PATCH https://graph.microsoft.com/v1.0/me/drive/items/{id}/workbook/worksheets/{sheet-id}/range(address='$B$1')/format
 Content-type: application/json
@@ -193,6 +217,10 @@ Content-type: application/json
   "wrapText": false
 }
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -220,7 +248,7 @@ This request updates the font style and size of the second cell.
 
 <!-- {
   "blockType": "request",
-  "name": "update_rangeformat_font_two"
+  "name": "update_rangeformat_font_two1"
 }-->
 ```http
 PATCH https://graph.microsoft.com/v1.0/me/drive/items/{id}/workbook/worksheets/{sheet-id}/range(address='$B$1')/format/font
@@ -231,6 +259,10 @@ Content-type: application/json
   "size": 26
 }
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -259,7 +291,7 @@ This request updates the background color of the second cell.
 
 <!-- {
   "blockType": "request",
-  "name": "update_rangeformat_fill_two"
+  "name": "update_rangeformat_fill_two1"
 }-->
 ```http
 PATCH https://graph.microsoft.com/v1.0/me/drive/items/{id}/workbook/worksheets/{sheet-id}/range(address='$B$1')/format/fill
@@ -269,6 +301,10 @@ Content-type: application/json
   "color": "#00FF00"
 }
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -306,6 +342,10 @@ Content-type: application/json
   "wrapText": false
 }
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -331,10 +371,16 @@ Content-type: application/json
 This request updates the font style, size, and color of the third cell. Note that the underline property takes **Single** or **Double** as values.
 
 
+<<<<<<< HEAD
+=======
+# [HTTP](#tab/http)
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- {
   "blockType": "request",
-  "name": "update_rangeformat_font_three"
+  "name": "update_font_rangeformat"
 }-->
+
 ```http
 PATCH https://graph.microsoft.com/v1.0/me/drive/items/{id}/workbook/worksheets/{sheet-id}/range(address='$C$1')/format/font
 Content-type: application/json
@@ -345,6 +391,10 @@ Content-type: application/json
   "size": 26
 }
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -373,7 +423,7 @@ This request updates the background color of the third cell.
 
 <!-- {
   "blockType": "request",
-  "name": "update_rangeformat_fill_three"
+  "name": "update_rangeformat_fill_three_v_one"
 }-->
 ```http
 PATCH https://graph.microsoft.com/v1.0/me/drive/items/{id}/workbook/worksheets/{sheet-id}/range(address='$C$1')/format/fill
@@ -383,6 +433,10 @@ Content-type: application/json
   "color": "#0000FF"
 }
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. Note: The response object shown here might be shortened for readability.
@@ -408,7 +462,7 @@ Content-type: application/json
   "keywords": "",
   "section": "documentation",
   "suppressions": [
-    "Error: update_rangeformat_font_three/underline:
+    "Error: update_font_rangeformat/underline:
       Expected type String but actual was Single. Property: underline, actual value: 'Single'"
   ],
   "tocPath": ""

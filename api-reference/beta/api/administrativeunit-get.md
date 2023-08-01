@@ -27,6 +27,8 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (personal Microsoft account) | Not supported.    |
 |Application | AdministrativeUnit.Read.All, Directory.Read.All, AdministrativeUnit.ReadWrite.All, Directory.ReadWrite.All |
 
+[!INCLUDE [rbac-admin-units-apis-read](../includes/rbac-for-apis/rbac-admin-units-apis-read.md)]
+
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -52,9 +54,12 @@ Do not supply a request body for this method.
 ## Response
 
 If successful, this method returns a `200 OK` response code and [administrativeUnit](../resources/administrativeunit.md) object in the response body.
-## Example
-### Request
-Here is an example of the request.
+
+## Examples
+
+### Example 1: Get an administrative unit
+
+#### Request
 
 <!-- {
   "blockType": "request",
@@ -64,9 +69,19 @@ Here is an example of the request.
 GET https://graph.microsoft.com/beta/administrativeUnits/4d7ea995-bc0f-45c0-8c3e-132e93bf95f8
 ```
 
+<<<<<<< HEAD
 ### Response
 
 Here is an example of the response. 
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-administrativeunit-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
@@ -87,6 +102,45 @@ Content-type: application/json
     "membershipRule": "(user.country -eq \"United States\")",
     "membershipType": "Dynamic",
     "membershipRuleProcessingState": "On"
+}
+```
+
+### Example 2: Get a restricted management administrative unit
+
+#### Request
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "get_administrativeunit_restricted"
+}-->
+```msgraph-interactive
+GET https://graph.microsoft.com/beta/administrativeUnits/2sd35b05-ae71-48ab-9e7d-4r41a28te37d
+```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-administrativeunit-restricted-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.administrativeUnit"
+} -->
+```http
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#administrativeUnits/$entity",
+    "id": "2sd35b05-ae71-48ab-9e7d-4r41a28te37d",
+    "deletedDateTime": null,
+    "displayName": "Executive Division",
+    "description": "Executive division administration",
+    "isMemberManagementRestricted": true
 }
 ```
 

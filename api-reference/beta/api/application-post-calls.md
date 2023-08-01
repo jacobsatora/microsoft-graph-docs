@@ -1,7 +1,7 @@
 ---
 title: "Create call"
 description: "Create a new call."
-author: "mkhribech"
+author: "rahulva-msft"
 ms.localizationpriority: medium
 ms.prod: "cloud-communications"
 doc_type: apiPageType
@@ -27,9 +27,10 @@ One of the following permissions is required to call this API. To learn more, in
 | Delegated (personal Microsoft account) | Not supported.                                                                          |
 | Application                            | Calls.JoinGroupCalls.Chat*, Calls.JoinGroupCallAsGuest.All, Calls.JoinGroupCall.All, Calls.Initiate.All, Calls.InitiateGroupCall.All |
 
-> **Notes:** For a call with app-hosted media, you need the Calls.AccessMedia.All or the Calls.AccessMedia.Chat* permission in addition to one of the permissions listed.
->
-> Permissions marked with * use [resource-specific consent](/microsoftteams/platform/graph-api/rsc/resource-specific-consent).
+> **Notes:** 
+> - For a call with app-hosted media, you need the Calls.AccessMedia.All permission in addition to one of the permissions listed in the previous table.
+> - Cloud Video Interop solutions that are [Certified for Microsoft Teams](/MicrosoftTeams/cloud-video-interop) have permission to call this API to join meetings for which they have meeting join links, similar to external users joining through a browser.
+> - Permissions marked with * use [resource-specific consent](/microsoftteams/platform/graph-api/rsc/resource-specific-consent).
 
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
@@ -107,6 +108,15 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-call-service-hosted-media-1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 > **Note:** The response object shown here might be shortened for readability.
@@ -228,6 +238,7 @@ Content-Type: application/json
   ]
 }
 ```
+>**Note:** Call establishing/established notifications may arrive out of order.
 
 #### Notification - established
 
@@ -261,6 +272,7 @@ Content-Type: application/json
   ]
 }
 ```
+>**Note:** Call establishing/established notifications may arrive out of order.
 
 #### Notification - content sharing started
 
@@ -409,6 +421,15 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-call-app-hosted-media-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 `<Media Session Configuration>` is the serialized media session configuration which contains the session information of the media stack. Specific information about audio, video, VBSS session information should be passed here.
 
 
@@ -565,6 +586,15 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-group-call-service-hosted-media-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 > **Note:** The response object shown here might be shortened for readability.
@@ -711,6 +741,15 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-group-call-app-hosted-media-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 > **Note:** The response object shown here might be shortened for readability.
@@ -851,6 +890,15 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/join-meeting-service-hosted-media-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 
@@ -1048,6 +1096,8 @@ POST https://bot.contoso.com/callback
 Content-Type: application/json
 ```
 
+##### Delta roster disabled (default)
+
 <!-- {
   "blockType": "example",
   "@odata.type": "microsoft.graph.commsNotifications",
@@ -1137,6 +1187,107 @@ Content-Type: application/json
 }
 ```
 
+##### Delta roster enabled
+
+<!-- {
+  "blockType": "example",
+  "@odata.type": "microsoft.graph.commsNotifications",
+  "truncated": true
+}-->
+```json
+{
+  "@odata.type": "#microsoft.graph.commsNotifications",
+  "value": [
+    {
+      "@odata.type": "#microsoft.graph.commsNotification",
+      "changeType": "updated",
+      "resource": "/app/calls/421f7700-f4ad-4ea9-a3fc-c1d2195675ad/participants",
+      "resourceUrl": "/communications/calls/421f7700-f4ad-4ea9-a3fc-c1d2195675ad/participants",
+      "resourceData": [
+        {
+          "@odata.type": "#microsoft.graph.deltaParticipants",
+          "participants": [
+            {
+              "@odata.type": "#microsoft.graph.participant",
+              "info": {
+                "@odata.type": "#microsoft.graph.participantInfo",
+                "identity": {
+                  "@odata.type": "#microsoft.graph.identitySet",
+                  "user": {
+                    "@odata.type": "#microsoft.graph.identity",
+                    "displayName": "John",
+                    "id": "112f7296-5fa4-42ca-bae8-6a692b15d4b8"
+                  }
+                },
+                "languageId": "en-US"
+              },
+              "mediaStreams": [
+                {
+                  "@odata.type": "#microsoft.graph.mediaStream",
+                  "mediaType": "audio",
+                  "sourceId": "1",
+                  "direction": "sendReceive",
+                  "serverMuted": false
+                },
+                {
+                  "@odata.type": "#microsoft.graph.mediaStream",
+                  "mediaType": "video",
+                  "sourceId": "2",
+                  "direction": "receiveOnly",
+                  "serverMuted": false
+                },
+                {
+                  "@odata.type": "#microsoft.graph.mediaStream",
+                  "mediaType": "videoBasedScreenSharing",
+                  "sourceId": "8",
+                  "direction": "receiveOnly",
+                  "serverMuted": false
+                }
+              ],
+              "isMuted": true,
+              "isInLobby": false,
+              "id": "0d7664b6-6432-43ed-8d27-d9e7adec188c",
+              "rosterSequenceNumber": 1
+            },
+            {
+              "@odata.type": "#microsoft.graph.participant",
+              "info": {
+                "@odata.type": "#microsoft.graph.participantInfo",
+                "identity": {
+                  "@odata.type": "#microsoft.graph.identitySet",
+                  "application": {
+                    "@odata.type": "#microsoft.graph.identity",
+                    "displayName": "Calling Bot",
+                    "id": "2891555a-92ff-42e6-80fa-6e1300c6b5c6"
+                  }
+                }
+              },
+              "mediaStreams": [
+                {
+                  "@odata.type": "#microsoft.graph.mediaStream",
+                  "mediaType": "audio",
+                  "sourceId": "10",
+                  "direction": "sendReceive",
+                  "serverMuted": false
+                }
+              ],
+              "isMuted": false,
+              "isInLobby": false,
+              "id": "05491616-385f-44a8-9974-18cc5f9933c1",
+              "rosterSequenceNumber": 1,
+              "removedState": {
+                "reason": "Removed from roster"
+              }
+            }
+          ],
+          "sequenceNumber": 1
+        }
+      ]
+    }
+  ]
+}
+```
+
 >**Note:** For join meeting scenarios apart from call state notifications, we receive roster notifications.
 
 ### Example 6: Join a scheduled meeting with joinMeetingId and passcode
@@ -1182,6 +1333,15 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/join-meeting-with-join-meeting-id-and-passcode-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 <!-- {
   "blockType": "response",
@@ -1303,6 +1463,15 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/join-meeting-with-join-meeting-id-and-without-passcode-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 <!-- {
@@ -1431,6 +1600,15 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/join-meeting-app-hosted-media-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 <!-- {
@@ -1569,6 +1747,15 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/join-channel-meeting-service-hosted-media-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 <!-- {
@@ -1726,6 +1913,15 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/join-channel-meeting-as-guest-service-hosted-media-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 > **Note:** The guest join depends on the tenant settings for meeting. The application might be put in lobby waiting to be admitted by a user. This is defined by the `isInLobby` property
 
 #### Response
@@ -1822,6 +2018,7 @@ POST https://bot.contoso.com/callback
 Content-Type: application/json
 ```
 
+##### Delta roster disabled (default)
 <!-- {
   "blockType": "example",
   "@odata.type": "microsoft.graph.commsNotifications",
@@ -1870,7 +2067,62 @@ Content-Type: application/json
 }
 ```
 
-> **Note:** The application will not receive the roster for participants in the meeting until its admitted from lobby
+##### Delta roster enabled
+
+<!-- {
+  "blockType": "example",
+  "@odata.type": "microsoft.graph.commsNotifications",
+  "truncated": true
+}-->
+```json
+{
+  "@odata.type": "#microsoft.graph.commsNotifications",
+  "value": [
+    {
+      "@odata.type": "#microsoft.graph.commsNotification",
+      "changeType": "updated",
+      "resource": "/app/calls/421f7700-f4ad-4ea9-a3fc-c1d2195675ad/participants",
+      "resourceUrl": "/communications/calls/421f7700-f4ad-4ea9-a3fc-c1d2195675ad/participants",
+      "resourceData": [
+        {
+          "@odata.type": "#microsoft.graph.deltaParticipants",
+          "participants": [
+            {
+              "@odata.type": "#microsoft.graph.participant",
+              "info": {
+                "@odata.type": "#microsoft.graph.participantInfo",
+                "identity": {
+                  "@odata.type": "#microsoft.graph.identitySet",
+                  "guest": {
+                    "@odata.type": "#microsoft.graph.identity",
+                    "displayName": "Guest User",
+                    "id": "d7a3b999-17ac-4bca-9e77-e6a730d2ec2e"
+                  }
+                }
+              },
+              "mediaStreams": [
+                {
+                  "@odata.type": "#microsoft.graph.mediaStream",
+                  "mediaType": "audio",
+                  "sourceId": "10",
+                  "direction": "sendReceive",
+                  "serverMuted": false
+                }
+              ],
+              "isMuted": false,
+              "isInLobby": true,
+              "id": "05491616-385f-44a8-9974-18cc5f9933c1"
+            }
+          ],
+          "sequenceNumber": 2
+        }
+      ]
+    }
+  ]
+}
+```
+
+> **Note:** The application will not receive the roster for participants in the meeting until its admitted from lobby.
 
 ### Example 11: Create peer-to-peer PSTN call with service hosted media
 
@@ -1933,6 +2185,15 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-call-service-hosted-media-2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 
@@ -2086,6 +2347,15 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-call-service-hosted-media-3-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 

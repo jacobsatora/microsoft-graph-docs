@@ -17,7 +17,11 @@ $params = @{
 			id = "74d20c7f34aa4a7fb74e2b30004247c5"
 			contentType = "application/vnd.microsoft.card.adaptive"
 			contentUrl = $null
+<<<<<<< HEAD
 			content = "{
+=======
+			content = '{
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
   "version": "1.2",
@@ -96,7 +100,11 @@ $params = @{
       ]
     }
   ]
+<<<<<<< HEAD
 }"
+=======
+}'
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 			name = $null
 			thumbnailUrl = $null
 		}

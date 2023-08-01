@@ -62,6 +62,15 @@ The following is an example of a request.
 GET https://graph.microsoft.com/beta/security/threatSubmission/urlThreats/49c5ef5b-1f65-444a-e6b9-08d772ea2059
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-urlthreatsubmission-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 The following is an example of the response.
 

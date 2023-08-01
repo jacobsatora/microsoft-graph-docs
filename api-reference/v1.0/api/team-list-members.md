@@ -13,8 +13,8 @@ Namespace: microsoft.graph
 Get the [conversationMember](../resources/conversationmember.md) collection of a [team](../resources/team.md).
 
 > [!NOTE]
-> The membership IDs returned by server must be treated as opaque strings. The client should not try to parse or make any assumptions about these resource IDs.
-> 
+> The membership IDs returned by the server must be treated as opaque strings. The client should not try to parse or make any assumptions about these resource IDs.
+>
 > The membership results could map to users from different tenants, as indicated in the response, in the future. The client should not assume that all members are from the current tenant only.
 
 ## Permissions
@@ -53,6 +53,8 @@ Do not supply a request body for this method.
 
 If successful, this method returns a `200 OK` response code and a collection of [conversationMember](../resources/conversationmember.md) objects in the response body.
 
+For new tenants, a JIT provisioning error will cause a `401` error for first-party apps using Microsoft Graph advanced Azure AD query capabilities (Mezzo). First-party apps require the provisioning of a service principal on the target tenant when the first request arrives, but advanced query endpoints are read-only, so provisioning cannot happen (advanced query endpoints are defined by the `ConsistencyLevel=eventual header` + `$count` or `$search` query arguments). As a workaround, call Azure AD Graph or another Microsoft Graph endpoint (for example, `/users?$top=1`). This takes care of the provisioning. This is an issue with Azure AD and will occur once per tenant for a given app. The following example shows the pattern to use.
+
 ## Examples
 
 ### Example 1: Get list of members in team
@@ -70,7 +72,11 @@ If successful, this method returns a `200 OK` response code and a collection of 
 GET https://graph.microsoft.com/v1.0/teams/ee0f5ae2-8bc6-4ae5-8466-7daeebbfa062/members
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-members-in-team-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -141,7 +147,11 @@ GET https://graph.microsoft.com/v1.0/teams/ee0f5ae2-8bc6-4ae5-8466-7daeebbfa062/
 
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-members-in-team-filter-by-userid-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -193,7 +203,11 @@ The following example shows a request to find the membership resources based on 
 GET https://graph.microsoft.com/v1.0/teams/ee0f5ae2-8bc6-4ae5-8466-7daeebbfa062/members?$filter=(microsoft.graph.aadUserConversationMember/displayName eq 'Harry Johnson' or microsoft.graph.aadUserConversationMember/email eq 'admin@M365x987948.OnMicrosoft.com')
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-members-in-team-filter-by-username-or-email-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -237,6 +251,7 @@ Content-Type: application/json
     ]
 }
 ```
+
 ## See also
 
 - [List members in channel](channel-list-members.md)

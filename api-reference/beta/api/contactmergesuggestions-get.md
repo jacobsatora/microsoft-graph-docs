@@ -47,10 +47,14 @@ If successful, this method returns a `200 OK` response code and a [contactMergeS
 
 ## Examples
 
-The following is an example of the request to get **contactMergeSuggestions** settings for the user.
-
 ### Request
 
+<<<<<<< HEAD
+=======
+The following is an example of the request to get **contactMergeSuggestions** settings for the user.
+
+# [HTTP](#tab/http)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 <!-- {
   "blockType": "request",
   "name": "get_contactmergesuggestions"
@@ -60,7 +64,19 @@ The following is an example of the request to get **contactMergeSuggestions** se
 GET https://graph.microsoft.com/beta/me/settings/contactMergeSuggestions
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-contactmergesuggestions-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
+
+The following is an example of the response.
+
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
@@ -77,4 +93,3 @@ Content-Type: application/json
     "isEnabled": true
 }
 ```
-

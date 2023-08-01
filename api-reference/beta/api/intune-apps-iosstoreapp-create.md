@@ -22,9 +22,9 @@ One of the following permissions is required to call this API. To learn more, in
 
 |Permission type|Permissions (from least to most privileged)|
 |:---|:---|
-|Delegated (work or school account)|DeviceManagementApps.ReadWrite.All|
+|Delegated (work or school account)|DeviceManagementConfiguration.ReadWrite.All, DeviceManagementApps.ReadWrite.All|
 |Delegated (personal Microsoft account)|Not supported.|
-|Application|DeviceManagementApps.ReadWrite.All|
+|Application|DeviceManagementConfiguration.ReadWrite.All, DeviceManagementApps.ReadWrite.All|
 
 ## HTTP Request
 <!-- {
@@ -85,7 +85,7 @@ Here is an example of the request.
 ``` http
 POST https://graph.microsoft.com/beta/deviceAppManagement/mobileApps
 Content-type: application/json
-Content-length: 1257
+Content-length: 1277
 
 {
   "@odata.type": "#microsoft.graph.iosStoreApp",
@@ -128,7 +128,8 @@ Content-length: 1257
     "v12_0": true,
     "v13_0": true,
     "v14_0": true,
-    "v15_0": true
+    "v15_0": true,
+    "v16_0": true
   }
 }
 ```
@@ -138,7 +139,7 @@ Here is an example of the response. Note: The response object shown here may be 
 ``` http
 HTTP/1.1 201 Created
 Content-Type: application/json
-Content-Length: 1429
+Content-Length: 1449
 
 {
   "@odata.type": "#microsoft.graph.iosStoreApp",
@@ -184,7 +185,8 @@ Content-Length: 1429
     "v12_0": true,
     "v13_0": true,
     "v14_0": true,
-    "v15_0": true
+    "v15_0": true,
+    "v16_0": true
   }
 }
 ```

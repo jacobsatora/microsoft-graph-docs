@@ -64,7 +64,11 @@ The following is an example of a request.
 GET https://graph.microsoft.com/v1.0/me/todo/lists/AAMkADA1MTHgwAAA=/tasks/721a35e2-35e2-721a-e235-1a72e2351a72
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-todotask-1-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -105,6 +109,10 @@ Content-Type: application/json
     },
     "dueDateTime": {
         "dateTime": "2020-08-25T04:00:00.0000000",
+        "timeZone": "UTC"
+    },
+    "startDateTime": {
+        "dateTime": "2020-06-23T04:00:00.0000000",
         "timeZone": "UTC"
     }
 }

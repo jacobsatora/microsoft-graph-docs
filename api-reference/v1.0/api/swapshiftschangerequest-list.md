@@ -42,6 +42,7 @@ This method supports some of the OData query parameters to help customize the re
 | Name      |Description|
 |:----------|:----------|
 | Authorization | Bearer {token}. Required. |
+| MS-APP-ACTS-AS  | A user ID (GUID). Required only if the authorization token is an application token; otherwise, optional. |
 
 ## Request body
 
@@ -61,21 +62,23 @@ The following is an example of the request.
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "get_swapshiftschangerequest_2"
+  "name": "get_swapshiftschangerequest_v1_e1"
 }-->
 
 ```msgraph-interactive
-GET https://graph.microsoft.com/v1.0/teams/{teamId}/schedule/swapShiftsChangeRequests
+GET https://graph.microsoft.com/v1.0/teams/00d4ce58-658a-4d53-a0ad-99aa318bed28/schedule/swapShiftsChangeRequests
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/get-swapshiftschangerequest-2-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-swapshiftschangerequest-v1-e1-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
-
----
-
 
 ### Response
 
@@ -94,26 +97,25 @@ HTTP/1.1 200 OK
 Content-type: application/json
 
 {
-    "value": [
-        {
-        "id": "0b87dd20-d5ed-4764-9c3e-cfc8516def09",
-        "senderShiftId": "5ad10161-6524-4c7c-9beb-4e8677ba2f6d",
-        "recipientShiftId": "e73408ca-3ea5-4bbf-96a8-2e06c95f7a2c",
-        "assignedTo": "manager",
-        "state": "approved",
-        "senderUserId": "3fe0bc21-1398-4fd9-9713-52511b434c1e",
-        "senderDateTime": "2019-05-01T10:00:00Z",
-        "senderMessage": "I can't make my shift, any chance we can swap?",
-        "recipientUserId": "567c8ea5-9e32-422a-a663-8270201699cd",
-        "recipientActionDateTime": "2019-05-01T11:00:00Z",
-        "recipientActionMessage": "Sure!",
-        "managerUserId": "fdcc8d43-7f83-438a-9ab1-098e8f2a95ff",
-        "managerActionDateTime": "2019-05-01T12:00:00Z",
-        "managerActionMessage": "Approved!"
-        }
-    ]
+  "value": [
+    {
+      "id": "0b87dd20-d5ed-4764-9c3e-cfc8516def09",
+      "senderShiftId": "5ad10161-6524-4c7c-9beb-4e8677ba2f6d",
+      "recipientShiftId": "e73408ca-3ea5-4bbf-96a8-2e06c95f7a2c",
+      "assignedTo": "manager",
+      "state": "approved",
+      "senderUserId": "3fe0bc21-1398-4fd9-9713-52511b434c1e",
+      "senderDateTime": "2019-05-01T10:00:00Z",
+      "senderMessage": "I cannot make my shift, any chance we can swap?",
+      "recipientUserId": "567c8ea5-9e32-422a-a663-8270201699cd",
+      "recipientActionDateTime": "2019-05-01T11:00:00Z",
+      "recipientActionMessage": "Sure!",
+      "managerUserId": "fdcc8d43-7f83-438a-9ab1-098e8f2a95ff",
+      "managerActionDateTime": "2019-05-01T12:00:00Z",
+      "managerActionMessage": "Approved!"
+    }
+  ]
 }
-
 ```
 
 <!-- uuid: 16cd6b66-4b1a-43a1-adaf-3a886856ed98
@@ -125,4 +127,3 @@ Content-type: application/json
   "section": "documentation",
   "tocPath": ""
 }-->
-

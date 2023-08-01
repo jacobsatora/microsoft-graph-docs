@@ -2,8 +2,14 @@
 description: "Automatically generated file. DO NOT MODIFY"
 ---
 
+<<<<<<< HEAD
 ```cli
 
+=======
+```bash
+
+// THE CLI IS IN PREVIEW. NON-PRODUCTION USE ONLY
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 mgc directory-objects check-member-groups post --directory-object-id {directoryObject-id} --body '{\
     "groupIds": [\
         "f448435d-3ca7-4073-8152-a1fd73c0fd09",\

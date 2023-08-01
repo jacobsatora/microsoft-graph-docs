@@ -41,6 +41,8 @@ GET /teams/{team-id}/channels/{channel-id}
 
 This method supports the `$filter` and `$select` [OData query parameters](/graph/query-parameters) to help customize the response.
 
+>**Note:** The summary property can only be retrieved via the `select` parameter, as shown in Example 2 in this topic.
+
 ## Request headers
 
 | Header       | Value |
@@ -55,25 +57,39 @@ Do not supply a request body for this method.
 
 If successful, this method returns a `200 OK` response code and a [channel](../resources/channel.md) object in the response body.
 
-## Example
+## Examples
 
-### Request
+### Example 1: Get a channel
 
-Here is an example of the request.
+#### Request
+
+The following example shows a request.
 
 
 <!-- {
   "blockType": "request",
-  "name": "get_channel",
+  "name": "get_channel_beta_e1",
   "sampleKeys": ["893075dd-2487-4122-925f-022c42e20265", "19:561fbdbbfca848a484f0a6f00ce9dbbd@thread.tacv2"]
 }-->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/teams/893075dd-2487-4122-925f-022c42e20265/channels/19:561fbdbbfca848a484f0a6f00ce9dbbd@thread.tacv2
 ```
 
+<<<<<<< HEAD
 ### Response
 
 Here is an example of the response.
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-channel-beta-e1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+
+The following example shows the response.
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 >**Note:** The response object shown here might be shortened for readability.
 
@@ -95,9 +111,13 @@ Content-type: application/json
 }
 
 ```
+The following example shows the response for a standard channel with channel moderation off.
 
-Here is an example of the response for a standard channel with channel moderation off.
-
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.channel"
+} -->
 ```http
 HTTP/1.1 200 OK
 
@@ -119,10 +139,15 @@ HTTP/1.1 200 OK
 }
 ```
 
-Here is an example of the response for a standard channel with channel moderation on.
+The following example shows the response for a standard channel with channel moderation on.
 
 >**Note:** The response object shown here might be shortened for readability.
 
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.channel"
+} -->
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
@@ -145,8 +170,13 @@ Content-type: application/json
 }
 ```
 
-Here is an example of the response for a private channel.
+The following example shows the response for a private channel.
 
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.channel"
+} -->
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
@@ -164,6 +194,54 @@ Content-type: application/json
 }
 ```
 
+### Example 2: Get a channelSummary property
+
+#### Request
+
+The following example shows a request to get the **channelSummary** property.
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "get_channelsummary_beta_e2",
+  "sampleKeys": ["893075dd-2487-4122-925f-022c42e20265", "19:561fbdbbfca848a484f0a6f00ce9dbbd@thread.tacv2"]
+}-->
+
+```msgraph-interactive
+GET https://graph.microsoft.com/beta/teams/893075dd-2487-4122-925f-022c42e20265/channels/19:561fbdbbfca848a484f0a6f00ce9dbbd@thread.tacv2?$select=summary
+```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-channelsummary-beta-e2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+
+The following example shows the response.
+
+>**Note:** The response object shown here might be shortened for readability.
+
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.channelSummary"
+} -->
+```http
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#teams('8bb12236-b929-42e0-94a0-1c417466ebf8')/channels(summary)/$entity",
+    "summary":{
+        "hasMembersFromOtherTenants":false,
+        "guestsCount":1,
+        "membersCount":3,
+        "ownersCount":2
+    }
+}
+```
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->
 <!--
@@ -178,4 +256,6 @@ Content-type: application/json
 }
 -->
 
+## See also
 
+[Microsoft Graph service-specific throttling limits](/graph/throttling-limits#microsoft-teams-service-limits)

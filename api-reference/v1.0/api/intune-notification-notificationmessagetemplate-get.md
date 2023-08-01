@@ -52,16 +52,27 @@ If successful, this method returns a `200 OK` response code and [notificationMes
 
 ### Request
 Here is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- { "blockType": "request" , "name" : "intune_notification_notificationmessagetemplate_get_get_notificationmessagetemplate" }-->
 ``` http
 GET https://graph.microsoft.com/v1.0/deviceManagement/notificationMessageTemplates/{notificationMessageTemplateId}
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/intune-notification-notificationmessagetemplate-get-get-notificationmessagetemplate-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+
+<!-- { "blockType": "response" , "@odata.type" : "microsoft.graph.notificationMessageTemplate" }-->
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 341
+Content-Length: 409
 
 {
   "value": {
@@ -70,7 +81,10 @@ Content-Length: 341
     "lastModifiedDateTime": "2017-01-01T00:00:35.1329464-08:00",
     "displayName": "Display Name value",
     "defaultLocale": "Default Locale value",
-    "brandingOptions": "includeCompanyLogo"
+    "brandingOptions": "includeCompanyLogo",
+    "roleScopeTagIds": [
+      "Role Scope Tag Ids value"
+    ]
   }
 }
 ```

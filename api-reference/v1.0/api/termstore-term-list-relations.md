@@ -29,8 +29,8 @@ One of the following permissions is required to call this API. To learn more, in
 }
 -->
 ``` http
-GET sites/{site-id}/termStore/sets/{set-id}/relations
-GET sites/{site-id}/termStore/sets/{set-id}/terms/{term-id}/relations
+GET /sites/{site-id}/termStore/sets/{set-id}/relations
+GET /sites/{site-id}/termStore/sets/{set-id}/terms/{term-id}/relations
 ```
 
 ## Optional query parameters
@@ -64,7 +64,11 @@ If successful, this method returns a `200 OK` response code and a collection of 
 GET https://graph.microsoft.com/v1.0/sites/microsoft.sharepoint.com,b9b0bc03-cbc4-40d2-aba9-2c9dd9821ddf,6a742cee-9216-4db5-8046-13a595684e74/termStore/sets/874be29c-35c8-4295-b3f8-ca2400c966c3/relations
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-relation-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

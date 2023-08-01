@@ -1,5 +1,5 @@
 ---
-title: "Remove appliesTo"
+title: "Remove appliesTo on a featureRolloutPolicy"
 description: "Remove a directoryObject from feature rollout."
 ms.localizationpriority: medium
 author: "madhavpatel6"
@@ -7,7 +7,7 @@ ms.prod: "identity-and-sign-in"
 doc_type: "apiPageType"
 ---
 
-# Remove appliesTo
+# Remove appliesTo on a featureRolloutPolicy
 
 Namespace: microsoft.graph
 
@@ -62,7 +62,11 @@ The following is an example of the request.
 DELETE https://graph.microsoft.com/v1.0/policies/featureRolloutPolicies/df85e4d9-e8c4-4033-a41c-73419a95c29c/appliesTo/2441b489-4f12-4882-b039-8f6006bd66da/$ref
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/delete-directoryobject-from-featurerolloutpolicy-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

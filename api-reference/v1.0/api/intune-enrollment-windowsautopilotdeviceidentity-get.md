@@ -52,12 +52,23 @@ If successful, this method returns a `200 OK` response code and [windowsAutopilo
 
 ### Request
 Here is an example of the request.
+
+# [HTTP](#tab/http)
+<!-- { "blockType": "request" , "name" : "intune_enrollment_windowsautopilotdeviceidentity_get_get_windowsautopilotdeviceidentity" }-->
 ``` http
 GET https://graph.microsoft.com/v1.0/deviceManagement/windowsAutopilotDeviceIdentities/{windowsAutopilotDeviceIdentityId}
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/intune-enrollment-windowsautopilotdeviceidentity-get-get-windowsautopilotdeviceidentity-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+
+<!-- { "blockType": "response" , "@odata.type" : "microsoft.graph.windowsAutopilotDeviceIdentity" }-->
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json

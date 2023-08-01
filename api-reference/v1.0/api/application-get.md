@@ -25,10 +25,13 @@ One of the following permissions is required to call this API. To learn more, in
 [!INCLUDE [permissions-applicationreadwriteownedby-disclaimer](../../includes/permissions-applicationreadwriteownedby-disclaimer.md)]
 
 ## HTTP request
-Replace `{applicationObjectId}` with the **id** for the application object, also referred to as the **Object ID** in the Azure portal.
+
+You can address the application using either its **id** or **appId**. **id** and **appId** are referred to as the **Object ID** and **Application (Client) ID**, respectively, in the Azure portal. Replace `{applicationObjectId}` with the **id** for the application object.
+
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /applications/{applicationObjectId}
+GET /applications(appId='{appId}')
 ```
 
 ## Optional query parameters
@@ -60,7 +63,6 @@ If successful, this method returns a `200 OK` response code and an [application]
 #### Request
 Here is an example of the request.
 
-
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
@@ -70,7 +72,11 @@ Here is an example of the request.
 GET https://graph.microsoft.com/v1.0/applications/acc848e9-e8ec-4feb-a521-8d58b5482e09
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-application-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -159,23 +165,27 @@ Content-type: application/json
 ```
 
 
-### Example 2: Retrieve an application by its ID and only specific properties
+### Example 2: Retrieve an application by its appId and only specific properties
 
 #### Request
 Here is an example of the request.
 
-
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "get_application_select"
+  "name": "get_application_by_appId_select"
 }-->
 ```msgraph-interactive
-GET https://graph.microsoft.com/v1.0/applications/7bec5fd1-a25f-474c-a6ca-5492082c6a9b?$select=id,appId,displayName,requiredResourceAccess
+GET https://graph.microsoft.com/v1.0/applications(appId='46e6adf4-a9cf-4b60-9390-0ba6fb00bf6b')?$select=id,appId,displayName,requiredResourceAccess
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/get-application-select-cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-application-by-appid-select-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---

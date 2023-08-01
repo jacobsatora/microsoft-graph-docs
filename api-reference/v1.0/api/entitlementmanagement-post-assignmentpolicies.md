@@ -55,6 +55,8 @@ You can specify the following properties when creating an **accessPackageAssignm
 |specificAllowedTargets|[subjectSet](../resources/subjectset.md) collection|The principals that can be assigned access from an access package through this policy.|
 |automaticRequestSettings|[accessPackageAutomaticRequestSettings](../resources/accessPackageAutomaticRequestSettings.md)|This property is only present for an auto assignment policy; if absent, this is a request-based policy.|
 |accessPackage|[accessPackage](../resources/accesspackage.md)| A reference to the access package that will contain the policy, which must already exist.|
+|questions|[accessPackageQuestion](../resources/accesspackagequestion.md) collection|Questions that are posed to the  requestor.|
+ 
 
 ## Response
 
@@ -74,7 +76,7 @@ The following example shows a request to create an access package assignment pol
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "create_accesspackageassignmentpolicy_from_"
+  "name": "create_accesspackageassignmentpolicy_from_v1_e1"
 }
 -->
 ``` http
@@ -112,8 +114,13 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
 [!INCLUDE [sample-code](../includes/snippets/cli/create-accesspackageassignmentpolicy-from--cli-snippets.md)]
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-accesspackageassignmentpolicy-from-v1-e1-cli-snippets.md)]
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
@@ -144,9 +151,10 @@ The following example shows a more complex policy with two stages of approval an
 #### Request
 
 
+# [HTTP](#tab/http)
 <!-- {
-  "blockType": "ignored",
-  "name": "create_accesspackageassignmentpolicy_2"
+  "blockType": "request",
+  "name": "create_accesspackageassignmentpolicy_2_v1_e2"
 }
 -->
 ```http
@@ -259,6 +267,12 @@ Content-Type: application/json
 }
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-accesspackageassignmentpolicy-2-v1-e2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 #### Response
 
 >**Note:** The response object shown here might be shortened for readability.
@@ -286,9 +300,10 @@ The following example shows a policy that automatically creates assignments for 
 #### Request
 
 
+# [HTTP](#tab/http)
 <!-- {
-  "blockType": "ignored",
-  "name": "create_accesspackageassignmentpolicy_autoassignment"
+  "blockType": "request",
+  "name": "create_accesspackageassignmentpolicy_autoassignment_v1_e3"
 }
 -->
 ```http
@@ -307,13 +322,21 @@ Content-Type: application/json
         }
     ],
     "automaticRequestSettings": {
-        "requestAccessForAllowedTargets": true
+        "requestAccessForAllowedTargets": true,
+        "removeAccessWhenTargetLeavesAllowedTargets": true,
+        "gracePeriodBeforeAccessRemoval": "P7D"
     },
     "accessPackage": {
         "id": "8a36831e-1527-4b2b-aff2-81259a8d8e76"
     }
 }
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-accesspackageassignmentpolicy-autoassignment-v1-e3-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 #### Response
 
@@ -332,5 +355,141 @@ Content-Type: application/json
     "id": "962493bb-be02-4aeb-a233-a205bbfe1d8d",
     "displayName": "Sales department users",
     "description": "All users from sales department"
+}
+```
+
+
+## Example 4: Create a policy where requestors are asked to answer questions while requesting access to provide additional information to approvers.
+
+The following example shows a policy that automatically creates assignments for users in the sales department.
+
+#### Request
+
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "create_accesspackageassignmentpolicy_autoassignment_v1_e4"
+}
+-->
+```http
+POST https://graph.microsoft.com/v1.0/identityGovernance/entitlementManagement/assignmentPolicies
+Content-Type: application/json
+
+{
+    "displayName": "A Policy With Questions",
+    "description": "",
+    "allowedTargetScope": "allMemberUsers",
+    "expiration": {
+        "type": "noExpiration"
+    },
+    "requestorSettings": {
+        "enableTargetsToSelfAddAccess": "true",
+        "enableTargetsToSelfUpdateAccess": "true",
+        "enableTargetsToSelfRemoveAccess": "true"
+    },
+    "requestApprovalSettings": {
+        "isApprovalRequiredForAdd": "true",
+        "isApprovalRequiredForUpdate": "true",
+        "stages": [
+            {
+                "durationBeforeAutomaticDenial": "P7D",
+                "isApproverJustificationRequired": "false",
+                "isEscalationEnabled": "false",
+                "fallbackPrimaryApprovers": [],
+                "escalationApprovers": [],
+                "fallbackEscalationApprovers": [],
+                "primaryApprovers": [
+                    {
+                        "@odata.type": "#microsoft.graph.singleUser",
+                        "userId": "08a551cb-575a-4343-b914-f6e42798bd20"
+                    }
+                ]
+            }
+        ]
+    },
+    "questions": [
+        {
+            "@odata.type": "#microsoft.graph.accessPackageMultipleChoiceQuestion",
+            "sequence": "1",
+            "isRequired": "true",
+            "isAnswerEditable": "true",
+            "text": "What country are you working from?",
+            "isMultipleSelectionAllowed": "false",
+            "choices": [
+                {
+                    "@odata.type": "microsoft.graph.accessPackageAnswerChoice",
+                    "actualValue": "KE",
+                    "text": "Kenya"
+                },
+                {
+                    "@odata.type": "microsoft.graph.accessPackageAnswerChoice",
+                    "actualValue": "US",
+                    "text": "United States"
+                },
+                {
+                    "@odata.type": "microsoft.graph.accessPackageAnswerChoice",
+                    "actualValue": "GY",
+                    "text": "Guyana"
+                },
+                {
+                    "@odata.type": "microsoft.graph.accessPackageAnswerChoice",
+                    "actualValue": "BD",
+                    "text": "Bangladesh"
+                },
+                {
+                    "@odata.type": "microsoft.graph.accessPackageAnswerChoice",
+                    "actualValue": "JP",
+                    "text": "Japan"
+                }
+            ]
+        },
+        {
+            "@odata.type": "#microsoft.graph.accessPackageTextInputQuestion",
+            "sequence": "2",
+            "isRequired": "true",
+            "isAnswerEditable": "true",
+            "text": "What do you do for work?",
+            "localizations": [
+                {
+                    "languageCode": "fr-CA",
+                    "text": "Que fais-tu comme travail?"
+                }
+            ],
+            "isSingleLineQuestion": "false",
+            "regexPattern": "[a-zA-Z]+[a-zA-Z\\s]*"
+        }
+    ],
+    "accessPackage": {
+        "id": "977c7ff4-ef8f-4910-9d31-49048ddf3120"
+    }
+}
+```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/create-accesspackageassignmentpolicy-autoassignment-v1-e4-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.accessPackageAssignmentPolicy"
+}
+-->
+``` http
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+    "id": "24e5711e-92f0-41e2-912d-9f4e005f36cc",
+    "displayName": "A Policy With Questions",
+    "allowedTargetScope": "allMemberUsers",
+    "createdDateTime": "2022-09-30T20:32:07.1949218Z",
+    "modifiedDateTime": "2022-09-30T20:32:07.4173893Z",
 }
 ```

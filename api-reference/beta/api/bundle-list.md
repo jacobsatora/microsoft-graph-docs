@@ -65,12 +65,26 @@ To request an enumeration of all bundles defined in the drive, you can make a re
 
 The following is an example of a request.
 
+<<<<<<< HEAD
 <!-- { "blockType": "request", "name": "list-all-bundles", "tags": "service.onedrive" } -->
+=======
+# [HTTP](#tab/http)
+<!-- { "blockType": "request", "name": "list-all-bundles_e1", "tags": "service.onedrive" } -->
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/drive/bundles
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-all-bundles-e1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response.
@@ -114,12 +128,26 @@ To filter the list of bundles returned from a request to the bundles collection,
 
 The following is an example of a request.
 
+<<<<<<< HEAD
 <!-- {"blockType": "request", "name": "list-album-bundles", "tags": "service.onedrive" } -->
+=======
+# [HTTP](#tab/http)
+<!-- {"blockType": "request", "name": "list-album-bundles-e2", "tags": "service.onedrive" } -->
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/drive/bundles?filter=bundle/album%20ne%20null
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/list-album-bundles-e2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 The following is an example of the response. The response to a GET to the bundles endpoint is an array of [driveItem][] resources with the [bundle][].

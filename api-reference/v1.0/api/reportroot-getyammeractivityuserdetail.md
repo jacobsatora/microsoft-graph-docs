@@ -82,27 +82,44 @@ The CSV file has the following headers for columns.
 The following is an example of the request.
 
 
+# [HTTP](#tab/http)
 <!--{
-  "blockType": "ignored",
-  "isComposable": true,
+  "blockType": "request",
   "name": "reportroot_getyammeractivityuserdetail"
 }-->
 
-```http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/reports/getYammerActivityUserDetail(period='D7')
 ```
 
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/reportroot-getyammeractivityuserdetail-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 #### Response
 
 The following is an example of the response.
 
-<!-- { "blockType": "response", "@odata.type": "microsoft.graph.report" } --> 
-
+<!-- { "blockType": "ignored" } --> 
 ```http
 HTTP/1.1 302 Found
 Content-Type: text/plain
 Location: https://reports.office.com/data/download/JDFKdf2_eJXKS034dbc7e0t__XDe
+```
+
+Follow the 302 redirection and the CSV file that downloads will have the following schema.
+
+<!-- { 
+  "blockType": "response", 
+  "@odata.type": "String" 
+} -->
+```http
+HTTP/1.1 200 OK
+Content-Type: application/octet-stream
+
+Report Refresh Date,User Principal Name,Display Name,User State,State Change Date,Last Activity Date,Posted Count,Read Count,Liked Count,Assigned Products,Report Period
 ```
 
 #### Request
@@ -112,7 +129,6 @@ If the `date` parameter is specified, the report is scoped to activities that to
 # [HTTP](#tab/http)
 <!--{
   "blockType": "request",
-  "isComposable": true,
   "name": "reportroot_getyammeractivityuserdetail_date"
 }-->
 
@@ -120,7 +136,11 @@ If the `date` parameter is specified, the report is scoped to activities that to
 GET https://graph.microsoft.com/v1.0/reports/getYammerActivityUserDetail(date='2018-03-05')
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/reportroot-getyammeractivityuserdetail-date-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -130,21 +150,19 @@ GET https://graph.microsoft.com/v1.0/reports/getYammerActivityUserDetail(date='2
 
 The following is an example of the response.
 
-<!-- {
-  "blockType": "response"
-} -->
-
+<!-- { "blockType": "ignored" } --> 
 ```http
 HTTP/1.1 302 Found
 Content-Type: text/plain
 Location: https://reports.office.com/data/download/JDFKdf2_eJXKS034dbc7e0t__XDe
 ```
 
-
 Follow the 302 redirection and the CSV file that downloads will have the following schema.
 
-<!-- { "blockType": "ignored" } --> 
-
+<!-- { 
+  "blockType": "response", 
+  "@odata.type": "String" 
+} -->
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/octet-stream

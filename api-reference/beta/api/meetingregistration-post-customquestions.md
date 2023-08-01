@@ -1,7 +1,7 @@
 ---
 title: "Create meetingRegistrationQuestion"
 description: "Create a custom meeting registration question associated with a meetingRegistration object."
-author: "mkhribech"
+author: "awang119"
 ms.localizationpriority: medium
 ms.prod: "cloud-communications"
 doc_type: apiPageType
@@ -73,7 +73,10 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 
 > **Note**: The response object shown here might be shortened for readability.

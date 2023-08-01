@@ -51,9 +51,23 @@ If successful, this method returns a `200 OK` response code and the single [auth
 
 The following is an example of the request.
 
-```http
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "policies_authorizationPolicy_get"
+}
+-->
+
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/policies/authorizationPolicy
 ```
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/policies-authorizationpolicy-get-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ---
 
 ### Response
@@ -79,6 +93,7 @@ Content-type: application/json
     "allowedToSignUpEmailBasedSubscriptions": true,
     "allowedToUseSSPR": true,
     "allowEmailVerifiedUsersToJoinOrganization": true,
+    "allowUserConsentForRiskyApps": false,
     "blockMsolPowerShell": null,
     "displayName": "Authorization Policy",
     "description": "Used to manage authorization related settings across the company.",

@@ -72,6 +72,15 @@ If successful, this method returns a `200 OK` response code and a [cloudPcOnPrem
 GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/onPremisesConnections/{id}
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-cloudpconpremisesconnection-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 **Note:** The response object shown here might be shortened for readability.
@@ -120,6 +129,15 @@ Content-Type: application/json
 GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/onPremisesConnections/{id}?$select=id,displayName,healthCheckStatus,healthCheckStatusDetails,inUse
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-cloudpconpremisesconnection-withdetails-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 
 **Note:** The response object shown here might be shortened for readability.
@@ -153,7 +171,8 @@ Content-Type: application/json
           "endDateTime": "2020-11-03T12:43:15Z",
           "errorType": "dnsCheckFqdnNotFound",
           "recommendedAction": "We did not find the provided domain name; please re-enter",
-          "additionalDdetails": null
+          "additionalDdetails": null,
+          "correlationId": "992e64f0-231c-46b0-8918-c5aed0585f53"
         },
         {
           "@odata.type": "microsoft.graph.cloudPcOnPremisesConnectionHealthCheck",
@@ -163,7 +182,8 @@ Content-Type: application/json
           "endDateTime": "2020-11-03T12:43:26Z",
           "errorType": null,
           "recommendedAction": null,
-          "additionalDetails": null
+          "additionalDetails": null,
+          "correlationId": null
         },
         {
           "@odata.type": "microsoft.graph.cloudPcOnPremisesConnectionHealthCheck",
@@ -173,7 +193,8 @@ Content-Type: application/json
           "endDateTime": "2020-11-03T12:43:32Z",
           "errorType": "endpointConnectivityCheckUrlNotWhitelisted",
           "recommendedAction": "Recommended Action value",
-          "additionaldDetails": "Additional Details value"
+          "additionaldDetails": "Additional Details value",
+          "correlationId": "119f8363-ace2-412b-a79a-867dc0737db0"
         },
         {
           "@odata.type": "microsoft.graph.cloudPcOnPremisesConnectionHealthCheck",
@@ -183,7 +204,8 @@ Content-Type: application/json
           "endDateTime": null,
           "errorType": null,
           "recommendedAction": null,
-          "additionaldDetails": null
+          "additionaldDetails": null,
+          "correlationId": "119f8363-ace2-412b-a79a-867dc0737db0"
         }
       ]
     },

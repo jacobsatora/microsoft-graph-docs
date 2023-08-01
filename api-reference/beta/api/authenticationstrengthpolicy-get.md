@@ -1,7 +1,7 @@
 ---
 title: "Get authenticationStrengthPolicy"
 description: "Read the properties and relationships of an authenticationStrengthPolicy object."
-author: "mmcla"
+author: "InbarckMS"
 ms.localizationpriority: medium
 ms.prod: "identity-and-sign-in"
 doc_type: apiPageType
@@ -22,6 +22,8 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (work or school account)|Policy.Read.All, Policy.ReadWrite.ConditionalAccess, Policy.ReadWrite.AuthenticationMethod|
 |Delegated (personal Microsoft account)|Not supported.|
 |Application|Policy.Read.All, Policy.ReadWrite.ConditionalAccess, Policy.ReadWrite.AuthenticationMethod|
+
+[!INCLUDE [rbac-authenticationstrength-apis-read](../includes/rbac-for-apis/rbac-authenticationstrength-apis-read.md)]
 
 ## HTTP request
 
@@ -62,6 +64,15 @@ The following is an example of a request.
 GET https://graph.microsoft.com/beta/policies/authenticationStrengthPolicies/00000000-0000-0000-0000-000000000004
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-authenticationstrengthpolicy-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 The following is an example of the response
 >**Note:** The response object shown here might be shortened for readability.
@@ -81,7 +92,7 @@ Content-Type: application/json
   "createdDateTime": "2017-10-30T10:59:01Z",
   "modifiedDateTime": "2017-10-30T10:59:01Z",
   "displayName": "Phishing resistant MFA",
-  "description": "Phishing-resistant, Passwordless methods for the strongest authentication, such as a FIDO2 security key",
+  "description": "Phishing resistant, Passwordless methods for the strongest authentication, such as a FIDO2 security key",
   "policyType": "builtIn",
   "requirementsSatisfied": "mfa",
   "allowedCombinations": [

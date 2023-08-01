@@ -45,7 +45,7 @@ Do not supply a request body for this method.
 
 ## Response
 
-If successful, this method returns `200 OK` response code and a JSON representation of the [identityProvider](../resources/identityprovider.md) in the response body.
+If successful, this method returns `200 OK` response code and a [identityProvider](../resources/identityprovider.md) object in the response body.
 
 ## Example
 
@@ -65,7 +65,11 @@ The following example retrieves a specific **identityProvider**.
 GET https://graph.microsoft.com/v1.0/identityProviders/Amazon-OAuth
 ```
 
+<<<<<<< HEAD
 # [Cli](#tab/cli)
+=======
+# [CLI](#tab/cli)
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 [!INCLUDE [sample-code](../includes/snippets/cli/get-identityprovider-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

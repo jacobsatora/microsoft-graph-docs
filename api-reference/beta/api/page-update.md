@@ -69,6 +69,10 @@ Content-type: application/json
   }
 ]
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ##### Response
 
 Here is an example of the response. 
@@ -89,6 +93,8 @@ HTTP/1.1 204 No Content
   "section": "documentation",
   "tocPath": "",
   "suppressions": [
+    "Error: /api/page-update.md/update_page:
+      Error parsing resource definition: Deserialized JSON type 'Newtonsoft.Json.Linq.JArray' is not compatible with expected type 'Newtonsoft.Json.Linq.JObject'. Path '', line 13, position 1."
   ]
 }
 -->

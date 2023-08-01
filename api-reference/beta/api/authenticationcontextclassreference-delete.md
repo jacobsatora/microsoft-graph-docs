@@ -52,13 +52,23 @@ The following is an example of a request.
 
 <!-- {
   "blockType": "request",
-  "name": "delete_authenticationcontextclassreference"
+  "name": "delete_authenticationcontextclassreference",
+  "sampleKeys": ["c1"]
 }
 -->
 ``` http
 DELETE https://graph.microsoft.com/beta/identity/conditionalAccess/authenticationContextClassReferences/c1
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-authenticationcontextclassreference-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 ### Response
 The following is an example of the response
 <!-- {

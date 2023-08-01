@@ -54,7 +54,7 @@ The following is an example of a request.
 
 <!-- {
   "blockType": "request",
-  "name": "delete_browsersharedcookie",
+  "name": "delete_browsersharedcookie_e1",
   "@odata.type": "microsoft.graph.browserSharedCookie",
   "sampleKeys": ["7cf831d2-8a9b-4826-b120-911566f6fd6a", "07b4cc32-237f-4a1a-9d7f-531efc26220e"]
 }
@@ -63,6 +63,15 @@ The following is an example of a request.
 DELETE https://graph.microsoft.com/beta/admin/edge/internetExplorerMode/siteLists/7cf831d2-8a9b-4826-b120-911566f6fd6a/sharedCookies/07b4cc32-237f-4a1a-9d7f-531efc26220e
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-browsersharedcookie-e1-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following is an example of the response.
 <!-- {
@@ -81,7 +90,7 @@ The following is an example of a request.
 
 <!-- {
   "blockType": "request",
-  "name": "delete_browsersharedcookie",
+  "name": "delete_browsersharedcookie_e2",
   "sampleKeys": ["7cf831d2-8a9b-4826-b120-911566f6fd6a", "07f4030f-45ff-4ad1-9277-3b8f6ee74141"]
 }
 -->
@@ -89,6 +98,15 @@ The following is an example of a request.
 DELETE https://graph.microsoft.com/beta/admin/edge/internetExplorerMode/siteLists/7cf831d2-8a9b-4826-b120-911566f6fd6a/sharedCookies/07f4030f-45ff-4ad1-9277-3b8f6ee74141
 ```
 
+<<<<<<< HEAD
+=======
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/delete-browsersharedcookie-e2-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+>>>>>>> ac57e61007f395881f1814eae37dc23911227b9b
 #### Response
 The following is an example of the response where the **status** has changed to `pendingDelete` but the shared cookie is still published. You must publish the shared cookie to fully remove it from the site list.
 >**Note:** The response object shown here might be shortened for readability.
