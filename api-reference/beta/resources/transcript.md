@@ -1,6 +1,6 @@
 ---
 title: "transcript resource type"
-description: "The transcript resource represents the metadata for a media item's transcript."
+description: "Represents the transcript metadata of a media item."
 author: "elmazdremdzhe"
 ms.localizationpriority: medium
 ms.prod: "sites-and-lists"
@@ -13,7 +13,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-The **transcript** resource represents the metadata for a [media item]'s transcript.
+Represents the transcript metadata of a [media](../resources/media.md) item.
 
 Transcripts are a text representation of spoken content in a media item. Transcripts can be added to media items to facilitate content search in the transcript pane and ensure inclusivity through captions.  For more information, see [View, edit, and manage video transcripts and captions - Microsoft Support](https://support.microsoft.com/en-us/office/view-edit-and-manage-video-transcripts-and-captions-3cb9acb6-05b2-4f59-a50d-7df61123aa20).
 
