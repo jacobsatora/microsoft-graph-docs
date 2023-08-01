@@ -4,21 +4,22 @@ ms.localizationpriority: medium
 
 ## Optional: Visualize your Microsoft Graph Data Connect data in Microsoft Power BI
 
-This exercise describes how to create a report in Microsoft Power BI to visualize your Microsoft 365 data from Microsoft Graph Data Connect. **This step is entirely optional** but requires you to complete all the steps in the building your first Microsoft Graph Data Connect pipeline beforehand. Once you have your JSON file in your Azure Storage, complete the following steps:
+This exercise describes how to create a report in Microsoft Power BI to visualize your Microsoft 365 data from Microsoft Graph Data Connect. Before proceeding with this optional step, ensure you have completed all the necessary steps to build your first Microsoft Graph Data Connect pipeline. Once you have your JSON file in your Azure storage, follow these steps:
 
 1. Open your Power BI desktop application or download it from: [Download Power BI tools and apps](https://powerbi.microsoft.com/en-us/downloads/)  
 
-2. Click on the **Get Data** window, select **Azure** and choose **Azure Blob Storage** from the list of Azure services.
+2. Click the **Get Data** window, select **Azure** and choose **Azure Blob Storage**.
 
 3. Click **Connect** to establish the connection between Power BI and your Azure Blob Storage account.
 
 ![A screenshot that shows how to connect to get data from an Azure Blob Storage in Power BI.](../concepts/images/data-connect-pbi-connect-blob-storage.png)
 
-4. Add the Azure Blob Storage **Account name or URL**: Enter the Azure Storage Account name and container name for the Azure Blob Storage account you want to connect to, then click **OK**.
+4. Add the **Azure Blob Storage Account name or URL**: Enter the Azure Storage Account name and container name for the Azure Blob Storage account you want to connect to, then click **OK**.
 
 ![A screenshot that shows how to add the Azure Blob Storage account URL to get data in Power BI.](../concepts/images/data-connect-pbi-add-blob-account-name.png)
 
-> **Note:** You can find your Azure Storage URL in the Azure Storage Account. Navigate to your containers and choose the container you want to connect, click on the Context menu (...), select **Container properties**, and copy the URL.
+> **Note:** 
+> You can find your Azure Storage URL in the Azure Storage Account. Navigate to your containers, choose the container you want to connect to, click on the Context menu (...), select **Container Properties**, and copy the URL.
 
 5. Select **Transform Data** and click to go inside the first line that says **Binary**.
 
