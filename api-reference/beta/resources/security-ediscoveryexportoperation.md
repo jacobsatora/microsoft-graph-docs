@@ -40,7 +40,7 @@ Inherits from [caseOperation](../resources/security-caseoperation.md).
 |status|[microsoft.graph.security.caseOperationStatus](../resources/security-caseoperation.md#caseoperationstatus-values)| The status of the case operation. Possible values are: `notStarted`, `submissionFailed`, `running`, `succeeded`, `partiallySucceeded`, `failed`.|
 |azureBlobContainer (deprecated)|String| The name of the Azure storage location where the export is stored. This only applies to exports stored in your own Azure storage location. The **azureBlobContainer** property is deprecated and will stop returning data on April 30th, 2023. |
 |azureBlobToken (deprecated)|String| The SAS token for the Azure storage location.  This only applies to exports stored in your own Azure storage location. The **azureBlobToken** property is deprecated and will stop returning data on April 30th, 2023. |
-|outputFolderId (deprecated) | String | The output folder ID. The **outputFolderId** property is deprecated and will stop returning data on April 30th, 2023.|
+|outputFolderId (deprecated) | String | The output folder ID. The **outputFolderId** property is deprecated and stopped returning data on April 30th, 2023.|
 |expandOption| String | This option will allow to expand the associated review set of the query. For more details, see [reviewSet: export](../api/security-ediscoveryreviewsetquery-export.md). Possible values are: `none`, `all`. Default value, if not provided is none.|
 
 ### exportOptions values
