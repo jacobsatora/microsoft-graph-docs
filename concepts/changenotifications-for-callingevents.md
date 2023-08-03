@@ -63,7 +63,7 @@ Subscriptions to call events only support notifications notification with resour
 
 Call event subscriptions will receive notifications when the user of interest enters or leaves applicable calling scenarios. Resource data from notifications will be included in notification payload and will need to be decrypted before it is used.
 
-### Call event notifications sample
+### Call event notification example
 ```json
 {
   "@odata.type": "#microsoft.graph.changeNotification",
@@ -91,7 +91,7 @@ Call event subscriptions will receive notifications when the user of interest en
 }
 ```
 
-### Call Started event decrypted resource data example
+### Call dtarted event decrypted resource data example
 ```json
 {	 
     "@odata.type":"#Microsoft.Graph.CallEvent", 
@@ -104,7 +104,7 @@ Call event subscriptions will receive notifications when the user of interest en
 }
 ```
 
-### Call Ended event decrypted resource data example
+### Call ended event decrypted resource data example
 ```json
 {	 
     "@odata.type":"#Microsoft.Graph.CallEvent", 
