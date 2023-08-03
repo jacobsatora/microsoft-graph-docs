@@ -214,7 +214,9 @@ The following is a JSON representation of the resource.
     }
   ],
   "alertPolicyId": "String",
-  "additionalData": "Dictionary"
+  "additionalData": {
+    "@odata.type": "microsoft.graph.security.dictionary"
+  }
 }
 ```
 
