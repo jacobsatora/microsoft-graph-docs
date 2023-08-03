@@ -1,6 +1,6 @@
 ---
 title: "Get change notifications for Microsoft Teams calls"
-description: "Use change notifications in Microsoft Graph to enable you to subscribe to call started/ended for Microsoft Teams calls."
+description: "Use change notifications in Microsoft Graph to subscribe to call started/ended events for Microsoft Teams calls."
 author: "awang119"
 ms.localizationpriority: high
 ms.prod: "cloud-communications"
