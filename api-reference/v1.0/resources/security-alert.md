@@ -59,7 +59,7 @@ When detecting a threat, a security provider creates an alert in the system. Mic
 |threatFamilyName|String|Threat family associated with this alert.|
 |title|String|Brief identifying string value describing the alert.|
 |alertPolicyId|String|The Id of the policy that generated the alert, and populated when there is a specific policy that generated the alert, whether configured by a customer or a built in policy.|
-|additionalData|Dictionary|A bag of custom fields that should be part of the alert and will be presented to the user.|
+|additionalData|Dictionary|A collection of other properties of the alert, including user-defined properties. Any custom details defined in the alert, and any dynamic content in the alert details, are stored here.|
 
 ### alertClassification values 
 
