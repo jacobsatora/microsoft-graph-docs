@@ -374,7 +374,7 @@ Content-Type: application/json
       "id": "876df28f-2e78-423b-94a5-44181bd0e225",
       "externalId": "f31b1263-ba99-435a-a679-911d24850d7c",
       "displayName": "Test App",
-      "distributionMethod": "organization",
+      "distributionMethod": "Organization",
       "appDefinitions": [
         {
           "id": "NGQyMGNiNDUtZWViYS00ZTEyLWE3YzktMGQ0NDgzYjYxNzU2IyMxLjAuMA==",
@@ -382,13 +382,10 @@ Content-Type: application/json
           "displayName": "Test App",
           "version": "1.0.1",
           "publishingState": "published",
-          "authorization": 
-          {
-            "requiredPermissionSet": 
-            {
-              "resourceSpecificPermissions": []
-            }
-          }
+          "shortDescription": "Types Of Cards.",
+          "description": "This sample shows the feature where user can send different types of cards using bot.",
+          "lastModifiedDateTime": "2020-11-23T21:36:00.9437445Z",
+          "createdBy": null 
         }
       ]
     }
@@ -478,7 +475,7 @@ Content-Type: application/json
                     "id": "OGExZWQ3YTMtNWM3OC00NmIyLTg1MDQtZjlkYTAwYTFkMWE2IyMxLjAuOSMjUmVqZWN0ZWQ=",
                     "teamsAppId": "8a1ed7a3-5c78-46b2-8504-f9da00a1d1a6",
                     "displayName": "Ducks-3",
-                    "version": "1.0.9",
+                    "version": "1.0.9",                  
                     "publishingState": "rejected",
                     "shortDescription": "quaerat quasi magnam. slight change. 5",
                     "description": "Aliquid placeat animi debitis accusamus. Non perferendis ullam. Quis est consequuntur vitae provident. Sunt laudantium id aut. slight change 5",
