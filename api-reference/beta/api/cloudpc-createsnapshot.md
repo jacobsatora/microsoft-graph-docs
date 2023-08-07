@@ -1,19 +1,19 @@
 ---
-title: "cloudPC: resize"
-description: "Upgrade or downgrade an existing Cloud PC to another configuration with a new virtual CPU (vCPU) and storage size."
+title: "cloudPC: create snapshot"
+description: "Create snapshot for a specific Cloud PC device with CloudPc Id."
 author: "Jiaer Huang"
 ms.localizationpriority: medium
 ms.prod: "cloud-pc"
 doc_type: apiPageType
 ---
 
-# cloudPC: resize
+# cloudPC: createSnapshot
 
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Upgrade or downgrade an existing Cloud PC to another configuration with a new virtual CPU (vCPU) and storage size.
+Create snapshot for a specific Cloud PC device with CloudPc Id.
 
 ## Permissions
 
@@ -33,7 +33,7 @@ One of the following permissions is required to call this API. To learn more, in
 -->
 
 ``` http
-POST /deviceManagement/virtualEndpoint/cloudPCs/{id}/resize
+POST /deviceManagement/virtualEndpoint/cloudPCs/{id}/createSnapshot
 ```
 
 ## Request headers
@@ -44,36 +44,25 @@ POST /deviceManagement/virtualEndpoint/cloudPCs/{id}/resize
 
 ## Request body
 
-In the request body, supply JSON representation of the parameters.
-
-The following table shows the parameters that can be used with this action.
-
-|Parameter|Type|Description|
-|:---|:---|:---|
-|targetServicePlanId|String|The target service plan ID of the resize configuration with new vCPU and storage size.|
+Do not supply a request body for this method.
 
 ## Response
 
 If successful, this method returns a `204 No Content` response code.
 
-## Examples
+## Example
 
 ### Request
 
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "cloudpc_resize"
+  "name": "cloudpc_createSnapshot"
 }
 -->
 
 ``` http
-POST https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs/{id}/resize
-Content-Type: application/json
-
-{
-  "targetServicePlanId": "30d0e128-de93-41dc-89ec-33d84bb662a0"
-}
+POST https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs/{id}/createSnapshot
 ```
 
 ### Response
