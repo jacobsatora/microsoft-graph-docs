@@ -68,7 +68,7 @@ GET /storageContainers/b!6XpSztFy9E2yOmBRc6UvE17Un8QjGtVKlBDSEvy3yq2qLiqRB1RCQKY
 
 ### Response
 
-<!-- { "blockType": "ignored" }-->
+<!-- { "blockType": "response", "name": "get_recyclebinItems", "@odata.type": "microsoft.graph.listItem", "isCollection": true, "truncated": true, "scope": "files.read" } -->
 
 ``` http
 HTTP/1.1 200 OK
