@@ -2,6 +2,7 @@
 author: vanshisingh
 ms.date: 02/08/2023
 title: recycleBinItem resource type
+description: "Recycle Bin Item Resource Type"
 ms.localizationpriority: "medium"
 ms.prod: "sharepoint"
 doc_type: apiPageType
