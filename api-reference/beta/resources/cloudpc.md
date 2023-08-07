@@ -51,6 +51,7 @@ Represents a cloud-managed virtual desktop. This Cloud PC is also enrolled into 
 |[Retry partner agent installation](../api/cloudpc-retrypartneragentinstallation.md)|None|Retry installation for the partner agents which failed to install on the [cloudPC](../resources/cloudpc.md).|
 |[Bulk resize](../api/cloudpc-retrypartneragentinstallation.md)|[cloudPcRemoteActionResult](../resources//cloudpcremoteactionresult.md) collection|Perform a bulk resize action to resize a group of [cloudPCs](../resources/cloudpc.md) that have successfully passed validation (cloudPC: validateBulkResize). If any devices cannot be resized, they will be labeled as "resize failed," while the remaining devices will be `provisioned` for the resize process.|
 |[Validate bulk resize](../api/cloudpc-validatebulkresize.md)|[cloudPcResizeValidateResult](../resources/cloudPcResizeValidationResult.md) collection|Validate that a set of [cloudPC](../resources/cloudpc.md) devices meet the requirements to be bulk resized.|
+|[Create snapshot](../api/cloudpc-createsnapshot.md)|None|Create a [cloudPC](../resources/cloudpc.md) snapshot.|
 
 ## Properties
 

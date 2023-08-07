@@ -10396,6 +10396,8 @@ items:
             href: api/manageddevice-bulksetcloudpcreviewstatus.md
           - name: Change user accout type
             href: api/cloudpc-changeuseraccounttype.md
+          - name: Create snapshot
+            href: api/cloudpc-createsnapshot.md
           - name: End grace period
             href: api/cloudpc-endgraceperiod.md
           - name: Get connectivity history
